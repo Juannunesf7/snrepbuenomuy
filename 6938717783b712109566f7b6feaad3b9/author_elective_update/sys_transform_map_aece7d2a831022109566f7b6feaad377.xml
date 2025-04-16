@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_transform_map">
+    <sys_transform_map action="DELETE">
+        <active>true</active>
+        <copy_empty_fields>false</copy_empty_fields>
+        <create_new_record_on_empty_coalesce_fields>false</create_new_record_on_empty_coalesce_fields>
+        <enforce_mandatory_fields>No</enforce_mandatory_fields>
+        <name>Bug List Mapping</name>
+        <order>100</order>
+        <run_business_rules>true</run_business_rules>
+        <run_script>false</run_script>
+        <script><![CDATA[(function transformRow(source, target, map, log, isUpdate) {
+
+	// Add your code here
+
+})(source, target, map, log, action==="update");]]></script>
+        <source_table>x_1523172_skill_up_import_bugs_xlsx</source_table>
+        <sys_class_name>sys_transform_map</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-03-18 10:46:04</sys_created_on>
+        <sys_id>aece7d2a831022109566f7b6feaad377</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name>Bug List Mapping</sys_name>
+        <sys_package display_value="Mock SkillUp" source="x_1523172_skill_up">6938717783b712109566f7b6feaad3b9</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Mock SkillUp">6938717783b712109566f7b6feaad3b9</sys_scope>
+        <sys_update_name>sys_transform_map_aece7d2a831022109566f7b6feaad377</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-03-18 10:49:47</sys_updated_on>
+        <target_table>x_1523172_skill_up_servico_compartilhado</target_table>
+    </sys_transform_map>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Mock SkillUp">6938717783b712109566f7b6feaad3b9</application>
+        <file_path/>
+        <instance_id>7ee1e82afb5f1e945704f3585eefdcfd</instance_id>
+        <instance_name>dev293201</instance_name>
+        <name>sys_transform_map_aece7d2a831022109566f7b6feaad377</name>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update table="sys_transform_map"&gt;&lt;sys_transform_map action="INSERT_OR_UPDATE"&gt;&lt;active&gt;true&lt;/active&gt;&lt;copy_empty_fields&gt;false&lt;/copy_empty_fields&gt;&lt;create_new_record_on_empty_coalesce_fields&gt;false&lt;/create_new_record_on_empty_coalesce_fields&gt;&lt;enforce_mandatory_fields&gt;No&lt;/enforce_mandatory_fields&gt;&lt;name&gt;Bug List Mapping&lt;/name&gt;&lt;order&gt;100&lt;/order&gt;&lt;run_business_rules&gt;true&lt;/run_business_rules&gt;&lt;run_script&gt;false&lt;/run_script&gt;&lt;script&gt;&lt;![CDATA[(function transformRow(source, target, map, log, isUpdate) {
+
+	// Add your code here
+
+})(source, target, map, log, action==="update");]]&gt;&lt;/script&gt;&lt;source_table&gt;x_1523172_skill_up_import_bugs_xlsx&lt;/source_table&gt;&lt;sys_class_name&gt;sys_transform_map&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2025-03-18 10:46:04&lt;/sys_created_on&gt;&lt;sys_id&gt;aece7d2a831022109566f7b6feaad377&lt;/sys_id&gt;&lt;sys_mod_count&gt;2&lt;/sys_mod_count&gt;&lt;sys_name&gt;Bug List Mapping&lt;/sys_name&gt;&lt;sys_package display_value="Mock SkillUp" source="x_1523172_skill_up"&gt;6938717783b712109566f7b6feaad3b9&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="Mock SkillUp"&gt;6938717783b712109566f7b6feaad3b9&lt;/sys_scope&gt;&lt;sys_update_name&gt;sys_transform_map_aece7d2a831022109566f7b6feaad377&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2025-03-18 10:49:47&lt;/sys_updated_on&gt;&lt;target_table&gt;x_1523172_skill_up_servico_compartilhado&lt;/target_table&gt;&lt;/sys_transform_map&gt;&lt;/record_update&gt;</payload>
+        <payload_hash>1616615790</payload_hash>
+        <record_name>Bug List Mapping</record_name>
+        <reverted_from/>
+        <source>a538717783b712109566f7b6feaad3be</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-03-18 10:49:47</sys_created_on>
+        <sys_id>b00002aa831022109566f7b6feaad3ed</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>195a8dfb3a10000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-03-18 10:49:47</sys_updated_on>
+        <type>Table Transform Map</type>
+        <update_guid>780002aa27102210d8b0143e082594ec</update_guid>
+        <update_guid_history>780002aa27102210d8b0143e082594ec:1616615790,decfb92a15102210a959caa6cd9f1305:1528599605,922f712af5102210a2efa5a15ba90e1d:1616615790</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-03-18 10:55:01</sys_created_on>
+        <sys_db_object display_value="" name="sys_transform_map">sys_transform_map</sys_db_object>
+        <sys_id>077e2059a97a43639852d164af02a1f1</sys_id>
+        <sys_metadata>aece7d2a831022109566f7b6feaad377</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Bug List Mapping</sys_name>
+        <sys_package display_value="Mock SkillUp" source="x_1523172_skill_up">6938717783b712109566f7b6feaad3b9</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="Mock SkillUp">6938717783b712109566f7b6feaad3b9</sys_scope>
+        <sys_scope_delete display_value="">3a6d93cae10942c4892c498dcc264390</sys_scope_delete>
+        <sys_update_name>sys_transform_map_aece7d2a831022109566f7b6feaad377</sys_update_name>
+        <sys_update_version display_value="sys_transform_map_aece7d2a831022109566f7b6feaad377">b00002aa831022109566f7b6feaad3ed</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-03-18 10:55:01</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

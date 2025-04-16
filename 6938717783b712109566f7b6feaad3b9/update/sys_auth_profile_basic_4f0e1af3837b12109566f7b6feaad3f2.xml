@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_auth_profile_basic">
+    <sys_auth_profile_basic action="INSERT_OR_UPDATE">
+        <name>Cursos</name>
+        <password>﷞﷟﷒7ab63cfb83f312109566f7b6feaad356﷬﷔1﷬﷭iQpsjRWHA06H6vSWXSSDdQ==GfBNps89mCYACv7MT8Jotb7n_U5hphxEgfJk7Rc=﷮﷯</password>
+        <sys_class_name>sys_auth_profile_basic</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-02-25 13:43:20</sys_created_on>
+        <sys_id>4f0e1af3837b12109566f7b6feaad3f2</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name>Cursos</sys_name>
+        <sys_package display_value="Mock SkillUp" source="x_1523172_skill_up">6938717783b712109566f7b6feaad3b9</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Mock SkillUp">6938717783b712109566f7b6feaad3b9</sys_scope>
+        <sys_update_name>sys_auth_profile_basic_4f0e1af3837b12109566f7b6feaad3f2</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-02-26 12:42:14</sys_updated_on>
+        <username>admin</username>
+    </sys_auth_profile_basic>
+</record_update>

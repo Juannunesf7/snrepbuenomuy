@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_theme">
+    <sp_theme action="INSERT_OR_UPDATE">
+        <css_variables>// Definir variáveis de cor&#13;
+$primary-color: #3498DB; // Azul Claro&#13;
+$secondary-color: #2ecc71; // Verde Claro&#13;
+$text-color: #000000; // Branco&#13;
+$background-color: #ffffff; // Azul Escuro&#13;
+&#13;
+// Corpo da página&#13;
+body {&#13;
+    background-color: $background-color;&#13;
+    color: $text-color;&#13;
+}&#13;
+&#13;
+// Botões primários&#13;
+.btn-primary {&#13;
+    background-color: $primary-color;&#13;
+    border-color: $primary-color;&#13;
+    color: $text-color;&#13;
+&#13;
+    &amp;:hover {&#13;
+        background-color: darken($primary-color, 10%);&#13;
+        border-color: darken($primary-color, 10%);&#13;
+    }&#13;
+}&#13;
+&#13;
+// Botões secundários&#13;
+.btn-secondary {&#13;
+    background-color: $secondary-color;&#13;
+    border-color: $secondary-color;&#13;
+    color: $text-color;&#13;
+&#13;
+    &amp;:hover {&#13;
+        background-color: darken($secondary-color, 10%);&#13;
+        border-color: darken($secondary-color, 10%);&#13;
+    }&#13;
+}&#13;
+&#13;
+// Links&#13;
+a {&#13;
+    color: $primary-color;&#13;
+&#13;
+    &amp;:hover {&#13;
+        color: darken($primary-color, 10%);&#13;
+    }&#13;
+}&#13;
+&#13;
+// Cards&#13;
+.card {&#13;
+    background-color: rgba(255, 255, 255, 0.1);&#13;
+    border: 1px solid rgba(255, 255, 255, 0.2);&#13;
+    color: $text-color;&#13;
+&#13;
+    &amp;:hover {&#13;
+        background-color: rgba(255, 255, 255, 0.2);&#13;
+    }&#13;
+}</css_variables>
+        <footer display_value="Footer Customizado">958e69ef835022109566f7b6feaad351</footer>
+        <footer_fixed>false</footer_fixed>
+        <header display_value="MSU Cliente - Header Customizado">7ed0b972832422109566f7b6feaad3cf</header>
+        <name>MSU Theme  - Cliente</name>
+        <navbar_fixed>true</navbar_fixed>
+        <sys_class_name>sp_theme</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-03-31 14:39:45</sys_created_on>
+        <sys_id>3f21bdb2832422109566f7b6feaad3da</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>MSU Theme  - Cliente</sys_name>
+        <sys_package display_value="Mock SkillUp" source="x_1523172_skill_up">6938717783b712109566f7b6feaad3b9</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Mock SkillUp">6938717783b712109566f7b6feaad3b9</sys_scope>
+        <sys_update_name>sp_theme_3f21bdb2832422109566f7b6feaad3da</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-03-31 14:39:45</sys_updated_on>
+        <turn_off_scss_compilation>false</turn_off_scss_compilation>
+    </sp_theme>
+</record_update>

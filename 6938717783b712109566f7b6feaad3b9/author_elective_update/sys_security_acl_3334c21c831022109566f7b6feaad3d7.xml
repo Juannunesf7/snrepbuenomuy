@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_security_acl">
+    <sys_security_acl action="DELETE">
+        <active>true</active>
+        <admin_overrides>true</admin_overrides>
+        <advanced>true</advanced>
+        <applies_to/>
+        <condition/>
+        <decision_type>allow</decision_type>
+        <description>Allow read for records in x_1523172_skill_up_projeto, if the ACL script returns true.</description>
+        <local_or_existing>Local</local_or_existing>
+        <name>x_1523172_skill_up_projeto</name>
+        <operation display_value="read">read</operation>
+        <script><![CDATA[// Obtém o usuário atual e suas roles
+var user = gs.getUser();
+var userRoles = user.getRoles();
+var userID = user.getID();
+var fieldName = current.getElement() ? current.getElementName() : null;
+
+var camposEstagiario = ['number', 'nome_projeto', 'description', 'gerente'];
+
+if (userRoles.indexOf('admin') != -1) {
+    answer = true;
+}
+else if (userRoles.indexOf('x_1523172_skill_up.intern') != -1) {
+
+    var isOwner = current.assigned_to == userID || current.sys_created_by == user.getName();
+    answer = isOwner && fieldName && camposEstagiario.indexOf(fieldName) != -1;
+}
+else {
+    answer = true;
+}
+]]></script>
+        <security_attribute/>
+        <sys_class_name>sys_security_acl</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-03-11 11:23:10</sys_created_on>
+        <sys_id>3334c21c831022109566f7b6feaad3d7</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name>x_1523172_skill_up_projeto</sys_name>
+        <sys_package display_value="Mock SkillUp" source="x_1523172_skill_up">6938717783b712109566f7b6feaad3b9</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Mock SkillUp">6938717783b712109566f7b6feaad3b9</sys_scope>
+        <sys_update_name>sys_security_acl_3334c21c831022109566f7b6feaad3d7</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-03-11 11:25:44</sys_updated_on>
+        <type display_value="record">record</type>
+    </sys_security_acl>
+    <sys_es_latest_script action="DELETE">
+        <id>3334c21c831022109566f7b6feaad3d7</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-03-11 11:24:24</sys_created_on>
+        <sys_id>a3c44e1c831022109566f7b6feaad38a</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-03-11 11:24:24</sys_updated_on>
+        <table>sys_security_acl</table>
+        <use_es_latest>true</use_es_latest>
+    </sys_es_latest_script>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Mock SkillUp">6938717783b712109566f7b6feaad3b9</application>
+        <file_path/>
+        <instance_id>7ee1e82afb5f1e945704f3585eefdcfd</instance_id>
+        <instance_name>dev293201</instance_name>
+        <name>sys_security_acl_3334c21c831022109566f7b6feaad3d7</name>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update table="sys_security_acl"&gt;&lt;sys_security_acl action="INSERT_OR_UPDATE"&gt;&lt;active&gt;true&lt;/active&gt;&lt;admin_overrides&gt;true&lt;/admin_overrides&gt;&lt;advanced&gt;true&lt;/advanced&gt;&lt;applies_to/&gt;&lt;condition/&gt;&lt;decision_type&gt;allow&lt;/decision_type&gt;&lt;description&gt;Allow read for records in x_1523172_skill_up_projeto, if the ACL script returns true.&lt;/description&gt;&lt;local_or_existing&gt;Local&lt;/local_or_existing&gt;&lt;name&gt;x_1523172_skill_up_projeto&lt;/name&gt;&lt;operation display_value="read"&gt;read&lt;/operation&gt;&lt;script&gt;&lt;![CDATA[// Obtém o usuário atual e suas roles
+var user = gs.getUser();
+var userRoles = user.getRoles();
+var userID = user.getID();
+var fieldName = current.getElement() ? current.getElementName() : null;
+
+var camposEstagiario = ['number', 'nome_projeto', 'description', 'gerente'];
+
+if (userRoles.indexOf('admin') != -1) {
+    answer = true;
+}
+else if (userRoles.indexOf('x_1523172_skill_up.intern') != -1) {
+
+    var isOwner = current.assigned_to == userID || current.sys_created_by == user.getName();
+    answer = isOwner &amp;&amp; fieldName &amp;&amp; camposEstagiario.indexOf(fieldName) != -1;
+}
+else {
+    answer = true;
+}
+]]&gt;&lt;/script&gt;&lt;security_attribute/&gt;&lt;sys_class_name&gt;sys_security_acl&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2025-03-11 11:23:10&lt;/sys_created_on&gt;&lt;sys_id&gt;3334c21c831022109566f7b6feaad3d7&lt;/sys_id&gt;&lt;sys_mod_count&gt;1&lt;/sys_mod_count&gt;&lt;sys_name&gt;x_1523172_skill_up_projeto&lt;/sys_name&gt;&lt;sys_package display_value="Mock SkillUp" source="x_1523172_skill_up"&gt;6938717783b712109566f7b6feaad3b9&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="Mock SkillUp"&gt;6938717783b712109566f7b6feaad3b9&lt;/sys_scope&gt;&lt;sys_update_name&gt;sys_security_acl_3334c21c831022109566f7b6feaad3d7&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2025-03-11 11:25:44&lt;/sys_updated_on&gt;&lt;type display_value="record"&gt;record&lt;/type&gt;&lt;/sys_security_acl&gt;&lt;sys_es_latest_script action="INSERT_OR_UPDATE"&gt;&lt;id&gt;3334c21c831022109566f7b6feaad3d7&lt;/id&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2025-03-11 11:24:24&lt;/sys_created_on&gt;&lt;sys_id&gt;a3c44e1c831022109566f7b6feaad38a&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2025-03-11 11:24:24&lt;/sys_updated_on&gt;&lt;table&gt;sys_security_acl&lt;/table&gt;&lt;use_es_latest&gt;true&lt;/use_es_latest&gt;&lt;/sys_es_latest_script&gt;&lt;/record_update&gt;</payload>
+        <payload_hash>-1487251713</payload_hash>
+        <record_name>x_1523172_skill_up_projeto</record_name>
+        <reverted_from/>
+        <source>a538717783b712109566f7b6feaad3be</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-03-11 11:25:44</sys_created_on>
+        <sys_id>1b154e5c831022109566f7b6feaad31f</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>19584f41a550000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-03-11 11:25:44</sys_updated_on>
+        <type>Access Control</type>
+        <update_guid>cf154e5c181022109967cd006ace2c1e</update_guid>
+        <update_guid_history>cf154e5c181022109967cd006ace2c1e:-1487251713,6184425c1d1022104b6a5a0bfccb2a72:-1404696854</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-03-11 11:50:31</sys_created_on>
+        <sys_db_object display_value="" name="sys_security_acl">sys_security_acl</sys_db_object>
+        <sys_id>6dbe260e209142a79c03c8b7f4510fd9</sys_id>
+        <sys_metadata>3334c21c831022109566f7b6feaad3d7</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>x_1523172_skill_up_projeto</sys_name>
+        <sys_package display_value="Mock SkillUp" source="x_1523172_skill_up">6938717783b712109566f7b6feaad3b9</sys_package>
+        <sys_parent display_value="x_1523172_skill_up_projeto">31af31ff83b712109566f7b6feaad365</sys_parent>
+        <sys_policy/>
+        <sys_scope display_value="Mock SkillUp">6938717783b712109566f7b6feaad3b9</sys_scope>
+        <sys_scope_delete display_value="">3a6d93cae10942c4892c498dcc264390</sys_scope_delete>
+        <sys_update_name>sys_security_acl_3334c21c831022109566f7b6feaad3d7</sys_update_name>
+        <sys_update_version display_value="sys_security_acl_3334c21c831022109566f7b6feaad3d7">1b154e5c831022109566f7b6feaad31f</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-03-11 11:50:31</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

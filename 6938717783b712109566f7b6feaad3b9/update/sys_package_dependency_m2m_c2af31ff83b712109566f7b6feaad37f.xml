@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_package_dependency_m2m">
+    <sys_package_dependency_m2m action="INSERT_OR_UPDATE">
+        <dependency display_value="Task table schema" source="com.glide.task">71d4f158190312104f3423cebaaa8527</dependency>
+        <min_version>1.0.0</min_version>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-02-25 11:29:14</sys_created_on>
+        <sys_id>c2af31ff83b712109566f7b6feaad37f</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_package display_value="Mock SkillUp" source="x_1523172_skill_up">6938717783b712109566f7b6feaad3b9</sys_package>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-02-25 11:29:14</sys_updated_on>
+    </sys_package_dependency_m2m>
+</record_update>

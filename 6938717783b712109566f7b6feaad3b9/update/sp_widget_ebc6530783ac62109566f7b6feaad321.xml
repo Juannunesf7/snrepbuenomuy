@@ -1,0 +1,472 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_widget">
+    <sp_widget action="INSERT_OR_UPDATE">
+        <category>custom</category>
+        <client_script><![CDATA[/*jshint esversion: 6*/
+function avisos($scope, $http, spUtil) {
+  $scope.data = {
+    avisos: []
+  };
+
+  var avisoapiUrl = '/api/now/table/x_1523172_skill_up_aviso';
+  var projetosApiUrl = '/api/now/table/x_1523172_skill_up_projeto';
+  var equipeApiUrl = '/api/now/table/x_1523172_skill_up_equipe';
+
+  // Função para carregar os avisos
+  $scope.carregarAvisos = function() {
+    $http.get(avisoapiUrl + '?sysparm_query=ORDERBYDESCsys_created_on').then(function(response) {
+      if (response.data.result && response.data.result.length > 0) {
+        var now = new Date();
+
+        $scope.data.avisos = response.data.result
+          .filter(aviso => String(aviso.ativo).toLowerCase() === "true")
+          .map(function(aviso) {
+            var createdDate = aviso.sys_created_on ? new Date(aviso.sys_created_on) : new Date();
+            var diffDays = Math.floor((now - createdDate) / (1000 * 60 * 60 * 24));
+
+            var nivelUrgencia = (String(aviso.urgente).toLowerCase() === "true") 
+              ? (aviso.nivelUrgencia || aviso.urgency_level || null)
+              : null;
+
+            return {
+              sys_id: aviso.sys_id,
+              titulo: aviso.aviso,
+              descricao: aviso.descricao,
+              dias: diffDays,
+              urgente: String(aviso.urgente).toLowerCase() === "true",
+              nivelUrgencia: aviso.urgency_level,
+              projeto: aviso.projeto,
+              categoria: aviso.categoria,
+              responsavel: aviso.responsavel
+            };
+          });
+      } else {
+        $scope.data.avisos = [];
+      }
+    }, function(error) {
+      gs.info("Erro ao buscar avisos:", error);
+      $scope.data.avisos = [];
+    });
+  };
+
+  // Carrega os avisos ao inicializar
+  $scope.carregarAvisos();
+
+  // Função para remover um aviso
+  $scope.removerAviso = function(sys_id) {
+    if (confirm("Tem certeza que deseja remover este aviso?")) {
+      $http.delete(avisoapiUrl + '/' + sys_id).then(function(response) {
+        $scope.carregarAvisos();
+      }, function(error) {
+        alert("Erro ao remover o aviso. Por favor, tente novamente.");
+      });
+    }
+  };
+
+  // Carrega os projetos disponíveis
+  $scope.projetos = [];
+  $http.get(projetosApiUrl).then(function(response) {
+    if (response.data.result) {
+      $scope.projetos = response.data.result.map(projeto => ({
+        sys_id: projeto.sys_id,
+        name: projeto.number || projeto.nome_projeto
+      }));
+    }
+  }, function(error) {
+    gs.info("Erro ao buscar projetos:", error);
+  });
+
+  // Carrega a equipe disponível (filtrando por cargo)
+  $scope.equipe = [];
+  $http.get(equipeApiUrl).then(function(response) {
+    if (response.data.result) {
+      $scope.equipe = response.data.result
+        .filter(membro => membro.cargo === "gestor" || membro.cargo === "monitor")
+        .map(membro => ({
+          sys_id: membro.sys_id,
+          name: membro.name || membro.nome
+        }));
+    }
+  }, function(error) {
+    gs.info("Erro ao buscar equipe:", error);
+  });
+
+  // Objeto para armazenar os dados do novo aviso
+  $scope.novoAviso = {
+    titulo: "",
+    descricao: "",
+    urgente: false,
+    nivelUrgencia: null,
+    ativo: true,
+    responsavel: "",
+    projeto: "",
+    categoria: ""
+  };
+
+  // Abre o modal de adição
+  $scope.openModal = function() {
+    $('#avisoModal').modal('show');
+  };
+
+  // Salva o novo aviso
+  $scope.salvarAviso = function() {
+    if (!$scope.novoAviso.urgente) {
+      $scope.novoAviso.nivelUrgencia = null;
+    }
+
+    if (!$scope.novoAviso.titulo || !$scope.novoAviso.descricao) {
+      alert("Preencha todos os campos obrigatórios.");
+      return;
+    }
+
+    var postData = {
+      aviso: $scope.novoAviso.titulo,
+      descricao: $scope.novoAviso.descricao,
+      urgente: $scope.novoAviso.urgente,
+      urgency_level:$scope.novoAviso.nivelUrgencia,
+      projeto: $scope.novoAviso.projeto,
+      categoria: $scope.novoAviso.categoria,
+      responsavel: $scope.novoAviso.responsavel,
+      ativo: $scope.novoAviso.ativo
+    };
+
+    $http.post(avisoapiUrl, postData).then(function(response) {
+      $('#avisoModal').modal('hide');
+      $scope.carregarAvisos();
+    }, function(error) {
+      alert("Erro ao salvar o aviso. Por favor, tente novamente.");
+    });
+  };
+}
+]]></client_script>
+        <controller_as>c</controller_as>
+        <css>.avisos-widget {
+  font-family: Arial, sans-serif;
+  padding: 20px;
+  background-color: transparent;
+  border: 1px solid #444;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.avisos-widget h2 {
+  color: #ffffff;
+  font-size: 24px;
+  text-align: center;
+  margin-bottom: 16px;
+}
+
+.avisos-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+.avisos-list li {
+  background-color: #fff;
+  padding: 12px;
+  margin-bottom: 8px;
+  border-radius: 6px;
+  border: 1px solid #ddd;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.aviso-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.aviso-titulo {
+  font-weight: bold;
+  color: #0077cc;
+}
+
+.aviso-detalhes {
+  font-size: 14px;
+  color: #666;
+  margin-top: 4px;
+}
+
+.aviso-data {
+  font-size: 12px;
+  color: #999;
+  margin-top: 2px;
+}
+/* CSS (adicione no final do arquivo) */
+.aviso-urgencia {
+  color: #000000; /* Cor preta para o texto */
+  font-size: 14px;
+  padding: 2px 6px;
+  border-radius: 4px;
+  margin-top: 4px;
+  display: inline-block;
+}
+
+/* Novas classes para cores do ícone */
+.urgencia-baixa-icon {
+  color: #4CAF50 !important; 
+  font-size: 18px;
+  margin-right: 6px;
+}
+
+.urgencia-media-icon {
+  color: #FFC107 !important; 
+  font-size: 18px;
+  margin-right: 6px;
+}
+
+.urgencia-alta-icon {
+  color: #F44336 !important; 
+  font-size: 18px;
+  margin-right: 6px;
+}
+
+
+.btn-delete {
+  background: none;
+  border: none;
+  color: #999;
+  font-size: 10px;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+.btn-delete:hover {
+  color: #cc0000;
+}
+
+.btn-delete i {
+  font-size: 10px;
+}
+
+/* Estilos do Modal */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+/* Estilos do Modal */
+.modal-container {
+  background-color: #fff;
+  border-radius: 8px;
+  width: 90%;
+  max-width: 500px;
+  color: #000; /* Cor do texto principal */
+}
+
+.modal-header h3,
+.modal-header .modal-title,
+.modal-body label,
+.modal-body select,
+.modal-body input,
+.modal-body textarea,
+.modal-footer button {
+  color: #000 !important; /* Garante contraste adequado */
+}
+
+.modal-close {
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  color: #000; /* Cor do botão de fechar */
+}
+
+.modal-body {
+  padding: 15px;
+}
+
+.modal-footer {
+  padding: 15px;
+  border-top: 1px solid #ddd;
+  text-align: right;
+}
+
+/* Elementos do formulário no modal */
+.form-group label {
+  color: #000 !important; /* Labels pretos */
+}
+
+.form-control {
+  color: #000 !important; /* Texto dos inputs */
+  border: 1px solid #000; /* Borda preta */
+}
+
+.form-check-label {
+  color: #000 !important; /* Labels dos checkboxes */
+}
+
+}</css>
+        <data_table>sp_instance</data_table>
+        <demo_data/>
+        <description/>
+        <docs/>
+        <field_list/>
+        <has_preview>false</has_preview>
+        <id>avisos</id>
+        <internal>false</internal>
+        <link><![CDATA[function link(scope, element, attrs, controller) {  }]]></link>
+        <name>Avisos</name>
+        <option_schema/>
+        <public>false</public>
+        <roles/>
+        <script><![CDATA[(function() {
+  /* populate the 'data' object */
+  /* e.g., data.table = $sp.getValue('table'); */
+
+})();]]></script>
+        <servicenow>false</servicenow>
+        <sys_class_name>sp_widget</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-04-01 16:41:40</sys_created_on>
+        <sys_id>ebc6530783ac62109566f7b6feaad321</sys_id>
+        <sys_mod_count>94</sys_mod_count>
+        <sys_name>Avisos</sys_name>
+        <sys_package display_value="Mock SkillUp" source="x_1523172_skill_up">6938717783b712109566f7b6feaad3b9</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Mock SkillUp">6938717783b712109566f7b6feaad3b9</sys_scope>
+        <sys_update_name>sp_widget_ebc6530783ac62109566f7b6feaad321</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-04-03 12:34:18</sys_updated_on>
+        <template><![CDATA[<!-- Incluindo a biblioteca Font Awesome -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+
+<div class="avisos-widget">
+  <h2>Avisos</h2>
+
+   <div ng-if="data.avisos.length > 0">
+    <ul class="avisos-list">
+      <li ng-repeat="aviso in data.avisos | orderBy:['-urgente', '-dias'] | limitTo:6">
+        <div class="aviso-header">
+          <div class="aviso-titulo-container">
+            <!-- Ícone de urgência com cores dinâmicas -->
+            <i ng-if="aviso.urgente" 
+               class="fas fa-exclamation-triangle"
+               ng-class="{
+                 'urgencia-baixa-icon': aviso.nivelUrgencia === 'low',
+                 'urgencia-media-icon': aviso.nivelUrgencia === 'mid',
+                 'urgencia-alta-icon': aviso.nivelUrgencia === 'high'
+               }">
+            </i>
+            <span class="aviso-titulo">{{ aviso.titulo }}</span>
+          </div>
+          <button class="btn-delete" ng-click="removerAviso(aviso.sys_id)">
+            <i class="fas fa-trash-alt"></i>
+          </button>
+        </div>
+
+        <span class="aviso-detalhes">{{ aviso.descricao }}</span>
+
+        <!-- Exibe o nível de urgência -->
+        <span ng-if="aviso.urgente && aviso.nivelUrgencia" class="aviso-urgencia"
+              ng-class="{
+                'urgencia-baixa': aviso.nivelUrgencia === 'low',
+                'urgencia-media': aviso.nivelUrgencia === 'mid',
+                'urgencia-alta': aviso.nivelUrgencia === 'high'
+              }">
+          Nível de Urgência: {{ aviso.nivelUrgencia === 'low' ? 'Baixo' : aviso.nivelUrgencia === 'mid' ? 'Médio' : 'Alto' }}
+        </span>
+
+        <span class="aviso-data">Criado há {{ aviso.dias }} dias</span>
+      </li>
+    </ul>
+  </div>
+
+  <div ng-if="data.avisos.length === 0">
+    <p>Nenhum aviso cadastrado.</p>
+  </div>
+
+  <!-- Botão para abrir o modal -->
+  <div class="adicionar-aviso-container">
+    <button class="btn btn-primary" ng-click="openModal()">Adicionar Aviso</button>
+  </div>
+
+  <!-- Modal de Adição de Aviso -->
+  <div id="avisoModal" class="modal fade" tabindex="-1">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Adicionar Aviso</h5>
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+        <div class="modal-body">
+          <div class="form-group">
+            <label>Título:</label>
+            <input type="text" ng-model="novoAviso.titulo" class="form-control" required>
+          </div>
+
+          <div class="form-group">
+            <label>Descrição:</label>
+            <textarea ng-model="novoAviso.descricao" class="form-control" required></textarea>
+          </div>
+
+          <div class="form-group">
+            <label>Projeto:</label>
+            <select ng-model="novoAviso.projeto" class="form-control" 
+                    ng-options="projeto.sys_id as projeto.name for projeto in projetos">
+              <option value="">Selecione um projeto</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label>Categoria:</label>
+            <select ng-model="novoAviso.categoria" class="form-control">
+              <option value="">Selecione uma categoria</option>
+              <option value="Informação">Informação</option>
+              <option value="Evento">Evento</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label>
+              <input type="checkbox" ng-model="novoAviso.urgente"> Urgente
+            </label>
+          </div>
+
+          <div class="form-group" ng-if="novoAviso.urgente">
+            <label>Nível de Urgência:</label>
+            <select ng-model="novoAviso.nivelUrgencia" class="form-control" required>
+              <option value="">Selecione</option>
+              <option value="low">Baixo</option>
+              <option value="mid">Médio</option>
+              <option value="high">Alto</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label>
+              <input type="checkbox" ng-model="novoAviso.ativo"> Ativo
+            </label>
+          </div>
+
+          <div class="form-group">
+            <label>Responsável:</label>
+            <select ng-model="novoAviso.responsavel" class="form-control" 
+                    ng-options="membro.sys_id as membro.name for membro in equipe">
+              <option value="">Selecione um responsável</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="modal-footer">
+          <button class="btn btn-success" ng-click="salvarAviso()">Salvar</button>
+          <button class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Importando o CSS externo -->
+<link rel="stylesheet" href="estilos.css">]]></template>
+    </sp_widget>
+</record_update>

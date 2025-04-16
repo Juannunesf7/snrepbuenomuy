@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_page">
+    <sp_page action="INSERT_OR_UPDATE">
+        <category>other</category>
+        <css>
+/* Configuração de html e body */
+html, body {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+}
+
+body {
+  background: url('https://goedx.com.br/assets/bghero.e3c4b7b6.webp') no-repeat center center fixed;
+  background-size: cover;
+  font-family: Arial, sans-serif;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Estrutura principal */
+.page-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+}
+
+.main-content {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  width: 100%;
+  max-width: 1200px;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+/* Seção de ícones */
+.icon-section {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 30px;
+  flex-wrap: wrap;
+  width: 100%;
+  max-width: 800px;
+}
+
+.icon-item {
+  display: center;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  color: #fff;
+  font-size: 18px;
+}
+
+.icon-item img {
+  width: 60px;
+  height: 60px;
+}
+
+.notification-title {
+  font-weight: bold;
+  color: #f5a623;
+}
+
+/* Responsividade */
+@media screen and (max-width: 768px) {
+  .main-content {
+    padding: 10px;
+  }
+
+  .icon-section {
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    max-width: 100%;
+  }
+
+  .icon-item {
+    flex-direction: column;
+    gap: 10px;
+    font-size: 14px;
+  }
+
+  .icon-item img {
+    width: 50px;
+    height: 50px;
+  }
+
+  .notification-box {
+    width: 100%;
+    max-width: 100%;
+    padding: 10px;
+  }
+
+  .notification-title {
+    font-size: 16px;
+  }
+
+  .notification-item {
+    font-size: 12px;
+  }
+}</css>
+        <draft>false</draft>
+        <dynamic_title_structure/>
+        <human_readable_url_structure/>
+        <id>msu_homepage</id>
+        <internal>false</internal>
+        <omit_watcher>false</omit_watcher>
+        <public>true</public>
+        <roles/>
+        <seo_script/>
+        <short_description/>
+        <sys_class_name>sp_page</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-03-31 11:50:30</sys_created_on>
+        <sys_id>f49a8536836022109566f7b6feaad3d3</sys_id>
+        <sys_mod_count>4</sys_mod_count>
+        <sys_name>msu_homepage</sys_name>
+        <sys_package display_value="Mock SkillUp" source="x_1523172_skill_up">6938717783b712109566f7b6feaad3b9</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Mock SkillUp">6938717783b712109566f7b6feaad3b9</sys_scope>
+        <sys_update_name>sp_page_f49a8536836022109566f7b6feaad3d3</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-03-31 12:57:28</sys_updated_on>
+        <title>Homepage</title>
+        <use_seo_script>false</use_seo_script>
+    </sp_page>
+    <sys_translated_text action="delete_multiple" query="documentkey=f49a8536836022109566f7b6feaad3d3"/>
+</record_update>

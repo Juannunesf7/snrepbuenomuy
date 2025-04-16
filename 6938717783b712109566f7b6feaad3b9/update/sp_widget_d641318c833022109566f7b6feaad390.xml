@@ -1,0 +1,612 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_widget">
+    <sp_widget action="INSERT_OR_UPDATE">
+        <category>sample</category>
+        <client_script><![CDATA[/*jshint esversion:6*/
+function spaceShooter($scope, $timeout) {
+  // Variáveis do escopo
+  $scope.score = 0;
+  $scope.level = 1;
+  $scope.currentXPCap = 50;
+  let nextXPCap = 150;
+  let maxLives = 3;
+  $scope.lives = maxLives;
+  let permanentShots = 1;
+  let multiShot = false;
+  let isGameOver = false;
+  let gamePaused = false;
+  let multiShotTimeout = null;
+
+  // Elementos do DOM
+  const container = document.querySelector('.game-container');
+  const player = document.getElementById('player');
+  const hudLives = document.getElementById('lives');
+
+  // Arrays de elementos
+  let projectiles = [], enemies = [], powerups = [];
+
+  // Inicialização
+  updateLivesDisplay();
+
+  // Sistema de Níveis
+  function checkLevelUp() {
+    if ($scope.score >= $scope.currentXPCap) {
+      gamePaused = true;
+      $scope.currentXPCap = nextXPCap;
+      nextXPCap *= 3;
+      $scope.level++;
+      document.getElementById('level-up-modal').style.display = 'block';
+      $scope.$apply();
+    }
+  }
+
+  // Sistema de Upgrade
+  window.chooseUpgrade = function(type) {
+    if (type === 'life' && maxLives < 5) {
+      maxLives++;
+      $scope.lives = maxLives;
+    } else if (type === 'shot') {
+      permanentShots++;
+    }
+    document.getElementById('level-up-modal').style.display = 'none';
+    gamePaused = false;
+    updateLivesDisplay();
+    if (!isGameOver) requestAnimationFrame(gameLoop);
+  };
+
+  // Controles
+  const keys = { arrowLeft: false, arrowRight: false, arrowUp: false, arrowDown: false };
+  
+  document.addEventListener('keydown', e => {
+    if (e.key === "ArrowLeft") keys.arrowLeft = true;
+    if (e.key === "ArrowRight") keys.arrowRight = true;
+    if (e.key === "ArrowUp") keys.arrowUp = true;
+    if (e.key === "ArrowDown") keys.arrowDown = true;
+  });
+
+  document.addEventListener('keyup', e => {
+    if (e.key === "ArrowLeft") keys.arrowLeft = false;
+    if (e.key === "ArrowRight") keys.arrowRight = false;
+    if (e.key === "ArrowUp") keys.arrowUp = false;
+    if (e.key === "ArrowDown") keys.arrowDown = false;
+  });
+
+  // Movimento do Player
+  container.addEventListener('mousemove', evt => {
+    if (gamePaused || isGameOver) return;
+    const rect = container.getBoundingClientRect();
+    player.style.left = (evt.clientX - rect.left - player.offsetWidth / 2) + 'px';
+    player.style.top = (evt.clientY - rect.top - player.offsetHeight / 2) + 'px';
+  });
+
+  function updatePlayer() {
+    if (gamePaused || isGameOver) return;
+    let x = parseInt(player.style.left) || player.offsetLeft;
+    let y = parseInt(player.style.top) || player.offsetTop;
+    const speed = 5;
+    
+    if (keys.arrowLeft) x -= speed;
+    if (keys.arrowRight) x += speed;
+    if (keys.arrowUp) y -= speed;
+    if (keys.arrowDown) y += speed;
+    
+    x = Math.max(0, Math.min(container.offsetWidth - player.offsetWidth, x));
+    y = Math.max(0, Math.min(container.offsetHeight - player.offsetHeight, y));
+    
+    player.style.left = x + 'px';
+    player.style.top = y + 'px';
+  }
+
+  // Sistema de Tiros
+  function shoot() {
+    if (isGameOver || gamePaused) return;
+    const shots = multiShot ? permanentShots + 1 : permanentShots;
+    const startPos = 16 - (8 * (shots - 1));
+    
+    for (let i = 0; i < shots; i++) {
+      const pos = startPos + (16 * i);
+      spawnProjectile(player.offsetLeft + pos, player.offsetTop);
+    }
+  }
+
+  function spawnProjectile(x, y) {
+    const proj = document.createElement('div');
+    proj.classList.add('projectile');
+    proj.innerHTML = '<i class="fas fa-circle"></i>';
+    proj.style.left = x + 'px';
+    proj.style.top = y + 'px';
+    container.appendChild(proj);
+    projectiles.push(proj);
+  }
+
+  // Inimigos
+  function spawnEnemy() {
+    if (isGameOver || gamePaused) return;
+    const enemy = document.createElement('div');
+    enemy.classList.add('enemy');
+    enemy.textContent = ']]>👾<![CDATA[';
+    enemy.style.left = Math.random() * (container.offsetWidth - 24) + 'px';
+    enemy.style.top = '-24px';
+    container.appendChild(enemy);
+    enemies.push(enemy);
+  }
+
+  // Power-ups
+  function spawnPowerup(type, x, y) {
+    const p = document.createElement('div');
+    p.className = type === 'heal' ? 'heal' : 'powerup';
+    p.innerHTML = type === 'heal' ? '<i class="fas fa-heart"></i>' : '<i class="fas fa-bolt"></i>';
+    p.style.left = x + 'px';
+    p.style.top = y + 'px';
+    container.appendChild(p);
+    powerups.push({ el: p, type });
+  }
+
+  // Atualizações do Jogo
+  function updateProjectiles() {
+    for (let i = projectiles.length - 1; i >= 0; i--) {
+      const proj = projectiles[i];
+      let y = parseInt(proj.style.top);
+      y -= 7;
+      proj.style.top = y + 'px';
+      
+      if (y < -20) {
+        proj.remove();
+        projectiles.splice(i, 1);
+      }
+    }
+  }
+
+  function updateEnemies() {
+    for (let i = enemies.length - 1; i >= 0; i--) {
+      const enemy = enemies[i];
+      let y = parseInt(enemy.style.top);
+      y += 3;
+      enemy.style.top = y + 'px';
+      
+      if (y > container.offsetHeight) {
+        loseLife();
+        enemy.remove();
+        enemies.splice(i, 1);
+      }
+    }
+  }
+
+  // Sistema de Colisões
+  function checkCollisions() {
+    // Projéteis vs Inimigos
+    for (let pIndex = projectiles.length - 1; pIndex >= 0; pIndex--) {
+      const proj = projectiles[pIndex];
+      const projRect = proj.getBoundingClientRect();
+      
+      for (let eIndex = enemies.length - 1; eIndex >= 0; eIndex--) {
+        const enemy = enemies[eIndex];
+        const enemyRect = enemy.getBoundingClientRect();
+        
+        if (collisionCheck(projRect, enemyRect)) {
+          proj.remove();
+          enemy.remove();
+          projectiles.splice(pIndex, 1);
+          enemies.splice(eIndex, 1);
+          
+          $scope.score += 10;
+          checkLevelUp();
+          $scope.$apply();
+          
+          const ex = parseInt(enemy.style.left);
+          const ey = parseInt(enemy.style.top);
+          if (Math.random() < 0.15) spawnPowerup('heal', ex, ey);
+          else if (Math.random() < 0.3) spawnPowerup('powerup', ex, ey);
+          
+          break;
+        }
+      }
+    }
+
+    // Inimigos vs Player
+    for (let i = enemies.length - 1; i >= 0; i--) {
+      const eRect = enemies[i].getBoundingClientRect();
+      const pRect = player.getBoundingClientRect();
+      
+      if (collisionCheck(eRect, pRect)) {
+        loseLife();
+        enemies[i].remove();
+        enemies.splice(i, 1);
+      }
+    }
+
+    // Power-ups vs Player
+    for (let i = powerups.length - 1; i >= 0; i--) {
+      const p = powerups[i];
+      const pRect = p.el.getBoundingClientRect();
+      const playerRect = player.getBoundingClientRect();
+      
+      if (collisionCheck(pRect, playerRect)) {
+        if (p.type === 'heal' && $scope.lives < maxLives) {
+          $scope.lives++;
+          updateLivesDisplay();
+        } else if (p.type === 'powerup') {
+          multiShot = true;
+          if (multiShotTimeout) clearTimeout(multiShotTimeout);
+          multiShotTimeout = setTimeout(() => multiShot = false, 10000);
+        }
+        
+        p.el.remove();
+        powerups.splice(i, 1);
+        $scope.$apply();
+      }
+    }
+  }
+
+  function collisionCheck(rect1, rect2) {
+    return !(rect1.right < rect2.left || 
+            rect1.left > rect2.right ||
+            rect1.bottom < rect2.top || 
+            rect1.top > rect2.bottom);
+  }
+
+  // Sistema de Vidas
+  function updateLivesDisplay() {
+    hudLives.innerHTML = '';
+    for (let i = 0; i < maxLives; i++) {
+      const heart = document.createElement('i');
+      heart.className = 'fas fa-heart';
+      heart.style.color = i < $scope.lives ? 'red' : '#444';
+      heart.style.marginRight = '5px';
+      hudLives.appendChild(heart);
+    }
+  }
+
+  function loseLife() {
+    $scope.lives--;
+    updateLivesDisplay();
+    $scope.$apply();
+    
+    if ($scope.lives <= 0) {
+      endGame();
+    }
+  }
+
+  // Game Over
+  function endGame() {
+    isGameOver = true;
+    document.getElementById('game-over').style.display = 'block';
+    document.querySelector('.final-score').textContent = $scope.score;
+  }
+
+  // Loop principal
+  function gameLoop() {
+    if (!isGameOver && !gamePaused) {
+      updatePlayer();
+      updateProjectiles();
+      updateEnemies();
+      checkCollisions();
+      requestAnimationFrame(gameLoop);
+    }
+  }
+
+  // Inicialização do jogo
+  setInterval(() => { if (!isGameOver && !gamePaused) shoot(); }, 400);
+  setInterval(() => { if (!isGameOver && !gamePaused) spawnEnemy(); }, 1500);
+  gameLoop();
+}]]></client_script>
+        <controller_as>c</controller_as>
+        <css>@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&amp;display=swap');
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: black;
+  font-family: 'Press Start 2P', cursive;
+  color: white;
+  overflow: hidden;
+}
+
+.game-container {
+  position: relative;
+  width: 100%;
+  height: 80vh;
+  overflow: hidden;
+}
+
+.game-container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 200%;
+  background-image: url('x_1523172_skill_up.spacebg.gif');
+  background-repeat: repeat-y;
+  background-size: cover;
+  animation: scrollBackground 10s linear infinite;
+  z-index: -1;
+}
+
+#hud span {
+  background-color: rgba(0,0,0,0.7);
+  padding: 5px;
+  border-radius: 3px;
+}
+#player {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  pointer-events: none;
+  z-index: 10;
+}
+
+.ship-sprite {
+  width: 100%;
+  height: auto;
+}
+
+.enemy {
+  position: absolute;
+  font-size: 24px;
+  animation: float 3s infinite ease-in-out;
+  color: #fff;
+}
+
+.projectile {
+  position: absolute;
+  font-size: 10px;
+  color: #0ff;
+  z-index: 5;
+}
+
+#hud {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  font-size: 12px;
+  display: flex;
+  gap: 30px;
+  z-index: 20;
+}
+
+.lives i {
+  margin-right: 5px;
+}
+
+#game-over {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 16px;
+  text-align: center;
+  background-color: rgba(0,0,0,0.85);
+  padding: 30px;
+  border: 2px solid #fff;
+  border-radius: 8px;
+  z-index: 99;
+  color: #f00;
+}
+
+#game-over button {
+  margin-top: 10px;
+  background: #111;
+  color: #0f0;
+  border: 1px solid #0f0;
+  padding: 8px 12px;
+  cursor: pointer;
+}
+
+#level-up-modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 9999;
+}
+
+#level-up-modal &gt; div {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 35%;
+  min-width: 300px;
+  max-width: 500px;
+  background: #1a1a1a;
+  padding: 25px;
+  border: 3px solid #4a4a4a;
+  border-radius: 10px;
+  text-align: center;
+}
+
+#level-up-modal button {
+  font-family: 'Press Start 2P', cursive;
+  background: #2d2d2d;
+  color: #fff;
+  border: 2px solid;
+  padding: 12px 20px;
+  margin: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+#level-up-modal button:nth-child(1) { border-color: #ff3366; color: #ff3366; }
+#level-up-modal button:nth-child(2) { border-color: #33ccff; color: #33ccff; }
+
+#level-up-modal button:hover {
+  background: #3d3d3d;
+  transform: scale(1.05);
+  text-shadow: 0 0 10px currentColor;
+}
+
+/* Resto das animações permanecem iguais */
+#level-up-modal button:active {
+  transform: scale(0.95);
+}
+
+#game-over {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 16px;
+  text-align: center;
+  background-color: rgba(0,0,0,0.85);
+  padding: 30px;
+  border: 2px solid #fff;
+  border-radius: 8px;
+  z-index: 99;
+  color: #f00;
+}
+
+#game-over button {
+  margin-top: 10px;
+  font-family: 'Press Start 2P', cursive;
+  background: #111;
+  color: #0f0;
+  border: 1px solid #0f0;
+  padding: 8px 12px;
+  cursor: pointer;
+}
+
+#game-over button:hover {
+  background-color: #222;
+}
+
+.shield {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: 2px dashed rgba(0,255,255,0.5);
+  top: -5px;
+  left: -5px;
+  z-index: -1;
+  animation: pulse 1.5s infinite;
+  display: none; /* Ativar quando tiver power-up */
+}
+
+.powerup {
+  position: absolute;
+  font-size: 24px;
+  color: #ffcc00;
+  animation: floatPowerup 2s ease-in-out infinite, glowPulse 1.5s ease-in-out infinite;
+  pointer-events: none;
+  filter: drop-shadow(0 0 6px #ffd700);
+  z-index: 999;
+}
+.heal {
+  position: absolute;
+  font-size: 24px;
+  color: #ff4d4d;
+  animation: floatPowerup 2s ease-in-out infinite, glowPulseHeal 1.5s ease-in-out infinite;
+  pointer-events: none;
+  filter: drop-shadow(0 0 6px #ff4d4d);
+  z-index: 999;
+}
+
+@keyframes glowPulseHeal {
+  0%, 100% { opacity: 1; filter: drop-shadow(0 0 6px #ff4d4d); }
+  50% { opacity: 0.7; filter: drop-shadow(0 0 12px #ff9999); }
+}
+
+@keyframes floatPowerup {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+  100% { transform: translateY(0); }
+}
+
+@keyframes glowPulse {
+  0%, 100% { opacity: 1; filter: drop-shadow(0 0 6px #ffd700); }
+  50% { opacity: 0.7; filter: drop-shadow(0 0 12px #ffee66); }
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); opacity: 0.7; }
+  50% { transform: scale(1.1); opacity: 1; }
+  100% { transform: scale(1); opacity: 0.7; }
+}
+
+@keyframes float {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(5px); }
+  100% { transform: translateY(0); }
+}
+</css>
+        <data_table>sp_instance</data_table>
+        <demo_data/>
+        <description/>
+        <docs/>
+        <field_list/>
+        <has_preview>false</has_preview>
+        <id/>
+        <internal>false</internal>
+        <link/>
+        <name>Joguinho</name>
+        <option_schema/>
+        <public>true</public>
+        <roles/>
+        <script><![CDATA[(function() {  /* populate the 'data' object */  /* e.g., data.table = $sp.getValue('table'); */})();]]></script>
+        <servicenow>false</servicenow>
+        <sys_class_name>sp_widget</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-04-04 11:52:01</sys_created_on>
+        <sys_id>d641318c833022109566f7b6feaad390</sys_id>
+        <sys_mod_count>55</sys_mod_count>
+        <sys_name>Joguinho</sys_name>
+        <sys_package display_value="Mock SkillUp" source="x_1523172_skill_up">6938717783b712109566f7b6feaad3b9</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Mock SkillUp">6938717783b712109566f7b6feaad3b9</sys_scope>
+        <sys_update_name>sp_widget_d641318c833022109566f7b6feaad390</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-04-08 11:21:20</sys_updated_on>
+        <template><![CDATA[<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+
+<div class="game-container" ng-controller="spaceShooter">
+  <div class="scrolling-bg"></div>
+
+  <!-- Nave do jogador -->
+  <div id="player" class="player">
+    <img src="x_1523172_skill_up.spaceship.png" class="ship-sprite" />
+    <div class="shield"></div>
+  </div>
+
+  <!-- Elementos dinâmicos do jogo -->
+  <div id="game-elements"></div>
+
+  <!-- HUD atualizado com bindings Angular -->
+  <div id="hud">
+    <span id="lives" class="lives"></span>
+    <span id="score">XP: {{score}}/{{currentXPCap}}</span>
+    <span id="level">Nível: {{level}}</span>
+  </div>
+
+  <!-- Modal de Level Up -->
+  <div id="level-up-modal" style="display: none;">
+    <div>
+      <p>]]>🎉<![CDATA[ LEVEL UP! CHOOSE YOUR UPGRADE:</p>
+      <button onclick="chooseUpgrade('life')">❤️ +1 LIFE</button>
+      <button onclick="chooseUpgrade('shot')">]]>🔫<![CDATA[ +1 SHOT</button>
+    </div>
+  </div>
+
+  <!-- Tela de Game Over -->
+  <div id="game-over" style="display: none;">
+    GAME OVER!<br>
+    Score: <span class="final-score"></span><br>
+    <button onclick="location.reload()">Play Again</button>
+  </div>
+</div>]]></template>
+    </sp_widget>
+    <sys_es_latest_script action="INSERT_OR_UPDATE">
+        <id>d641318c833022109566f7b6feaad390</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-04-04 11:52:46</sys_created_on>
+        <sys_id>0571358c833022109566f7b6feaad340</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-04-04 11:52:46</sys_updated_on>
+        <table>sp_widget</table>
+        <use_es_latest>true</use_es_latest>
+    </sys_es_latest_script>
+</record_update>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element db_object_id="c387463b83f712109566f7b6feaad311" label="Aviso" max_length="40" name="x_1523172_skill_up_aviso" type="collection">
+        <element label="Ativo" max_length="40" name="ativo" type="boolean"/>
+        <element attributes="edge_encryption_enabled=true" choice="1" label="Categoria" mandatory="true" max_length="40" name="categoria" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="Evento" value="1"/>
+                <element inactive_on_update="false" label="Informação" value="2"/>
+            </choice>
+        </element>
+        <element attributes="encode_utf8=false" label="Projeto" max_length="32" name="projeto" reference="x_1523172_skill_up_projeto" type="reference"/>
+        <element attributes="edge_encryption_enabled=true" label="Descrição" mandatory="true" max_length="40" name="descricao" type="string"/>
+        <element default="javascript:gs.getUserID();" label="Responsavel" max_length="32" name="responsavel" read_only="true" reference="x_1523172_skill_up_equipe" type="reference"/>
+        <element choice="1" label="Nivel de Urgência" max_length="40" name="urgency_level" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="Baixa" value="low"/>
+                <element inactive_on_update="false" label="Média" value="mid"/>
+                <element inactive_on_update="false" label="Alta" value="high"/>
+            </choice>
+        </element>
+        <element label="Urgente" max_length="40" name="urgente" type="boolean"/>
+        <element attributes="edge_encryption_enabled=true" display="true" label="Aviso" mandatory="true" max_length="40" name="aviso" type="string"/>
+        <index name="index">
+            <element name="projeto"/>
+        </index>
+        <index name="index2">
+            <element name="responsavel"/>
+        </index>
+    </element>
+</database>

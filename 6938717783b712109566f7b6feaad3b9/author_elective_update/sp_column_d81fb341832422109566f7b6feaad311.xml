@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_column">
+    <sp_column action="DELETE">
+        <class_name/>
+        <order>3</order>
+        <semantic_tag/>
+        <size>3</size>
+        <size_lg/>
+        <size_sm/>
+        <size_xs/>
+        <sp_row display_value="1">901fb341832422109566f7b6feaad30a</sp_row>
+        <sys_class_name>sp_column</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-03-26 14:29:42</sys_created_on>
+        <sys_id>d81fb341832422109566f7b6feaad311</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>3</sys_name>
+        <sys_package display_value="Mock SkillUp" source="x_1523172_skill_up">6938717783b712109566f7b6feaad3b9</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Mock SkillUp">6938717783b712109566f7b6feaad3b9</sys_scope>
+        <sys_update_name>sp_column_d81fb341832422109566f7b6feaad311</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-03-26 14:29:42</sys_updated_on>
+    </sp_column>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Mock SkillUp">6938717783b712109566f7b6feaad3b9</application>
+        <file_path/>
+        <instance_id>7ee1e82afb5f1e945704f3585eefdcfd</instance_id>
+        <instance_name>dev293201</instance_name>
+        <name>sp_column_d81fb341832422109566f7b6feaad311</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_column"><sp_column action="INSERT_OR_UPDATE"><class_name/><order>3</order><semantic_tag/><size>3</size><size_lg/><size_sm/><size_xs/><sp_row display_value="1">901fb341832422109566f7b6feaad30a</sp_row><sys_class_name>sp_column</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2025-03-26 14:29:42</sys_created_on><sys_id>d81fb341832422109566f7b6feaad311</sys_id><sys_mod_count>0</sys_mod_count><sys_name>3</sys_name><sys_package display_value="Mock SkillUp" source="x_1523172_skill_up">6938717783b712109566f7b6feaad3b9</sys_package><sys_policy/><sys_scope display_value="Mock SkillUp">6938717783b712109566f7b6feaad3b9</sys_scope><sys_update_name>sp_column_d81fb341832422109566f7b6feaad311</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2025-03-26 14:29:42</sys_updated_on></sp_column></record_update>]]></payload>
+        <payload_hash>634190827</payload_hash>
+        <record_name>3</record_name>
+        <reverted_from/>
+        <source>a538717783b712109566f7b6feaad3be</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-03-26 14:29:42</sys_created_on>
+        <sys_id>181fb341832422109566f7b6feaad313</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>195d2dbeac00000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-03-26 14:29:42</sys_updated_on>
+        <type>Column</type>
+        <update_guid>1c1fb341a9242210e041bb5874b7ec12</update_guid>
+        <update_guid_history>1c1fb341a9242210e041bb5874b7ec12:634190827</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="3">87f0db1b8320e2109566f7b6feaad36e</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-04-02 10:54:43</sys_created_on>
+        <sys_db_object display_value="" name="sp_column">sp_column</sys_db_object>
+        <sys_id>1d7fb6efbad145b4896b98a09b3fc381</sys_id>
+        <sys_metadata>d81fb341832422109566f7b6feaad311</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>3</sys_name>
+        <sys_package display_value="Mock SkillUp" source="x_1523172_skill_up">6938717783b712109566f7b6feaad3b9</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="Mock SkillUp">6938717783b712109566f7b6feaad3b9</sys_scope>
+        <sys_scope_delete display_value="">3a6d93cae10942c4892c498dcc264390</sys_scope_delete>
+        <sys_update_name>sp_column_d81fb341832422109566f7b6feaad311</sys_update_name>
+        <sys_update_version display_value="sp_column_d81fb341832422109566f7b6feaad311">181fb341832422109566f7b6feaad313</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-04-02 10:54:43</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_ui_policy">
+    <sys_ui_policy action="DELETE">
+        <active>true</active>
+        <conditions/>
+        <description/>
+        <global>true</global>
+        <inherit>false</inherit>
+        <isolate_script>true</isolate_script>
+        <model_id/>
+        <model_table/>
+        <on_load>true</on_load>
+        <order>100</order>
+        <reverse_if_false>true</reverse_if_false>
+        <run_scripts>true</run_scripts>
+        <script_false><![CDATA[function onCondition() {
+
+}]]></script_false>
+        <script_true><![CDATA[(function onCondition() {
+    return gs.hasRole('x_1523172_skill_up.intern');
+})(current, previous);]]></script_true>
+        <set_values/>
+        <short_description>Campo Read Only para estagiario</short_description>
+        <sys_class_name>sys_ui_policy</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-03-11 14:21:17</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>15fbe250831422109566f7b6feaad34b</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Campo Read Only para estagiario</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Mock SkillUp" source="x_1523172_skill_up">6938717783b712109566f7b6feaad3b9</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Mock SkillUp">6938717783b712109566f7b6feaad3b9</sys_scope>
+        <sys_update_name>sys_ui_policy_15fbe250831422109566f7b6feaad34b</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-03-11 14:21:17</sys_updated_on>
+        <table>x_1523172_skill_up_tarefas</table>
+        <ui_type>0</ui_type>
+        <view/>
+    </sys_ui_policy>
+    <sys_es_latest_script action="DELETE">
+        <id>15fbe250831422109566f7b6feaad34b</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-03-11 14:18:32</sys_created_on>
+        <sys_id>62ac2a10831422109566f7b6feaad364</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-03-11 14:18:32</sys_updated_on>
+        <table>sys_ui_policy</table>
+        <use_es_latest>false</use_es_latest>
+    </sys_es_latest_script>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Mock SkillUp">6938717783b712109566f7b6feaad3b9</application>
+        <file_path/>
+        <instance_id>7ee1e82afb5f1e945704f3585eefdcfd</instance_id>
+        <instance_name>dev293201</instance_name>
+        <name>sys_ui_policy_15fbe250831422109566f7b6feaad34b</name>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update sys_domain="global" table="sys_ui_policy"&gt;&lt;sys_ui_policy action="INSERT_OR_UPDATE"&gt;&lt;active&gt;true&lt;/active&gt;&lt;conditions/&gt;&lt;description/&gt;&lt;global&gt;true&lt;/global&gt;&lt;inherit&gt;false&lt;/inherit&gt;&lt;isolate_script&gt;true&lt;/isolate_script&gt;&lt;model_id/&gt;&lt;model_table/&gt;&lt;on_load&gt;true&lt;/on_load&gt;&lt;order&gt;100&lt;/order&gt;&lt;reverse_if_false&gt;true&lt;/reverse_if_false&gt;&lt;run_scripts&gt;true&lt;/run_scripts&gt;&lt;script_false&gt;&lt;![CDATA[function onCondition() {
+
+}]]&gt;&lt;/script_false&gt;&lt;script_true&gt;&lt;![CDATA[(function onCondition() {
+    return gs.hasRole('x_1523172_skill_up.intern');
+})(current, previous);]]&gt;&lt;/script_true&gt;&lt;set_values/&gt;&lt;short_description&gt;Campo Read Only para estagiario&lt;/short_description&gt;&lt;sys_class_name&gt;sys_ui_policy&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2025-03-11 14:21:17&lt;/sys_created_on&gt;&lt;sys_domain&gt;global&lt;/sys_domain&gt;&lt;sys_domain_path&gt;/&lt;/sys_domain_path&gt;&lt;sys_id&gt;15fbe250831422109566f7b6feaad34b&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_name&gt;Campo Read Only para estagiario&lt;/sys_name&gt;&lt;sys_overrides/&gt;&lt;sys_package display_value="Mock SkillUp" source="x_1523172_skill_up"&gt;6938717783b712109566f7b6feaad3b9&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="Mock SkillUp"&gt;6938717783b712109566f7b6feaad3b9&lt;/sys_scope&gt;&lt;sys_update_name&gt;sys_ui_policy_15fbe250831422109566f7b6feaad34b&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2025-03-11 14:21:17&lt;/sys_updated_on&gt;&lt;table&gt;x_1523172_skill_up_tarefas&lt;/table&gt;&lt;ui_type&gt;0&lt;/ui_type&gt;&lt;view/&gt;&lt;/sys_ui_policy&gt;&lt;sys_es_latest_script action="INSERT_OR_UPDATE"&gt;&lt;id&gt;15fbe250831422109566f7b6feaad34b&lt;/id&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2025-03-11 14:18:32&lt;/sys_created_on&gt;&lt;sys_id&gt;62ac2a10831422109566f7b6feaad364&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2025-03-11 14:18:32&lt;/sys_updated_on&gt;&lt;table&gt;sys_ui_policy&lt;/table&gt;&lt;use_es_latest&gt;false&lt;/use_es_latest&gt;&lt;/sys_es_latest_script&gt;&lt;/record_update&gt;</payload>
+        <payload_hash>1456607145</payload_hash>
+        <record_name>Campo Read Only para estagiario</record_name>
+        <reverted_from/>
+        <source>a538717783b712109566f7b6feaad3be</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-03-11 14:21:17</sys_created_on>
+        <sys_id>6a4d2e90831422109566f7b6feaad306</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>1958594d0b60000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-03-11 14:21:17</sys_updated_on>
+        <type>UI Policy</type>
+        <update_guid>6e4d2e907c142210933e019d50b84d05</update_guid>
+        <update_guid_history>6e4d2e907c142210933e019d50b84d05:1456607145</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-03-11 14:27:53</sys_created_on>
+        <sys_db_object display_value="" name="sys_ui_policy">sys_ui_policy</sys_db_object>
+        <sys_id>06204d00ce94459286050a458a7d86d1</sys_id>
+        <sys_metadata>15fbe250831422109566f7b6feaad34b</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Campo Read Only para estagiario</sys_name>
+        <sys_package display_value="Mock SkillUp" source="x_1523172_skill_up">6938717783b712109566f7b6feaad3b9</sys_package>
+        <sys_parent display_value="Tarefas">af748a3783f712109566f7b6feaad3e7</sys_parent>
+        <sys_policy/>
+        <sys_scope display_value="Mock SkillUp">6938717783b712109566f7b6feaad3b9</sys_scope>
+        <sys_scope_delete display_value="">3a6d93cae10942c4892c498dcc264390</sys_scope_delete>
+        <sys_update_name>sys_ui_policy_15fbe250831422109566f7b6feaad34b</sys_update_name>
+        <sys_update_version display_value="sys_ui_policy_15fbe250831422109566f7b6feaad34b">6a4d2e90831422109566f7b6feaad306</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-03-11 14:27:53</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

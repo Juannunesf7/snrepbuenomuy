@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_instance">
+    <sp_instance_link action="DELETE">
+        <active>true</active>
+        <class_name/>
+        <color>default</color>
+        <css>/* Estilo base para o widget */&#13;
+.iconlink {&#13;
+    padding: 3px 0;&#13;
+}&#13;
+&#13;
+.iconlink a {&#13;
+    display: flex !important;&#13;
+    flex-direction: column;&#13;
+    align-items: center;&#13;
+    text-align: center;&#13;
+    text-decoration: none;&#13;
+}&#13;
+&#13;
+/* Título branco (prioridade máxima) */&#13;
+.title-white {&#13;
+    color: white !important;&#13;
+    margin: 10px 0 !important;&#13;
+    transition: transform 0.3s ease;&#13;
+}&#13;
+&#13;
+.title-white:hover {&#13;
+    transform: scale(1.1);&#13;
+}&#13;
+&#13;
+/* Gradiente vermelho → roxo APENAS para o glyph */&#13;
+.glyph.custom-gradient { /* Adicione a classe "custom-gradient" ao elemento do glyph */&#13;
+    background: linear-gradient(45deg, #FF0000, #800080) !important; /* Vermelho → Roxo */&#13;
+    -webkit-background-clip: text !important;&#13;
+    background-clip: text !important;&#13;
+    color: transparent !important;&#13;
+    -webkit-text-fill-color: transparent !important; /* Garante compatibilidade com Font Awesome */&#13;
+}&#13;
+&#13;
+/* Centralização e efeito de hover do glyph */&#13;
+.glyph {&#13;
+    transition: transform 0.3s ease;&#13;
+    display: inline-block; /* Necessário para aplicar gradiente */&#13;
+}&#13;
+&#13;
+.glyph:hover {&#13;
+    transform: scale(1.1);&#13;
+}</css>
+        <glyph>bug</glyph>
+        <id/>
+        <kb_article/>
+        <kb_category/>
+        <kb_topic/>
+        <order>1</order>
+        <roles/>
+        <sc_cat_item display_value="Bug Report">d9d9d5de839022109566f7b6feaad330</sc_cat_item>
+        <sc_category/>
+        <short_description/>
+        <size>md</size>
+        <sp_column display_value="1">6caa29df839422109566f7b6feaad354</sp_column>
+        <sp_page display_value="sc_cat_item">9f12251147132100ba13a5554ee490f4</sp_page>
+        <sp_widget/>
+        <sys_class_name>sp_instance_link</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-03-21 13:32:05</sys_created_on>
+        <sys_id>23e1cea783d022109566f7b6feaad396</sys_id>
+        <sys_mod_count>7</sys_mod_count>
+        <sys_name>Reportar Bugs</sys_name>
+        <sys_package display_value="Mock SkillUp" source="x_1523172_skill_up">6938717783b712109566f7b6feaad3b9</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Mock SkillUp">6938717783b712109566f7b6feaad3b9</sys_scope>
+        <sys_update_name>sp_instance_link_23e1cea783d022109566f7b6feaad396</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-03-21 14:15:36</sys_updated_on>
+        <title>Reportar Bugs</title>
+        <type>sc_cat_item</type>
+        <url/>
+        <widget_parameters><![CDATA[{
+	"link_template": {
+		"value": "Top Icon",
+		"displayValue": "Top Icon"
+	}
+}]]></widget_parameters>
+    </sp_instance_link>
+    <sys_translated_text action="DELETE" query="documentkey=23e1cea783d022109566f7b6feaad396"/>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Mock SkillUp">6938717783b712109566f7b6feaad3b9</application>
+        <file_path/>
+        <instance_id>7ee1e82afb5f1e945704f3585eefdcfd</instance_id>
+        <instance_name>dev293201</instance_name>
+        <name>sp_instance_link_23e1cea783d022109566f7b6feaad396</name>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update table="sp_instance"&gt;&lt;sp_instance_link action="INSERT_OR_UPDATE"&gt;&lt;active&gt;true&lt;/active&gt;&lt;class_name/&gt;&lt;color&gt;default&lt;/color&gt;&lt;css&gt;/* Estilo base para o widget */&amp;#13;
+.iconlink {&amp;#13;
+    padding: 3px 0;&amp;#13;
+}&amp;#13;
+&amp;#13;
+.iconlink a {&amp;#13;
+    display: flex !important;&amp;#13;
+    flex-direction: column;&amp;#13;
+    align-items: center;&amp;#13;
+    text-align: center;&amp;#13;
+    text-decoration: none;&amp;#13;
+}&amp;#13;
+&amp;#13;
+/* Título branco (prioridade máxima) */&amp;#13;
+.title-white {&amp;#13;
+    color: white !important;&amp;#13;
+    margin: 10px 0 !important;&amp;#13;
+    transition: transform 0.3s ease;&amp;#13;
+}&amp;#13;
+&amp;#13;
+.title-white:hover {&amp;#13;
+    transform: scale(1.1);&amp;#13;
+}&amp;#13;
+&amp;#13;
+/* Gradiente vermelho → roxo APENAS para o glyph */&amp;#13;
+.glyph.custom-gradient { /* Adicione a classe "custom-gradient" ao elemento do glyph */&amp;#13;
+    background: linear-gradient(45deg, #FF0000, #800080) !important; /* Vermelho → Roxo */&amp;#13;
+    -webkit-background-clip: text !important;&amp;#13;
+    background-clip: text !important;&amp;#13;
+    color: transparent !important;&amp;#13;
+    -webkit-text-fill-color: transparent !important; /* Garante compatibilidade com Font Awesome */&amp;#13;
+}&amp;#13;
+&amp;#13;
+/* Centralização e efeito de hover do glyph */&amp;#13;
+.glyph {&amp;#13;
+    transition: transform 0.3s ease;&amp;#13;
+    display: inline-block; /* Necessário para aplicar gradiente */&amp;#13;
+}&amp;#13;
+&amp;#13;
+.glyph:hover {&amp;#13;
+    transform: scale(1.1);&amp;#13;
+}&lt;/css&gt;&lt;glyph&gt;bug&lt;/glyph&gt;&lt;id/&gt;&lt;kb_article/&gt;&lt;kb_category/&gt;&lt;kb_topic/&gt;&lt;order&gt;1&lt;/order&gt;&lt;roles/&gt;&lt;sc_cat_item display_value="Bug Report"&gt;d9d9d5de839022109566f7b6feaad330&lt;/sc_cat_item&gt;&lt;sc_category/&gt;&lt;short_description/&gt;&lt;size&gt;md&lt;/size&gt;&lt;sp_column display_value="1"&gt;6caa29df839422109566f7b6feaad354&lt;/sp_column&gt;&lt;sp_page display_value="sc_cat_item"&gt;9f12251147132100ba13a5554ee490f4&lt;/sp_page&gt;&lt;sp_widget/&gt;&lt;sys_class_name&gt;sp_instance_link&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2025-03-21 13:32:05&lt;/sys_created_on&gt;&lt;sys_id&gt;23e1cea783d022109566f7b6feaad396&lt;/sys_id&gt;&lt;sys_mod_count&gt;7&lt;/sys_mod_count&gt;&lt;sys_name&gt;Reportar Bugs&lt;/sys_name&gt;&lt;sys_package display_value="Mock SkillUp" source="x_1523172_skill_up"&gt;6938717783b712109566f7b6feaad3b9&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="Mock SkillUp"&gt;6938717783b712109566f7b6feaad3b9&lt;/sys_scope&gt;&lt;sys_update_name&gt;sp_instance_link_23e1cea783d022109566f7b6feaad396&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2025-03-21 14:15:36&lt;/sys_updated_on&gt;&lt;title&gt;Reportar Bugs&lt;/title&gt;&lt;type&gt;sc_cat_item&lt;/type&gt;&lt;url/&gt;&lt;widget_parameters&gt;&lt;![CDATA[{
+	"link_template": {
+		"value": "Top Icon",
+		"displayValue": "Top Icon"
+	}
+}]]&gt;&lt;/widget_parameters&gt;&lt;/sp_instance_link&gt;&lt;sys_translated_text action="delete_multiple" query="documentkey=23e1cea783d022109566f7b6feaad396"/&gt;&lt;/record_update&gt;</payload>
+        <payload_hash>-2041110228</payload_hash>
+        <record_name>Reportar Bugs</record_name>
+        <reverted_from/>
+        <source>a538717783b712109566f7b6feaad3be</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-03-21 14:15:58</sys_created_on>
+        <sys_id>1efb0a27831422109566f7b6feaad3db</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>195b90f8b8f0000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-03-21 14:15:58</sys_updated_on>
+        <type>Instance with Link</type>
+        <update_guid>b8eb82e3a4142210c9fa17c7c1a9b1cf</update_guid>
+        <update_guid_history>b8eb82e3a4142210c9fa17c7c1a9b1cf:1680874927,b8eb82e3a4142210c9fa17c7c1a9b1cf:1680874927,11780623aa14221043d9cea468eacb3c:-1936457495,c1468a6fadd02210dd8f9c2599dba903:-192736909,5ed5ce2f99d02210966d00904ddaab8b:-1936457495,9a55422fbfd022109cc5ab2ab9c1c746:-192736909,71824a2b4fd02210c92e6283aec3a8f9:-1936457495,cf6282e7a0d022107fda73de77d5195f:544275979,ebe1cea748d022105aa4e9e47f716d97:-596954221</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="Reportar Bugs">820cc627831422109566f7b6feaad391</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-03-21 14:16:14</sys_created_on>
+        <sys_db_object display_value="" name="sp_instance_link">sp_instance_link</sys_db_object>
+        <sys_id>463c4e60e09d4747b3e4aaad2f8a6381</sys_id>
+        <sys_metadata>23e1cea783d022109566f7b6feaad396</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Reportar Bugs</sys_name>
+        <sys_package display_value="Mock SkillUp" source="x_1523172_skill_up">6938717783b712109566f7b6feaad3b9</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="Mock SkillUp">6938717783b712109566f7b6feaad3b9</sys_scope>
+        <sys_scope_delete display_value="">3a6d93cae10942c4892c498dcc264390</sys_scope_delete>
+        <sys_update_name>sp_instance_link_23e1cea783d022109566f7b6feaad396</sys_update_name>
+        <sys_update_version display_value="sp_instance_link_23e1cea783d022109566f7b6feaad396">1efb0a27831422109566f7b6feaad3db</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-03-21 14:16:14</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_instance">
+    <sp_instance action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <class_name/>
+        <color>default</color>
+        <css/>
+        <glyph/>
+        <id/>
+        <order>0</order>
+        <roles/>
+        <short_description/>
+        <size>md</size>
+        <sp_column display_value="2">293b0576836022109566f7b6feaad3c8</sp_column>
+        <sp_widget display_value="SC Category Page">f2ff0622d7000200a9ad1e173e24d4f3</sp_widget>
+        <sys_class_name>sp_instance</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-03-31 11:53:16</sys_created_on>
+        <sys_id>ad3b0576836022109566f7b6feaad3ca</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Catalog Category</sys_name>
+        <sys_package display_value="Mock SkillUp" source="x_1523172_skill_up">6938717783b712109566f7b6feaad3b9</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Mock SkillUp">6938717783b712109566f7b6feaad3b9</sys_scope>
+        <sys_update_name>sp_instance_ad3b0576836022109566f7b6feaad3ca</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-03-31 11:53:16</sys_updated_on>
+        <title>Catalog Category</title>
+        <url/>
+        <widget_parameters><![CDATA[{
+	"click_event_name": {
+		"value": "",
+		"displayValue": ""
+	},
+	"limit_item": {
+		"value": 9,
+		"displayValue": "9"
+	},
+	"show_items_from_child": {
+		"value": "true",
+		"displayValue": "true"
+	},
+  	"scroll_to_category_page": {
+    		"value": "true",
+    		"displayValue": "true"
+  	}
+}]]></widget_parameters>
+    </sp_instance>
+    <sys_translated_text action="delete_multiple" query="documentkey=ad3b0576836022109566f7b6feaad3ca"/>
+</record_update>

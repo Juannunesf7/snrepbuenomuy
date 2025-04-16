@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_css">
+    <sp_css action="INSERT_OR_UPDATE">
+        <css>/* Background do body */&#13;
+body {&#13;
+  background: #0A0F3D url('https://i.pinimg.com/736x/7d/3e/56/7d3e56245c98646fa2cce9a4ac51dccb.jpg') no-repeat center center fixed !important;&#13;
+  background-size: cover !important;&#13;
+  color: white;&#13;
+  position: relative;&#13;
+}&#13;
+&#13;
+&#13;
+/* Garantir que os widgets fiquem acima */&#13;
+.container-fluid,&#13;
+.page-header,&#13;
+.widget {&#13;
+  position: relative;&#13;
+  z-index: 2;&#13;
+}&#13;
+&#13;
+/* Tornar widgets transparentes */&#13;
+.widget {&#13;
+  background-color: rgba(255, 255, 255, 0.7) !important;&#13;
+  border-radius: 10px;&#13;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);&#13;
+}&#13;
+&#13;
+/* Remover fundos sólidos de painéis e cards */&#13;
+.panel,&#13;
+.card {&#13;
+  background-color: transparent !important;&#13;
+  border: none !important;&#13;
+}&#13;
+&#13;
+.panel-body,&#13;
+.card-body {&#13;
+  background-color: transparent !important;&#13;
+}</css>
+        <name>edx_esc_body</name>
+        <sys_class_name>sp_css</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-03-21 10:53:25</sys_created_on>
+        <sys_id>bd6d116b831022109566f7b6feaad3e4</sys_id>
+        <sys_mod_count>4</sys_mod_count>
+        <sys_name>edx_esc_body</sys_name>
+        <sys_package display_value="Mock SkillUp" source="x_1523172_skill_up">6938717783b712109566f7b6feaad3b9</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Mock SkillUp">6938717783b712109566f7b6feaad3b9</sys_scope>
+        <sys_update_name>sp_css_bd6d116b831022109566f7b6feaad3e4</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-03-21 11:25:04</sys_updated_on>
+        <turn_off_scss_compilation>false</turn_off_scss_compilation>
+    </sp_css>
+</record_update>

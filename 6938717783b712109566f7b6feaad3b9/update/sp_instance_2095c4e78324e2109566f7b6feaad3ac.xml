@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_instance">
+    <sp_instance action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <class_name/>
+        <color>default</color>
+        <css/>
+        <glyph/>
+        <id/>
+        <order>1</order>
+        <roles/>
+        <short_description/>
+        <size>md</size>
+        <sp_column display_value="1">dc1fb341832422109566f7b6feaad30c</sp_column>
+        <sp_widget display_value="Custom Widget Card">a81348638324e2109566f7b6feaad330</sp_widget>
+        <sys_class_name>sp_instance</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-04-02 14:44:28</sys_created_on>
+        <sys_id>2095c4e78324e2109566f7b6feaad3ac</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_name>Knowledge Base</sys_name>
+        <sys_package display_value="Mock SkillUp" source="x_1523172_skill_up">6938717783b712109566f7b6feaad3b9</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Mock SkillUp">6938717783b712109566f7b6feaad3b9</sys_scope>
+        <sys_update_name>sp_instance_2095c4e78324e2109566f7b6feaad3ac</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-04-02 14:54:05</sys_updated_on>
+        <title>Knowledge Base</title>
+        <url>?id=kb_category&amp;kb_category=3d2bce3583e022109566f7b6feaad304</url>
+        <widget_parameters><![CDATA[{
+	"icon": {
+		"value": "x_1523172_skill_up.knowledgebase.png",
+		"displayValue": "x_1523172_skill_up.knowledgebase.png"
+	},
+	"title": {
+		"value": "Knowledge Base",
+		"displayValue": "Knowledge Base"
+	},
+	"description": {
+		"value": "O seu guia para dominar a plataforma! ]]>🤓<![CDATA[☝️",
+		"displayValue": "O seu guia para dominar a plataforma! ]]>🤓<![CDATA[☝️"
+	},
+	"url": {
+		"value": "?id=kb_category&kb_category=3d2bce3583e022109566f7b6feaad304",
+		"displayValue": "?id=kb_category&kb_category=3d2bce3583e022109566f7b6feaad304"
+	}
+}]]></widget_parameters>
+    </sp_instance>
+    <sys_translated_text action="delete_multiple" query="documentkey=2095c4e78324e2109566f7b6feaad3ac"/>
+</record_update>

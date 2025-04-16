@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element db_object_id="bff5c6b783f712109566f7b6feaad3fe" label="Skill" max_length="40" name="x_1523172_skill_up_skill" type="collection">
+        <element attributes="edge_encryption_enabled=true" calculation="(function calculatedFieldValue(current) {&#13;&#10;&#13;&#10;answer = current.technical;&#13;&#10;&#13;&#10;})(current);" choice="1" dependent="skill" dependent_on_field="skill" label="Technical" mandatory="true" max_length="40" name="technical" type="choice" use_dependent_field="true">
+            <choice>
+                <element inactive_on_update="false" label="Language" value="language"/>
+                <element inactive_on_update="false" label="General" value="general"/>
+                <element inactive_on_update="false" label="Technical" value="technical"/>
+                <element inactive_on_update="false" label="Experience" sequence="0" value="experience"/>
+            </choice>
+        </element>
+        <element attributes="edge_encryption_enabled=true" display="true" label="Skill" mandatory="true" max_length="40" name="skill" type="string"/>
+    </element>
+</database>

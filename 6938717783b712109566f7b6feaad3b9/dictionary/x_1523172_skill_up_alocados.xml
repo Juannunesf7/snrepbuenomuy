@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element db_object_id="fe305eb3833b12109566f7b6feaad33d" label="Alocados" max_length="40" name="x_1523172_skill_up_alocados" type="collection">
+        <element attributes="encode_utf8=false" label="Projetos" mandatory="true" max_length="32" name="x_1523172_skill_up_projeto" reference="x_1523172_skill_up_projeto" type="reference"/>
+        <element choice="1" label="Status" mandatory="true" max_length="40" name="status" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="Em Andamento" sequence="2" value="2"/>
+                <element inactive_on_update="false" label="Concluido" sequence="1" value="3"/>
+                <element inactive_on_update="false" label="Aberto" sequence="0" value="1"/>
+            </choice>
+        </element>
+        <element attributes="encode_utf8=false" label="Equipes" mandatory="true" max_length="32" name="x_1523172_skill_up_equipe" reference="x_1523172_skill_up_equipe" reference_qual="cargo=estagiario^EQ" reference_qual_condition="cargo=estagiario^EQ" type="reference"/>
+        <index name="index">
+            <element name="x_1523172_skill_up_equipe"/>
+        </index>
+        <index name="index2">
+            <element name="x_1523172_skill_up_projeto"/>
+        </index>
+    </element>
+</database>

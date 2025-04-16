@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_rest_message">
+    <sys_rest_message action="DELETE">
+        <access>package_private</access>
+        <authentication_type>basic</authentication_type>
+        <basic_auth_password/>
+        <basic_auth_profile display_value="Cursos">4f0e1af3837b12109566f7b6feaad3f2</basic_auth_profile>
+        <basic_auth_user/>
+        <description/>
+        <name>Float para Duration</name>
+        <oauth2_profile/>
+        <protocol_name/>
+        <rest_endpoint>https://dev224983.service-now.com/api/now/table/x_1632557_skillup_courses?sysparm_fields=template,treinamento,duracao,ordem&amp;sysparm_limit=10</rest_endpoint>
+        <sys_class_name>sys_rest_message</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-02-25 14:53:21</sys_created_on>
+        <sys_id>74fdeeb383bb12109566f7b6feaad32e</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Float para Duration</sys_name>
+        <sys_package display_value="Mock SkillUp" source="x_1523172_skill_up">6938717783b712109566f7b6feaad3b9</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Mock SkillUp">6938717783b712109566f7b6feaad3b9</sys_scope>
+        <sys_update_name>sys_rest_message_74fdeeb383bb12109566f7b6feaad32e</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-02-25 14:53:21</sys_updated_on>
+        <use_basic_auth>false</use_basic_auth>
+        <use_mutual_auth>false</use_mutual_auth>
+    </sys_rest_message>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Mock SkillUp">6938717783b712109566f7b6feaad3b9</application>
+        <file_path/>
+        <instance_id>7ee1e82afb5f1e945704f3585eefdcfd</instance_id>
+        <instance_name>dev293201</instance_name>
+        <name>sys_rest_message_74fdeeb383bb12109566f7b6feaad32e</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_rest_message"><sys_rest_message action="INSERT_OR_UPDATE"><access>package_private</access><authentication_type>basic</authentication_type><basic_auth_password/><basic_auth_profile display_value="Cursos">4f0e1af3837b12109566f7b6feaad3f2</basic_auth_profile><basic_auth_user/><description/><name>Float para Duration</name><oauth2_profile/><protocol_name/><rest_endpoint>https://dev224983.service-now.com/api/now/table/x_1632557_skillup_courses?sysparm_fields=template,treinamento,duracao,ordem&amp;sysparm_limit=10</rest_endpoint><sys_class_name>sys_rest_message</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2025-02-25 14:53:21</sys_created_on><sys_id>74fdeeb383bb12109566f7b6feaad32e</sys_id><sys_mod_count>0</sys_mod_count><sys_name>Float para Duration</sys_name><sys_package display_value="Mock SkillUp" source="x_1523172_skill_up">6938717783b712109566f7b6feaad3b9</sys_package><sys_policy/><sys_scope display_value="Mock SkillUp">6938717783b712109566f7b6feaad3b9</sys_scope><sys_update_name>sys_rest_message_74fdeeb383bb12109566f7b6feaad32e</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2025-02-25 14:53:21</sys_updated_on><use_basic_auth>false</use_basic_auth><use_mutual_auth>false</use_mutual_auth></sys_rest_message></record_update>]]></payload>
+        <payload_hash>1287574825</payload_hash>
+        <record_name>Float para Duration</record_name>
+        <reverted_from/>
+        <source>a538717783b712109566f7b6feaad3be</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-02-25 14:53:21</sys_created_on>
+        <sys_id>bb5e6eb783bb12109566f7b6feaad3f3</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>1953d9923b00000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-02-25 14:53:21</sys_updated_on>
+        <type>REST Message</type>
+        <update_guid>bf5e6eb76dbb1210e2646f96d0c6ccf2</update_guid>
+        <update_guid_history>bf5e6eb76dbb1210e2646f96d0c6ccf2:1287574825</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-02-25 14:59:31</sys_created_on>
+        <sys_db_object display_value="" name="sys_rest_message">sys_rest_message</sys_db_object>
+        <sys_id>168b83c2f3cf4d688da3b0ba6c912040</sys_id>
+        <sys_metadata>74fdeeb383bb12109566f7b6feaad32e</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Float para Duration</sys_name>
+        <sys_package display_value="Mock SkillUp" source="x_1523172_skill_up">6938717783b712109566f7b6feaad3b9</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="Mock SkillUp">6938717783b712109566f7b6feaad3b9</sys_scope>
+        <sys_scope_delete display_value="">3a6d93cae10942c4892c498dcc264390</sys_scope_delete>
+        <sys_update_name>sys_rest_message_74fdeeb383bb12109566f7b6feaad32e</sys_update_name>
+        <sys_update_version display_value="sys_rest_message_74fdeeb383bb12109566f7b6feaad32e">bb5e6eb783bb12109566f7b6feaad3f3</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-02-25 14:59:31</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>
