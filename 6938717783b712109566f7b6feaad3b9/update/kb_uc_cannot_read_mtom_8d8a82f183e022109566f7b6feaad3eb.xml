@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="kb_uc_cannot_read_mtom">
+    <kb_uc_cannot_read_mtom action="INSERT_OR_UPDATE">
+        <kb_knowledge_base display_value="Portal do Colaborador - KB">b1b9c2f183e022109566f7b6feaad3c1</kb_knowledge_base>
+        <sys_class_name>kb_uc_cannot_read_mtom</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-03-28 13:55:56</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>8d8a82f183e022109566f7b6feaad3eb</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Portal do Colaborador - KB.Guest User</sys_name>
+        <sys_package display_value="Mock SkillUp" source="x_1523172_skill_up">6938717783b712109566f7b6feaad3b9</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Mock SkillUp">6938717783b712109566f7b6feaad3b9</sys_scope>
+        <sys_update_name>kb_uc_cannot_read_mtom_8d8a82f183e022109566f7b6feaad3eb</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-03-28 13:55:56</sys_updated_on>
+        <user_criteria display_value="Guest User">76f09af6cb1200108ad442fcf7076dbf</user_criteria>
+    </kb_uc_cannot_read_mtom>
+</record_update>

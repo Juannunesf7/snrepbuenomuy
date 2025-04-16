@@ -1,0 +1,458 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_widget">
+    <sp_widget action="INSERT_OR_UPDATE">
+        <category>custom</category>
+        <client_script><![CDATA[function minhasSkills($scope) {
+    var c = this;
+    
+    // Inicialização
+    c.$onInit = function() {
+        c.data.selectedSkill = '';
+        c.data.skillLevel = '';
+    };
+    
+    // Adicionar skill
+    c.addSkill = function() {
+        c.data.loading = true;
+        c.data.successMessage = '';
+        c.data.errorMessage = '';
+        c.data.action = 'addSkill';
+        
+        c.server.update().then(function(response) {
+            c.data.loading = false;
+            if (!response.errorMessage) {
+                // Limpa os campos se foi sucesso
+                c.data.selectedSkill = '';
+                c.data.skillLevel = '';
+            }
+        });
+    };
+    
+    // Remover skill
+ c.removeSkill = function(skillId) {
+    if (confirm('Tem certeza que deseja remover esta habilidade?')) {
+        c.data.loading = true;
+        c.data.action = 'removeSkill';
+        c.data.skillId = skillId;  // Passa o skillId
+        c.server.update().then(function() {
+            c.data.loading = false;
+        });
+    }
+ }
+ }
+]]></client_script>
+        <controller_as>c</controller_as>
+        <css>/* Container Principal */
+.skill-widget-container {
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 25px;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+  font-family: 'Segoe UI', Arial, sans-serif;
+}
+
+/* Cabeçalho */
+.skill-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px;
+  padding-bottom: 15px;
+  border-bottom: 2px solid #11266D;
+}
+
+.skill-header h2 {
+  color: #11266D;
+  margin: 0;
+  font-size: 1.8em;
+}
+
+/* Spinner */
+.loading-spinner {
+  border: 4px solid rgba(17,38,109,0.1);
+  border-top: 4px solid #11266D;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Lista */
+.skill-list {
+  margin: 20px 0;
+}
+
+.skill-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+  margin-bottom: 12px;
+  background: #F8F9FA;
+  border-radius: 8px;
+  transition: all 0.2s ease;
+}
+
+.skill-item:hover {
+  background: #EBEEF2;
+}
+
+.skill-name {
+  color: #11266D;
+  margin: 0 0 5px 0;
+  font-size: 1.1em;
+}
+
+.level-badge {
+  background: #11266D;
+  color: white;
+  padding: 4px 12px;
+  border-radius: 15px;
+  font-size: 0.85em;
+  display: inline-block;
+}
+
+/* Botão Remover */
+.remove-btn {
+  background: none;
+  border: none;
+  color: #E53E3E;
+  cursor: pointer;
+  padding: 5px;
+  font-size: 1.2em;
+}
+
+/* Estado Vazio - TEXTO EM AZUL */
+.empty-state {
+  text-align: center;
+  padding: 30px;
+}
+
+.empty-state p {
+  color: #11266D !important; /* Alterado para azul */
+  font-size: 1.1em;
+  margin: 10px 0;
+  line-height: 1.5;
+}
+
+/* Formulário */
+.add-skill-form {
+  margin-top: 30px;
+  padding-top: 20px;
+  border-top: 1px solid #EAEAEA;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 8px;
+  color: #11266D;
+  font-weight: 500;
+}
+
+.form-control {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #DDD;
+  border-radius: 5px;
+  font-size: 1em;
+}
+
+.btn-primary {
+  background: #11266D;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.btn-primary:hover {
+  background: #0A0F3D;
+}
+
+.btn-primary:disabled {
+  background: #CCC;
+  cursor: not-allowed;
+}
+
+/* Mensagens */
+.status-messages {
+  margin-top: 20px;
+}
+
+.alert {
+  padding: 12px;
+  border-radius: 5px;
+  margin-bottom: 15px;
+}
+
+.alert-success {
+  background: #E6FFEE;
+  color: #22543D;
+  border: 1px solid #B2F5C6;
+}
+
+.alert-danger {
+  background: #FFF5F5;
+  color: #9B2C2C;
+  border: 1px solid #FED7D7;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+  .skill-widget-container {
+    padding: 20px 15px;
+    margin: 15px;
+  }
+  
+  .skill-header h2 {
+    font-size: 1.5em;
+  }
+}</css>
+        <data_table>sp_instance</data_table>
+        <demo_data/>
+        <description/>
+        <docs/>
+        <field_list/>
+        <has_preview>false</has_preview>
+        <id>minhasskills</id>
+        <internal>false</internal>
+        <link><![CDATA[function link(scope, element, attrs, controller) {
+  
+}]]></link>
+        <name>Minhas Skills</name>
+        <option_schema/>
+        <public>true</public>
+        <roles/>
+        <script><![CDATA[(function() {
+    // Carrega dados iniciais
+    loadSkillsData();
+    
+    // Processa ações
+    if (input && input.action) {
+        switch(input.action) {
+            case 'addSkill':
+                addNewSkill();
+                break;
+            case 'removeSkill':
+                removeSkill();
+                break;
+        }
+    }
+  
+    function loadSkillsData() {
+        // Carrega habilidades do usuário
+        data.skills = [];
+        var grPossuiSkill = new GlideRecord('x_1523172_skill_up_possui_skill');
+        grPossuiSkill.addQuery('x_1523172_skill_up_equipe', gs.getUser().getID());
+        grPossuiSkill.addNotNullQuery('x_1523172_skill_up_skill');
+        grPossuiSkill.orderByDesc('nivel');
+        grPossuiSkill.query();
+     
+        while (grPossuiSkill.next()) {
+            data.skills.push({
+                sys_id: grPossuiSkill.getUniqueValue(),
+                name: grPossuiSkill.x_1523172_skill_up_skill.getDisplayValue(),
+                level: grPossuiSkill.nivel ? grPossuiSkill.nivel.toString() : 'Desconhecido'
+            });
+        }
+     
+        // Carrega todas as habilidades disponíveis
+        data.allskills = [];
+        var grSkill = new GlideRecord('x_1523172_skill_up_skill');
+        grSkill.query();
+     
+        while (grSkill.next()) {
+            data.allskills.push({
+                sys_id: grSkill.getUniqueValue(),
+                name: grSkill.getDisplayValue('skill'),
+                technical: grSkill.getValue('technical') // Adicionado campo technical
+            });
+        }
+    }   
+    
+    function addNewSkill() {
+        try {
+            // Validação dos campos
+            if (!input.selectedSkill || !input.skillLevel) {
+                data.errorMessage = "Selecione uma habilidade e um nível!";
+                return;
+            }
+            
+            // Verifica se o usuário já possui essa skill
+            var grCheck = new GlideRecord('x_1523172_skill_up_possui_skill');
+            grCheck.addQuery('x_1523172_skill_up_equipe', gs.getUser().getID());
+            grCheck.addQuery('x_1523172_skill_up_skill', input.selectedSkill);
+            grCheck.query();
+            
+            if (grCheck.hasNext()) {
+                data.errorMessage = "Você já possui esta habilidade cadastrada!";
+                return;
+            }
+            
+            // Cria novo registro
+            var grNew = new GlideRecord('x_1523172_skill_up_possui_skill');
+            grNew.initialize();
+            
+            // Preenche os campos do registro
+            grNew.x_1523172_skill_up_equipe = gs.getUser().getID(); // ID do usuário
+            grNew.x_1523172_skill_up_skill = input.selectedSkill; // ID da skill selecionada
+            grNew.nivel = input.skillLevel; // Nível selecionado
+            
+            // Insere o registro
+            var newRecordID = grNew.insert();
+            
+            if (newRecordID) {
+                data.successMessage = "Habilidade adicionada com sucesso!";
+                // Recarrega os dados para mostrar a nova skill
+                loadSkillsData();
+            } else {
+                data.errorMessage = "Falha ao adicionar habilidade!";
+            }
+            
+        } catch (e) {
+            data.errorMessage = "Erro ao adicionar habilidade: " + e.message;
+            gs.error("Erro ao adicionar habilidade: " + e);
+        }
+    }
+    
+    function removeSkill() {
+        try {
+            // Verifica se o skillId foi fornecido
+            if (!input.skillId) {
+                data.errorMessage = "Nenhuma habilidade especificada para remoção!";
+                return;
+            }
+            
+            // Localiza o registro na tabela 'x_1523172_skill_up_possui_skill' para o usuário e skill especificados
+            var grRemove = new GlideRecord('x_1523172_skill_up_possui_skill');
+            grRemove.addQuery('sys_id', input.skillId); // Localiza pelo sys_id do registro
+            grRemove.addQuery('x_1523172_skill_up_equipe', gs.getUser().getID()); // Certifica que o registro é do usuário atual
+            grRemove.query();
+            
+            if (grRemove.next()) {
+                // Exclui o registro encontrado
+                grRemove.deleteRecord();
+                data.successMessage = "Habilidade removida com sucesso!";
+                // Recarrega as skills do usuário
+                loadSkillsData();
+            } else {
+                data.errorMessage = "Habilidade não encontrada ou não pertencente ao usuário!";
+            }
+            
+        } catch (e) {
+            data.errorMessage = "Erro ao remover habilidade: " + e.message;
+            gs.error("Erro ao remover habilidade: " + e);
+        }
+    }
+})();
+]]></script>
+        <servicenow>false</servicenow>
+        <sys_class_name>sp_widget</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-03-24 13:19:35</sys_created_on>
+        <sys_id>923451e083a022109566f7b6feaad35d</sys_id>
+        <sys_mod_count>87</sys_mod_count>
+        <sys_name>Minhas Skills</sys_name>
+        <sys_package display_value="Mock SkillUp" source="x_1523172_skill_up">6938717783b712109566f7b6feaad3b9</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Mock SkillUp">6938717783b712109566f7b6feaad3b9</sys_scope>
+        <sys_update_name>sp_widget_923451e083a022109566f7b6feaad35d</sys_update_name>
+        <sys_updated_by>313.231.323-32</sys_updated_by>
+        <sys_updated_on>2025-03-26 13:29:07</sys_updated_on>
+        <template><![CDATA[<div class="skill-widget-container">
+  <!-- Cabeçalho -->
+  <div class="skill-header panel-heading">
+    <h2>Minhas Habilidades</h2>
+    <div class="loading-spinner" ng-if="c.data.loading"></div>
+  </div>
+
+  <!-- Lista de Habilidades -->
+  <div class="skill-list">
+    <div class="skill-item" ng-repeat="skill in data.skills">
+      <div class="skill-info">
+        <h3 class="skill-name">{{skill.name}}</h3>
+        <div class="skill-level">
+          <span class="level-badge">Nível {{skill.level}}</span>
+        </div>
+      </div>
+      <button class="btn btn-icon remove-btn" 
+              ng-click="c.removeSkill(skill.sys_id)">
+        <span class="icon icon-cross"></span>
+      </button>
+    </div>
+  </div>
+
+  <!-- Estado Vazio -->
+  <div class="empty-state" ng-if="!c.data.loading && data.skills.length === 0">
+    <p ng-if="data.allskills.length === 0">Não há habilidades disponíveis</p>
+    <p ng-if="data.allskills.length > 0">Nenhuma habilidade cadastrada</p>
+  </div>
+
+  <!-- Formulário de Adição -->
+<div class="add-skill-form" ng-if="data.allskills.length > 0">
+  <div class="form-group">
+    <label for="skillSelect">Adicionar Habilidade</label>
+    <select id="skillSelect" 
+            class="form-control"
+            ng-model="c.data.selectedSkill"
+            ng-options="skill.sys_id as skill.name for skill in data.allskills"
+            >
+      <option value="" disabled selected>Selecione...</option>
+    </select>
+  </div>
+
+  <div class="form-group">
+    <label for="skillLevel">Nível</label>
+    <select id="skillLevel" 
+            class="form-control"
+            ng-model="c.data.skillLevel"
+            >
+      <option value="" disabled selected>Selecione...</option>
+      <option value="basic">Básico</option>
+      <option value="intermediate">Intermediário</option>
+      <option value="advanced">Avançado</option>
+    </select>
+  </div>
+
+  <button class="btn btn-primary"
+          ng-click="c.addSkill()"
+          ng-disabled="!c.data.selectedSkill || !c.data.skillLevel">
+    Adicionar
+  </button>
+</div>
+
+  <!-- Mensagens de Status -->
+  <div class="status-messages">
+    <div class="alert alert-success" ng-if="c.data.successMessage">
+      {{c.data.successMessage}}
+    </div>
+    <div class="alert alert-danger" ng-if="c.data.errorMessage">
+      {{c.data.errorMessage}}
+    </div>
+  </div>
+</div>]]></template>
+    </sp_widget>
+    <sys_es_latest_script action="INSERT_OR_UPDATE">
+        <id>923451e083a022109566f7b6feaad35d</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-03-24 13:19:34</sys_created_on>
+        <sys_id>51db596483a022109566f7b6feaad3a4</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-03-24 13:19:34</sys_updated_on>
+        <table>sp_widget</table>
+        <use_es_latest>true</use_es_latest>
+    </sys_es_latest_script>
+</record_update>

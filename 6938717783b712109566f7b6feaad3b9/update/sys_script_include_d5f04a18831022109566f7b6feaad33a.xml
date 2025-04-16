@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>package_private</access>
+        <active>true</active>
+        <api_name>x_1523172_skill_up.ACL Creator</api_name>
+        <caller_access/>
+        <client_callable>false</client_callable>
+        <description/>
+        <mobile_callable>false</mobile_callable>
+        <name>ACL Creator</name>
+        <sandbox_callable>false</sandbox_callable>
+        <script><![CDATA[// Script Include para criação de ACLs
+var ACLCreator = Class.create();
+ACLCreator.prototype = {
+    initialize: function() {},
+    
+    createACL: function(config) {
+        var aclGr = new GlideRecord('sys_security_acl');
+        aclGr.initialize();
+        
+        // Configurações da ACL
+        aclGr.name = config.name;
+        aclGr.operation = config.operation;
+        aclGr.table = config.table;
+        aclGr.field = config.field || ''; // Campo específico (se aplicável)
+        aclGr.roles = config.roles;
+        aclGr.script = config.script || 'true'; // Condição padrão
+        aclGr.description = config.description;
+        
+        // Verifica se a ACL já existe
+        var existingAcl = new GlideRecord('sys_security_acl');
+        existingAcl.addQuery('name', config.name);
+        existingAcl.addQuery('table', config.table);
+        existingAcl.addQuery('field', config.field || '');
+        existingAcl.query();
+        
+        if (!existingAcl.hasNext()) {
+            aclGr.insert();
+            gs.info('ACL criada: ' + config.name);
+        } else {
+            gs.info('ACL já existe: ' + config.name);
+        }
+    }
+};
+
+// Execução das ACLs para Estagiário e Monitor
+(function() {
+    var creator = new ACLCreator();
+    
+    // === ACLs para Estagiário (Leitura de campos específicos) ===
+    var estagiarioFields = ['number', 'nome_projeto', 'description', 'gerente'];
+    estagiarioFields.forEach(function(field) {
+        creator.createACL({
+            name: 'ACL READ ' + field.toUpperCase() + ' - Estagiário',
+            operation: 'read',
+            table: 'x_1523172_skill_up_projeto',
+            field: field,
+            roles: 'x_1523172_skill_up.intern', // Role do Estagiário
+            description: 'Permite leitura do campo ' + field + ' para Estagiário'
+        });
+    });
+
+    // Bloqueia leitura de outros campos para Estagiário
+    creator.createACL({
+        name: 'ACL BLOCK OTHER FIELDS - Estagiário',
+        operation: 'read',
+        table: 'x_1523172_skill_up_projeto',
+        roles: 'x_1523172_skill_up.intern',
+        script: 'false', // Bloqueia acesso
+        description: 'Bloqueia leitura de campos não permitidos para Estagiário'
+    });
+
+    // === ACLs para Monitor (Atualização de Status e Descrição) ===
+    var monitorFields = ['status', 'description'];
+    monitorFields.forEach(function(field) {
+        creator.createACL({
+            name: 'ACL WRITE ' + field.toUpperCase() + ' - Monitor',
+            operation: 'write',
+            table: 'x_1523172_skill_up_projeto',
+            field: field,
+            roles: 'monitor', // Role do Monitor (ajuste se necessário)
+            description: 'Permite atualização do campo ' + field + ' para Monitor'
+        });
+    });
+})();]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-03-11 11:09:18</sys_created_on>
+        <sys_id>d5f04a18831022109566f7b6feaad33a</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name>ACL Creator</sys_name>
+        <sys_package display_value="Mock SkillUp" source="x_1523172_skill_up">6938717783b712109566f7b6feaad3b9</sys_package>
+        <sys_policy>read</sys_policy>
+        <sys_scope display_value="Mock SkillUp">6938717783b712109566f7b6feaad3b9</sys_scope>
+        <sys_update_name>sys_script_include_d5f04a18831022109566f7b6feaad33a</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-03-11 11:12:56</sys_updated_on>
+    </sys_script_include>
+    <sys_es_latest_script action="INSERT_OR_UPDATE">
+        <id>d5f04a18831022109566f7b6feaad33a</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-03-11 11:09:17</sys_created_on>
+        <sys_id>96514ed4831022109566f7b6feaad303</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-03-11 11:09:17</sys_updated_on>
+        <table>sys_script_include</table>
+        <use_es_latest>true</use_es_latest>
+    </sys_es_latest_script>
+</record_update>

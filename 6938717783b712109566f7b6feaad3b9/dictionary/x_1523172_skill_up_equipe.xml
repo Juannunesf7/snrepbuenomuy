@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element db_object_id="e23ab93b83b712109566f7b6feaad367" extends="sys_user" label="Equipe" max_length="40" name="x_1523172_skill_up_equipe" type="collection">
+        <element attributes="edge_encryption_enabled=true" label="CPF" mandatory="true" max_length="40" name="cpf" type="string"/>
+        <element attributes="edge_encryption_enabled=true" choice="1" label="Cargo" mandatory="true" max_length="40" name="cargo" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="Monitor" sequence="2" value="monitor"/>
+                <element inactive_on_update="false" label="Gestor" sequence="1" value="gestor"/>
+                <element inactive_on_update="false" label="Estagiário" sequence="0" value="estagiario"/>
+            </choice>
+        </element>
+        <element attributes="omit_sys_original=true" label="Salário" mandatory="true" max_length="20" name="salario" type="currency"/>
+        <element attributes="edge_encryption_enabled=true" label="Data de Admissão" mandatory="true" max_length="40" name="data_admissao" type="glide_date"/>
+        <element attributes="edge_encryption_enabled=true" label="Data de Desligamento" max_length="40" name="data_desligamento" type="glide_date"/>
+    </element>
+</database>

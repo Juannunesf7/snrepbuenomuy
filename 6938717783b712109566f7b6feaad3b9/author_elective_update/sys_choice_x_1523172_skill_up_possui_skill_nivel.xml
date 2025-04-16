@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_choice action="INSERT_OR_UPDATE" field="nivel" table="x_1523172_skill_up_possui_skill" version="3">
+        <sys_choice_set action="INSERT_OR_UPDATE">
+            <element>nivel</element>
+            <name>x_1523172_skill_up_possui_skill</name>
+            <sys_class_name>sys_choice_set</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2025-02-28 11:27:07</sys_created_on>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>nivel</sys_name>
+            <sys_package display_value="Mock SkillUp" source="x_1523172_skill_up">6938717783b712109566f7b6feaad3b9</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="Mock SkillUp">6938717783b712109566f7b6feaad3b9</sys_scope>
+            <sys_update_name>sys_choice_x_1523172_skill_up_possui_skill_nivel</sys_update_name>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2025-02-28 11:27:07</sys_updated_on>
+        </sys_choice_set>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>nivel</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Avançado</label>
+            <language>en</language>
+            <name>x_1523172_skill_up_possui_skill</name>
+            <sequence>0</sequence>
+            <synonyms/>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2025-02-28 11:27:33</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_mod_count>2</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2025-02-28 13:38:14</sys_updated_on>
+            <value>advanced</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>nivel</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Básico</label>
+            <language>en</language>
+            <name>x_1523172_skill_up_possui_skill</name>
+            <sequence>1</sequence>
+            <synonyms/>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2025-02-28 11:27:07</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_mod_count>2</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2025-02-28 13:38:14</sys_updated_on>
+            <value>basic</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>nivel</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Intermediario</label>
+            <language>en</language>
+            <name>x_1523172_skill_up_possui_skill</name>
+            <sequence>2</sequence>
+            <synonyms/>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2025-02-28 11:27:23</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_mod_count>2</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2025-02-28 13:38:14</sys_updated_on>
+            <value>intermediate</value>
+        </sys_choice>
+    </sys_choice>
+</record_update>

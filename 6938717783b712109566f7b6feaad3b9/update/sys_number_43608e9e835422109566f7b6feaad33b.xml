@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_number">
+    <sys_number action="INSERT_OR_UPDATE">
+        <category display_value="" name="x_1523172_skill_up_servico_compartilhado">x_1523172_skill_up_servico_compartilhado</category>
+        <maximum_digits>7</maximum_digits>
+        <number>1000</number>
+        <prefix>CSC</prefix>
+        <sys_class_name>sys_number</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-03-17 16:13:06</sys_created_on>
+        <sys_id>43608e9e835422109566f7b6feaad33b</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>CSC</sys_name>
+        <sys_package display_value="Mock SkillUp" source="x_1523172_skill_up">6938717783b712109566f7b6feaad3b9</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Mock SkillUp">6938717783b712109566f7b6feaad3b9</sys_scope>
+        <sys_update_name>sys_number_43608e9e835422109566f7b6feaad33b</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-03-17 16:13:06</sys_updated_on>
+    </sys_number>
+</record_update>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element db_object_id="af748a3783f712109566f7b6feaad3e7" extends="task" label="Tarefas" max_length="40" name="x_1523172_skill_up_tarefas" type="collection">
+        <element label="Hora Estimada" max_length="40" name="hora_estimada" type="glide_duration"/>
+        <element attributes="edge_encryption_enabled=true" label="Dependências" max_length="40" name="dependencias" type="string"/>
+        <element attributes="edge_encryption_enabled=true" label="Nome da Tarefa" mandatory="true" max_length="40" name="nome_tarefa" type="string"/>
+        <element attributes="edge_encryption_enabled=true" choice="1" label="Status" mandatory="true" max_length="40" name="status" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="Em Andamento" value="2"/>
+                <element inactive_on_update="false" label="Cancelado" value="4"/>
+                <element inactive_on_update="false" label="Aberto" value="1"/>
+                <element inactive_on_update="false" label="Concluido" value="3"/>
+            </choice>
+        </element>
+        <element attributes="encode_utf8=false" label="Projeto" mandatory="true" max_length="32" name="projeto" reference="x_1523172_skill_up_projeto" type="reference"/>
+        <element attributes="edge_encryption_enabled=true" label="Data de Inicio" mandatory="true" max_length="40" name="data_inicio" type="glide_date"/>
+        <element attributes="edge_encryption_enabled=true" label="Data de Finalização" max_length="40" name="data_fim" type="glide_date"/>
+        <element label="Hora Trabalhada" mandatory="true" max_length="40" name="hora_trabalhada" type="glide_duration"/>
+    </element>
+</database>

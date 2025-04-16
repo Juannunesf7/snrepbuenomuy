@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_instance">
+    <sp_instance action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <class_name/>
+        <color>default</color>
+        <css/>
+        <glyph/>
+        <id/>
+        <order>1</order>
+        <roles/>
+        <short_description/>
+        <size>md</size>
+        <sp_column display_value="2">b002427983a022109566f7b6feaad3c5</sp_column>
+        <sp_widget display_value="Custom Widget Card">a81348638324e2109566f7b6feaad330</sp_widget>
+        <sys_class_name>sp_instance</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-04-02 14:39:44</sys_created_on>
+        <sys_id>9f7480a78324e2109566f7b6feaad3ef</sys_id>
+        <sys_mod_count>8</sys_mod_count>
+        <sys_name>Bug em Lote</sys_name>
+        <sys_package display_value="Mock SkillUp" source="x_1523172_skill_up">6938717783b712109566f7b6feaad3b9</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Mock SkillUp">6938717783b712109566f7b6feaad3b9</sys_scope>
+        <sys_update_name>sp_instance_9f7480a78324e2109566f7b6feaad3ef</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-04-02 14:54:56</sys_updated_on>
+        <title>Bug em Lote</title>
+        <url>?id=sc_cat_item&amp;sys_id=a1ad6916831422109566f7b6feaad354</url>
+        <widget_parameters><![CDATA[{
+	"icon": {
+		"value": "x_1523172_skill_up.bug_em_lote.png",
+		"displayValue": "x_1523172_skill_up.bug_em_lote.png"
+	},
+	"title": {
+		"value": "Bug em Lote",
+		"displayValue": "Bug em Lote"
+	},
+	"description": {
+		"value": "Relate problemas técnicos encontrados aqui! ]]>👾<![CDATA[",
+		"displayValue": "Relate problemas técnicos encontrados aqui! ]]>👾<![CDATA["
+	},
+	"url": {
+		"value": "?id=sc_cat_item&sys_id=a1ad6916831422109566f7b6feaad354",
+		"displayValue": "?id=sc_cat_item&sys_id=a1ad6916831422109566f7b6feaad354"
+	}
+}]]></widget_parameters>
+    </sp_instance>
+    <sys_translated_text action="delete_multiple" query="documentkey=9f7480a78324e2109566f7b6feaad3ef"/>
+</record_update>

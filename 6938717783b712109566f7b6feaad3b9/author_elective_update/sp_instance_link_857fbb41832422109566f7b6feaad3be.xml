@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_instance_link">
+    <sp_instance_link action="DELETE">
+        <active>true</active>
+        <class_name/>
+        <color>danger</color>
+        <css>h2 {&#13;
+    background: linear-gradient(&#13;
+        to bottom,&#13;
+        #ffffff, /* Laranja vibrante na parte superior */&#13;
+        #ffffff  /* Branco na parte inferior */&#13;
+    );&#13;
+      -webkit-background-clip: text; /* Recorta o gradiente no formato do texto */&#13;
+      background-clip: text;&#13;
+      color: transparent; /* Torna o texto transparente para revelar o gradiente */&#13;
+ &#13;
+}&#13;
+ &#13;
+.text-danger{&#13;
+    background: linear-gradient(&#13;
+        to bottom,&#13;
+        #FF0033, &#13;
+        #6A00F4&#13;
+    );&#13;
+      -webkit-background-clip: text; /* Recorta o gradiente no formato do texto */&#13;
+      background-clip: text;&#13;
+      color: transparent; /* Torna o texto transparente para revelar o gradiente */&#13;
+ </css>
+        <glyph>bug</glyph>
+        <id/>
+        <kb_article/>
+        <kb_category/>
+        <kb_topic/>
+        <order>1</order>
+        <roles/>
+        <sc_cat_item display_value="Bug Report em Lote">a1ad6916831422109566f7b6feaad354</sc_cat_item>
+        <sc_category/>
+        <short_description/>
+        <size>md</size>
+        <sp_column display_value="1">7402427983a022109566f7b6feaad3c2</sp_column>
+        <sp_page display_value="sc_cat_item">9f12251147132100ba13a5554ee490f4</sp_page>
+        <sp_widget display_value="Icon Link">3caa67afcb13020000f8d856634c9c2e</sp_widget>
+        <sys_class_name>sp_instance_link</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-03-26 14:31:24</sys_created_on>
+        <sys_id>857fbb41832422109566f7b6feaad3be</sys_id>
+        <sys_mod_count>25</sys_mod_count>
+        <sys_name>Reportar Bug em Lote</sys_name>
+        <sys_package display_value="Mock SkillUp" source="x_1523172_skill_up">6938717783b712109566f7b6feaad3b9</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Mock SkillUp">6938717783b712109566f7b6feaad3b9</sys_scope>
+        <sys_update_name>sp_instance_link_857fbb41832422109566f7b6feaad3be</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-03-28 13:44:15</sys_updated_on>
+        <title>Reportar Bug em Lote</title>
+        <type>sc_cat_item</type>
+        <url/>
+        <widget_parameters><![CDATA[{
+	"link_template": {
+		"value": "",
+		"displayValue": ""
+	}
+}]]></widget_parameters>
+    </sp_instance_link>
+    <sys_translated_text action="DELETE" query="documentkey=857fbb41832422109566f7b6feaad3be"/>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Mock SkillUp">6938717783b712109566f7b6feaad3b9</application>
+        <file_path/>
+        <instance_id>7ee1e82afb5f1e945704f3585eefdcfd</instance_id>
+        <instance_name>dev293201</instance_name>
+        <name>sp_instance_link_857fbb41832422109566f7b6feaad3be</name>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update table="sp_instance_link"&gt;&lt;sp_instance_link action="INSERT_OR_UPDATE"&gt;&lt;active&gt;true&lt;/active&gt;&lt;class_name/&gt;&lt;color&gt;danger&lt;/color&gt;&lt;css&gt;h2 {&amp;#13;
+    background: linear-gradient(&amp;#13;
+        to bottom,&amp;#13;
+        #ffffff, /* Laranja vibrante na parte superior */&amp;#13;
+        #ffffff  /* Branco na parte inferior */&amp;#13;
+    );&amp;#13;
+      -webkit-background-clip: text; /* Recorta o gradiente no formato do texto */&amp;#13;
+      background-clip: text;&amp;#13;
+      color: transparent; /* Torna o texto transparente para revelar o gradiente */&amp;#13;
+ &amp;#13;
+}&amp;#13;
+ &amp;#13;
+.text-danger{&amp;#13;
+    background: linear-gradient(&amp;#13;
+        to bottom,&amp;#13;
+        #FF0033, &amp;#13;
+        #6A00F4&amp;#13;
+    );&amp;#13;
+      -webkit-background-clip: text; /* Recorta o gradiente no formato do texto */&amp;#13;
+      background-clip: text;&amp;#13;
+      color: transparent; /* Torna o texto transparente para revelar o gradiente */&amp;#13;
+ &lt;/css&gt;&lt;glyph&gt;bug&lt;/glyph&gt;&lt;id/&gt;&lt;kb_article/&gt;&lt;kb_category/&gt;&lt;kb_topic/&gt;&lt;order&gt;1&lt;/order&gt;&lt;roles/&gt;&lt;sc_cat_item display_value="Bug Report em Lote"&gt;a1ad6916831422109566f7b6feaad354&lt;/sc_cat_item&gt;&lt;sc_category/&gt;&lt;short_description/&gt;&lt;size&gt;md&lt;/size&gt;&lt;sp_column display_value="1"&gt;7402427983a022109566f7b6feaad3c2&lt;/sp_column&gt;&lt;sp_page display_value="sc_cat_item"&gt;9f12251147132100ba13a5554ee490f4&lt;/sp_page&gt;&lt;sp_widget display_value="Icon Link"&gt;3caa67afcb13020000f8d856634c9c2e&lt;/sp_widget&gt;&lt;sys_class_name&gt;sp_instance_link&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2025-03-26 14:31:24&lt;/sys_created_on&gt;&lt;sys_id&gt;857fbb41832422109566f7b6feaad3be&lt;/sys_id&gt;&lt;sys_mod_count&gt;25&lt;/sys_mod_count&gt;&lt;sys_name&gt;Reportar Bug em Lote&lt;/sys_name&gt;&lt;sys_package display_value="Mock SkillUp" source="x_1523172_skill_up"&gt;6938717783b712109566f7b6feaad3b9&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="Mock SkillUp"&gt;6938717783b712109566f7b6feaad3b9&lt;/sys_scope&gt;&lt;sys_update_name&gt;sp_instance_link_857fbb41832422109566f7b6feaad3be&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2025-03-28 13:44:15&lt;/sys_updated_on&gt;&lt;title&gt;Reportar Bug em Lote&lt;/title&gt;&lt;type&gt;sc_cat_item&lt;/type&gt;&lt;url/&gt;&lt;widget_parameters&gt;&lt;![CDATA[{
+	"link_template": {
+		"value": "",
+		"displayValue": ""
+	}
+}]]&gt;&lt;/widget_parameters&gt;&lt;/sp_instance_link&gt;&lt;sys_translated_text action="delete_multiple" query="documentkey=857fbb41832422109566f7b6feaad3be"/&gt;&lt;/record_update&gt;</payload>
+        <payload_hash>435686374</payload_hash>
+        <record_name>Reportar Bug em Lote</record_name>
+        <reverted_from/>
+        <source>a538717783b712109566f7b6feaad3be</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-03-28 13:44:15</sys_created_on>
+        <sys_id>ced78e3183e022109566f7b6feaad334</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>195dcff06ee0000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-03-28 13:44:15</sys_updated_on>
+        <type>Instance with Link</type>
+        <update_guid>86d78e31e9e02210e805dd73fc5e8d34</update_guid>
+        <update_guid_history>86d78e31e9e02210e805dd73fc5e8d34:435686374,5a87c6317ae022100e354c4603e38a82:-434041824,83120a792ea022107d15570a2d935114:435686374,e275cc19c02422104837e875ff80f9bf:-434041824,2f55cc192e242210e594ef984e60cf55:-1362791146,8c0444d52024221082f7f02a6fe2e231:1832784472,f3d380d56e2422104cba7125085c8121:601537661,c9b30c9510242210e6c902faa76b7349:-232868323,27a3c895f2242210a412545b6f8a262a:1706784641,ab8340958b242210bd1facddb4f595c5:1033056528,c503885565242210110c37ad2ddf3268:662381492,49c2c8553b242210bde10d6115388ebd:-987895179,cfb240555f242210d98f5db1cdd6786c:-1517481665,5e910cd147242210639198829b674152:-987895179,7c910cd17e242210c5558787785e4a46:1226903027,733180d18d242210bd59ef0e9ab860b3:-2079582509,671180d1ab2422106acd7d459c5c2003:-160676139,f8a040d1352422104abce67c98bdb4a1:826572940,719040d1be2422105d5a2d4e16eca248:-419400182,f7800c9166242210e83c0b58da3a7ca5:-13325307,a18000d18e242210b8892f7a8d64fd11:553511814,b650c851cf242210f3a192d887d45492:1172228858,d130c8512b242210ba699930dbceb71c:1162804855,71afff0172242210d96907e5f14173cb:75890432,4d7fbb41982422103fc835704cd61ebf:-1364074525</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="Reportar Bug em Lote">c1d6027e836422109566f7b6feaad348</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-03-31 16:13:45</sys_created_on>
+        <sys_db_object display_value="" name="sp_instance_link">sp_instance_link</sys_db_object>
+        <sys_id>809d182394b34899aa3795c1064de4e1</sys_id>
+        <sys_metadata>857fbb41832422109566f7b6feaad3be</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Reportar Bug em Lote</sys_name>
+        <sys_package display_value="Mock SkillUp" source="x_1523172_skill_up">6938717783b712109566f7b6feaad3b9</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="Mock SkillUp">6938717783b712109566f7b6feaad3b9</sys_scope>
+        <sys_scope_delete display_value="">3a6d93cae10942c4892c498dcc264390</sys_scope_delete>
+        <sys_update_name>sp_instance_link_857fbb41832422109566f7b6feaad3be</sys_update_name>
+        <sys_update_version display_value="sp_instance_link_857fbb41832422109566f7b6feaad3be">ced78e3183e022109566f7b6feaad334</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-03-31 16:13:45</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

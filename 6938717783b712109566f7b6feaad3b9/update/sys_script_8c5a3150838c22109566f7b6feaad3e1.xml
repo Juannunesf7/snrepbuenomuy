@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_script">
+    <sys_script action="INSERT_OR_UPDATE">
+        <abort_action>false</abort_action>
+        <access>package_private</access>
+        <action_delete>false</action_delete>
+        <action_insert>true</action_insert>
+        <action_query>false</action_query>
+        <action_update>true</action_update>
+        <active>true</active>
+        <add_message>false</add_message>
+        <advanced>true</advanced>
+        <change_fields>false</change_fields>
+        <client_callable>false</client_callable>
+        <collection>x_1523172_skill_up_equipe</collection>
+        <condition/>
+        <description/>
+        <execute_function>false</execute_function>
+        <filter_condition/>
+        <is_rest>false</is_rest>
+        <message/>
+        <name>Definir Manager pela Data de Admissao</name>
+        <order>100</order>
+        <priority>100</priority>
+        <rest_method/>
+        <rest_method_text/>
+        <rest_service/>
+        <rest_service_text/>
+        <rest_variables/>
+        <role_conditions/>
+        <script><![CDATA[(function executeRule(current, previous /*null when async*/) {
+    if (current.cargo != 'estagiario') {
+        gs.info('O cargo do usuário não é Estagiário. Atribuição de Manager não necessária.');
+        return;
+    }
+    // pega a data de 3 meses atrás
+    var tresmeses = new GlideDateTime();
+    tresmeses.addMonthsUTC(-3);
+    // verifica a data de admissão do estagiário para decidir entre 'monitor' ou 'gestor'
+    var cargoManager = new GlideDateTime(current.data_admissao).onOrBefore(tresmeses)
+        ? 'monitor'  
+        : 'gestor'; 
+    // filtra o gestor ou monitor na tabela Equipe com base no departamento
+    var managers = new GlideRecord('x_1523172_skill_up_equipe');
+    managers.addQuery('cargo', cargoManager);      
+    managers.addQuery('department', current.department); 
+    managers.addQuery('active', true);             
+    managers.query();
+    // faz a listagem com os managers válidos (com menos de 25 estagiários atribuídos)
+    var validManagers = [];
+    while (managers.next()) {
+        var estagiariosCount = new GlideAggregate('x_1523172_skill_up_equipe');
+        estagiariosCount.addQuery('manager', managers.sys_id);
+        estagiariosCount.addAggregate('COUNT');
+        estagiariosCount.query();
+
+        if (estagiariosCount.next() && estagiariosCount.getAggregate('COUNT') < 25) {
+            validManagers.push(managers.sys_id.toString());
+        }
+    }
+    // se houver managers válidos, atribui aleatoriamente um deles ao estagiário
+    if (validManagers.length > 0) {
+        var randomIndex = Math.floor(Math.random() * validManagers.length);
+        current.manager = validManagers[randomIndex];  
+        current.update();                              
+        gs.info('Manager atribuído ao Estagiário: ' + current.sys_id + ', Manager: ' + current.manager);
+    } else {
+        gs.warn('Nenhum Manager disponível para o Estagiário ' + current.sys_id + ' no departamento ' + current.department);
+    }
+})(current, previous);
+]]></script>
+        <sys_class_name>sys_script</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-02-27 00:47:26</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>8c5a3150838c22109566f7b6feaad3e1</sys_id>
+        <sys_mod_count>18</sys_mod_count>
+        <sys_name>Definir Manager pela Data de Admissao</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Mock SkillUp" source="x_1523172_skill_up">6938717783b712109566f7b6feaad3b9</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Mock SkillUp">6938717783b712109566f7b6feaad3b9</sys_scope>
+        <sys_update_name>sys_script_8c5a3150838c22109566f7b6feaad3e1</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-02-27 18:05:01</sys_updated_on>
+        <template/>
+        <when>before</when>
+    </sys_script>
+    <sys_translated_text action="delete_multiple" query="documentkey=8c5a3150838c22109566f7b6feaad3e1"/>
+    <sys_es_latest_script action="INSERT_OR_UPDATE">
+        <id>8c5a3150838c22109566f7b6feaad3e1</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-02-27 00:47:26</sys_created_on>
+        <sys_id>0cffb5d4838c22109566f7b6feaad3be</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-02-27 00:47:26</sys_updated_on>
+        <table>sys_script</table>
+        <use_es_latest>true</use_es_latest>
+    </sys_es_latest_script>
+</record_update>

@@ -1,0 +1,254 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_widget">
+    <sp_widget action="DELETE">
+        <category>custom</category>
+        <client_script><![CDATA[function mySkills($scope, $http) {
+  $scope.data = {
+    skills: []
+  };
+
+  var userId = gs.getUserID();
+  var apiUrl = '/api/now/table/x_1523172_skill_up_possui_skill';
+  var query = 'user=' + userId;
+
+  $http.get(apiUrl + '?sysparm_query=' + query).then(function(response) {
+    if (response.data.result && response.data.result.length > 0) {
+      $scope.data.skills = response.data.result.map(function(skill) {
+        return {
+          skill: skill.skill.display_value,
+          level: skill.level
+        };
+      });
+    } else {
+      $scope.data.skills = [];
+    }
+  }, function(error) {
+    gs.error('Erro ao buscar habilidades: ' + error.message);
+    $scope.data.skills = [];
+  });
+}]]></client_script>
+        <controller_as>c</controller_as>
+        <css>.user-skills-widget {
+  font-family: Arial, sans-serif;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.user-skills-widget h2 {
+  color: #333;
+  font-size: 24px;
+  margin-bottom: 16px;
+}
+
+.skills-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+.skills-list li {
+  background-color: #fff;
+  padding: 10px;
+  margin-bottom: 8px;
+  border-radius: 4px;
+  border: 1px solid #ddd;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.skill-name {
+  font-weight: bold;
+  color: #0077cc;
+}
+
+.skill-level {
+  color: #666;
+  font-style: italic;
+}</css>
+        <data_table>sp_instance</data_table>
+        <demo_data/>
+        <description/>
+        <docs/>
+        <field_list/>
+        <has_preview>false</has_preview>
+        <id/>
+        <internal>false</internal>
+        <link><![CDATA[function link(scope, element, attrs, controller) {
+  
+}]]></link>
+        <name>User Skills</name>
+        <option_schema/>
+        <public>true</public>
+        <roles/>
+        <script><![CDATA[(function() {
+  /* populate the 'data' object */
+  /* e.g., data.table = $sp.getValue('table'); */
+
+})();]]></script>
+        <servicenow>false</servicenow>
+        <sys_class_name>sp_widget</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-03-21 17:01:32</sys_created_on>
+        <sys_id>fab7aa6f831422109566f7b6feaad386</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name>User Skills</sys_name>
+        <sys_package display_value="Mock SkillUp" source="x_1523172_skill_up">6938717783b712109566f7b6feaad3b9</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Mock SkillUp">6938717783b712109566f7b6feaad3b9</sys_scope>
+        <sys_update_name>sp_widget_fab7aa6f831422109566f7b6feaad386</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-03-21 17:10:28</sys_updated_on>
+        <template><![CDATA[<div class="user-skills-widget">
+  <h2>Minhas Habilidades</h2>
+  <div ng-if="data.skills.length > 0">
+    <ul class="skills-list">
+      <li ng-repeat="skill in data.skills">
+        <span class="skill-name">{{ skill.skill }}</span>
+        <span class="skill-level">(Nível: {{ skill.level }})</span>
+      </li>
+    </ul>
+  </div>
+  <div ng-if="data.skills.length === 0">
+    <p>Nenhuma habilidade cadastrada.</p>
+  </div>
+</div>]]></template>
+    </sp_widget>
+    <sys_es_latest_script action="DELETE">
+        <id>fab7aa6f831422109566f7b6feaad386</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-03-21 17:01:31</sys_created_on>
+        <sys_id>57d1b26383d422109566f7b6feaad3dc</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-03-21 17:01:31</sys_updated_on>
+        <table>sp_widget</table>
+        <use_es_latest>true</use_es_latest>
+    </sys_es_latest_script>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Mock SkillUp">6938717783b712109566f7b6feaad3b9</application>
+        <file_path/>
+        <instance_id>7ee1e82afb5f1e945704f3585eefdcfd</instance_id>
+        <instance_name>dev293201</instance_name>
+        <name>sp_widget_fab7aa6f831422109566f7b6feaad386</name>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update table="sp_widget"&gt;&lt;sp_widget action="INSERT_OR_UPDATE"&gt;&lt;category&gt;custom&lt;/category&gt;&lt;client_script&gt;&lt;![CDATA[function mySkills($scope, $http) {
+  $scope.data = {
+    skills: []
+  };
+
+  var userId = gs.getUserID();
+  var apiUrl = '/api/now/table/x_1523172_skill_up_possui_skill';
+  var query = 'user=' + userId;
+
+  $http.get(apiUrl + '?sysparm_query=' + query).then(function(response) {
+    if (response.data.result &amp;&amp; response.data.result.length &gt; 0) {
+      $scope.data.skills = response.data.result.map(function(skill) {
+        return {
+          skill: skill.skill.display_value,
+          level: skill.level
+        };
+      });
+    } else {
+      $scope.data.skills = [];
+    }
+  }, function(error) {
+    gs.error('Erro ao buscar habilidades: ' + error.message);
+    $scope.data.skills = [];
+  });
+}]]&gt;&lt;/client_script&gt;&lt;controller_as&gt;c&lt;/controller_as&gt;&lt;css&gt;.user-skills-widget {
+  font-family: Arial, sans-serif;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.user-skills-widget h2 {
+  color: #333;
+  font-size: 24px;
+  margin-bottom: 16px;
+}
+
+.skills-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+.skills-list li {
+  background-color: #fff;
+  padding: 10px;
+  margin-bottom: 8px;
+  border-radius: 4px;
+  border: 1px solid #ddd;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.skill-name {
+  font-weight: bold;
+  color: #0077cc;
+}
+
+.skill-level {
+  color: #666;
+  font-style: italic;
+}&lt;/css&gt;&lt;data_table&gt;sp_instance&lt;/data_table&gt;&lt;demo_data/&gt;&lt;description/&gt;&lt;docs/&gt;&lt;field_list/&gt;&lt;has_preview&gt;false&lt;/has_preview&gt;&lt;id/&gt;&lt;internal&gt;false&lt;/internal&gt;&lt;link&gt;&lt;![CDATA[function link(scope, element, attrs, controller) {
+  
+}]]&gt;&lt;/link&gt;&lt;name&gt;User Skills&lt;/name&gt;&lt;option_schema/&gt;&lt;public&gt;true&lt;/public&gt;&lt;roles/&gt;&lt;script&gt;&lt;![CDATA[(function() {
+  /* populate the 'data' object */
+  /* e.g., data.table = $sp.getValue('table'); */
+
+})();]]&gt;&lt;/script&gt;&lt;servicenow&gt;false&lt;/servicenow&gt;&lt;sys_class_name&gt;sp_widget&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2025-03-21 17:01:32&lt;/sys_created_on&gt;&lt;sys_id&gt;fab7aa6f831422109566f7b6feaad386&lt;/sys_id&gt;&lt;sys_mod_count&gt;2&lt;/sys_mod_count&gt;&lt;sys_name&gt;User Skills&lt;/sys_name&gt;&lt;sys_package display_value="Mock SkillUp" source="x_1523172_skill_up"&gt;6938717783b712109566f7b6feaad3b9&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="Mock SkillUp"&gt;6938717783b712109566f7b6feaad3b9&lt;/sys_scope&gt;&lt;sys_update_name&gt;sp_widget_fab7aa6f831422109566f7b6feaad386&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2025-03-21 17:10:28&lt;/sys_updated_on&gt;&lt;template&gt;&lt;![CDATA[&lt;div class="user-skills-widget"&gt;
+  &lt;h2&gt;Minhas Habilidades&lt;/h2&gt;
+  &lt;div ng-if="data.skills.length &gt; 0"&gt;
+    &lt;ul class="skills-list"&gt;
+      &lt;li ng-repeat="skill in data.skills"&gt;
+        &lt;span class="skill-name"&gt;{{ skill.skill }}&lt;/span&gt;
+        &lt;span class="skill-level"&gt;(Nível: {{ skill.level }})&lt;/span&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/div&gt;
+  &lt;div ng-if="data.skills.length === 0"&gt;
+    &lt;p&gt;Nenhuma habilidade cadastrada.&lt;/p&gt;
+  &lt;/div&gt;
+&lt;/div&gt;]]&gt;&lt;/template&gt;&lt;/sp_widget&gt;&lt;sys_es_latest_script action="INSERT_OR_UPDATE"&gt;&lt;id&gt;fab7aa6f831422109566f7b6feaad386&lt;/id&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2025-03-21 17:01:31&lt;/sys_created_on&gt;&lt;sys_id&gt;57d1b26383d422109566f7b6feaad3dc&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2025-03-21 17:01:31&lt;/sys_updated_on&gt;&lt;table&gt;sp_widget&lt;/table&gt;&lt;use_es_latest&gt;true&lt;/use_es_latest&gt;&lt;/sys_es_latest_script&gt;&lt;/record_update&gt;</payload>
+        <payload_hash>-474152235</payload_hash>
+        <record_name>User Skills</record_name>
+        <reverted_from/>
+        <source>a538717783b712109566f7b6feaad3be</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-03-21 17:10:28</sys_created_on>
+        <sys_id>dee37a2783d422109566f7b6feaad333</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>195b9af4c790000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-03-21 17:10:28</sys_updated_on>
+        <type>Widget</type>
+        <update_guid>96e37a272bd422103efd31bf52879e33</update_guid>
+        <update_guid_history>96e37a272bd422103efd31bf52879e33:-474152235,50433ee3b5d42210e18de2e997b5f082:91660530,a3d1fe63efd4221003b8e7a685c12784:87675239</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="User Skills">ab0fa9b783a422109566f7b6feaad34d</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-04-03 17:03:48</sys_created_on>
+        <sys_db_object display_value="" name="sp_widget">sp_widget</sys_db_object>
+        <sys_id>7cc899749519450087cb856a1ab5c400</sys_id>
+        <sys_metadata>fab7aa6f831422109566f7b6feaad386</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>User Skills</sys_name>
+        <sys_package display_value="Mock SkillUp" source="x_1523172_skill_up">6938717783b712109566f7b6feaad3b9</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="Mock SkillUp">6938717783b712109566f7b6feaad3b9</sys_scope>
+        <sys_scope_delete display_value="">3a6d93cae10942c4892c498dcc264390</sys_scope_delete>
+        <sys_update_name>sp_widget_fab7aa6f831422109566f7b6feaad386</sys_update_name>
+        <sys_update_version display_value="sp_widget_fab7aa6f831422109566f7b6feaad386">dee37a2783d422109566f7b6feaad333</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-04-03 17:03:48</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

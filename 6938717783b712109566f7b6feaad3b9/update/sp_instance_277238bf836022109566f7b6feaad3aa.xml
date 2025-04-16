@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_instance">
+    <sp_instance action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <class_name/>
+        <color>default</color>
+        <css/>
+        <glyph/>
+        <id/>
+        <order>2</order>
+        <roles/>
+        <short_description/>
+        <size>md</size>
+        <sp_column display_value="2">859a8536836022109566f7b6feaad3f6</sp_column>
+        <sp_widget display_value="Custom Widget Card">a81348638324e2109566f7b6feaad330</sp_widget>
+        <sys_class_name>sp_instance</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-04-03 12:39:12</sys_created_on>
+        <sys_id>277238bf836022109566f7b6feaad3aa</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name>Bug Report</sys_name>
+        <sys_package display_value="Mock SkillUp" source="x_1523172_skill_up">6938717783b712109566f7b6feaad3b9</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Mock SkillUp">6938717783b712109566f7b6feaad3b9</sys_scope>
+        <sys_update_name>sp_instance_277238bf836022109566f7b6feaad3aa</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-04-03 12:40:27</sys_updated_on>
+        <title>Bug Report</title>
+        <url>?id=sc_cat_item&amp;sys_id=d9d9d5de839022109566f7b6feaad330</url>
+        <widget_parameters><![CDATA[{
+	"icon": {
+		"value": "x_1523172_skill_up.bug_icon.png",
+		"displayValue": "x_1523172_skill_up.bug_icon.png"
+	},
+	"title": {
+		"value": "Bug Report",
+		"displayValue": "Bug Report"
+	},
+	"description": {
+		"value": "Relate problemas técnicos encontrados aqui! ]]>👾<![CDATA[",
+		"displayValue": "Relate problemas técnicos encontrados aqui! ]]>👾<![CDATA["
+	},
+	"url": {
+		"value": "?id=sc_cat_item&sys_id=d9d9d5de839022109566f7b6feaad330",
+		"displayValue": "?id=sc_cat_item&sys_id=d9d9d5de839022109566f7b6feaad330"
+	}
+}]]></widget_parameters>
+    </sp_instance>
+    <sys_translated_text action="delete_multiple" query="documentkey=277238bf836022109566f7b6feaad3aa"/>
+</record_update>

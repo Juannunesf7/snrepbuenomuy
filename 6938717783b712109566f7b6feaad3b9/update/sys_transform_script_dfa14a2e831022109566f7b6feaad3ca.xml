@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_transform_script">
+    <sys_transform_script action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <map display_value="Bug List Mapping">e77186ea831022109566f7b6feaad349</map>
+        <order>100</order>
+        <script><![CDATA[(function transformRow(source, target, map, log) {
+    var projetoNome = source.u_projeto;
+    var taskNome = source.u_task;
+    // verificação do projeto
+    var projectGr = new GlideRecord('x_1523172_skill_up_projeto');
+    projectGr.addQuery('nome_projeto', projetoNome);
+    projectGr.query();
+    if (!projectGr.next()) {
+        log.error("Erro na linha " + source.sys_import_row + ": Projeto não encontrado.");
+        return false;
+    }
+    // verificação da tarefa
+    var taskGr = new GlideRecord('x_1523172_skill_up_tarefas');
+    taskGr.addQuery('nome_tarefa', taskNome);
+    taskGr.addQuery('parent', projectGr.sys_id);
+    taskGr.query();
+    if (!taskGr.next()) {
+        log.error("Erro na linha " + source.sys_import_row + ": Tarefa não encontrada.");
+        return false; 
+    }
+    target.project = projectGr.sys_id;
+    target.task = taskGr.sys_id;
+    return true;
+})(source, target, map, log);]]></script>
+        <sys_class_name>sys_transform_script</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-03-18 10:59:03</sys_created_on>
+        <sys_id>dfa14a2e831022109566f7b6feaad3ca</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name>onBefore</sys_name>
+        <sys_package display_value="Mock SkillUp" source="x_1523172_skill_up">6938717783b712109566f7b6feaad3b9</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Mock SkillUp">6938717783b712109566f7b6feaad3b9</sys_scope>
+        <sys_update_name>sys_transform_script_dfa14a2e831022109566f7b6feaad3ca</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-03-19 11:22:26</sys_updated_on>
+        <when>onBefore</when>
+    </sys_transform_script>
+    <sys_es_latest_script action="INSERT_OR_UPDATE">
+        <id>dfa14a2e831022109566f7b6feaad3ca</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-03-18 10:59:03</sys_created_on>
+        <sys_id>e022ceea831022109566f7b6feaad3f2</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-03-18 10:59:03</sys_updated_on>
+        <table>sys_transform_script</table>
+        <use_es_latest>true</use_es_latest>
+    </sys_es_latest_script>
+</record_update>

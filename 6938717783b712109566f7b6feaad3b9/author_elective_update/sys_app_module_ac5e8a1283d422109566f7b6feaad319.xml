@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_app_module">
+    <sys_app_module action="DELETE">
+        <active>true</active>
+        <application display_value="System Import Sets">import_sets</application>
+        <assessment/>
+        <device_type/>
+        <filter/>
+        <hint/>
+        <homepage/>
+        <image/>
+        <link_type>LIST</link_type>
+        <map_page/>
+        <mobile_title>Bug List</mobile_title>
+        <mobile_view_name>Mobile</mobile_view_name>
+        <name>x_1523172_skill_up_bug_list</name>
+        <order>1100</order>
+        <override_menu_roles>false</override_menu_roles>
+        <query/>
+        <report/>
+        <require_confirmation>true</require_confirmation>
+        <roles/>
+        <sys_class_name>sys_app_module</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-03-17 17:13:50</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>ac5e8a1283d422109566f7b6feaad319</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Bug List</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Mock SkillUp" source="x_1523172_skill_up">6938717783b712109566f7b6feaad3b9</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Mock SkillUp">6938717783b712109566f7b6feaad3b9</sys_scope>
+        <sys_update_name>sys_app_module_ac5e8a1283d422109566f7b6feaad319</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-03-17 17:13:50</sys_updated_on>
+        <timeline_page/>
+        <title>Bug List</title>
+        <uncancelable>false</uncancelable>
+        <view_name/>
+        <window_name/>
+    </sys_app_module>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Mock SkillUp">6938717783b712109566f7b6feaad3b9</application>
+        <file_path/>
+        <instance_id>7ee1e82afb5f1e945704f3585eefdcfd</instance_id>
+        <instance_name>dev293201</instance_name>
+        <name>sys_app_module_ac5e8a1283d422109566f7b6feaad319</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_app_module"><sys_app_module action="INSERT_OR_UPDATE"><active>true</active><application display_value="System Import Sets">import_sets</application><assessment/><device_type/><filter/><hint/><homepage/><image/><link_type>LIST</link_type><map_page/><mobile_title>Bug List</mobile_title><mobile_view_name>Mobile</mobile_view_name><name>x_1523172_skill_up_bug_list</name><order>1100</order><override_menu_roles>false</override_menu_roles><query/><report/><require_confirmation>true</require_confirmation><roles/><sys_class_name>sys_app_module</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2025-03-17 17:13:50</sys_created_on><sys_domain>global</sys_domain><sys_domain_path>/</sys_domain_path><sys_id>ac5e8a1283d422109566f7b6feaad319</sys_id><sys_mod_count>0</sys_mod_count><sys_name>Bug List</sys_name><sys_overrides/><sys_package display_value="Mock SkillUp" source="x_1523172_skill_up">6938717783b712109566f7b6feaad3b9</sys_package><sys_policy/><sys_scope display_value="Mock SkillUp">6938717783b712109566f7b6feaad3b9</sys_scope><sys_update_name>sys_app_module_ac5e8a1283d422109566f7b6feaad319</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2025-03-17 17:13:50</sys_updated_on><timeline_page/><title>Bug List</title><uncancelable>false</uncancelable><view_name/><window_name/></sys_app_module></record_update>]]></payload>
+        <payload_hash>189366588</payload_hash>
+        <record_name>Bug List</record_name>
+        <reverted_from/>
+        <source>a538717783b712109566f7b6feaad3be</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-03-17 17:13:50</sys_created_on>
+        <sys_id>f05e8a1283d422109566f7b6feaad31c</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>195a518f1f60000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-03-17 17:13:50</sys_updated_on>
+        <type>Module</type>
+        <update_guid>f45e8a129bd422108e98da187aa23f1b</update_guid>
+        <update_guid_history>f45e8a129bd422108e98da187aa23f1b:189366588</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="Bug List">3eed79e6831022109566f7b6feaad3fe</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-03-18 10:40:38</sys_created_on>
+        <sys_db_object display_value="" name="sys_app_module">sys_app_module</sys_db_object>
+        <sys_id>5e07ff56486d468690aac79d3f112b64</sys_id>
+        <sys_metadata>ac5e8a1283d422109566f7b6feaad319</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Bug List</sys_name>
+        <sys_package display_value="Mock SkillUp" source="x_1523172_skill_up">6938717783b712109566f7b6feaad3b9</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="Mock SkillUp">6938717783b712109566f7b6feaad3b9</sys_scope>
+        <sys_scope_delete display_value="">3a6d93cae10942c4892c498dcc264390</sys_scope_delete>
+        <sys_update_name>sys_app_module_ac5e8a1283d422109566f7b6feaad319</sys_update_name>
+        <sys_update_version display_value="sys_app_module_ac5e8a1283d422109566f7b6feaad319">f05e8a1283d422109566f7b6feaad31c</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-03-18 10:40:38</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

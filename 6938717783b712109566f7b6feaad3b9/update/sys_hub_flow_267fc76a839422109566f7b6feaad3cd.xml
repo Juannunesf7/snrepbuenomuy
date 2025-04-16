@@ -1,0 +1,812 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_hub_flow">
+    <sys_hub_flow action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <acls/>
+        <active>true</active>
+        <annotation/>
+        <attributes>browserActivatedIn=firefox,integrationActivatedIn=standalone,labelCacheCleanUpExecuted=true,timeFromCreateToActivate=2420980000,viewActivatedIn=naturalLanguage</attributes>
+        <authored_on_release_version>26000</authored_on_release_version>
+        <callable_by_client_api>false</callable_by_client_api>
+        <category/>
+        <copied_from/>
+        <copied_from_name/>
+        <description/>
+        <display_name_after_preview/>
+        <flow_priority>MEDIUM</flow_priority>
+        <generation_source/>
+        <internal_name>solicitao_de_frias</internal_name>
+        <label_cache>[{"name":"Created_1.current.solicitante","label":"Trigger - Record Created➛Serviço Compartilhado Record➛Solicitante","reference":"x_1523172_skill_up_equipe","reference_display":"Equipe","type":"reference","base_type":"reference","parent_table_name":"x_1523172_skill_up_servico_compartilhado","column_name":"solicitante","usedInstances":{"4cebd3d6-2e2b-4a35-a793-6a4ec7181278":["solicitante"]}},{"name":"{{static.0601c528838022109566f7b6feaad390}}","label":"Luana Sidarta","reference":"sys_user","reference_display":"User","type":"reference","base_type":"reference","usedInstances":{"8c5c0ffd-502d-4759-be1e-c04c070b299c":["approval_conditions"]}},{"name":"Created_1.current","label":"Trigger - Record Created➛Serviço Compartilhado Record","reference":"x_1523172_skill_up_servico_compartilhado","reference_display":"Serviço Compartilhado","type":"reference","base_type":"reference","usedInstances":{"8c5c0ffd-502d-4759-be1e-c04c070b299c":["record"],"198a89b0-47d7-4867-a366-2c91a85ba3a2":["record"],"41b4837c-ee63-42ff-941c-789dd9b023a0":["record"]},"attributes":{}},{"name":"Created_1.current.solicitante.manager","label":"Trigger - Record Created➛Serviço Compartilhado Record➛Solicitante➛Manager","reference":"sys_user","reference_display":"User","type":"reference","base_type":"reference","parent_table_name":"x_1523172_skill_up_equipe","column_name":"manager","usedInstances":{"8c5c0ffd-502d-4759-be1e-c04c070b299c":["approval_conditions"],"41b4837c-ee63-42ff-941c-789dd9b023a0":["approval_conditions"]}},{"name":"Created_1.current.work_start","label":"Trigger - Record Created➛Serviço Compartilhado Record➛Actual start","reference":"","reference_display":"Actual start","type":"glide_date_time","base_type":"glide_date_time","parent_table_name":"x_1523172_skill_up_servico_compartilhado","column_name":"work_start","usedInstances":{"4cebd3d6-2e2b-4a35-a793-6a4ec7181278":["data_inicio"]}},{"name":"Created_1.run_start_time","label":"Trigger - Record Created➛Run Start Time UTC","type":"glide_date_time","base_type":"glide_date_time","usedInstances":{},"attributes":{"test_input_hidden":"true"}},{"name":"Created_1.current.work_end","label":"Trigger - Record Created➛Serviço Compartilhado Record➛Actual end","reference":"","reference_display":"Actual end","type":"glide_date_time","base_type":"glide_date_time","parent_table_name":"x_1523172_skill_up_servico_compartilhado","column_name":"work_end","usedInstances":{"4cebd3d6-2e2b-4a35-a793-6a4ec7181278":["data_fim"]}},{"name":"Created_1.current.description","label":"Trigger - Record Created➛Serviço Compartilhado Record➛Description","reference":"","reference_display":"Description","type":"string","base_type":"string","parent_table_name":"x_1523172_skill_up_servico_compartilhado","column_name":"description","usedInstances":{"4cebd3d6-2e2b-4a35-a793-6a4ec7181278":["description"]}},{"name":"{{static.01035a77833b12109566f7b6feaad378}}","label":"MSU - Gerentes","reference":"sys_user_group","reference_display":"Group","type":"reference","base_type":"reference","usedInstances":{"41b4837c-ee63-42ff-941c-789dd9b023a0":["approval_conditions"]}}]</label_cache>
+        <master_snapshot>6ded353583a022109566f7b6feaad35d</master_snapshot>
+        <master_snapshot_digest/>
+        <name>Solicitação de Férias</name>
+        <natlang/>
+        <outputs/>
+        <pre_compiled>false</pre_compiled>
+        <remote_trigger_id>02ed753583a022109566f7b6feaad302</remote_trigger_id>
+        <run_as>user</run_as>
+        <run_with_roles/>
+        <sc_callable>false</sc_callable>
+        <show_draft_actions>false</show_draft_actions>
+        <show_triggered_flows>false</show_triggered_flows>
+        <status>published</status>
+        <substatus/>
+        <sys_class_name>sys_hub_flow</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-03-18 16:36:58</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>267fc76a839422109566f7b6feaad3cd</sys_id>
+        <sys_mod_count>10</sys_mod_count>
+        <sys_name>Solicitação de Férias</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Mock SkillUp" source="x_1523172_skill_up">6938717783b712109566f7b6feaad3b9</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Mock SkillUp">6938717783b712109566f7b6feaad3b9</sys_scope>
+        <sys_update_name>sys_hub_flow_267fc76a839422109566f7b6feaad3cd</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-04-15 17:06:40</sys_updated_on>
+        <type>flow</type>
+        <version>2</version>
+    </sys_hub_flow>
+    <sys_translated_text action="delete_multiple" query="documentkey=267fc76a839422109566f7b6feaad3cd"/>
+    <sys_variable_value action="delete_multiple" query="document_key=267fc76a839422109566f7b6feaad3cd"/>
+    <sys_flow_record_trigger action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <condition table="x_1523172_skill_up_servico_compartilhado">item_de_catalogo=ddc36a6683d022109566f7b6feaad3d2<item display_table="sc_cat_item" display_value="Solicitação de Férias" endquery="false" field="item_de_catalogo" goto="false" newquery="false" operator="=" or="false" value="ddc36a6683d022109566f7b6feaad3d2"/>
+        </condition>
+        <name/>
+        <on_delete>false</on_delete>
+        <on_insert>true</on_insert>
+        <on_update>false</on_update>
+        <run_flow_in>background</run_flow_in>
+        <run_on_extended>false</run_on_extended>
+        <run_when_setting>both</run_when_setting>
+        <run_when_user_list/>
+        <run_when_user_setting>any</run_when_user_setting>
+        <sys_class_name>sys_flow_record_trigger</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-03-28 13:00:50</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>02ed753583a022109566f7b6feaad302</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_overrides/>
+        <sys_scope display_value="Mock SkillUp">6938717783b712109566f7b6feaad3b9</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-03-28 13:00:50</sys_updated_on>
+        <table>x_1523172_skill_up_servico_compartilhado</table>
+    </sys_flow_record_trigger>
+    <sys_trigger_runner_mapping action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <data>{"run_flow_in":"background","run_when_user_list":[],"run_when_setting":"both","run_when_user_setting":"any","run_on_extended":"false"}</data>
+        <identifier>267fc76a839422109566f7b6feaad3cd</identifier>
+        <runner>FDTriggerRunner</runner>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-04-15 17:06:40</sys_created_on>
+        <sys_id>a2c227a7837022109566f7b6feaad3aa</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-04-15 17:06:40</sys_updated_on>
+        <trigger display_value="">02ed753583a022109566f7b6feaad302</trigger>
+    </sys_trigger_runner_mapping>
+    <sys_trigger_runner_mapping action="delete_multiple" query="identifier=267fc76a839422109566f7b6feaad3cd^sys_idNOT INa2c227a7837022109566f7b6feaad3aa"/>
+    <sys_hub_flow_stage action="delete_multiple" query="flow=267fc76a839422109566f7b6feaad3cd"/>
+    <sys_flow_cat_variable_model action="delete_multiple" query="id=267fc76a839422109566f7b6feaad3cd^sys_idNOT INe27fc76a839422109566f7b6feaad3ce"/>
+    <sys_flow_cat_variable_model action="INSERT_OR_UPDATE">
+        <id>267fc76a839422109566f7b6feaad3cd</id>
+        <name>Solicitação de Férias</name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-03-18 16:36:58</sys_created_on>
+        <sys_id>e27fc76a839422109566f7b6feaad3ce</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-03-18 16:36:58</sys_updated_on>
+    </sys_flow_cat_variable_model>
+    <sys_flow_cat_variable action="delete_multiple" query="flow_catalog_model=e27fc76a839422109566f7b6feaad3ce"/>
+    <sys_hub_flow_input action="delete_multiple" query="model=267fc76a839422109566f7b6feaad3cd^sys_idNOT IN9038efb683d022109566f7b6feaad3e9,d838277683d022109566f7b6feaad31a"/>
+    <sys_hub_flow_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,test_input_hidden=true,uiType=table_name,uiTypeLabel=Table Name</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>table_name</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="">table_name</internal_type>
+        <label>Table Name</label>
+        <mandatory>false</mandatory>
+        <max_length>200</max_length>
+        <model display_value="Solicitação de Férias">267fc76a839422109566f7b6feaad3cd</model>
+        <model_id>267fc76a839422109566f7b6feaad3cd</model_id>
+        <model_table>sys_hub_flow</model_table>
+        <name>var__m_sys_hub_flow_input_267fc76a839422109566f7b6feaad3cd</name>
+        <next_element/>
+        <order>101</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-03-19 13:03:26</sys_created_on>
+        <sys_id>9038efb683d022109566f7b6feaad3e9</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Mock SkillUp">6938717783b712109566f7b6feaad3b9</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-03-19 13:03:26</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=9038efb683d022109566f7b6feaad3e9"/>
+    <sys_hub_flow_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=document_id,uiTypeLabel=Document ID</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent>table_name</dependent>
+        <dependent_on_field>table_name</dependent_on_field>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>current</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="">document_id</internal_type>
+        <label>Record</label>
+        <mandatory>true</mandatory>
+        <max_length>200</max_length>
+        <model display_value="Solicitação de Férias">267fc76a839422109566f7b6feaad3cd</model>
+        <model_id>267fc76a839422109566f7b6feaad3cd</model_id>
+        <model_table>sys_hub_flow</model_table>
+        <name>var__m_sys_hub_flow_input_267fc76a839422109566f7b6feaad3cd</name>
+        <next_element/>
+        <order>100</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-03-19 13:03:26</sys_created_on>
+        <sys_id>d838277683d022109566f7b6feaad31a</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Mock SkillUp">6938717783b712109566f7b6feaad3b9</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-03-19 13:03:26</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>true</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=d838277683d022109566f7b6feaad31a"/>
+    <sys_hub_flow_output action="delete_multiple" query="model=267fc76a839422109566f7b6feaad3cd"/>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=267fc76a839422109566f7b6feaad3cd"/>
+    <sys_hub_trigger_instance_v2 action="delete_multiple" query="flow=267fc76a839422109566f7b6feaad3cd^sys_idNOT IN2c3823f683d022109566f7b6feaad307"/>
+    <sys_hub_trigger_instance_v2 action="INSERT_OR_UPDATE">
+        <comment/>
+        <display_text/>
+        <flow display_value="Solicitação de Férias">267fc76a839422109566f7b6feaad3cd</flow>
+        <name>Created</name>
+        <remote_sys_id/>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-03-19 13:03:27</sys_created_on>
+        <sys_id>2c3823f683d022109566f7b6feaad307</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-03-19 13:14:12</sys_updated_on>
+        <trigger_definition display_value="Created">798916a0c31322002841b63b12d3ae7c</trigger_definition>
+        <trigger_inputs>H4sIAAAAAAAA/9VY2W7jNhT9FUFPLeACWrzmbepk0ADTCWBnZh7SQKC42MTQpCtRStxBvqcf0h/rpSTbsiQ73jJJXgyI2z08PPdc0nc/bIFCKuwL+xaFgtotm0tNI4nE7WJOoVmb5kCimembIUmQVtHCvtBRQlu2igiN7Au3ZadIJHS8iK8JTIKh2Yxiul10w/dj4HY83+15QfydCxEk8yCmUcqxCrCazVGkuZgiomAK4fFcoMXXYubYDPvvX2UNK+PwlAsSUWlf3N23bOiCyNqg+lHp4gYaZhgNPOpg3/U9z3G8ftsNu37oesRH1HFgwSojla3oBmLWPNBHTSWhEIohEdMGziKKyI0Ui9WIKVCekzZDjzH/B1bvO2Yco4Ad07xv9RkUxOTNeKo4pjdzzZXMW3KceacSyUx+zvEbSilDidBLSqEliWE9OjeQDYgCERtP1cNoGfAjl9nuik6hMBKrL6R1xMNE09gQzrgA6oOcm1glUYZ+dDW8GV0G3z7cDv+4GgWjq/Ht6Hp4e3VpP2X7Cv5OzIo5wgJLkG/naaWDj5wKc4AymYWApmXHOOJz/QFrntICzlNrreehkoRnrNQ0jZdd8aamiy0tD9NxtsoalxZfSptrOgMuA4w0Emqi/kocxyeEYL+Lut2+TxzPc51Bp9tlvbDLKELEJ97BAu52YSJFWwQcspKAyxQ0ANcNbJT3vkvKRcs+Wm47ziupOc+3o8U8U4SKy/VyNnROJiBvLueJNmw9IKnjQKsAERKUeDRDAdNz6s73Vpf48+KOEglLBKsTqks8I3LF6CcewwbuIEGXbGVLQj/7VCw5SqSl4Cjhx8JJBGRpa2l57HqGJgXHbEwFxbokC/YlLn/9yeOYy0kJ9Spoxkot5iocyMtabimPHZ8Y/P7I/K7zm1Z4q1Sng9PYdRkLKfOcnkli1/FD5jo9p4MY8R0He6U0roPZilJXTv9F0vmwZI4z3Yk9VFaluADvlIW/l2LSTbktSTBqKDxjeB5o7pmgeQZaxfv8g8xvJcu8+XJTnbu2duYbACIpghlkXw80A/YwOybUA/juEUYXIvx9EqlEkqrzmDUtLq31COuXgr9fz2h6TEV0N4DNEa9kd2uGlxpFcnEGo/OZGw5omzrgbz5YW9gZDEKMPMZ63R713IrRrWE0YnsXBveMsNImZW4zu0aNpE3SOsDmTgBYs7yDAZ5udoUwG60u73sfpvYwpTIAqFEgjG3VvG0iOLwnir6jE7sWJV2n8qnJzfoD3HF7PdyDhwgkN2vTELltr4MGva7f71SSuwZlF0zdQMJPeZ7EizgDsiXxv+Rdb+vh/ZIKjanWpsgcXnsl3E6zOSgPUqp/5liszD9UZH1W8rfr9ThrTKGsZW/UcxXhfVCYg7VeFkao9LR2C4DQv0P7Rmhze9zCymu+iSp6SDe3dfKbiLb7nQHzm92EDZrcZA1mO8w3f2nYMxnSrWnVdHvYV9tpY4psLfdHqLUik/I9YMdF5VykuGcnxXs5UvyTL0fLXNz6EDwG7DuqVtkV4pSSZWLSQLGyT18qCzosCGJxZhX/A8K7PlxYekqBUgG3YAhomeinGnS5YNShrBT8c4Hk9+pa4YJmq7grvWpNqpz6eZ+wlPRQp+NvueUOqk/YJkDP4H3zFergBEib8mlnmTps3eqajYWqpM5NRexZgs666+Y6dNquGyvRc7s+vcbseoA3oHij1eP+fzrZ+Fz+HgAA</trigger_inputs>
+        <trigger_outputs/>
+        <trigger_type>record_create</trigger_type>
+    </sys_hub_trigger_instance_v2>
+    <sys_hub_action_instance_v2 action="delete_multiple" query="flow=267fc76a839422109566f7b6feaad3cd^sys_idNOT IN02aaef7a83d022109566f7b6feaad3dd,07d3fdb5836022109566f7b6feaad385,585753e7833022109566f7b6feaad3f4"/>
+    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
+        <action_type display_value="Update Record">f9d01dd2c31332002841b63b12d3aea1</action_type>
+        <action_type_parent display_value="Update Record">baf174c8c3c232002841b63b12d3aee4</action_type_parent>
+        <attributes/>
+        <comment/>
+        <compiled_snapshot/>
+        <display_text/>
+        <flow display_value="Solicitação de Férias">267fc76a839422109566f7b6feaad3cd</flow>
+        <generation_source/>
+        <order>3</order>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-03-19 13:14:12</sys_created_on>
+        <sys_id>02aaef7a83d022109566f7b6feaad3dd</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_scope display_value="Mock SkillUp">6938717783b712109566f7b6feaad3b9</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-04-15 16:16:32</sys_updated_on>
+        <ui_id>198a89b0-47d7-4867-a366-2c91a85ba3a2</ui_id>
+        <values>H4sIAAAAAAAA/+1U0WrbMBT9leBnYyw7ydq8jYbAHtZCO/rSFSFLN4mYbHmSnCYL+Z59yH5sV7acpunWhVIYg+lNV/eee87V4d5tIymiSTQEkZJzMuY5yfMsTbOzISnGeUEykTMAEsVRxUrATANcG4H3FVOND2y3FwaYA0FJwhtjoHK7Hb4LaWvFNrchDSN8KZXA92hydx9HNTOI6MBEk+3Rk9vUQBUrQGHhVPOmRNDBhylinMq2r77u6R7T9z3wLgI6lT6IT54PSeMI1g4qAdhuzpSFOCpZJZjTZhNNnGkwgKrFVaU2+4ylrFyntGRrK78h/jD1eXNAaTxMYX+lYUL9cLTkcFU7qasu4lih+slp1ZTVZSfBzxbmrFHuYLaNRTyoPWVPomM4v1nqh+u+30xWrbrAVmnO1P7GnDOyaBxY/x2goB1KyepaVgtaG72SbTFSKZOFwksyV/oBe1q5qBLGPe8EB8SSGcanbfiWGelFfEQYLN614unXxvftZATCtNXcCqbtR2Gq5UbW7j0CryDQ3MXBrsXoJQPw88f/PsB8tOyaklGWk3cZtV+kUrSpqQWzklxTlIfGdFItmdDPXXzj035814OLo7zXefuTZze47NidquxJ8W+UBnc/iQVzj97M3Gd/ydyB0T/m7j95Os1eXGoHP93a2B742Trcv5+bNM1F9tyzR6+vdCqUiOlg0KHGJ3PuAWYSlLC/ENFbNTSgq9Bgv4vfzK9knLbn/0p+w5V8/xPolMIKQwgAAA==</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
+        <action_type display_value="Enviar Solicitação">67e8a179832022109566f7b6feaad365</action_type>
+        <action_type_parent display_value="Enviar Solicitação">d4966d75832022109566f7b6feaad3b9</action_type_parent>
+        <attributes/>
+        <comment/>
+        <compiled_snapshot/>
+        <display_text/>
+        <flow display_value="Solicitação de Férias">267fc76a839422109566f7b6feaad3cd</flow>
+        <generation_source/>
+        <order>1</order>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-03-28 12:16:57</sys_created_on>
+        <sys_id>07d3fdb5836022109566f7b6feaad385</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_scope display_value="Mock SkillUp">6938717783b712109566f7b6feaad3b9</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-03-28 12:18:48</sys_updated_on>
+        <ui_id>4cebd3d6-2e2b-4a35-a793-6a4ec7181278</ui_id>
+        <values>H4sIAAAAAAAA/+2W207bQBCGXwX5Oo58jp27qoCE1BaptNwgZM0enKxYr4295tCIp+lFH4QX62zsmCQNIQJKW6mXnp3Zf06f7bOZJZg1tiLCY3BHSex7jue5ThJGUTYiUcYBmB/F1sBSkHP0rAspqNCgNEfjFcjGWGez9xUHzVnqDmlTVVzp4ZLn3R36MlGXEm5PuxC00KmQDH2t8dn5wCqhQgnNK2s8WzvStyVPJRAuMfAzzzieUKO/a/KL2JOV7DeWZLTQWC2pFBUzWbkDi99orhhH1QxkzQdWDoqBLqrb3oJ9YMdKPhimQum23hxuavENb/e9wZLA2LpJ3dDz3ZGX1hdCyrQpU37ZiNKI935p10D0P1gc0mkhKD8utShUq6GByKeupIVscvWprd5MhmfQSL00maZGOV6aWk3yXSXZybS47tt/KNS8Ld2hLCjI/gm0rgRpNK/NNBvx5deutsYPG6bKJc9RN82hLIWapGVVXIm5FqaeDycSH4aZLK4xx1pM1BCoacAQJwHDQ7Tvz82nUAnTjY94DQYbxa9KXDb8yGxN4lA/hDi0qccCO8iSkZ0EENk0HDkRT0IaQmDdzfufXjamtLZVXVPStuHoUNNKlPodpnDFu/rvBh1X/vbVZA9LaHJPhcJFLJ7g6rqoLtJaQ6VfFat90D1RO6S9FAZ7jO8dLVLfWE8H1XxyKWuVOqq8V6MqcFapegSerdj8UTpW2rOKRzedNyGD0jB2PEZtHnhIRhBGdhISx2Yk8nwnyxI39F9MxsjftmIjd22TMpHvggVm8Nug2CHjdSgOcBEqo6T0OhptQVu48P9z8ZdxkUVB5CdAbBKx2A58iG0CAbWJ50MSOQlx3Zd/McjWV+8oWFoj3t5jZrUdjSXPTXTsEvI8fE5wnGqyAGiH0nqA5vL3P+6/F48V3KFTLyQ6bIJXwyZ2nH8dnL45q9D0Y3mbH63Y8ZMwcO04iBh+TnhsJwl+XRj+Z1GSxR6JybOxOf8Jb4Hrw8IMAAA=</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
+        <action_type display_value="Ask For Approval">f8f2e9920b10030085c083eb37673abd</action_type>
+        <action_type_parent display_value="Ask For Approval">bae0a1120b10030085c083eb37673a92</action_type_parent>
+        <attributes/>
+        <comment/>
+        <compiled_snapshot/>
+        <display_text/>
+        <flow display_value="Solicitação de Férias">267fc76a839422109566f7b6feaad3cd</flow>
+        <generation_source/>
+        <order>2</order>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-04-15 16:16:32</sys_created_on>
+        <sys_id>585753e7833022109566f7b6feaad3f4</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_scope display_value="Mock SkillUp">6938717783b712109566f7b6feaad3b9</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-04-15 16:46:07</sys_updated_on>
+        <ui_id>41b4837c-ee63-42ff-941c-789dd9b023a0</ui_id>
+        <values>H4sIAAAAAAAA/+1XX2/aMBD/KijPKAukDMpbVYS0SVultutLqSzjOODN2Jnt0DKUz7MPsi+2c+KEFNoUIaRuVR/vfH9+d/c7x7ldeyzyhl5/EHfp6Wk3mHaCIAyCQY8Eg5BOw/7HfohJ4LU9gRcULBUlUkUgLzFPrWK9PlcUGxqhjk9SpagwWQbnEdMJx6sbZwYaMmc8gnNveHvX9hKsIKKhyhuut47MKqGI4ynl4DiSJF1A0NanEcTYF23pfVnC3YZvc4AcueiIWSUcWTxB26MPhoqIQrYYc03b3gKLCBupVt7QqBQUUHR0IfiqspgzYYpCF/hBs18QPuxau5hCZcQ1oRKRa1DZG8kIvUgMk6LQGDzlZeMkTxfia1GBbS2NccpNrbWphng0sZAtiAJhfDWX95dlvjETeXEOLZcE80rCxig2TQ3VdhqU07wnC5wkTMxQouSS5c4AZeHPOAh+zOU95NRsJnxMLG4fGoT9MehHufoGK2aL+AJhwDnLi0c/U5u3KMMBRnnNRcFgpYliiTmDmEvqEGZtR9QpaRw92Uy6CLfh6QPq9Lphp99F+gfjHKUJ0lQtGZEIigI2GsbnOJK71L2yZn9+y9b5lt1hhL62wFr5NNt7F/XIebdIx+ZcRKII7cjcaSaz0+zD5kHwOmx2iP4zOr/E5KDTNPRosBky5APEmKOYUV6/esuDXcrWTg4j6dimekTSPfCWzmcue2vsAD9XiKNtLm7RtntE2gavRNy3ew2TRjLQcDPz7zJVooG7aM50PtJnOVyzOBaX94BfOn8u8G9TebusBiaH70z+h5l80mukAn3i9iJSRMzi0zU+F3ce1Wdi9e32iTexryVnhBksDPVh/HhGVZbd7dL+8ECHbUd1WV+mnOpyQ/ZoS/XEdn6NbXL7UR0q5+R25ORYL+7XW5G3+UohjTyITzdzj1JoB1C1/ms48QqQE2848YQUdOK1J561QpYQuRosAFx1kOvW6ywrNKnCLkCnJm68I7zSuaUmcxoBqXLtI03BdKc/5p/plUvQGgHuD9es9n15uWvV721a+D/ZSLc1VSVF51j969I72tfl5H1xaosDMBmqntHwMYEr6OBtuvsLpWyqVmgRAAA=</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_sub_flow_instance_v2 action="delete_multiple" query="flow=267fc76a839422109566f7b6feaad3cd"/>
+    <sys_hub_flow_logic_instance_v2 action="delete_multiple" query="flow=267fc76a839422109566f7b6feaad3cd"/>
+    <sys_hub_pill_compound action="delete_multiple" query="attached_to=267fc76a839422109566f7b6feaad3cd"/>
+    <sys_hub_flow_variable action="delete_multiple" query="model=267fc76a839422109566f7b6feaad3cd"/>
+    <sys_documentation action="delete_multiple" query="name=var__m_sys_hub_flow_input_267fc76a839422109566f7b6feaad3cd^sys_idNOT IN9038efb683d022109566f7b6feaad3e8,9438efb683d022109566f7b6feaad3eb"/>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>current</element>
+        <help/>
+        <hint/>
+        <label>Record</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_267fc76a839422109566f7b6feaad3cd</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-03-19 13:03:26</sys_created_on>
+        <sys_id>9038efb683d022109566f7b6feaad3e8</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Mock SkillUp" source="x_1523172_skill_up">6938717783b712109566f7b6feaad3b9</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Mock SkillUp">6938717783b712109566f7b6feaad3b9</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-03-19 13:03:26</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>table_name</element>
+        <help/>
+        <hint/>
+        <label>Table Name</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_267fc76a839422109566f7b6feaad3cd</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-03-19 13:03:26</sys_created_on>
+        <sys_id>9438efb683d022109566f7b6feaad3eb</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Mock SkillUp" source="x_1523172_skill_up">6938717783b712109566f7b6feaad3b9</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Mock SkillUp">6938717783b712109566f7b6feaad3b9</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-03-19 13:03:26</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_choice action="delete_multiple" query="name=var__m_sys_hub_flow_input_267fc76a839422109566f7b6feaad3cd"/>
+    <sys_documentation action="delete_multiple" query="name=var__m_sys_hub_flow_output_267fc76a839422109566f7b6feaad3cd"/>
+    <sys_choice action="delete_multiple" query="name=var__m_sys_hub_flow_output_267fc76a839422109566f7b6feaad3cd"/>
+    <sys_hub_flow_snapshot action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <acls/>
+        <active>true</active>
+        <annotation/>
+        <attributes>browserActivatedIn=firefox,integrationActivatedIn=standalone,labelCacheCleanUpExecuted=true,viewActivatedIn=naturalLanguage</attributes>
+        <authored_on_release_version>26000</authored_on_release_version>
+        <callable_by_client_api>false</callable_by_client_api>
+        <category/>
+        <copied_from/>
+        <copied_from_name/>
+        <description/>
+        <flow_priority>MEDIUM</flow_priority>
+        <internal_name>solicitao_de_frias</internal_name>
+        <label_cache>[{"name":"Created_1.current.solicitante","label":"Trigger - Record Created➛Serviço Compartilhado Record➛Solicitante","reference":"x_1523172_skill_up_equipe","reference_display":"Equipe","type":"reference","base_type":"reference","parent_table_name":"x_1523172_skill_up_servico_compartilhado","column_name":"solicitante","usedInstances":{"4cebd3d6-2e2b-4a35-a793-6a4ec7181278":["solicitante"]}},{"name":"{{static.0601c528838022109566f7b6feaad390}}","label":"Luana Sidarta","reference":"sys_user","reference_display":"User","type":"reference","base_type":"reference","usedInstances":{"8c5c0ffd-502d-4759-be1e-c04c070b299c":["approval_conditions"]}},{"name":"Created_1.current","label":"Trigger - Record Created➛Serviço Compartilhado Record","reference":"x_1523172_skill_up_servico_compartilhado","reference_display":"Serviço Compartilhado","type":"reference","base_type":"reference","usedInstances":{"8c5c0ffd-502d-4759-be1e-c04c070b299c":["record"],"198a89b0-47d7-4867-a366-2c91a85ba3a2":["record"],"41b4837c-ee63-42ff-941c-789dd9b023a0":["record"]},"attributes":{}},{"name":"Created_1.current.solicitante.manager","label":"Trigger - Record Created➛Serviço Compartilhado Record➛Solicitante➛Manager","reference":"sys_user","reference_display":"User","type":"reference","base_type":"reference","parent_table_name":"x_1523172_skill_up_equipe","column_name":"manager","usedInstances":{"8c5c0ffd-502d-4759-be1e-c04c070b299c":["approval_conditions"],"41b4837c-ee63-42ff-941c-789dd9b023a0":["approval_conditions"]}},{"name":"Created_1.current.work_start","label":"Trigger - Record Created➛Serviço Compartilhado Record➛Actual start","reference":"","reference_display":"Actual start","type":"glide_date_time","base_type":"glide_date_time","parent_table_name":"x_1523172_skill_up_servico_compartilhado","column_name":"work_start","usedInstances":{"4cebd3d6-2e2b-4a35-a793-6a4ec7181278":["data_inicio"]}},{"name":"Created_1.run_start_time","label":"Trigger - Record Created➛Run Start Time UTC","type":"glide_date_time","base_type":"glide_date_time","usedInstances":{},"attributes":{"test_input_hidden":"true"}},{"name":"Created_1.current.work_end","label":"Trigger - Record Created➛Serviço Compartilhado Record➛Actual end","reference":"","reference_display":"Actual end","type":"glide_date_time","base_type":"glide_date_time","parent_table_name":"x_1523172_skill_up_servico_compartilhado","column_name":"work_end","usedInstances":{"4cebd3d6-2e2b-4a35-a793-6a4ec7181278":["data_fim"]}},{"name":"Created_1.current.description","label":"Trigger - Record Created➛Serviço Compartilhado Record➛Description","reference":"","reference_display":"Description","type":"string","base_type":"string","parent_table_name":"x_1523172_skill_up_servico_compartilhado","column_name":"description","usedInstances":{"4cebd3d6-2e2b-4a35-a793-6a4ec7181278":["description"]}},{"name":"{{static.01035a77833b12109566f7b6feaad378}}","label":"MSU - Gerentes","reference":"sys_user_group","reference_display":"Group","type":"reference","base_type":"reference","usedInstances":{"41b4837c-ee63-42ff-941c-789dd9b023a0":["approval_conditions"]}}]</label_cache>
+        <master>true</master>
+        <name>Solicitação de Férias</name>
+        <natlang/>
+        <outputs/>
+        <parent_flow display_value="Solicitação de Férias">267fc76a839422109566f7b6feaad3cd</parent_flow>
+        <remote_trigger_id/>
+        <run_as>user</run_as>
+        <run_with_roles/>
+        <sc_callable>false</sc_callable>
+        <status>published</status>
+        <sys_class_name>sys_hub_flow_snapshot</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-03-28 13:00:49</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>6ded353583a022109566f7b6feaad35d</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name/>
+        <sys_overrides/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Mock SkillUp">6938717783b712109566f7b6feaad3b9</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-04-15 17:06:40</sys_updated_on>
+        <type>flow</type>
+        <version>2</version>
+    </sys_hub_flow_snapshot>
+    <sys_translated_text action="delete_multiple" query="documentkey=6ded353583a022109566f7b6feaad35d"/>
+    <sys_variable_value action="delete_multiple" query="document_key=6ded353583a022109566f7b6feaad35d"/>
+    <sys_hub_flow_stage action="delete_multiple" query="flow=6ded353583a022109566f7b6feaad35d"/>
+    <sys_flow_cat_variable_model action="delete_multiple" query="id=6ded353583a022109566f7b6feaad35d^sys_idNOT IN6ded353583a022109566f7b6feaad35e"/>
+    <sys_flow_cat_variable_model action="INSERT_OR_UPDATE">
+        <id>6ded353583a022109566f7b6feaad35d</id>
+        <name>Solicitação de Férias</name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-03-28 13:00:49</sys_created_on>
+        <sys_id>6ded353583a022109566f7b6feaad35e</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-03-28 13:00:49</sys_updated_on>
+    </sys_flow_cat_variable_model>
+    <sys_flow_cat_variable action="delete_multiple" query="flow_catalog_model=6ded353583a022109566f7b6feaad35e"/>
+    <sys_hub_flow_input action="delete_multiple" query="model=6ded353583a022109566f7b6feaad35d^sys_idNOT IN21ed353583a022109566f7b6feaad360,f1ed353583a022109566f7b6feaad36c"/>
+    <sys_hub_flow_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=document_id</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent>table_name</dependent>
+        <dependent_on_field>table_name</dependent_on_field>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>current</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="">document_id</internal_type>
+        <label>Record</label>
+        <mandatory>true</mandatory>
+        <max_length>200</max_length>
+        <model display_value="Solicitação de Férias">6ded353583a022109566f7b6feaad35d</model>
+        <model_id>6ded353583a022109566f7b6feaad35d</model_id>
+        <model_table>sys_hub_flow_snapshot</model_table>
+        <name>var__m_sys_hub_flow_input_6ded353583a022109566f7b6feaad35d</name>
+        <next_element/>
+        <order>100</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-03-28 13:00:49</sys_created_on>
+        <sys_id>21ed353583a022109566f7b6feaad360</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Mock SkillUp">6938717783b712109566f7b6feaad3b9</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-04-15 17:06:39</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>true</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=21ed353583a022109566f7b6feaad360"/>
+    <sys_hub_flow_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,test_input_hidden=true,uiType=table_name</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>table_name</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="">table_name</internal_type>
+        <label>Table Name</label>
+        <mandatory>false</mandatory>
+        <max_length>200</max_length>
+        <model display_value="Solicitação de Férias">6ded353583a022109566f7b6feaad35d</model>
+        <model_id>6ded353583a022109566f7b6feaad35d</model_id>
+        <model_table>sys_hub_flow_snapshot</model_table>
+        <name>var__m_sys_hub_flow_input_6ded353583a022109566f7b6feaad35d</name>
+        <next_element/>
+        <order>101</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-03-28 13:00:49</sys_created_on>
+        <sys_id>f1ed353583a022109566f7b6feaad36c</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Mock SkillUp">6938717783b712109566f7b6feaad3b9</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-04-15 17:06:39</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=f1ed353583a022109566f7b6feaad36c"/>
+    <sys_hub_flow_output action="delete_multiple" query="model=6ded353583a022109566f7b6feaad35d"/>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=6ded353583a022109566f7b6feaad35d"/>
+    <sys_hub_trigger_instance_v2 action="delete_multiple" query="flow=6ded353583a022109566f7b6feaad35d^sys_idNOT INb1ed353583a022109566f7b6feaad3d1"/>
+    <sys_hub_trigger_instance_v2 action="INSERT_OR_UPDATE">
+        <comment/>
+        <display_text/>
+        <flow display_value="Solicitação de Férias">6ded353583a022109566f7b6feaad35d</flow>
+        <name>Created</name>
+        <remote_sys_id/>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-03-28 13:00:49</sys_created_on>
+        <sys_id>b1ed353583a022109566f7b6feaad3d1</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-03-28 13:00:49</sys_updated_on>
+        <trigger_definition display_value="Created">798916a0c31322002841b63b12d3ae7c</trigger_definition>
+        <trigger_inputs>H4sIAAAAAAAA/9VY2W7jNhT9FUFPLeACWrzmbepk0ADTCWBnZh7SQKC42MTQpCtRStxBvqcf0h/rpSTbsiQ73jJJXgyI2z08PPdc0nc/bIFCKuwL+xaFgtotm0tNI4nE7WJOoVmb5kCimembIUmQVtHCvtBRQlu2igiN7Au3ZadIJHS8iK8JTIKh2Yxiul10w/dj4HY83+15QfydCxEk8yCmUcqxCrCazVGkuZgiomAK4fFcoMXXYubYDPvvX2UNK+PwlAsSUWlf3N23bOiCyNqg+lHp4gYaZhgNPOpg3/U9z3G8ftsNu37oesRH1HFgwSojla3oBmLWPNBHTSWhEIohEdMGziKKyI0Ui9WIKVCekzZDjzH/B1bvO2Yco4Ad07xv9RkUxOTNeKo4pjdzzZXMW3KceacSyUx+zvEbSilDidBLSqEliWE9OjeQDYgCERtP1cNoGfAjl9nuik6hMBKrL6R1xMNE09gQzrgA6oOcm1glUYZ+dDW8GV0G3z7cDv+4GgWjq/Ht6Hp4e3VpP2X7Cv5OzIo5wgJLkG/naaWDj5wKc4AymYWApmXHOOJz/QFrntICzlNrreehkoRnrNQ0jZdd8aamiy0tD9NxtsoalxZfSptrOgMuA4w0Emqi/kocxyeEYL+Lut2+TxzPc51Bp9tlvbDLKELEJ97BAu52YSJFWwQcspKAyxQ0ANcNbJT3vkvKRcs+Wm47ziupOc+3o8U8U4SKy/VyNnROJiBvLueJNmw9IKnjQKsAERKUeDRDAdNz6s73Vpf48+KOEglLBKsTqks8I3LF6CcewwbuIEGXbGVLQj/7VCw5SqSl4Cjhx8JJBGRpa2l57HqGJgXHbEwFxbokC/YlLn/9yeOYy0kJ9Spoxkot5iocyMtabimPHZ8Y/P7I/K7zm1Z4q1Sng9PYdRkLKfOcnkli1/FD5jo9p4MY8R0He6U0roPZilJXTv9F0vmwZI4z3Yk9VFaluADvlIW/l2LSTbktSTBqKDxjeB5o7pmgeQZaxfv8g8xvJcu8+XJTnbu2duYbACIpghlkXw80A/YwOybUA/juEUYXIvx9EqlEkqrzmDUtLq31COuXgr9fz2h6TEV0N4DNEa9kd2uGlxpFcnEGo/OZGw5omzrgbz5YW9gZDEKMPMZ63R713IrRrWE0YnsXBveMsNImZW4zu0aNpE3SOsDmTgBYs7yDAZ5udoUwG60u73sfpvYwpTIAqFEgjG3VvG0iOLwnir6jE7sWJV2n8qnJzfoD3HF7PdyDhwgkN2vTELltr4MGva7f71SSuwZlF0zdQMJPeZ7EizgDsiXxv+Rdb+vh/ZIKjanWpsgcXnsl3E6zOSgPUqp/5liszD9UZH1W8rfr9ThrTKGsZW/UcxXhfVCYg7VeFkao9LR2C4DQv0P7Rmhze9zCymu+iSp6SDe3dfKbiLb7nQHzm92EDZrcZA1mO8w3f2nYMxnSrWnVdHvYV9tpY4psLfdHqLUik/I9YMdF5VykuGcnxXs5UvyTL0fLXNz6EDwG7DuqVtkV4pSSZWLSQLGyT18qCzosCGJxZhX/A8K7PlxYekqBUgG3YAhomeinGnS5YNShrBT8c4Hk9+pa4YJmq7grvWpNqpz6eZ+wlPRQp+NvueUOqk/YJkDP4H3zFergBEib8mlnmTps3eqajYWqpM5NRexZgs666+Y6dNquGyvRc7s+vcbseoA3oHij1eP+fzrZ+Fz+HgAA</trigger_inputs>
+        <trigger_outputs/>
+        <trigger_type>record_create</trigger_type>
+    </sys_hub_trigger_instance_v2>
+    <sys_hub_action_instance_v2 action="delete_multiple" query="flow=6ded353583a022109566f7b6feaad35d^sys_idNOT IN52c227a7837022109566f7b6feaad36d,71ed353583a022109566f7b6feaad3cf,f9ed353583a022109566f7b6feaad3d0"/>
+    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
+        <action_type display_value="Ask For Approval">f8f2e9920b10030085c083eb37673abd</action_type>
+        <action_type_parent display_value="Ask For Approval">bae0a1120b10030085c083eb37673a92</action_type_parent>
+        <attributes/>
+        <comment/>
+        <compiled_snapshot>f8f2e9920b10030085c083eb37673abd</compiled_snapshot>
+        <display_text/>
+        <flow display_value="Solicitação de Férias">6ded353583a022109566f7b6feaad35d</flow>
+        <generation_source/>
+        <order>2</order>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-04-15 17:06:39</sys_created_on>
+        <sys_id>52c227a7837022109566f7b6feaad36d</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_scope display_value="Mock SkillUp">6938717783b712109566f7b6feaad3b9</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-04-15 17:06:39</sys_updated_on>
+        <ui_id>41b4837c-ee63-42ff-941c-789dd9b023a0</ui_id>
+        <values>H4sIAAAAAAAA/+1X3VIaMRR+FSbXDF1AK3LnwDjTTqszYr0RJxOyWUgbkm2SRSnD8/RB+mI9m2SXFRTBemP18vzmO4fvI5vrBeIx6qKjTtJix8etaNSMonYUdQ5p1GmzUfvo41Gb0AjVkSRTBpmaUaVjsGdEZLljsehpRiyLcbNBM62ZtMslxGNuUkHmVyENPHTCRQxx1L2+qaOUaOhomUbdxVpoV0iCjJiA1IsC0zpGO09zO1Y0mwIuzAvnl1DZD5Hapz5EoCiHE9URu7NMxgxwJEQYVkdTImNilZ6jrtUZOGDm+FyKeZkx4dL6OafkzvBfcHC7leclDAajYQelicN+vDvpE0sG0JnaTJfrUpwy41cSs4RkwvaqPp9wnlqupC+xZCSKaiWyqTzzC0Flg8rPkRkAwdJ8zhy5HysZTNTtRQHylEu3kTCiUJSI0iLWaj7KbA5ngZhgbsVTkqZcjnGq1Yy7YoAybYwFGI1EqFs40/CxbBCa427AVknjFPx9574imudDfIU2ULysIzM3PUGMWY0CO8Q/sxyJHyyMgN0W/AryOqp5ak/glBkLmJf1QPcR3cotuqKSb7di+x1uHrbazaMWNj+4EDhLsWF6xqnCMCZw2nIxIbHaFMAgT/vzW9V6a3n7yWIH6IUsLgP2tVGCKJyJXey+JlxZ7cwHgiSa2yURPCtNeDI9IIlO9IokEcZ69Zp4Sg5Rcxun4s6KQ4AAZiACJ5yJ6i1QBDZ5X4nsx/QdUBVMPwln1E4DrMfgBu478yHuu/o17rf25P7j90Enil4T/d/SjUC3ko21V5z6rjIttygAT7hxzHhUCZWM/RSxA8hCEZ89ynVBrIN/jh7a73r4//VwcLiVapXPipLVVMmY54hNRRX+n5mZEzn/dv3AU6FhlOCUWyItawCLyJjp5fJmUzzPb7SfxnYYvHx2ZIKZpxYRFFYGdSiqqqy8voqOQWkHL/UQeWVCeyvfXXQr15LjFbfiDBYEhK++u4fIwx6i7hBJJdkQ1Ycoz8I5uZwbMgBcGXC+xWK59J5Mk9CgWTFX1TGZG5dp6ITFwE3nvefBTgzB/xLP/h12Uuivn7Fa3y9lc01BdyVOvxe+ccMNQoLr9OGSV2+6wxe76Q7e5fev8gOYHJePCbjG4N/vBTV58xcr+1diCxMAAA==</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
+        <action_type display_value="Enviar Solicitação">67e8a179832022109566f7b6feaad365</action_type>
+        <action_type_parent display_value="Enviar Solicitação">d4966d75832022109566f7b6feaad3b9</action_type_parent>
+        <attributes/>
+        <comment/>
+        <compiled_snapshot>67e8a179832022109566f7b6feaad365</compiled_snapshot>
+        <display_text/>
+        <flow display_value="Solicitação de Férias">6ded353583a022109566f7b6feaad35d</flow>
+        <generation_source/>
+        <order>1</order>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-03-28 13:00:49</sys_created_on>
+        <sys_id>71ed353583a022109566f7b6feaad3cf</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_scope display_value="Mock SkillUp">6938717783b712109566f7b6feaad3b9</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-03-28 13:00:49</sys_updated_on>
+        <ui_id>4cebd3d6-2e2b-4a35-a793-6a4ec7181278</ui_id>
+        <values>H4sIAAAAAAAA/+2WyW7bMBCGX6XQWTK0L74VWYAAbQPUbS5BIAwX2USoJRSVxDXyND30QfJiJS1ZkV3HcQAnh7ZHDYfkP//MB+pyYTBijI0Q0RicKIk913Zdx06CMMwiFGYUgHhhbJhGATlVmXXJGWYSCklV8BZ4o6OLxZGgIClJnRFuhKCFHA0yHx5ULmF1xWF+0W1RETxjnKhcY3x5ZRoVCHWFpMIYLzaW9tXIAVGuUidrIrcql/NKBwXNqLoGr0KfuhO+DuKlIFqUYxr0XtKCUKUmA15T08ihICBLMe8jygZyXvCnwIwVsi03h/ua/VC3eq45uHhs3KdO4HpO5Kb1NeM8baqU3jSs0pf3eWnnn8o/WS1mxyBhIkWDZSN6U0uGad0aR2gGDZdHw1ibcF5JVhbtFgmIv6QDl7zJiy+tlUZ/8qCbTa000kobpCvuys8ms/Kud/OUFUsvu0VeYuCDVAoCz04Z5brfy7aZBkgpGGqklr8wGvbtz8a1wW2to5zmSk2aQ1WxYppWorxlSwWqoHw05epjlPHyTimv2bQYAda2jFRTYXSq4sfL8AUIpj36rI5Rm/WN3wt209AzLTSxsRdAHFjYJb7lZ0lkJT6EFg4iO6RJgAPwjQfTqOf1EYe6fjJRFZHeNNqC1tLOvLRtjN6CBavkRyXqlnY+PZgds95uHsjT5OtqUlao6S9fYPauFNdpLUHIgyC7h8QVsnqSPxD64Wwlc6v2jtpl31K1tIntcRvqiHUPRqxvrxP7DJiHR/J9yHuGsTWb1yHrjH4XvjAOYtsl2KK+q/jyg9BKAmRbBIWuZ2dZ4gTeG/AVebuGN3I2ZjRj+T5wKQUHQWsPdZtonagxEPrUQm4C1op/HV3ef7r+Brqy0A+9BJCFQhJbvgexhcDHFnI9SEI7QY7zFq8X2vk0RP5gQGl7ju7ebsAGmdsY22fL6yDco4gewuVFj78ef5bPldbhV6tpKaYb6E1WwQ4+/2Dwxbb9T+LX27yOXm/0+/w6xraXBL5jxX5I1NNGYytJ1EtH1J8jRlnsohgdEL6r3wIJ93TwDQAA</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
+        <action_type display_value="Update Record">f9d01dd2c31332002841b63b12d3aea1</action_type>
+        <action_type_parent display_value="Update Record">baf174c8c3c232002841b63b12d3aee4</action_type_parent>
+        <attributes/>
+        <comment/>
+        <compiled_snapshot>f9d01dd2c31332002841b63b12d3aea1</compiled_snapshot>
+        <display_text/>
+        <flow display_value="Solicitação de Férias">6ded353583a022109566f7b6feaad35d</flow>
+        <generation_source/>
+        <order>3</order>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-03-28 13:00:49</sys_created_on>
+        <sys_id>f9ed353583a022109566f7b6feaad3d0</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_scope display_value="Mock SkillUp">6938717783b712109566f7b6feaad3b9</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-04-15 17:06:39</sys_updated_on>
+        <ui_id>198a89b0-47d7-4867-a366-2c91a85ba3a2</ui_id>
+        <values>H4sIAAAAAAAA/+VV3W7aMBh9FeTrKMoPsJa7CYQ0qWulMnHTVZaxP8CaE2e2Q2GI59mD7MX2JXEAQdVRqTdo3H1/9jlfzsFPWyIFGZAuiCi+jfs8jdM0iaLkphvP+uksTkTKAGISkJxlgJ0GuDYC4xVTZZXYbocGmANB45CXxkDudjusC2kLxTZT34YZvpRKYJ0Mnp4DUjCDJzowZLA9KV0KSbEZKGx9bDGdYnSbooqF5mWGuKhsk3d+cuQrnS8jrOBQBSeOAgJrB7kABDJnykJAMpYL5rTZkIEzJSaQtHjI1WbfsZS5a4hmbG3lL7y5G1V9c0Bm3C9hH1K/oCY9HzHHJngyd6XZ70tLDrbZiYA5K5UbHueahofCSZ03I47NVDutVZnl981GyP6Ao+9RWgQBRcWzQt7Qmk+W+uWxBTmWeb0ST1FpztQ+Ys4ZOStdBWdLQEG944wVhcwXtDB6JethhJKFC4VBOFf6Be+0cpGHjFe4Q9wqC8eYH9XpKTOyIvEVj8HhXUDsxg4Vs/ZABXdIf5YVkoaYp0DrLdQroLUSqmFuZOE+41Ur8MB3gRf9rPeWwvjtQVBHZx6Ev6ZxL0njTwm1P6RStCyoBbOSXFMkjPJ2Ui2Z0OdemFRtf37rzvCk730OuQB/65BvtS5e5+NNcpa7O57t3DcFb5Heh1nk5pos4mlcvUf+5YwoefO/90hJtRnskSusw7fgexlFqUjOlX9SfZ/eL0DV6n0sQQn7CsxW7JAhLAe0gX0ieF/sTH1x/y58mOrjflT/rkj7/83z8PwXanyG9hUJAAA=</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_sub_flow_instance_v2 action="delete_multiple" query="flow=6ded353583a022109566f7b6feaad35d"/>
+    <sys_hub_flow_logic_instance_v2 action="delete_multiple" query="flow=6ded353583a022109566f7b6feaad35d"/>
+    <sys_hub_pill_compound action="delete_multiple" query="attached_to=6ded353583a022109566f7b6feaad35d"/>
+    <sys_hub_flow_variable action="delete_multiple" query="model=6ded353583a022109566f7b6feaad35d"/>
+    <sys_documentation action="delete_multiple" query="name=var__m_sys_hub_flow_input_6ded353583a022109566f7b6feaad35d^sys_idNOT IN79ed353583a022109566f7b6feaad3c7,b9ed353583a022109566f7b6feaad369"/>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>table_name</element>
+        <help/>
+        <hint/>
+        <label>Table Name</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_6ded353583a022109566f7b6feaad35d</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-03-28 13:00:49</sys_created_on>
+        <sys_id>79ed353583a022109566f7b6feaad3c7</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Mock SkillUp" source="x_1523172_skill_up">6938717783b712109566f7b6feaad3b9</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Mock SkillUp">6938717783b712109566f7b6feaad3b9</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-03-28 13:00:49</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>current</element>
+        <help/>
+        <hint/>
+        <label>Record</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_6ded353583a022109566f7b6feaad35d</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-03-28 13:00:49</sys_created_on>
+        <sys_id>b9ed353583a022109566f7b6feaad369</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Mock SkillUp" source="x_1523172_skill_up">6938717783b712109566f7b6feaad3b9</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Mock SkillUp">6938717783b712109566f7b6feaad3b9</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-03-28 13:00:49</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_choice action="delete_multiple" query="name=var__m_sys_hub_flow_input_6ded353583a022109566f7b6feaad35d"/>
+    <sys_documentation action="delete_multiple" query="name=var__m_sys_hub_flow_output_6ded353583a022109566f7b6feaad35d"/>
+    <sys_choice action="delete_multiple" query="name=var__m_sys_hub_flow_output_6ded353583a022109566f7b6feaad35d"/>
+    <sys_hub_flow action="UPDATE">
+        <sys_id>267fc76a839422109566f7b6feaad3cd</sys_id>
+        <latest_snapshot>6ded353583a022109566f7b6feaad35d</latest_snapshot>
+        <compiler_build/>
+    </sys_hub_flow>
+    <sys_flow_trigger_plan action="delete_multiple" query="plan_id=267fc76a839422109566f7b6feaad3cd^sys_idNOT IN86ed753583a022109566f7b6feaad329"/>
+    <sys_flow_trigger_plan action="INSERT_OR_UPDATE">
+        <binding_strategy>com.snc.process_flow.engine.binding.OncePerRecord</binding_strategy>
+        <plan/>
+        <plan_id>267fc76a839422109566f7b6feaad3cd</plan_id>
+        <snapshot>6ded353583a022109566f7b6feaad35d</snapshot>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-03-28 13:00:50</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>86ed753583a022109566f7b6feaad329</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_overrides/>
+        <sys_scope/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-03-28 13:00:50</sys_updated_on>
+        <trigger display_value="">02ed753583a022109566f7b6feaad302</trigger>
+    </sys_flow_trigger_plan>
+    <sys_flow_subflow_plan action="delete_multiple" query="plan_id=267fc76a839422109566f7b6feaad3cd"/>
+</record_update>

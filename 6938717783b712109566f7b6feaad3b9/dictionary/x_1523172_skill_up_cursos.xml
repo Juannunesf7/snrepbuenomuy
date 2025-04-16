@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element db_object_id="c44bbd7b83b712109566f7b6feaad384" label="Cursos" max_length="40" name="x_1523172_skill_up_cursos" type="collection">
+        <element label="Duração" mandatory="true" max_length="40" name="duration" type="glide_duration"/>
+        <element label="Ordem" mandatory="true" max_length="40" name="order" type="integer"/>
+        <element attributes="edge_encryption_enabled=true" label="Nome do Curso" mandatory="true" max_length="40" name="course_name" type="string"/>
+        <element attributes="edge_encryption_enabled=true" display="true" label="Treinamento" mandatory="true" max_length="40" name="training" type="string"/>
+    </element>
+</database>

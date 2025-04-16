@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="db_image">
+    <db_image action="DELETE">
+        <active>true</active>
+        <category/>
+        <format>png</format>
+        <height>16</height>
+        <image>8bccbdc8837022109566f7b6feaad370</image>
+        <name>x_1523172_skill_up.player_ship.png</name>
+        <size_bytes>567</size_bytes>
+        <sys_class_name>db_image</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-04-04 12:42:11</sys_created_on>
+        <sys_id>3dbc3dc8837022109566f7b6feaad37e</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name>x_1523172_skill_up.player_ship.png</sys_name>
+        <sys_package display_value="Mock SkillUp" source="x_1523172_skill_up">6938717783b712109566f7b6feaad3b9</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Mock SkillUp">6938717783b712109566f7b6feaad3b9</sys_scope>
+        <sys_update_name>db_image_3dbc3dc8837022109566f7b6feaad37e</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-04-04 12:42:19</sys_updated_on>
+        <thumbnail/>
+        <width>48</width>
+    </db_image>
+    <sys_attachment action="DELETE">
+        <average_image_color>#be5358</average_image_color>
+        <chunk_size_bytes>700000</chunk_size_bytes>
+        <compressed>true</compressed>
+        <content_type>image/png</content_type>
+        <file_name>image</file_name>
+        <hash>caac41bfba900e45d6ba5256c1e3f60e496ca2076e732b587f33bea92bc55df0</hash>
+        <image_height>16</image_height>
+        <image_width>48</image_width>
+        <size_bytes>567</size_bytes>
+        <size_compressed>590</size_compressed>
+        <state>available</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-04-04 12:42:19</sys_created_on>
+        <sys_id>8bccbdc8837022109566f7b6feaad370</sys_id>
+        <sys_mod_count>5</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-04-04 12:42:19</sys_updated_on>
+        <table_name>ZZ_YYdb_image</table_name>
+        <table_sys_id>3dbc3dc8837022109566f7b6feaad37e</table_sys_id>
+    </sys_attachment>
+    <sys_attachment_doc action="DELETE">
+        <data>H4sIAAAAAAAA/w==</data>
+        <length>16</length>
+        <position>0</position>
+        <sys_attachment display_value="image" sys_id="8bccbdc8837022109566f7b6feaad370">8bccbdc8837022109566f7b6feaad370</sys_attachment>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-04-04 12:42:19</sys_created_on>
+        <sys_id>cbccbdc8837022109566f7b6feaad370</sys_id>
+    </sys_attachment_doc>
+    <sys_attachment_doc action="DELETE">
+        <data>ATcCyP2JUE5HDQoaCgAAAA1JSERSAAAAMAAAABAIAgAAAN/Ma+YAAAAHdElNRQfmAQsRISU81/RtAAAAF3RFWHRTb2Z0d2FyZQBHTERQTkcgdmVyIDMuNHGFpOEAAAAIdHBOR0dMRDMAAAAASoApHwAAAARnQU1BAACxjwv8YQUAAAAGYktHRAD/AP8A/6C9p5MAAAAGdFJOUwD9AE0A07maDoAAAAGASURBVHiczZUxSwNBEIWP+wtBSGUdG5t0/oAIgo1gYRUsbFMoWqdPp2AZsbGxFwJ2gl0QtLAX7NVKEdEPngyb2ds1MQd6PMLOzHu7e7Mve8XH+t2/QhGnLs6OwUyz1Cip2NDL8xOYafYaJWWReEZbV6lSivkLSfyUjnd6vWkh44xSpZBvYV71wxJhu3a7O5+dTqvZAAwAmVTPVRItlFgppXISR/ZHtnQ7fh08apB6y1jCL6p6JM752riQt6qqw0YrlBBOowol7r/mO7S2ugEO3hful9vKlG978Stacru9CNlUhNOomNxUnmMj/HU5uukfDkDzqEem39sHJ+OH2LkkVSWEPI+KRSeYahStBrqsAEaz5suDhGIqBHZkkFMqeVzzp1RAq09cjErZdJC0iRCOKUCDPI/KMb+PrLty7s6S9mIIeYKqETQGqkKrVBktVMlzsWpiA2ZvbZNOCvFbOljVJKEqL4kXqv6WyQe6qcwWmSvOceJMRqWxwpBQ8XH9W3wBZ+4Ik0QXjRAAAAAASUVORK5CYILLY7oWNwIAAA==</data>
+        <length>776</length>
+        <position>1</position>
+        <sys_attachment display_value="image" sys_id="8bccbdc8837022109566f7b6feaad370">8bccbdc8837022109566f7b6feaad370</sys_attachment>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-04-04 12:42:19</sys_created_on>
+        <sys_id>4fccbdc8837022109566f7b6feaad370</sys_id>
+    </sys_attachment_doc>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Mock SkillUp">6938717783b712109566f7b6feaad3b9</application>
+        <file_path/>
+        <instance_id>7ee1e82afb5f1e945704f3585eefdcfd</instance_id>
+        <instance_name>dev293201</instance_name>
+        <name>db_image_3dbc3dc8837022109566f7b6feaad37e</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="db_image"><db_image action="INSERT_OR_UPDATE"><active>true</active><category/><format>png</format><height>16</height><image>8bccbdc8837022109566f7b6feaad370</image><name>x_1523172_skill_up.player_ship.png</name><size_bytes>567</size_bytes><sys_class_name>db_image</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2025-04-04 12:42:11</sys_created_on><sys_id>3dbc3dc8837022109566f7b6feaad37e</sys_id><sys_mod_count>2</sys_mod_count><sys_name>x_1523172_skill_up.player_ship.png</sys_name><sys_package display_value="Mock SkillUp" source="x_1523172_skill_up">6938717783b712109566f7b6feaad3b9</sys_package><sys_policy/><sys_scope display_value="Mock SkillUp">6938717783b712109566f7b6feaad3b9</sys_scope><sys_update_name>db_image_3dbc3dc8837022109566f7b6feaad37e</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2025-04-04 12:42:19</sys_updated_on><thumbnail/><width>48</width></db_image><sys_attachment action="INSERT_OR_UPDATE"><average_image_color>#be5358</average_image_color><chunk_size_bytes>700000</chunk_size_bytes><compressed>true</compressed><content_type>image/png</content_type><file_name>image</file_name><hash>caac41bfba900e45d6ba5256c1e3f60e496ca2076e732b587f33bea92bc55df0</hash><image_height>16</image_height><image_width>48</image_width><size_bytes>567</size_bytes><size_compressed>590</size_compressed><state>available</state><sys_created_by>admin</sys_created_by><sys_created_on>2025-04-04 12:42:19</sys_created_on><sys_id>8bccbdc8837022109566f7b6feaad370</sys_id><sys_mod_count>5</sys_mod_count><sys_updated_by>admin</sys_updated_by><sys_updated_on>2025-04-04 12:42:19</sys_updated_on><table_name>ZZ_YYdb_image</table_name><table_sys_id>3dbc3dc8837022109566f7b6feaad37e</table_sys_id></sys_attachment><sys_attachment_doc action="INSERT_OR_UPDATE"><data>H4sIAAAAAAAA/w==</data><length>16</length><position>0</position><sys_attachment display_value="image" sys_id="8bccbdc8837022109566f7b6feaad370">8bccbdc8837022109566f7b6feaad370</sys_attachment><sys_created_by>admin</sys_created_by><sys_created_on>2025-04-04 12:42:19</sys_created_on><sys_id>cbccbdc8837022109566f7b6feaad370</sys_id></sys_attachment_doc><sys_attachment_doc action="INSERT_OR_UPDATE"><data>ATcCyP2JUE5HDQoaCgAAAA1JSERSAAAAMAAAABAIAgAAAN/Ma+YAAAAHdElNRQfmAQsRISU81/RtAAAAF3RFWHRTb2Z0d2FyZQBHTERQTkcgdmVyIDMuNHGFpOEAAAAIdHBOR0dMRDMAAAAASoApHwAAAARnQU1BAACxjwv8YQUAAAAGYktHRAD/AP8A/6C9p5MAAAAGdFJOUwD9AE0A07maDoAAAAGASURBVHiczZUxSwNBEIWP+wtBSGUdG5t0/oAIgo1gYRUsbFMoWqdPp2AZsbGxFwJ2gl0QtLAX7NVKEdEPngyb2ds1MQd6PMLOzHu7e7Mve8XH+t2/QhGnLs6OwUyz1Cip2NDL8xOYafYaJWWReEZbV6lSivkLSfyUjnd6vWkh44xSpZBvYV71wxJhu3a7O5+dTqvZAAwAmVTPVRItlFgppXISR/ZHtnQ7fh08apB6y1jCL6p6JM752riQt6qqw0YrlBBOowol7r/mO7S2ugEO3hful9vKlG978Stacru9CNlUhNOomNxUnmMj/HU5uukfDkDzqEem39sHJ+OH2LkkVSWEPI+KRSeYahStBrqsAEaz5suDhGIqBHZkkFMqeVzzp1RAq09cjErZdJC0iRCOKUCDPI/KMb+PrLty7s6S9mIIeYKqETQGqkKrVBktVMlzsWpiA2ZvbZNOCvFbOljVJKEqL4kXqv6WyQe6qcwWmSvOceJMRqWxwpBQ8XH9W3wBZ+4Ik0QXjRAAAAAASUVORK5CYILLY7oWNwIAAA==</data><length>776</length><position>1</position><sys_attachment display_value="image" sys_id="8bccbdc8837022109566f7b6feaad370">8bccbdc8837022109566f7b6feaad370</sys_attachment><sys_created_by>admin</sys_created_by><sys_created_on>2025-04-04 12:42:19</sys_created_on><sys_id>4fccbdc8837022109566f7b6feaad370</sys_id></sys_attachment_doc></record_update>]]></payload>
+        <payload_hash>0</payload_hash>
+        <record_name>x_1523172_skill_up.player_ship.png</record_name>
+        <reverted_from/>
+        <source>a538717783b712109566f7b6feaad3be</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-04-04 12:42:19</sys_created_on>
+        <sys_id>43ccbdc8837022109566f7b6feaad389</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>19600d2d7920000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-04-04 12:42:19</sys_updated_on>
+        <type>Images</type>
+        <update_guid>43ccbdc87d70221043c3780fce38667c</update_guid>
+        <update_guid_history>43ccbdc87d70221043c3780fce38667c:-643472175,4fccbdc80e70221098878b043ebaef76:-1610709608,87ccbdc8e8702210446aeba6d0af0374:-1907376986,01ccf5c88a70221015f43fd9f18ae063:1191145932</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="x_1523172_skill_up.player_ship.png">1aae971d83bc62109566f7b6feaad364</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-04-08 17:02:18</sys_created_on>
+        <sys_db_object display_value="" name="db_image">db_image</sys_db_object>
+        <sys_id>e0b3dcf5e9914513801332cb80980441</sys_id>
+        <sys_metadata>3dbc3dc8837022109566f7b6feaad37e</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>x_1523172_skill_up.player_ship.png</sys_name>
+        <sys_package display_value="Mock SkillUp" source="x_1523172_skill_up">6938717783b712109566f7b6feaad3b9</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="Mock SkillUp">6938717783b712109566f7b6feaad3b9</sys_scope>
+        <sys_scope_delete display_value="">3a6d93cae10942c4892c498dcc264390</sys_scope_delete>
+        <sys_update_name>db_image_3dbc3dc8837022109566f7b6feaad37e</sys_update_name>
+        <sys_update_version display_value="db_image_3dbc3dc8837022109566f7b6feaad37e">43ccbdc8837022109566f7b6feaad389</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-04-08 17:02:18</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

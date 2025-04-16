@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element db_object_id="e01156f3833b12109566f7b6feaad3b6" label="Possui Skill" max_length="40" name="x_1523172_skill_up_possui_skill" type="collection">
+        <element choice="1" label="Nivel" mandatory="true" max_length="40" name="nivel" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="Básico" sequence="1" value="basic"/>
+                <element inactive_on_update="false" label="Intermediario" sequence="2" value="intermediate"/>
+                <element inactive_on_update="false" label="Avançado" sequence="0" value="advanced"/>
+            </choice>
+        </element>
+        <element calculation="var grSkill = new GlideRecord('x_1523172_skill_up_skill');&#13;&#10;grSkill.addQuery('sys_id', current.skill); // Campo 'skill' do registro atual&#13;&#10;grSkill.query();&#13;&#10;&#13;&#10;if (grSkill.next()) {&#13;&#10;    // Obter o valor de exibição (display value) do campo 'technical'&#13;&#10;    var technicalDisplayValue = grSkill.getDisplayValue('technical');&#13;&#10;    &#13;&#10;    // Definir o valor do Calculated Value como o display value de 'technical'&#13;&#10;    current.technical_display_value = technicalDisplayValue;&#13;&#10;}&#13;&#10;" choice="1" choice_field="technical" choice_table="x_1523172_skill_up_skill" label="Technical" max_length="40" name="technical" reference_qual="javascript:current.skill ? 'technical=' + current.skill : '';&#13;&#10;" type="choice" use_reference_qualifier="advanced">
+            <choice/>
+        </element>
+        <element attributes="encode_utf8=false" label="Funcionario" mandatory="true" max_length="32" name="x_1523172_skill_up_equipe" reference="x_1523172_skill_up_equipe" type="reference"/>
+        <element attributes="encode_utf8=false" display="true" label="Skills" mandatory="true" max_length="32" name="x_1523172_skill_up_skill" reference="x_1523172_skill_up_skill" type="reference"/>
+        <index name="index">
+            <element name="x_1523172_skill_up_equipe"/>
+        </index>
+        <index name="index2">
+            <element name="x_1523172_skill_up_skill"/>
+        </index>
+    </element>
+</database>

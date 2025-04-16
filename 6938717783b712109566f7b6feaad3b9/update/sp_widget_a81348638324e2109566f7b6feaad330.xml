@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_widget">
+    <sp_widget action="INSERT_OR_UPDATE">
+        <category>custom</category>
+        <client_script><![CDATA[function recprodCard($scope, spUtil) {
+	var c = this;
+  $scope.c.redirectToRecordProducer = function() {
+    window.location.href = c.data.href;
+  };
+}
+ ]]></client_script>
+        <controller_as>c</controller_as>
+        <css>.card-widget {
+  background-color: transparent; /* Fundo escuro para contraste */
+  border: 1px solid #444;
+  border-radius: 8px;
+  padding: 20px;
+  text-align: center;
+  cursor: pointer;
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease;
+  color: white; /* Texto branco */
+  max-width: 200px; /* Tamanho reduzido para um card */
+  margin: 0 auto; /* Centraliza */
+}
+
+.card-widget:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  background-color: #0A0F3D; /* Cor mais clara no hover */
+}
+
+/* Estilo para o ícone (ajuste o tamanho conforme necessário) */
+.card-widget img {
+  width: 48px; /* Reduz o ícone para um tamanho adequado */
+  height: 48px;
+  margin-bottom: 12px;
+}
+
+/* Estilo para o texto "Report Bug" */
+.card-widget h3 {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 600;
+  color: white; /* Garante texto branco */
+}</css>
+        <data_table>sp_instance</data_table>
+        <demo_data/>
+        <description/>
+        <docs/>
+        <field_list/>
+        <has_preview>false</has_preview>
+        <id>custom_widget_card</id>
+        <internal>false</internal>
+        <link><![CDATA[function link(scope, element, attrs, controller) {  }]]></link>
+        <name>Custom Widget Card</name>
+        <option_schema>[{"name":"icon","section":"Presentation","label":"ICONE","type":"string"},{"name":"title","section":"Presentation","label":"TITULO","type":"string"},{"name":"description","section":"Presentation","label":"DESCRIÇÃO","type":"string"},{"name":"url","section":"Presentation","label":"URL","type":"string"}]</option_schema>
+        <public>false</public>
+        <roles/>
+        <script><![CDATA[(function() {
+	data.titulo = options.title;
+	data.descricao = options.description;
+	data.href = options.url;
+	data.icone = options.icon
+})();]]></script>
+        <servicenow>false</servicenow>
+        <sys_class_name>sp_widget</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-04-02 14:33:32</sys_created_on>
+        <sys_id>a81348638324e2109566f7b6feaad330</sys_id>
+        <sys_mod_count>7</sys_mod_count>
+        <sys_name>Custom Widget Card</sys_name>
+        <sys_package display_value="Mock SkillUp" source="x_1523172_skill_up">6938717783b712109566f7b6feaad3b9</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Mock SkillUp">6938717783b712109566f7b6feaad3b9</sys_scope>
+        <sys_update_name>sp_widget_a81348638324e2109566f7b6feaad330</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-04-02 14:41:40</sys_updated_on>
+        <template><![CDATA[<div class="card-widget" ng-click="c.redirectToRecordProducer()">
+ 
+    <img src="{{data.icone}}" />
+<h3>{{data.titulo}}</h3>
+<p>{{data.descricao}}</p>
+ 
+</div>
+ ]]></template>
+    </sp_widget>
+</record_update>

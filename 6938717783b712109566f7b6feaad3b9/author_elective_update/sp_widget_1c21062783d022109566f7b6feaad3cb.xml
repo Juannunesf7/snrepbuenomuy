@@ -1,0 +1,326 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_widget">
+    <sp_widget action="DELETE">
+        <category>standard</category>
+        <client_script><![CDATA[function meuControle($scope, spAriaUtil) {
+	$scope.accessibilityModeEnabled = spAriaUtil.isAccessibilityEnabled();
+}]]></client_script>
+        <controller_as>c</controller_as>
+        <css>/* Estilo base para o widget */&#13;
+.iconlink {&#13;
+    padding: 3px 0;&#13;
+}&#13;
+&#13;
+.iconlink a {&#13;
+    display: flex !important;&#13;
+    flex-direction: column;&#13;
+    align-items: center;&#13;
+    text-align: center;&#13;
+    text-decoration: none;&#13;
+}&#13;
+&#13;
+.iconlink a label,&#13;
+h2 {&#13;
+    display: block;&#13;
+    font-size: 2.5rem;&#13;
+    font-weight: 300;&#13;
+    line-height: 1.1;&#13;
+    padding: 0;&#13;
+    margin: 0 0 10px 0;&#13;
+}&#13;
+&#13;
+/* TÍTULO EM BRANCO (PRIORIDADE MÁXIMA) */&#13;
+.title-white {&#13;
+    color: white !important;&#13;
+    margin: 10px 0 !important;&#13;
+    transition: transform 0.3s ease;&#13;
+}&#13;
+&#13;
+.title-white:hover {&#13;
+    transform: scale(1.1);&#13;
+}&#13;
+&#13;
+/* ÍCONES HERDAM CORES DO BOOTSTRAP */&#13;
+.text-primary .glyph,&#13;
+.text-info .glyph,&#13;
+.text-success .glyph,&#13;
+.text-warning .glyph,&#13;
+.text-danger .glyph {&#13;
+    color: inherit !important; /* Herda a cor da classe pai (ex: .text-primary) */&#13;
+}&#13;
+&#13;
+/* TOP ICON */&#13;
+a.top_icon .fa {&#13;
+    margin-bottom: 10px;&#13;
+}&#13;
+&#13;
+/* CIRCLE ICON */&#13;
+a.circle_icon {&#13;
+    position: relative;&#13;
+    min-height: 100px;&#13;
+}&#13;
+&#13;
+a.circle_icon .fa-stack {&#13;
+    display: inline-flex !important;&#13;
+    align-items: center;&#13;
+    justify-content: center;&#13;
+    margin: 10px 0;&#13;
+}&#13;
+&#13;
+a.circle_icon .fa-circle {&#13;
+    color: transparent !important;&#13;
+}&#13;
+&#13;
+/* COLOR BOX */&#13;
+a.color_box {&#13;
+    padding: 20px;&#13;
+    border-radius: 8px;&#13;
+    min-height: 200px;&#13;
+    justify-content: center;&#13;
+}&#13;
+&#13;
+a.color_box .fa {&#13;
+    display: flex !important;&#13;
+    align-items: center;&#13;
+    justify-content: center;&#13;
+    margin: 10px 0;&#13;
+}&#13;
+&#13;
+/* Efeito de hover para ícones */&#13;
+.glyph {&#13;
+    transition: transform 0.3s ease;&#13;
+}&#13;
+&#13;
+.glyph:hover {&#13;
+    transform: scale(1.1);&#13;
+}</css>
+        <data_table>sp_instance_link</data_table>
+        <demo_data/>
+        <description/>
+        <docs/>
+        <field_list>type,url,sc_category,sc_cat_item,kb_topic,kb_article,kb_category,sp_page,title,short_description,color,class_name,glyph</field_list>
+        <has_preview>false</has_preview>
+        <id/>
+        <internal>false</internal>
+        <link><![CDATA[function link(scope, element, attrs, controller) {  }]]></link>
+        <name>Copy of Icon Link</name>
+        <option_schema>[{"name":"link_template","section":"Presentation","label":"Template","type":"choice","choices":[{"label":"Top Icon","value":"Top Icon"},{"label":"Circle Icon","value":"Circle Icon"},{"label":"Color Box","value":"Color Box"}]}]</option_schema>
+        <public>true</public>
+        <roles/>
+        <script><![CDATA[(function(){
+	var gr = $sp.getInstanceRecord();
+	data.href = $sp.getMenuHREF(gr);
+	data.target = options.target || "";
+})();]]></script>
+        <servicenow>false</servicenow>
+        <sys_class_name>sp_widget</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-03-21 13:28:36</sys_created_on>
+        <sys_id>1c21062783d022109566f7b6feaad3cb</sys_id>
+        <sys_mod_count>12</sys_mod_count>
+        <sys_name>Copy of Icon Link</sys_name>
+        <sys_package display_value="Mock SkillUp" source="x_1523172_skill_up">6938717783b712109566f7b6feaad3b9</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Mock SkillUp">6938717783b712109566f7b6feaad3b9</sys_scope>
+        <sys_update_name>sp_widget_1c21062783d022109566f7b6feaad3cb</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-03-21 14:10:01</sys_updated_on>
+        <template><![CDATA[<div class="iconlink" ng-class="{'high-contrast': accessibilityModeEnabled}">
+    <!-- Top Icon -->
+    <a ng-if="::(options.link_template == 'Top Icon' || !options.link_template)" ng-href="{{::data.href}}" class="top_icon text-primary" target="{{::data.target}}">
+        <div class="m-b fa fa-{{::options.glyph}} fa-4x glyph-gradient"></div>
+        <h2 class="title-white">{{::options.title}}</h2>
+        <span class="text-muted">{{::options.short_description}}</span>
+    </a>
+
+    <!-- Circle Icon -->
+    <a ng-if="::(options.link_template == 'Circle Icon')" ng-href="{{::data.href}}" class="circle_icon text-info" target="{{::data.target}}">
+        <span class="fa fa-stack fa-2x">
+            <i class="fa fa-circle fa-stack-2x"></i>
+            <i class="fa fa-{{::options.glyph}} fa-stack-1x fa-inverse glyph-gradient"></i>
+        </span>
+        <h2 class="title-white">{{::options.title}}</h2>
+        <span class="text-muted">{{::options.short_description}}</span>
+    </a>
+
+    <!-- Color Box -->
+    <a ng-if="::(options.link_template == 'Color Box')" ng-href="{{::data.href}}" class="color_box text-warning icon-link-background-{{::options.color}} text-white" target="{{::data.target}}">
+        <div class="fa fa-{{::options.glyph}} fa-3x glyph-gradient"></div>
+        <h2 class="title-white">{{::options.title}}</h2>
+        <span>{{::options.short_description}}</span>
+    </a>
+</div>]]></template>
+    </sp_widget>
+    <sys_es_latest_script action="DELETE">
+        <id>1c21062783d022109566f7b6feaad3cb</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-03-21 13:28:53</sys_created_on>
+        <sys_id>a83102e783d022109566f7b6feaad33a</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-03-21 13:28:53</sys_updated_on>
+        <table>sp_widget</table>
+        <use_es_latest>true</use_es_latest>
+    </sys_es_latest_script>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Mock SkillUp">6938717783b712109566f7b6feaad3b9</application>
+        <file_path/>
+        <instance_id>7ee1e82afb5f1e945704f3585eefdcfd</instance_id>
+        <instance_name>dev293201</instance_name>
+        <name>sp_widget_1c21062783d022109566f7b6feaad3cb</name>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update table="sp_widget"&gt;&lt;sp_widget action="INSERT_OR_UPDATE"&gt;&lt;category&gt;standard&lt;/category&gt;&lt;client_script&gt;&lt;![CDATA[function meuControle($scope, spAriaUtil) {
+	$scope.accessibilityModeEnabled = spAriaUtil.isAccessibilityEnabled();
+}]]&gt;&lt;/client_script&gt;&lt;controller_as&gt;c&lt;/controller_as&gt;&lt;css&gt;/* Estilo base para o widget */&amp;#13;
+.iconlink {&amp;#13;
+    padding: 3px 0;&amp;#13;
+}&amp;#13;
+&amp;#13;
+.iconlink a {&amp;#13;
+    display: flex !important;&amp;#13;
+    flex-direction: column;&amp;#13;
+    align-items: center;&amp;#13;
+    text-align: center;&amp;#13;
+    text-decoration: none;&amp;#13;
+}&amp;#13;
+&amp;#13;
+.iconlink a label,&amp;#13;
+h2 {&amp;#13;
+    display: block;&amp;#13;
+    font-size: 2.5rem;&amp;#13;
+    font-weight: 300;&amp;#13;
+    line-height: 1.1;&amp;#13;
+    padding: 0;&amp;#13;
+    margin: 0 0 10px 0;&amp;#13;
+}&amp;#13;
+&amp;#13;
+/* TÍTULO EM BRANCO (PRIORIDADE MÁXIMA) */&amp;#13;
+.title-white {&amp;#13;
+    color: white !important;&amp;#13;
+    margin: 10px 0 !important;&amp;#13;
+    transition: transform 0.3s ease;&amp;#13;
+}&amp;#13;
+&amp;#13;
+.title-white:hover {&amp;#13;
+    transform: scale(1.1);&amp;#13;
+}&amp;#13;
+&amp;#13;
+/* ÍCONES HERDAM CORES DO BOOTSTRAP */&amp;#13;
+.text-primary .glyph,&amp;#13;
+.text-info .glyph,&amp;#13;
+.text-success .glyph,&amp;#13;
+.text-warning .glyph,&amp;#13;
+.text-danger .glyph {&amp;#13;
+    color: inherit !important; /* Herda a cor da classe pai (ex: .text-primary) */&amp;#13;
+}&amp;#13;
+&amp;#13;
+/* TOP ICON */&amp;#13;
+a.top_icon .fa {&amp;#13;
+    margin-bottom: 10px;&amp;#13;
+}&amp;#13;
+&amp;#13;
+/* CIRCLE ICON */&amp;#13;
+a.circle_icon {&amp;#13;
+    position: relative;&amp;#13;
+    min-height: 100px;&amp;#13;
+}&amp;#13;
+&amp;#13;
+a.circle_icon .fa-stack {&amp;#13;
+    display: inline-flex !important;&amp;#13;
+    align-items: center;&amp;#13;
+    justify-content: center;&amp;#13;
+    margin: 10px 0;&amp;#13;
+}&amp;#13;
+&amp;#13;
+a.circle_icon .fa-circle {&amp;#13;
+    color: transparent !important;&amp;#13;
+}&amp;#13;
+&amp;#13;
+/* COLOR BOX */&amp;#13;
+a.color_box {&amp;#13;
+    padding: 20px;&amp;#13;
+    border-radius: 8px;&amp;#13;
+    min-height: 200px;&amp;#13;
+    justify-content: center;&amp;#13;
+}&amp;#13;
+&amp;#13;
+a.color_box .fa {&amp;#13;
+    display: flex !important;&amp;#13;
+    align-items: center;&amp;#13;
+    justify-content: center;&amp;#13;
+    margin: 10px 0;&amp;#13;
+}&amp;#13;
+&amp;#13;
+/* Efeito de hover para ícones */&amp;#13;
+.glyph {&amp;#13;
+    transition: transform 0.3s ease;&amp;#13;
+}&amp;#13;
+&amp;#13;
+.glyph:hover {&amp;#13;
+    transform: scale(1.1);&amp;#13;
+}&lt;/css&gt;&lt;data_table&gt;sp_instance_link&lt;/data_table&gt;&lt;demo_data/&gt;&lt;description/&gt;&lt;docs/&gt;&lt;field_list&gt;type,url,sc_category,sc_cat_item,kb_topic,kb_article,kb_category,sp_page,title,short_description,color,class_name,glyph&lt;/field_list&gt;&lt;has_preview&gt;false&lt;/has_preview&gt;&lt;id/&gt;&lt;internal&gt;false&lt;/internal&gt;&lt;link&gt;&lt;![CDATA[function link(scope, element, attrs, controller) {  }]]&gt;&lt;/link&gt;&lt;name&gt;Copy of Icon Link&lt;/name&gt;&lt;option_schema&gt;[{"name":"link_template","section":"Presentation","label":"Template","type":"choice","choices":[{"label":"Top Icon","value":"Top Icon"},{"label":"Circle Icon","value":"Circle Icon"},{"label":"Color Box","value":"Color Box"}]}]&lt;/option_schema&gt;&lt;public&gt;true&lt;/public&gt;&lt;roles/&gt;&lt;script&gt;&lt;![CDATA[(function(){
+	var gr = $sp.getInstanceRecord();
+	data.href = $sp.getMenuHREF(gr);
+	data.target = options.target || "";
+})();]]&gt;&lt;/script&gt;&lt;servicenow&gt;false&lt;/servicenow&gt;&lt;sys_class_name&gt;sp_widget&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2025-03-21 13:28:36&lt;/sys_created_on&gt;&lt;sys_id&gt;1c21062783d022109566f7b6feaad3cb&lt;/sys_id&gt;&lt;sys_mod_count&gt;12&lt;/sys_mod_count&gt;&lt;sys_name&gt;Copy of Icon Link&lt;/sys_name&gt;&lt;sys_package display_value="Mock SkillUp" source="x_1523172_skill_up"&gt;6938717783b712109566f7b6feaad3b9&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="Mock SkillUp"&gt;6938717783b712109566f7b6feaad3b9&lt;/sys_scope&gt;&lt;sys_update_name&gt;sp_widget_1c21062783d022109566f7b6feaad3cb&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2025-03-21 14:10:01&lt;/sys_updated_on&gt;&lt;template&gt;&lt;![CDATA[&lt;div class="iconlink" ng-class="{'high-contrast': accessibilityModeEnabled}"&gt;
+    &lt;!-- Top Icon --&gt;
+    &lt;a ng-if="::(options.link_template == 'Top Icon' || !options.link_template)" ng-href="{{::data.href}}" class="top_icon text-primary" target="{{::data.target}}"&gt;
+        &lt;div class="m-b fa fa-{{::options.glyph}} fa-4x glyph-gradient"&gt;&lt;/div&gt;
+        &lt;h2 class="title-white"&gt;{{::options.title}}&lt;/h2&gt;
+        &lt;span class="text-muted"&gt;{{::options.short_description}}&lt;/span&gt;
+    &lt;/a&gt;
+
+    &lt;!-- Circle Icon --&gt;
+    &lt;a ng-if="::(options.link_template == 'Circle Icon')" ng-href="{{::data.href}}" class="circle_icon text-info" target="{{::data.target}}"&gt;
+        &lt;span class="fa fa-stack fa-2x"&gt;
+            &lt;i class="fa fa-circle fa-stack-2x"&gt;&lt;/i&gt;
+            &lt;i class="fa fa-{{::options.glyph}} fa-stack-1x fa-inverse glyph-gradient"&gt;&lt;/i&gt;
+        &lt;/span&gt;
+        &lt;h2 class="title-white"&gt;{{::options.title}}&lt;/h2&gt;
+        &lt;span class="text-muted"&gt;{{::options.short_description}}&lt;/span&gt;
+    &lt;/a&gt;
+
+    &lt;!-- Color Box --&gt;
+    &lt;a ng-if="::(options.link_template == 'Color Box')" ng-href="{{::data.href}}" class="color_box text-warning icon-link-background-{{::options.color}} text-white" target="{{::data.target}}"&gt;
+        &lt;div class="fa fa-{{::options.glyph}} fa-3x glyph-gradient"&gt;&lt;/div&gt;
+        &lt;h2 class="title-white"&gt;{{::options.title}}&lt;/h2&gt;
+        &lt;span&gt;{{::options.short_description}}&lt;/span&gt;
+    &lt;/a&gt;
+&lt;/div&gt;]]&gt;&lt;/template&gt;&lt;/sp_widget&gt;&lt;sys_es_latest_script action="INSERT_OR_UPDATE"&gt;&lt;id&gt;1c21062783d022109566f7b6feaad3cb&lt;/id&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2025-03-21 13:28:53&lt;/sys_created_on&gt;&lt;sys_id&gt;a83102e783d022109566f7b6feaad33a&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2025-03-21 13:28:53&lt;/sys_updated_on&gt;&lt;table&gt;sp_widget&lt;/table&gt;&lt;use_es_latest&gt;true&lt;/use_es_latest&gt;&lt;/sys_es_latest_script&gt;&lt;/record_update&gt;</payload>
+        <payload_hash>-595649077</payload_hash>
+        <record_name>Copy of Icon Link</record_name>
+        <reverted_from/>
+        <source>a538717783b712109566f7b6feaad3be</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-03-21 14:10:01</sys_created_on>
+        <sys_id>039a0623831422109566f7b6feaad346</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>195b90a1a480000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-03-21 14:10:01</sys_updated_on>
+        <type>Widget</type>
+        <update_guid>c79a06231f1422103b87a93c7155a545</update_guid>
+        <update_guid_history>c79a06231f1422103b87a93c7155a545:-595649077,86684a6f31d02210d30b64cf5e223428:1020459180,b136c62f6dd02210dfdc128fc063b962:1134570747,cbc5ce2fe2d022100bfc4353cd81ec93:638513393,4545422f4fd02210f8a6b8a011b4f773:807248141,b8e446abddd0221002a49dfa05ffc6f4:1042280524,49934a6bf6d02210748961c8e39527e7:134491065,9603422bd5d02210744d3147a213ebdd:-930033552,58f2862b30d022100861ea74d26d6c7e:1071865300,a542862bced022108a7389344732451c:771333825,0ce14ee777d022101b00bf9331ac81cd:-1777585623,573102e7f9d022108ccd650b20c2083e:526002029,942106274ad022106d5ffde0594216cd:277060826</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="Copy of Icon Link">9afb82e3831422109566f7b6feaad3d2</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-03-21 14:15:59</sys_created_on>
+        <sys_db_object display_value="" name="sp_widget">sp_widget</sys_db_object>
+        <sys_id>0cf6ca8be97b43d380d0b686520bd961</sys_id>
+        <sys_metadata>1c21062783d022109566f7b6feaad3cb</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Copy of Icon Link</sys_name>
+        <sys_package display_value="Mock SkillUp" source="x_1523172_skill_up">6938717783b712109566f7b6feaad3b9</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="Mock SkillUp">6938717783b712109566f7b6feaad3b9</sys_scope>
+        <sys_scope_delete display_value="">3a6d93cae10942c4892c498dcc264390</sys_scope_delete>
+        <sys_update_name>sp_widget_1c21062783d022109566f7b6feaad3cb</sys_update_name>
+        <sys_update_version display_value="sp_widget_1c21062783d022109566f7b6feaad3cb">039a0623831422109566f7b6feaad346</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-03-21 14:15:59</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

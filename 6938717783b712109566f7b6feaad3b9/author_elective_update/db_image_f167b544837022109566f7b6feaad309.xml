@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="db_image">
+    <db_image action="DELETE">
+        <active>true</active>
+        <category/>
+        <format>png</format>
+        <height>16</height>
+        <image>9677b544837022109566f7b6feaad30c</image>
+        <name>x_1523172_skill_up.enemy2bon_bon.png</name>
+        <size_bytes>463</size_bytes>
+        <sys_class_name>db_image</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-04-04 12:19:00</sys_created_on>
+        <sys_id>f167b544837022109566f7b6feaad309</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name>x_1523172_skill_up.enemy2bon_bon.png</sys_name>
+        <sys_package display_value="Mock SkillUp" source="x_1523172_skill_up">6938717783b712109566f7b6feaad3b9</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Mock SkillUp">6938717783b712109566f7b6feaad3b9</sys_scope>
+        <sys_update_name>db_image_f167b544837022109566f7b6feaad309</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-04-04 12:19:04</sys_updated_on>
+        <thumbnail/>
+        <width>64</width>
+    </db_image>
+    <sys_attachment action="DELETE">
+        <average_image_color>#d0861c</average_image_color>
+        <chunk_size_bytes>700000</chunk_size_bytes>
+        <compressed>true</compressed>
+        <content_type>image/png</content_type>
+        <file_name>image</file_name>
+        <hash>8679d8b10f6870be0382b70cca9f86c8e7cfdebe631268cfec37639e07ece0d0</hash>
+        <image_height>16</image_height>
+        <image_width>64</image_width>
+        <size_bytes>463</size_bytes>
+        <size_compressed>476</size_compressed>
+        <state>available</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-04-04 12:19:04</sys_created_on>
+        <sys_id>9677b544837022109566f7b6feaad30c</sys_id>
+        <sys_mod_count>5</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-04-04 12:19:04</sys_updated_on>
+        <table_name>ZZ_YYdb_image</table_name>
+        <table_sys_id>f167b544837022109566f7b6feaad309</table_sys_id>
+    </sys_attachment>
+    <sys_attachment_doc action="DELETE">
+        <data>H4sIAAAAAAAA/w==</data>
+        <length>16</length>
+        <position>0</position>
+        <sys_attachment display_value="image" sys_id="9677b544837022109566f7b6feaad30c">9677b544837022109566f7b6feaad30c</sys_attachment>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-04-04 12:19:04</sys_created_on>
+        <sys_id>d677b544837022109566f7b6feaad30c</sys_id>
+    </sys_attachment_doc>
+    <sys_attachment_doc action="DELETE">
+        <data>6wzwc+flkuJiYGDg9fRwCQLSDkAswMEEJDVb39UBKfYST19X9meM3ILSHDELyxKBQuIlrhElwflpJeWJRakM7j4uQGMUylKLFIz1TApblzwEKuEoKfBzB8oYA9kMXg2a8kCKJd3R15GBYWM/959EViCfLcnb3YXhPwgu2Lt8MkikJMgvmOEvgy/D5Z2z+BoYGBglPF0cQyrmJP94XV3podzGWH7Q4zuD8GEFZv2rJRNv+jy1y+CIZVxWF7PqJbMK81PFaUyeCtJKPyK/KwkkhjP0tP53fzJftFnCQegE2yJ/eXsGwZZenVbJ5gLdE10flXeIrelSDOp99uzEsSSlHUxsSV8OLJ2wljGKX9z9m0GAwPT8h1UPXxVWMiQ1tbUYLEtWaPoQkHBgPbuvaV12geaxL8YBqi6Gy/IVY5RsGVQiL0x68NXUpmJHBGMMr+PRAyqzTxVManSUW2d09ZmKzcLJnCe8nSZsaGmXL5Jr6E72/Xsi6kFMjCcHv5Onk0BzA08MX5N34i7ORzEpLgbCj8N9/NSWXXC84lrhJJw9g2/XLAnLeYbOwro+7IvZPVwXy0lksDCsd6i8uyfs5mVQ+Hq6+rmsc0poAgA2YpzQzwEAAA==</data>
+        <length>624</length>
+        <position>1</position>
+        <sys_attachment display_value="image" sys_id="9677b544837022109566f7b6feaad30c">9677b544837022109566f7b6feaad30c</sys_attachment>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-04-04 12:19:04</sys_created_on>
+        <sys_id>5a77b544837022109566f7b6feaad30c</sys_id>
+    </sys_attachment_doc>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Mock SkillUp">6938717783b712109566f7b6feaad3b9</application>
+        <file_path/>
+        <instance_id>7ee1e82afb5f1e945704f3585eefdcfd</instance_id>
+        <instance_name>dev293201</instance_name>
+        <name>db_image_f167b544837022109566f7b6feaad309</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="db_image"><db_image action="INSERT_OR_UPDATE"><active>true</active><category/><format>png</format><height>16</height><image>9677b544837022109566f7b6feaad30c</image><name>x_1523172_skill_up.enemy2bon_bon.png</name><size_bytes>463</size_bytes><sys_class_name>db_image</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2025-04-04 12:19:00</sys_created_on><sys_id>f167b544837022109566f7b6feaad309</sys_id><sys_mod_count>2</sys_mod_count><sys_name>x_1523172_skill_up.enemy2bon_bon.png</sys_name><sys_package display_value="Mock SkillUp" source="x_1523172_skill_up">6938717783b712109566f7b6feaad3b9</sys_package><sys_policy/><sys_scope display_value="Mock SkillUp">6938717783b712109566f7b6feaad3b9</sys_scope><sys_update_name>db_image_f167b544837022109566f7b6feaad309</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2025-04-04 12:19:04</sys_updated_on><thumbnail/><width>64</width></db_image><sys_attachment action="INSERT_OR_UPDATE"><average_image_color>#d0861c</average_image_color><chunk_size_bytes>700000</chunk_size_bytes><compressed>true</compressed><content_type>image/png</content_type><file_name>image</file_name><hash>8679d8b10f6870be0382b70cca9f86c8e7cfdebe631268cfec37639e07ece0d0</hash><image_height>16</image_height><image_width>64</image_width><size_bytes>463</size_bytes><size_compressed>476</size_compressed><state>available</state><sys_created_by>admin</sys_created_by><sys_created_on>2025-04-04 12:19:04</sys_created_on><sys_id>9677b544837022109566f7b6feaad30c</sys_id><sys_mod_count>5</sys_mod_count><sys_updated_by>admin</sys_updated_by><sys_updated_on>2025-04-04 12:19:04</sys_updated_on><table_name>ZZ_YYdb_image</table_name><table_sys_id>f167b544837022109566f7b6feaad309</table_sys_id></sys_attachment><sys_attachment_doc action="INSERT_OR_UPDATE"><data>H4sIAAAAAAAA/w==</data><length>16</length><position>0</position><sys_attachment display_value="image" sys_id="9677b544837022109566f7b6feaad30c">9677b544837022109566f7b6feaad30c</sys_attachment><sys_created_by>admin</sys_created_by><sys_created_on>2025-04-04 12:19:04</sys_created_on><sys_id>d677b544837022109566f7b6feaad30c</sys_id></sys_attachment_doc><sys_attachment_doc action="INSERT_OR_UPDATE"><data>6wzwc+flkuJiYGDg9fRwCQLSDkAswMEEJDVb39UBKfYST19X9meM3ILSHDELyxKBQuIlrhElwflpJeWJRakM7j4uQGMUylKLFIz1TApblzwEKuEoKfBzB8oYA9kMXg2a8kCKJd3R15GBYWM/959EViCfLcnb3YXhPwgu2Lt8MkikJMgvmOEvgy/D5Z2z+BoYGBglPF0cQyrmJP94XV3podzGWH7Q4zuD8GEFZv2rJRNv+jy1y+CIZVxWF7PqJbMK81PFaUyeCtJKPyK/KwkkhjP0tP53fzJftFnCQegE2yJ/eXsGwZZenVbJ5gLdE10flXeIrelSDOp99uzEsSSlHUxsSV8OLJ2wljGKX9z9m0GAwPT8h1UPXxVWMiQ1tbUYLEtWaPoQkHBgPbuvaV12geaxL8YBqi6Gy/IVY5RsGVQiL0x68NXUpmJHBGMMr+PRAyqzTxVManSUW2d09ZmKzcLJnCe8nSZsaGmXL5Jr6E72/Xsi6kFMjCcHv5Onk0BzA08MX5N34i7ORzEpLgbCj8N9/NSWXXC84lrhJJw9g2/XLAnLeYbOwro+7IvZPVwXy0lksDCsd6i8uyfs5mVQ+Hq6+rmsc0poAgA2YpzQzwEAAA==</data><length>624</length><position>1</position><sys_attachment display_value="image" sys_id="9677b544837022109566f7b6feaad30c">9677b544837022109566f7b6feaad30c</sys_attachment><sys_created_by>admin</sys_created_by><sys_created_on>2025-04-04 12:19:04</sys_created_on><sys_id>5a77b544837022109566f7b6feaad30c</sys_id></sys_attachment_doc></record_update>]]></payload>
+        <payload_hash>0</payload_hash>
+        <record_name>x_1523172_skill_up.enemy2bon_bon.png</record_name>
+        <reverted_from/>
+        <source>a538717783b712109566f7b6feaad3be</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-04-04 12:19:04</sys_created_on>
+        <sys_id>12773944837022109566f7b6feaad3b8</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>19600bd8c9d0000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-04-04 12:19:04</sys_updated_on>
+        <type>Images</type>
+        <update_guid>d67739447f70221084d8b21100a267b7</update_guid>
+        <update_guid_history>d67739447f70221084d8b21100a267b7:-1115530397,5a77b5449f7022100ac5e178a98e6a12:-1884316865,9277b544be702210521c351d3a96da10:-2116672563,9577b5445f70221096cceab466fc8ed2:1169852268</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="x_1523172_skill_up.enemy2bon_bon.png">2aae971d83bc62109566f7b6feaad3a8</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-04-08 17:02:19</sys_created_on>
+        <sys_db_object display_value="" name="db_image">db_image</sys_db_object>
+        <sys_id>0bc07c8aff7a46788536a3a349588064</sys_id>
+        <sys_metadata>f167b544837022109566f7b6feaad309</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>x_1523172_skill_up.enemy2bon_bon.png</sys_name>
+        <sys_package display_value="Mock SkillUp" source="x_1523172_skill_up">6938717783b712109566f7b6feaad3b9</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="Mock SkillUp">6938717783b712109566f7b6feaad3b9</sys_scope>
+        <sys_scope_delete display_value="">3a6d93cae10942c4892c498dcc264390</sys_scope_delete>
+        <sys_update_name>db_image_f167b544837022109566f7b6feaad309</sys_update_name>
+        <sys_update_version display_value="db_image_f167b544837022109566f7b6feaad309">12773944837022109566f7b6feaad3b8</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-04-08 17:02:19</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

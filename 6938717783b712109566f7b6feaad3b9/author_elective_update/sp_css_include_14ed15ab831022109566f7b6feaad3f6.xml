@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_css_include">
+    <sp_css_include action="DELETE">
+        <lazy_load>false</lazy_load>
+        <name>EDX - Body</name>
+        <rtl_css_file_url/>
+        <source>local</source>
+        <sp_css display_value="edx_esc_body">bd6d116b831022109566f7b6feaad3e4</sp_css>
+        <sys_class_name>sp_css_include</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-03-21 10:54:54</sys_created_on>
+        <sys_id>14ed15ab831022109566f7b6feaad3f6</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>EDX - Body</sys_name>
+        <sys_package display_value="Mock SkillUp" source="x_1523172_skill_up">6938717783b712109566f7b6feaad3b9</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Mock SkillUp">6938717783b712109566f7b6feaad3b9</sys_scope>
+        <sys_update_name>sp_css_include_14ed15ab831022109566f7b6feaad3f6</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-03-21 10:54:54</sys_updated_on>
+        <url/>
+    </sp_css_include>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Mock SkillUp">6938717783b712109566f7b6feaad3b9</application>
+        <file_path/>
+        <instance_id>7ee1e82afb5f1e945704f3585eefdcfd</instance_id>
+        <instance_name>dev293201</instance_name>
+        <name>sp_css_include_14ed15ab831022109566f7b6feaad3f6</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_css_include"><sp_css_include action="INSERT_OR_UPDATE"><lazy_load>false</lazy_load><name>EDX - Body</name><rtl_css_file_url/><source>local</source><sp_css display_value="edx_esc_body">bd6d116b831022109566f7b6feaad3e4</sp_css><sys_class_name>sp_css_include</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2025-03-21 10:54:54</sys_created_on><sys_id>14ed15ab831022109566f7b6feaad3f6</sys_id><sys_mod_count>0</sys_mod_count><sys_name>EDX - Body</sys_name><sys_package display_value="Mock SkillUp" source="x_1523172_skill_up">6938717783b712109566f7b6feaad3b9</sys_package><sys_policy/><sys_scope display_value="Mock SkillUp">6938717783b712109566f7b6feaad3b9</sys_scope><sys_update_name>sp_css_include_14ed15ab831022109566f7b6feaad3f6</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2025-03-21 10:54:54</sys_updated_on><url/></sp_css_include></record_update>]]></payload>
+        <payload_hash>2060939135</payload_hash>
+        <record_name>EDX - Body</record_name>
+        <reverted_from/>
+        <source>a538717783b712109566f7b6feaad3be</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-03-21 10:54:54</sys_created_on>
+        <sys_id>fcfd19ab831022109566f7b6feaad35f</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>195b857758d0000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-03-21 10:54:54</sys_updated_on>
+        <type>CSS Include</type>
+        <update_guid>f0fd19ab61102210ed92f9bf8a79135f</update_guid>
+        <update_guid_history>f0fd19ab61102210ed92f9bf8a79135f:2060939135</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="EDX - Body">6d840120836022109566f7b6feaad38e</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-03-24 11:37:44</sys_created_on>
+        <sys_db_object display_value="" name="sp_css_include">sp_css_include</sys_db_object>
+        <sys_id>9c8597f81c8f494ea5b2e5b24b7c56a4</sys_id>
+        <sys_metadata>14ed15ab831022109566f7b6feaad3f6</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>EDX - Body</sys_name>
+        <sys_package display_value="Mock SkillUp" source="x_1523172_skill_up">6938717783b712109566f7b6feaad3b9</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="Mock SkillUp">6938717783b712109566f7b6feaad3b9</sys_scope>
+        <sys_scope_delete display_value="">3a6d93cae10942c4892c498dcc264390</sys_scope_delete>
+        <sys_update_name>sp_css_include_14ed15ab831022109566f7b6feaad3f6</sys_update_name>
+        <sys_update_version display_value="sp_css_include_14ed15ab831022109566f7b6feaad3f6">fcfd19ab831022109566f7b6feaad35f</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-03-24 11:37:44</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

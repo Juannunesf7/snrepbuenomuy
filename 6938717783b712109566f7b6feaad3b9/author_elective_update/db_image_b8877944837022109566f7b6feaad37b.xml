@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="db_image">
+    <db_image action="DELETE">
+        <active>true</active>
+        <category/>
+        <format>png</format>
+        <height>16</height>
+        <image>d697b544837022109566f7b6feaad317</image>
+        <name>x_1523172_skill_up.enemyboss_lips.png</name>
+        <size_bytes>578</size_bytes>
+        <sys_class_name>db_image</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-04-04 12:19:32</sys_created_on>
+        <sys_id>b8877944837022109566f7b6feaad37b</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name>x_1523172_skill_up.enemyboss_lips.png</sys_name>
+        <sys_package display_value="Mock SkillUp" source="x_1523172_skill_up">6938717783b712109566f7b6feaad3b9</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Mock SkillUp">6938717783b712109566f7b6feaad3b9</sys_scope>
+        <sys_update_name>db_image_b8877944837022109566f7b6feaad37b</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-04-04 12:19:36</sys_updated_on>
+        <thumbnail/>
+        <width>80</width>
+    </db_image>
+    <sys_attachment action="DELETE">
+        <average_image_color>#bd4d79</average_image_color>
+        <chunk_size_bytes>700000</chunk_size_bytes>
+        <compressed>true</compressed>
+        <content_type>image/png</content_type>
+        <file_name>image</file_name>
+        <hash>ffbc04014c964d521d7ada055cc7944130b420496682abc6ac71166f2c2f66e9</hash>
+        <image_height>16</image_height>
+        <image_width>80</image_width>
+        <size_bytes>578</size_bytes>
+        <size_compressed>601</size_compressed>
+        <state>available</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-04-04 12:19:36</sys_created_on>
+        <sys_id>d697b544837022109566f7b6feaad317</sys_id>
+        <sys_mod_count>5</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-04-04 12:19:36</sys_updated_on>
+        <table_name>ZZ_YYdb_image</table_name>
+        <table_sys_id>b8877944837022109566f7b6feaad37b</table_sys_id>
+    </sys_attachment>
+    <sys_attachment_doc action="DELETE">
+        <data>H4sIAAAAAAAA/w==</data>
+        <length>16</length>
+        <position>0</position>
+        <sys_attachment display_value="image" sys_id="d697b544837022109566f7b6feaad317">d697b544837022109566f7b6feaad317</sys_attachment>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-04-04 12:19:36</sys_created_on>
+        <sys_id>1a97b544837022109566f7b6feaad317</sys_id>
+    </sys_attachment_doc>
+    <sys_attachment_doc action="DELETE">
+        <data>AUICvf2JUE5HDQoaCgAAAA1JSERSAAAAUAAAABAIAgAAAA4rb5YAAAAHdElNRQfmAQsRGxqvGAcpAAAAF3RFWHRTb2Z0d2FyZQBHTERQTkcgdmVyIDMuNHGFpOEAAAAIdHBOR0dMRDMAAAAASoApHwAAAARnQU1BAACxjwv8YQUAAAAGYktHRAD/AP8A/6C9p5MAAAAGdFJOUwD9AE0A07maDoAAAAGLSURBVHic5VaxSkNBEDwCllZpbOzzI+liKdj5IZaSxiKVpBQEsXp2YpPCLq2Fhf+QSFDBUnRh5Rh29vbeC6YwCVPcu5u9tzN7ty/p6+h5p9BL2/W7nh/3Tl8/bw4FMpBHy0D1V/3B4uTuu3n8eH8TyEAeZbLklvI1RMkxf9PQBEw+AuQkZnOAieHd0aASf9MG5c0Z+IpUZbtpGT4bxDK6GoSvMPu7HuHq4KAvwB2sYENF5DB39wBB9izYaGBy1SNXAif/27TuZ2eCi70ltwGZ1FWc1JkYyB8Nx3m8bFb7syeBDFyC6TTCNAOXliVMJuc6IwMnedWNroiRZqAwFctePtxOzUBX1z4Rbchc5Dh/W+GXy0bA5S2tSkGwJubHq51ORBsyH6KSBDuPpvIFVgR3UtsJIriTTMaQlmQ3BCWYCvtNSwUETSvoutXD1vUrUCUHnlablvMdZiNZAN5kRkB28+aQvFWJ74YYzTjjCC5Z+4f/nNYwqFNIqWDISe3T/RcwNWNrtk1wFTsn+AfKlUgR0mehFwAAAABJRU5ErkJggmsok69CAgAA</data>
+        <length>788</length>
+        <position>1</position>
+        <sys_attachment display_value="image" sys_id="d697b544837022109566f7b6feaad317">d697b544837022109566f7b6feaad317</sys_attachment>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-04-04 12:19:36</sys_created_on>
+        <sys_id>9a97b544837022109566f7b6feaad317</sys_id>
+    </sys_attachment_doc>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Mock SkillUp">6938717783b712109566f7b6feaad3b9</application>
+        <file_path/>
+        <instance_id>7ee1e82afb5f1e945704f3585eefdcfd</instance_id>
+        <instance_name>dev293201</instance_name>
+        <name>db_image_b8877944837022109566f7b6feaad37b</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="db_image"><db_image action="INSERT_OR_UPDATE"><active>true</active><category/><format>png</format><height>16</height><image>d697b544837022109566f7b6feaad317</image><name>x_1523172_skill_up.enemyboss_lips.png</name><size_bytes>578</size_bytes><sys_class_name>db_image</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2025-04-04 12:19:32</sys_created_on><sys_id>b8877944837022109566f7b6feaad37b</sys_id><sys_mod_count>2</sys_mod_count><sys_name>x_1523172_skill_up.enemyboss_lips.png</sys_name><sys_package display_value="Mock SkillUp" source="x_1523172_skill_up">6938717783b712109566f7b6feaad3b9</sys_package><sys_policy/><sys_scope display_value="Mock SkillUp">6938717783b712109566f7b6feaad3b9</sys_scope><sys_update_name>db_image_b8877944837022109566f7b6feaad37b</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2025-04-04 12:19:36</sys_updated_on><thumbnail/><width>80</width></db_image><sys_attachment action="INSERT_OR_UPDATE"><average_image_color>#bd4d79</average_image_color><chunk_size_bytes>700000</chunk_size_bytes><compressed>true</compressed><content_type>image/png</content_type><file_name>image</file_name><hash>ffbc04014c964d521d7ada055cc7944130b420496682abc6ac71166f2c2f66e9</hash><image_height>16</image_height><image_width>80</image_width><size_bytes>578</size_bytes><size_compressed>601</size_compressed><state>available</state><sys_created_by>admin</sys_created_by><sys_created_on>2025-04-04 12:19:36</sys_created_on><sys_id>d697b544837022109566f7b6feaad317</sys_id><sys_mod_count>5</sys_mod_count><sys_updated_by>admin</sys_updated_by><sys_updated_on>2025-04-04 12:19:36</sys_updated_on><table_name>ZZ_YYdb_image</table_name><table_sys_id>b8877944837022109566f7b6feaad37b</table_sys_id></sys_attachment><sys_attachment_doc action="INSERT_OR_UPDATE"><data>H4sIAAAAAAAA/w==</data><length>16</length><position>0</position><sys_attachment display_value="image" sys_id="d697b544837022109566f7b6feaad317">d697b544837022109566f7b6feaad317</sys_attachment><sys_created_by>admin</sys_created_by><sys_created_on>2025-04-04 12:19:36</sys_created_on><sys_id>1a97b544837022109566f7b6feaad317</sys_id></sys_attachment_doc><sys_attachment_doc action="INSERT_OR_UPDATE"><data>AUICvf2JUE5HDQoaCgAAAA1JSERSAAAAUAAAABAIAgAAAA4rb5YAAAAHdElNRQfmAQsRGxqvGAcpAAAAF3RFWHRTb2Z0d2FyZQBHTERQTkcgdmVyIDMuNHGFpOEAAAAIdHBOR0dMRDMAAAAASoApHwAAAARnQU1BAACxjwv8YQUAAAAGYktHRAD/AP8A/6C9p5MAAAAGdFJOUwD9AE0A07maDoAAAAGLSURBVHic5VaxSkNBEDwCllZpbOzzI+liKdj5IZaSxiKVpBQEsXp2YpPCLq2Fhf+QSFDBUnRh5Rh29vbeC6YwCVPcu5u9tzN7ty/p6+h5p9BL2/W7nh/3Tl8/bw4FMpBHy0D1V/3B4uTuu3n8eH8TyEAeZbLklvI1RMkxf9PQBEw+AuQkZnOAieHd0aASf9MG5c0Z+IpUZbtpGT4bxDK6GoSvMPu7HuHq4KAvwB2sYENF5DB39wBB9izYaGBy1SNXAif/27TuZ2eCi70ltwGZ1FWc1JkYyB8Nx3m8bFb7syeBDFyC6TTCNAOXliVMJuc6IwMnedWNroiRZqAwFctePtxOzUBX1z4Rbchc5Dh/W+GXy0bA5S2tSkGwJubHq51ORBsyH6KSBDuPpvIFVgR3UtsJIriTTMaQlmQ3BCWYCvtNSwUETSvoutXD1vUrUCUHnlablvMdZiNZAN5kRkB28+aQvFWJ74YYzTjjCC5Z+4f/nNYwqFNIqWDISe3T/RcwNWNrtk1wFTsn+AfKlUgR0mehFwAAAABJRU5ErkJggmsok69CAgAA</data><length>788</length><position>1</position><sys_attachment display_value="image" sys_id="d697b544837022109566f7b6feaad317">d697b544837022109566f7b6feaad317</sys_attachment><sys_created_by>admin</sys_created_by><sys_created_on>2025-04-04 12:19:36</sys_created_on><sys_id>9a97b544837022109566f7b6feaad317</sys_id></sys_attachment_doc></record_update>]]></payload>
+        <payload_hash>0</payload_hash>
+        <record_name>x_1523172_skill_up.enemyboss_lips.png</record_name>
+        <reverted_from/>
+        <source>a538717783b712109566f7b6feaad3be</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-04-04 12:19:36</sys_created_on>
+        <sys_id>1e97b944837022109566f7b6feaad3f2</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>19600be0b870000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-04-04 12:19:36</sys_updated_on>
+        <type>Images</type>
+        <update_guid>d297b944767022105b8f7a0051bc05f2</update_guid>
+        <update_guid_history>d297b944767022105b8f7a0051bc05f2:-1082452834,9a97b544fc70221086998a3aaa87da1d:897569098,d297b54410702210082ba4a7f233a41b:240664600,cd97318014702210f6980f9de3b6b7df:70712718</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="x_1523172_skill_up.enemyboss_lips.png">6eae971d83bc62109566f7b6feaad387</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-04-08 17:02:18</sys_created_on>
+        <sys_db_object display_value="" name="db_image">db_image</sys_db_object>
+        <sys_id>0fc2dd26c68641cc835378f8949a0910</sys_id>
+        <sys_metadata>b8877944837022109566f7b6feaad37b</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>x_1523172_skill_up.enemyboss_lips.png</sys_name>
+        <sys_package display_value="Mock SkillUp" source="x_1523172_skill_up">6938717783b712109566f7b6feaad3b9</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="Mock SkillUp">6938717783b712109566f7b6feaad3b9</sys_scope>
+        <sys_scope_delete display_value="">3a6d93cae10942c4892c498dcc264390</sys_scope_delete>
+        <sys_update_name>db_image_b8877944837022109566f7b6feaad37b</sys_update_name>
+        <sys_update_version display_value="db_image_b8877944837022109566f7b6feaad37b">1e97b944837022109566f7b6feaad3f2</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-04-08 17:02:18</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

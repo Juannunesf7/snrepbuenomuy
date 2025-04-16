@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_ui_section action="DELETE" caption="" section_id="729392d683d422109566f7b6feaad372" sys_domain="global" table="x_1523172_skill_up_bug_list" version="3" view="">
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>.begin_split</element>
+            <position>0</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2025-03-17 17:36:55</sys_created_on>
+            <sys_id>839392d683d422109566f7b6feaad379</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_1523172_skill_up_bug_list" sys_domain="global" view="Default view">729392d683d422109566f7b6feaad372</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2025-03-17 17:36:55</sys_updated_on>
+            <sys_user/>
+            <type>.begin_split</type>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>u_projeto</element>
+            <position>1</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2025-03-17 17:36:55</sys_created_on>
+            <sys_id>4f9392d683d422109566f7b6feaad379</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_1523172_skill_up_bug_list" sys_domain="global" view="Default view">729392d683d422109566f7b6feaad372</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2025-03-17 17:36:55</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>u_description</element>
+            <position>2</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2025-03-17 17:36:55</sys_created_on>
+            <sys_id>c39392d683d422109566f7b6feaad37a</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_1523172_skill_up_bug_list" sys_domain="global" view="Default view">729392d683d422109566f7b6feaad372</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2025-03-17 17:36:55</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>u_short_description</element>
+            <position>3</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2025-03-17 17:36:55</sys_created_on>
+            <sys_id>4b9392d683d422109566f7b6feaad37a</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_1523172_skill_up_bug_list" sys_domain="global" view="Default view">729392d683d422109566f7b6feaad372</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2025-03-17 17:36:55</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>.split</element>
+            <position>4</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2025-03-17 17:36:55</sys_created_on>
+            <sys_id>cf9392d683d422109566f7b6feaad37a</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_1523172_skill_up_bug_list" sys_domain="global" view="Default view">729392d683d422109566f7b6feaad372</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2025-03-17 17:36:55</sys_updated_on>
+            <sys_user/>
+            <type>.split</type>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>u_linha</element>
+            <position>5</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2025-03-17 17:36:55</sys_created_on>
+            <sys_id>479392d683d422109566f7b6feaad37b</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_1523172_skill_up_bug_list" sys_domain="global" view="Default view">729392d683d422109566f7b6feaad372</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2025-03-17 17:36:55</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>u_passo_a_passo</element>
+            <position>6</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2025-03-17 17:36:55</sys_created_on>
+            <sys_id>cb9392d683d422109566f7b6feaad37b</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_1523172_skill_up_bug_list" sys_domain="global" view="Default view">729392d683d422109566f7b6feaad372</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2025-03-17 17:36:55</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>u_task</element>
+            <position>7</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2025-03-17 17:36:55</sys_created_on>
+            <sys_id>c79356d683d422109566f7b6feaad34d</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_1523172_skill_up_bug_list" sys_domain="global" view="Default view">729392d683d422109566f7b6feaad372</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2025-03-17 17:36:55</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>.end_split</element>
+            <position>8</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2025-03-17 17:36:55</sys_created_on>
+            <sys_id>4f9356d683d422109566f7b6feaad34d</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_1523172_skill_up_bug_list" sys_domain="global" view="Default view">729392d683d422109566f7b6feaad372</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2025-03-17 17:36:55</sys_updated_on>
+            <sys_user/>
+            <type>.end_split</type>
+        </sys_ui_element>
+        <sys_ui_section action="DELETE">
+            <caption/>
+            <header>false</header>
+            <name>x_1523172_skill_up_bug_list</name>
+            <roles/>
+            <sys_class_name>sys_ui_section</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2025-03-17 17:36:55</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>729392d683d422109566f7b6feaad372</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>x_1523172_skill_up_bug_list</sys_name>
+            <sys_overrides/>
+            <sys_package display_value="Mock SkillUp" source="x_1523172_skill_up">6938717783b712109566f7b6feaad3b9</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="Mock SkillUp">6938717783b712109566f7b6feaad3b9</sys_scope>
+            <sys_update_name>sys_ui_section_729392d683d422109566f7b6feaad372</sys_update_name>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2025-03-17 17:36:55</sys_updated_on>
+            <sys_user/>
+            <title>true</title>
+            <view display_value="Default view" name="NULL">Default view</view>
+            <view_name/>
+        </sys_ui_section>
+    </sys_ui_section>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Mock SkillUp">6938717783b712109566f7b6feaad3b9</application>
+        <file_path/>
+        <instance_id>7ee1e82afb5f1e945704f3585eefdcfd</instance_id>
+        <instance_name>dev293201</instance_name>
+        <name>sys_ui_section_729392d683d422109566f7b6feaad372</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update><sys_ui_section caption="" section_id="729392d683d422109566f7b6feaad372" sys_domain="global" table="x_1523172_skill_up_bug_list" version="3" view=""><sys_ui_element action="INSERT_OR_UPDATE"><element>.begin_split</element><position>0</position><sys_created_by>admin</sys_created_by><sys_created_on>2025-03-17 17:36:55</sys_created_on><sys_id>839392d683d422109566f7b6feaad379</sys_id><sys_mod_count>0</sys_mod_count><sys_ui_formatter/><sys_ui_section caption="NULL" display_value="" name="x_1523172_skill_up_bug_list" sys_domain="global" view="Default view">729392d683d422109566f7b6feaad372</sys_ui_section><sys_updated_by>admin</sys_updated_by><sys_updated_on>2025-03-17 17:36:55</sys_updated_on><sys_user/><type>.begin_split</type></sys_ui_element><sys_ui_element action="INSERT_OR_UPDATE"><element>u_projeto</element><position>1</position><sys_created_by>admin</sys_created_by><sys_created_on>2025-03-17 17:36:55</sys_created_on><sys_id>4f9392d683d422109566f7b6feaad379</sys_id><sys_mod_count>0</sys_mod_count><sys_ui_formatter/><sys_ui_section caption="NULL" display_value="" name="x_1523172_skill_up_bug_list" sys_domain="global" view="Default view">729392d683d422109566f7b6feaad372</sys_ui_section><sys_updated_by>admin</sys_updated_by><sys_updated_on>2025-03-17 17:36:55</sys_updated_on><sys_user/><type/></sys_ui_element><sys_ui_element action="INSERT_OR_UPDATE"><element>u_description</element><position>2</position><sys_created_by>admin</sys_created_by><sys_created_on>2025-03-17 17:36:55</sys_created_on><sys_id>c39392d683d422109566f7b6feaad37a</sys_id><sys_mod_count>0</sys_mod_count><sys_ui_formatter/><sys_ui_section caption="NULL" display_value="" name="x_1523172_skill_up_bug_list" sys_domain="global" view="Default view">729392d683d422109566f7b6feaad372</sys_ui_section><sys_updated_by>admin</sys_updated_by><sys_updated_on>2025-03-17 17:36:55</sys_updated_on><sys_user/><type/></sys_ui_element><sys_ui_element action="INSERT_OR_UPDATE"><element>u_short_description</element><position>3</position><sys_created_by>admin</sys_created_by><sys_created_on>2025-03-17 17:36:55</sys_created_on><sys_id>4b9392d683d422109566f7b6feaad37a</sys_id><sys_mod_count>0</sys_mod_count><sys_ui_formatter/><sys_ui_section caption="NULL" display_value="" name="x_1523172_skill_up_bug_list" sys_domain="global" view="Default view">729392d683d422109566f7b6feaad372</sys_ui_section><sys_updated_by>admin</sys_updated_by><sys_updated_on>2025-03-17 17:36:55</sys_updated_on><sys_user/><type/></sys_ui_element><sys_ui_element action="INSERT_OR_UPDATE"><element>.split</element><position>4</position><sys_created_by>admin</sys_created_by><sys_created_on>2025-03-17 17:36:55</sys_created_on><sys_id>cf9392d683d422109566f7b6feaad37a</sys_id><sys_mod_count>0</sys_mod_count><sys_ui_formatter/><sys_ui_section caption="NULL" display_value="" name="x_1523172_skill_up_bug_list" sys_domain="global" view="Default view">729392d683d422109566f7b6feaad372</sys_ui_section><sys_updated_by>admin</sys_updated_by><sys_updated_on>2025-03-17 17:36:55</sys_updated_on><sys_user/><type>.split</type></sys_ui_element><sys_ui_element action="INSERT_OR_UPDATE"><element>u_linha</element><position>5</position><sys_created_by>admin</sys_created_by><sys_created_on>2025-03-17 17:36:55</sys_created_on><sys_id>479392d683d422109566f7b6feaad37b</sys_id><sys_mod_count>0</sys_mod_count><sys_ui_formatter/><sys_ui_section caption="NULL" display_value="" name="x_1523172_skill_up_bug_list" sys_domain="global" view="Default view">729392d683d422109566f7b6feaad372</sys_ui_section><sys_updated_by>admin</sys_updated_by><sys_updated_on>2025-03-17 17:36:55</sys_updated_on><sys_user/><type/></sys_ui_element><sys_ui_element action="INSERT_OR_UPDATE"><element>u_passo_a_passo</element><position>6</position><sys_created_by>admin</sys_created_by><sys_created_on>2025-03-17 17:36:55</sys_created_on><sys_id>cb9392d683d422109566f7b6feaad37b</sys_id><sys_mod_count>0</sys_mod_count><sys_ui_formatter/><sys_ui_section caption="NULL" display_value="" name="x_1523172_skill_up_bug_list" sys_domain="global" view="Default view">729392d683d422109566f7b6feaad372</sys_ui_section><sys_updated_by>admin</sys_updated_by><sys_updated_on>2025-03-17 17:36:55</sys_updated_on><sys_user/><type/></sys_ui_element><sys_ui_element action="INSERT_OR_UPDATE"><element>u_task</element><position>7</position><sys_created_by>admin</sys_created_by><sys_created_on>2025-03-17 17:36:55</sys_created_on><sys_id>c79356d683d422109566f7b6feaad34d</sys_id><sys_mod_count>0</sys_mod_count><sys_ui_formatter/><sys_ui_section caption="NULL" display_value="" name="x_1523172_skill_up_bug_list" sys_domain="global" view="Default view">729392d683d422109566f7b6feaad372</sys_ui_section><sys_updated_by>admin</sys_updated_by><sys_updated_on>2025-03-17 17:36:55</sys_updated_on><sys_user/><type/></sys_ui_element><sys_ui_element action="INSERT_OR_UPDATE"><element>.end_split</element><position>8</position><sys_created_by>admin</sys_created_by><sys_created_on>2025-03-17 17:36:55</sys_created_on><sys_id>4f9356d683d422109566f7b6feaad34d</sys_id><sys_mod_count>0</sys_mod_count><sys_ui_formatter/><sys_ui_section caption="NULL" display_value="" name="x_1523172_skill_up_bug_list" sys_domain="global" view="Default view">729392d683d422109566f7b6feaad372</sys_ui_section><sys_updated_by>admin</sys_updated_by><sys_updated_on>2025-03-17 17:36:55</sys_updated_on><sys_user/><type>.end_split</type></sys_ui_element><sys_ui_section action="INSERT_OR_UPDATE"><caption/><header>false</header><name>x_1523172_skill_up_bug_list</name><roles/><sys_class_name>sys_ui_section</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2025-03-17 17:36:55</sys_created_on><sys_domain>global</sys_domain><sys_domain_path>/</sys_domain_path><sys_id>729392d683d422109566f7b6feaad372</sys_id><sys_mod_count>0</sys_mod_count><sys_name>x_1523172_skill_up_bug_list</sys_name><sys_overrides/><sys_package display_value="Mock SkillUp" source="x_1523172_skill_up">6938717783b712109566f7b6feaad3b9</sys_package><sys_policy/><sys_scope display_value="Mock SkillUp">6938717783b712109566f7b6feaad3b9</sys_scope><sys_update_name>sys_ui_section_729392d683d422109566f7b6feaad372</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2025-03-17 17:36:55</sys_updated_on><sys_user/><title>true</title><view display_value="Default view" name="NULL">Default view</view><view_name/></sys_ui_section></sys_ui_section></record_update>]]></payload>
+        <payload_hash>-378976421</payload_hash>
+        <record_name>Bug List</record_name>
+        <reverted_from/>
+        <source>a538717783b712109566f7b6feaad3be</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-03-17 17:36:55</sys_created_on>
+        <sys_id>039356d683d422109566f7b6feaad350</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>195a52e167e0000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-03-17 17:36:55</sys_updated_on>
+        <type>Form Layout</type>
+        <update_guid>c79356d666d42210e10631764a6ce34f</update_guid>
+        <update_guid_history>c79356d666d42210e10631764a6ce34f:-378976421,cf9392d6bed42210127ac02bb4e0f874:-657970781</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-03-18 10:40:40</sys_created_on>
+        <sys_db_object display_value="" name="sys_ui_section">sys_ui_section</sys_db_object>
+        <sys_id>c10743aacece479b9fd8bc391eaea401</sys_id>
+        <sys_metadata>729392d683d422109566f7b6feaad372</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>x_1523172_skill_up_bug_list</sys_name>
+        <sys_package display_value="Mock SkillUp" source="x_1523172_skill_up">6938717783b712109566f7b6feaad3b9</sys_package>
+        <sys_parent display_value="">645e4a1283d422109566f7b6feaad3e2</sys_parent>
+        <sys_policy/>
+        <sys_scope display_value="Mock SkillUp">6938717783b712109566f7b6feaad3b9</sys_scope>
+        <sys_scope_delete display_value="">3a6d93cae10942c4892c498dcc264390</sys_scope_delete>
+        <sys_update_name>sys_ui_section_729392d683d422109566f7b6feaad372</sys_update_name>
+        <sys_update_version display_value="sys_ui_section_729392d683d422109566f7b6feaad372">039356d683d422109566f7b6feaad350</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-03-18 10:40:40</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

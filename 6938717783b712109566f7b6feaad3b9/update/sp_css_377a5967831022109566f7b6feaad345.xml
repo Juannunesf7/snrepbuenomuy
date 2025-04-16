@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_css">
+    <sp_css action="INSERT_OR_UPDATE">
+        <css>/* Alterar o background do body */&#13;
+body {&#13;
+  background: url('https://i.pinimg.com/736x/7d/3e/56/7d3e56245c98646fa2cce9a4ac51dccb.jpg') no-repeat center center fixed;&#13;
+  background-size: cover; /* Garante que a imagem cubra toda a tela */&#13;
+  color: white; /* Cor do texto para melhor contraste */&#13;
+}&#13;
+&#13;
+/* Adicionar uma camada semi-transparente para melhorar a legibilidade */&#13;
+body::before {&#13;
+  content: '';&#13;
+  position: fixed;&#13;
+  top: 0;&#13;
+  left: 0;&#13;
+  width: 100%;&#13;
+  height: 100%;&#13;
+  background: rgba(0, 0, 0, 0.5); /* Camada preta semi-transparente */&#13;
+  z-index: 1;&#13;
+}&#13;
+&#13;
+/* Garantir que o conteúdo fique acima da camada semi-transparente */&#13;
+.container-fluid,&#13;
+.page-header,&#13;
+.widget {&#13;
+  position: relative;&#13;
+  z-index: 2;&#13;
+}</css>
+        <name>MSU - Body</name>
+        <sys_class_name>sp_css</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-03-21 10:42:13</sys_created_on>
+        <sys_id>377a5967831022109566f7b6feaad345</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>MSU - Body</sys_name>
+        <sys_package display_value="Mock SkillUp" source="x_1523172_skill_up">6938717783b712109566f7b6feaad3b9</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Mock SkillUp">6938717783b712109566f7b6feaad3b9</sys_scope>
+        <sys_update_name>sp_css_377a5967831022109566f7b6feaad345</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-03-21 10:42:13</sys_updated_on>
+        <turn_off_scss_compilation>false</turn_off_scss_compilation>
+    </sp_css>
+</record_update>

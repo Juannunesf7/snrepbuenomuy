@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_widget">
+    <sp_widget action="DELETE">
+        <category>standard</category>
+        <client_script/>
+        <controller_as>c</controller_as>
+        <css>/* Estilo base para o widget */&#13;
+.iconlink {&#13;
+    padding: 3px 0;&#13;
+}&#13;
+&#13;
+.circle_icon {&#13;
+    display: block;&#13;
+    padding: 20px 0px 20px 70px;&#13;
+    position: relative;&#13;
+    text-align: center;&#13;
+}&#13;
+&#13;
+.circle_icon .fa-stack {&#13;
+    position: absolute;&#13;
+    left: 0px;&#13;
+    top: 10px;&#13;
+    width: 60px; /* Tamanho fixo do círculo externo */&#13;
+    height: 60px; /* Tamanho fixo do círculo externo */&#13;
+    display: flex;&#13;
+    align-items: center;&#13;
+    justify-content: center;&#13;
+}&#13;
+&#13;
+/* Círculo externo */&#13;
+.circle_icon .fa-circle {&#13;
+    color: transparent !important; /* Círculo transparente */&#13;
+}&#13;
+&#13;
+/* Glyph/Ícone interno */&#13;
+.circle_icon .icon-glow {&#13;
+    position: absolute;&#13;
+    font-size: 24px; /* Tamanho do ícone */&#13;
+    transition: color 0.3s ease, text-shadow 0.3s ease;&#13;
+    color: inherit !important; /* Herda a cor definida pelo JavaScript */&#13;
+}</css>
+        <data_table>sp_instance_link</data_table>
+        <demo_data/>
+        <description/>
+        <docs/>
+        <field_list>type,url,sc_category,sc_cat_item,kb_topic,kb_article,kb_category,sp_page,title,short_description,color,class_name,glyph</field_list>
+        <has_preview>false</has_preview>
+        <id/>
+        <internal>false</internal>
+        <link><![CDATA[function link(scope, element, attrs, controller) {  }]]></link>
+        <name>edx_copyIcon Link</name>
+        <option_schema>[{"name":"link_template","section":"Presentation","label":"Template","type":"choice","choices":[{"label":"Top Icon","value":"Top Icon"},{"label":"Circle Icon","value":"Circle Icon"},{"label":"Color Box","value":"Color Box"}]}]</option_schema>
+        <public>true</public>
+        <roles/>
+        <script><![CDATA[(function(){
+	var gr = $sp.getInstanceRecord();
+	data.href = $sp.getMenuHREF(gr);
+	data.target = options.target || "";
+})();]]></script>
+        <servicenow>false</servicenow>
+        <sys_class_name>sp_widget</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-03-21 12:49:02</sys_created_on>
+        <sys_id>7c18fd6b839022109566f7b6feaad350</sys_id>
+        <sys_mod_count>5</sys_mod_count>
+        <sys_name>edx_copyIcon Link</sys_name>
+        <sys_package display_value="Mock SkillUp" source="x_1523172_skill_up">6938717783b712109566f7b6feaad3b9</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Mock SkillUp">6938717783b712109566f7b6feaad3b9</sys_scope>
+        <sys_update_name>sp_widget_7c18fd6b839022109566f7b6feaad350</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-03-21 13:25:02</sys_updated_on>
+        <template><![CDATA[<div class="iconlink">
+    <!-- Circle Icon -->
+    <a ng-if="::(options.link_template == 'Circle Icon')" ng-href="{{::data.href}}" class="circle_icon text-{{::options.color}}" target="{{::data.target}}">
+        <span class="fa fa-stack fa-2x" aria-hidden="true">
+            <i class="fa fa-circle fa-stack-2x"></i> <!-- Círculo externo -->
+            <i class="fa fa-{{::options.glyph}} fa-stack-1x fa-inverse icon-glow"></i> <!-- Glyph/Ícone interno -->
+        </span>
+        <h2>{{::options.title}}</h2>
+        <span class="text-muted">{{::options.short_description}}</span>
+    </a>
+</div>]]></template>
+    </sp_widget>
+    <sys_es_latest_script action="DELETE">
+        <id>7c18fd6b839022109566f7b6feaad350</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-03-21 12:58:59</sys_created_on>
+        <sys_id>e25afdab839022109566f7b6feaad327</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-03-21 12:58:59</sys_updated_on>
+        <table>sp_widget</table>
+        <use_es_latest>true</use_es_latest>
+    </sys_es_latest_script>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Mock SkillUp">6938717783b712109566f7b6feaad3b9</application>
+        <file_path/>
+        <instance_id>7ee1e82afb5f1e945704f3585eefdcfd</instance_id>
+        <instance_name>dev293201</instance_name>
+        <name>sp_widget_7c18fd6b839022109566f7b6feaad350</name>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update table="sp_widget"&gt;&lt;sp_widget action="INSERT_OR_UPDATE"&gt;&lt;category&gt;standard&lt;/category&gt;&lt;client_script/&gt;&lt;controller_as&gt;c&lt;/controller_as&gt;&lt;css&gt;/* Estilo base para o widget */&amp;#13;
+.iconlink {&amp;#13;
+    padding: 3px 0;&amp;#13;
+}&amp;#13;
+&amp;#13;
+.circle_icon {&amp;#13;
+    display: block;&amp;#13;
+    padding: 20px 0px 20px 70px;&amp;#13;
+    position: relative;&amp;#13;
+    text-align: center;&amp;#13;
+}&amp;#13;
+&amp;#13;
+.circle_icon .fa-stack {&amp;#13;
+    position: absolute;&amp;#13;
+    left: 0px;&amp;#13;
+    top: 10px;&amp;#13;
+    width: 60px; /* Tamanho fixo do círculo externo */&amp;#13;
+    height: 60px; /* Tamanho fixo do círculo externo */&amp;#13;
+    display: flex;&amp;#13;
+    align-items: center;&amp;#13;
+    justify-content: center;&amp;#13;
+}&amp;#13;
+&amp;#13;
+/* Círculo externo */&amp;#13;
+.circle_icon .fa-circle {&amp;#13;
+    color: transparent !important; /* Círculo transparente */&amp;#13;
+}&amp;#13;
+&amp;#13;
+/* Glyph/Ícone interno */&amp;#13;
+.circle_icon .icon-glow {&amp;#13;
+    position: absolute;&amp;#13;
+    font-size: 24px; /* Tamanho do ícone */&amp;#13;
+    transition: color 0.3s ease, text-shadow 0.3s ease;&amp;#13;
+    color: inherit !important; /* Herda a cor definida pelo JavaScript */&amp;#13;
+}&lt;/css&gt;&lt;data_table&gt;sp_instance_link&lt;/data_table&gt;&lt;demo_data/&gt;&lt;description/&gt;&lt;docs/&gt;&lt;field_list&gt;type,url,sc_category,sc_cat_item,kb_topic,kb_article,kb_category,sp_page,title,short_description,color,class_name,glyph&lt;/field_list&gt;&lt;has_preview&gt;false&lt;/has_preview&gt;&lt;id/&gt;&lt;internal&gt;false&lt;/internal&gt;&lt;link&gt;&lt;![CDATA[function link(scope, element, attrs, controller) {  }]]&gt;&lt;/link&gt;&lt;name&gt;edx_copyIcon Link&lt;/name&gt;&lt;option_schema&gt;[{"name":"link_template","section":"Presentation","label":"Template","type":"choice","choices":[{"label":"Top Icon","value":"Top Icon"},{"label":"Circle Icon","value":"Circle Icon"},{"label":"Color Box","value":"Color Box"}]}]&lt;/option_schema&gt;&lt;public&gt;true&lt;/public&gt;&lt;roles/&gt;&lt;script&gt;&lt;![CDATA[(function(){
+	var gr = $sp.getInstanceRecord();
+	data.href = $sp.getMenuHREF(gr);
+	data.target = options.target || "";
+})();]]&gt;&lt;/script&gt;&lt;servicenow&gt;false&lt;/servicenow&gt;&lt;sys_class_name&gt;sp_widget&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2025-03-21 12:49:02&lt;/sys_created_on&gt;&lt;sys_id&gt;7c18fd6b839022109566f7b6feaad350&lt;/sys_id&gt;&lt;sys_mod_count&gt;5&lt;/sys_mod_count&gt;&lt;sys_name&gt;edx_copyIcon Link&lt;/sys_name&gt;&lt;sys_package display_value="Mock SkillUp" source="x_1523172_skill_up"&gt;6938717783b712109566f7b6feaad3b9&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="Mock SkillUp"&gt;6938717783b712109566f7b6feaad3b9&lt;/sys_scope&gt;&lt;sys_update_name&gt;sp_widget_7c18fd6b839022109566f7b6feaad350&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2025-03-21 13:25:02&lt;/sys_updated_on&gt;&lt;template&gt;&lt;![CDATA[&lt;div class="iconlink"&gt;
+    &lt;!-- Circle Icon --&gt;
+    &lt;a ng-if="::(options.link_template == 'Circle Icon')" ng-href="{{::data.href}}" class="circle_icon text-{{::options.color}}" target="{{::data.target}}"&gt;
+        &lt;span class="fa fa-stack fa-2x" aria-hidden="true"&gt;
+            &lt;i class="fa fa-circle fa-stack-2x"&gt;&lt;/i&gt; &lt;!-- Círculo externo --&gt;
+            &lt;i class="fa fa-{{::options.glyph}} fa-stack-1x fa-inverse icon-glow"&gt;&lt;/i&gt; &lt;!-- Glyph/Ícone interno --&gt;
+        &lt;/span&gt;
+        &lt;h2&gt;{{::options.title}}&lt;/h2&gt;
+        &lt;span class="text-muted"&gt;{{::options.short_description}}&lt;/span&gt;
+    &lt;/a&gt;
+&lt;/div&gt;]]&gt;&lt;/template&gt;&lt;/sp_widget&gt;&lt;sys_es_latest_script action="INSERT_OR_UPDATE"&gt;&lt;id&gt;7c18fd6b839022109566f7b6feaad350&lt;/id&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2025-03-21 12:58:59&lt;/sys_created_on&gt;&lt;sys_id&gt;e25afdab839022109566f7b6feaad327&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2025-03-21 12:58:59&lt;/sys_updated_on&gt;&lt;table&gt;sp_widget&lt;/table&gt;&lt;use_es_latest&gt;true&lt;/use_es_latest&gt;&lt;/sys_es_latest_script&gt;&lt;/record_update&gt;</payload>
+        <payload_hash>-1451674648</payload_hash>
+        <record_name>edx_copyIcon Link</record_name>
+        <reverted_from/>
+        <source>a538717783b712109566f7b6feaad3be</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-03-21 13:25:02</sys_created_on>
+        <sys_id>cc500a2783d022109566f7b6feaad3fa</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>195b8e0ea760000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-03-21 13:25:02</sys_updated_on>
+        <type>Widget</type>
+        <update_guid>84500a278cd02210373f16396e9c3dfa</update_guid>
+        <update_guid_history>84500a278cd02210373f16396e9c3dfa:-1451674648,35befda37ad02210e9d0f26696b005ab:60646597,a3bd31a336d02210c9ee0f87ac72107d:1541198125,e2fcf56363d0221020f6c5376148614f:1070430838,40abfdef16902210126ae52f1e14761a:-788205297,7c18fd6bc6902210be291381bb383552:277060826</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="edx_copyIcon Link">afe08e6783d022109566f7b6feaad364</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-03-21 13:27:44</sys_created_on>
+        <sys_db_object display_value="" name="sp_widget">sp_widget</sys_db_object>
+        <sys_id>07ca0096c2ce498c997b621f0c11aa64</sys_id>
+        <sys_metadata>7c18fd6b839022109566f7b6feaad350</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>edx_copyIcon Link</sys_name>
+        <sys_package display_value="Mock SkillUp" source="x_1523172_skill_up">6938717783b712109566f7b6feaad3b9</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="Mock SkillUp">6938717783b712109566f7b6feaad3b9</sys_scope>
+        <sys_scope_delete display_value="">3a6d93cae10942c4892c498dcc264390</sys_scope_delete>
+        <sys_update_name>sp_widget_7c18fd6b839022109566f7b6feaad350</sys_update_name>
+        <sys_update_version display_value="sp_widget_7c18fd6b839022109566f7b6feaad350">cc500a2783d022109566f7b6feaad3fa</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-03-21 13:27:44</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

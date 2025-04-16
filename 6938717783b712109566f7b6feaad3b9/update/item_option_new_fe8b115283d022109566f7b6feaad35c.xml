@@ -58,7 +58,8 @@
         <record/>
         <record_producer_table>x_1523172_skill_up_bug</record_producer_table>
         <reference>x_1523172_skill_up_tarefas</reference>
-        <reference_qual>javascript: return 'tarefa=' + projeto;</reference_qual>
+        <reference_qual>javascript: &#13;
+    current.variables.projeto ? "projeto=" + current.variables.projeto : "";</reference_qual>
         <reference_qual_condition/>
         <rich_text/>
         <roles_to_use_also_request_for/>
@@ -79,14 +80,14 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2025-03-17 13:33:00</sys_created_on>
         <sys_id>fe8b115283d022109566f7b6feaad35c</sys_id>
-        <sys_mod_count>3</sys_mod_count>
+        <sys_mod_count>9</sys_mod_count>
         <sys_name>Qual Tarefa o problema está relacionado?</sys_name>
         <sys_package display_value="Mock SkillUp" source="x_1523172_skill_up">6938717783b712109566f7b6feaad3b9</sys_package>
         <sys_policy/>
         <sys_scope display_value="Mock SkillUp">6938717783b712109566f7b6feaad3b9</sys_scope>
         <sys_update_name>item_option_new_fe8b115283d022109566f7b6feaad35c</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2025-03-17 13:57:28</sys_updated_on>
+        <sys_updated_on>2025-03-17 14:33:07</sys_updated_on>
         <table/>
         <tooltip/>
         <topic_block/>

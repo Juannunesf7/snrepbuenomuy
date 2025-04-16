@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_security_acl">
+    <sys_security_acl action="DELETE">
+        <active>true</active>
+        <admin_overrides>true</admin_overrides>
+        <advanced>true</advanced>
+        <applies_to/>
+        <condition/>
+        <decision_type>deny</decision_type>
+        <description>Deny read for all fields in x_1523172_skill_up_projeto, unless users have at least one of the roles (x_1523172_skill_up.manager, x_1523172_skill_up.monitor), and the ACL script returns true.</description>
+        <local_or_existing>Local</local_or_existing>
+        <name>x_1523172_skill_up_projeto.*</name>
+        <operation display_value="read">read</operation>
+        <script><![CDATA[// Obtém o usuário atual e suas roles
+var user = gs.getUser();
+var userRoles = user.getRoles();
+var fieldName = current.getElement() ? current.getElementName() : null;
+
+// Lista de campos permitidos para estagiários
+var camposPermitidos = ['number', 'nome_projeto', 'description', 'gerente'];
+
+// Se for admin, concede acesso total
+if (userRoles.indexOf('admin') != -1) {
+    answer = true;
+}
+// Se for estagiário, só pode acessar os campos permitidos
+else if (userRoles.indexOf('x_1523172_skill_up.intern') != -1) {
+    answer = fieldName && camposPermitidos.indexOf(fieldName) != -1;
+}
+// Para outros usuários, permite acesso normal
+else {
+    answer = true;
+}
+]]></script>
+        <security_attribute/>
+        <sys_class_name>sys_security_acl</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-03-10 17:07:46</sys_created_on>
+        <sys_id>9c28860c839422109566f7b6feaad39a</sys_id>
+        <sys_mod_count>10</sys_mod_count>
+        <sys_name>x_1523172_skill_up_projeto.*</sys_name>
+        <sys_package display_value="Mock SkillUp" source="x_1523172_skill_up">6938717783b712109566f7b6feaad3b9</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Mock SkillUp">6938717783b712109566f7b6feaad3b9</sys_scope>
+        <sys_update_name>sys_security_acl_9c28860c839422109566f7b6feaad39a</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-03-11 12:14:16</sys_updated_on>
+        <type display_value="record">record</type>
+    </sys_security_acl>
+    <sys_es_latest_script action="DELETE">
+        <id>9c28860c839422109566f7b6feaad39a</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-03-10 17:07:43</sys_created_on>
+        <sys_id>fec98ec8839422109566f7b6feaad309</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-03-10 17:07:43</sys_updated_on>
+        <table>sys_security_acl</table>
+        <use_es_latest>true</use_es_latest>
+    </sys_es_latest_script>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Mock SkillUp">6938717783b712109566f7b6feaad3b9</application>
+        <file_path/>
+        <instance_id>7ee1e82afb5f1e945704f3585eefdcfd</instance_id>
+        <instance_name>dev293201</instance_name>
+        <name>sys_security_acl_9c28860c839422109566f7b6feaad39a</name>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update table="sys_security_acl"&gt;&lt;sys_security_acl action="INSERT_OR_UPDATE"&gt;&lt;active&gt;true&lt;/active&gt;&lt;admin_overrides&gt;true&lt;/admin_overrides&gt;&lt;advanced&gt;true&lt;/advanced&gt;&lt;applies_to/&gt;&lt;condition/&gt;&lt;decision_type&gt;deny&lt;/decision_type&gt;&lt;description&gt;Deny read for all fields in x_1523172_skill_up_projeto, unless users have at least one of the roles (x_1523172_skill_up.manager, x_1523172_skill_up.monitor), and the ACL script returns true.&lt;/description&gt;&lt;local_or_existing&gt;Local&lt;/local_or_existing&gt;&lt;name&gt;x_1523172_skill_up_projeto.*&lt;/name&gt;&lt;operation display_value="read"&gt;read&lt;/operation&gt;&lt;script&gt;&lt;![CDATA[// Obtém o usuário atual e suas roles
+var user = gs.getUser();
+var userRoles = user.getRoles();
+var fieldName = current.getElement() ? current.getElementName() : null;
+
+// Lista de campos permitidos para estagiários
+var camposPermitidos = ['number', 'nome_projeto', 'description', 'gerente'];
+
+// Se for admin, concede acesso total
+if (userRoles.indexOf('admin') != -1) {
+    answer = true;
+}
+// Se for estagiário, só pode acessar os campos permitidos
+else if (userRoles.indexOf('x_1523172_skill_up.intern') != -1) {
+    answer = fieldName &amp;&amp; camposPermitidos.indexOf(fieldName) != -1;
+}
+// Para outros usuários, permite acesso normal
+else {
+    answer = true;
+}
+]]&gt;&lt;/script&gt;&lt;security_attribute/&gt;&lt;sys_class_name&gt;sys_security_acl&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2025-03-10 17:07:46&lt;/sys_created_on&gt;&lt;sys_id&gt;9c28860c839422109566f7b6feaad39a&lt;/sys_id&gt;&lt;sys_mod_count&gt;10&lt;/sys_mod_count&gt;&lt;sys_name&gt;x_1523172_skill_up_projeto.*&lt;/sys_name&gt;&lt;sys_package display_value="Mock SkillUp" source="x_1523172_skill_up"&gt;6938717783b712109566f7b6feaad3b9&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="Mock SkillUp"&gt;6938717783b712109566f7b6feaad3b9&lt;/sys_scope&gt;&lt;sys_update_name&gt;sys_security_acl_9c28860c839422109566f7b6feaad39a&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2025-03-11 12:14:16&lt;/sys_updated_on&gt;&lt;type display_value="record"&gt;record&lt;/type&gt;&lt;/sys_security_acl&gt;&lt;sys_es_latest_script action="INSERT_OR_UPDATE"&gt;&lt;id&gt;9c28860c839422109566f7b6feaad39a&lt;/id&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2025-03-10 17:07:43&lt;/sys_created_on&gt;&lt;sys_id&gt;fec98ec8839422109566f7b6feaad309&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2025-03-10 17:07:43&lt;/sys_updated_on&gt;&lt;table&gt;sys_security_acl&lt;/table&gt;&lt;use_es_latest&gt;true&lt;/use_es_latest&gt;&lt;/sys_es_latest_script&gt;&lt;/record_update&gt;</payload>
+        <payload_hash>1834723463</payload_hash>
+        <record_name>x_1523172_skill_up_projeto.*</record_name>
+        <reverted_from/>
+        <source>a538717783b712109566f7b6feaad3be</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-03-11 12:14:16</sys_created_on>
+        <sys_id>c230561c835022109566f7b6feaad3e3</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>1958520889c0000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-03-11 12:14:16</sys_updated_on>
+        <type>Access Control</type>
+        <update_guid>8a30561c975022106c94f4266d598be2</update_guid>
+        <update_guid_history>8a30561c975022106c94f4266d598be2:1834723463,8e4f02d8965022107a8406efcf34142e:-192288252,8b1e8258aa5022103626f4f57c65bef2:-1825097070,b3bd4258a8502210172ac94955211e76:1042982988,bf1c0e94d0502210ae0e3f34dd521ed4:-1883797312,2ada4a1476502210831cba63c5ef1027:1459325808,86e942d0e550221017545c5135dd9157:-771325181,80a5469c07102210af5ba7956db9fea1:-434516686,5e3306d8b31022102bc9033ad865bcfb:-1285240239,7bd24e988f102210a699500a9b06ecd5:-1049845890,2bc90a002dd4221000b46bed0e0e9e9f:-1091538215</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-03-11 12:31:32</sys_created_on>
+        <sys_db_object display_value="" name="sys_security_acl">sys_security_acl</sys_db_object>
+        <sys_id>2ffe3e954a5c40bb9bc0c681041498d1</sys_id>
+        <sys_metadata>9c28860c839422109566f7b6feaad39a</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>x_1523172_skill_up_projeto.*</sys_name>
+        <sys_package display_value="Mock SkillUp" source="x_1523172_skill_up">6938717783b712109566f7b6feaad3b9</sys_package>
+        <sys_parent display_value="x_1523172_skill_up_projeto">31af31ff83b712109566f7b6feaad365</sys_parent>
+        <sys_policy/>
+        <sys_scope display_value="Mock SkillUp">6938717783b712109566f7b6feaad3b9</sys_scope>
+        <sys_scope_delete display_value="">3a6d93cae10942c4892c498dcc264390</sys_scope_delete>
+        <sys_update_name>sys_security_acl_9c28860c839422109566f7b6feaad39a</sys_update_name>
+        <sys_update_version display_value="sys_security_acl_9c28860c839422109566f7b6feaad39a">c230561c835022109566f7b6feaad3e3</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-03-11 12:31:32</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

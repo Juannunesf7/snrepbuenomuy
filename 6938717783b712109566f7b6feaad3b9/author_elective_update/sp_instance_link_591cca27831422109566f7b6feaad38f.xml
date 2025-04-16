@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_instance_link">
+    <sp_instance_link action="DELETE">
+        <active>true</active>
+        <class_name/>
+        <color>danger</color>
+        <css>h2 {&#13;
+    background: linear-gradient(&#13;
+        to bottom,&#13;
+        #ffffff, /* Laranja vibrante na parte superior */&#13;
+        #ffffff  /* Branco na parte inferior */&#13;
+    );&#13;
+      -webkit-background-clip: text; /* Recorta o gradiente no formato do texto */&#13;
+      background-clip: text;&#13;
+      color: transparent; /* Torna o texto transparente para revelar o gradiente */&#13;
+ &#13;
+}&#13;
+ &#13;
+.text-danger{&#13;
+    background: linear-gradient(&#13;
+        to bottom,&#13;
+        #FF0000, /* Laranja vibrante na parte superior */&#13;
+        #800080  /* Branco na parte inferior */&#13;
+    );&#13;
+      -webkit-background-clip: text; /* Recorta o gradiente no formato do texto */&#13;
+      background-clip: text;&#13;
+      color: transparent; /* Torna o texto transparente para revelar o gradiente */&#13;
+ &#13;
+}</css>
+        <glyph>bug</glyph>
+        <id/>
+        <kb_article/>
+        <kb_category/>
+        <kb_topic/>
+        <order>1</order>
+        <roles/>
+        <sc_cat_item display_value="Bug Report">d9d9d5de839022109566f7b6feaad330</sc_cat_item>
+        <sc_category/>
+        <short_description/>
+        <size>md</size>
+        <sp_column display_value="2">bcaa29df839422109566f7b6feaad37f</sp_column>
+        <sp_page display_value="sc_cat_item">9f12251147132100ba13a5554ee490f4</sp_page>
+        <sp_widget display_value="Icon Link">3caa67afcb13020000f8d856634c9c2e</sp_widget>
+        <sys_class_name>sp_instance_link</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-03-21 14:16:27</sys_created_on>
+        <sys_id>591cca27831422109566f7b6feaad38f</sys_id>
+        <sys_mod_count>26</sys_mod_count>
+        <sys_name>Reportar Bugs</sys_name>
+        <sys_package display_value="Mock SkillUp" source="x_1523172_skill_up">6938717783b712109566f7b6feaad3b9</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Mock SkillUp">6938717783b712109566f7b6feaad3b9</sys_scope>
+        <sys_update_name>sp_instance_link_591cca27831422109566f7b6feaad38f</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-03-26 14:29:50</sys_updated_on>
+        <title>Reportar Bugs</title>
+        <type>sc_cat_item</type>
+        <url/>
+        <widget_parameters><![CDATA[{
+	"link_template": {
+		"value": "",
+		"displayValue": "-- None --"
+	}
+}]]></widget_parameters>
+    </sp_instance_link>
+    <sys_translated_text action="DELETE" query="documentkey=591cca27831422109566f7b6feaad38f"/>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Mock SkillUp">6938717783b712109566f7b6feaad3b9</application>
+        <file_path/>
+        <instance_id>7ee1e82afb5f1e945704f3585eefdcfd</instance_id>
+        <instance_name>dev293201</instance_name>
+        <name>sp_instance_link_591cca27831422109566f7b6feaad38f</name>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update table="sp_instance_link"&gt;&lt;sp_instance_link action="INSERT_OR_UPDATE"&gt;&lt;active&gt;true&lt;/active&gt;&lt;class_name/&gt;&lt;color&gt;danger&lt;/color&gt;&lt;css&gt;h2 {&amp;#13;
+    background: linear-gradient(&amp;#13;
+        to bottom,&amp;#13;
+        #ffffff, /* Laranja vibrante na parte superior */&amp;#13;
+        #ffffff  /* Branco na parte inferior */&amp;#13;
+    );&amp;#13;
+      -webkit-background-clip: text; /* Recorta o gradiente no formato do texto */&amp;#13;
+      background-clip: text;&amp;#13;
+      color: transparent; /* Torna o texto transparente para revelar o gradiente */&amp;#13;
+ &amp;#13;
+}&amp;#13;
+ &amp;#13;
+.text-danger{&amp;#13;
+    background: linear-gradient(&amp;#13;
+        to bottom,&amp;#13;
+        #FF0000, /* Laranja vibrante na parte superior */&amp;#13;
+        #800080  /* Branco na parte inferior */&amp;#13;
+    );&amp;#13;
+      -webkit-background-clip: text; /* Recorta o gradiente no formato do texto */&amp;#13;
+      background-clip: text;&amp;#13;
+      color: transparent; /* Torna o texto transparente para revelar o gradiente */&amp;#13;
+ &amp;#13;
+}&lt;/css&gt;&lt;glyph&gt;bug&lt;/glyph&gt;&lt;id/&gt;&lt;kb_article/&gt;&lt;kb_category/&gt;&lt;kb_topic/&gt;&lt;order&gt;1&lt;/order&gt;&lt;roles/&gt;&lt;sc_cat_item display_value="Bug Report"&gt;d9d9d5de839022109566f7b6feaad330&lt;/sc_cat_item&gt;&lt;sc_category/&gt;&lt;short_description/&gt;&lt;size&gt;md&lt;/size&gt;&lt;sp_column display_value="2"&gt;bcaa29df839422109566f7b6feaad37f&lt;/sp_column&gt;&lt;sp_page display_value="sc_cat_item"&gt;9f12251147132100ba13a5554ee490f4&lt;/sp_page&gt;&lt;sp_widget display_value="Icon Link"&gt;3caa67afcb13020000f8d856634c9c2e&lt;/sp_widget&gt;&lt;sys_class_name&gt;sp_instance_link&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2025-03-21 14:16:27&lt;/sys_created_on&gt;&lt;sys_id&gt;591cca27831422109566f7b6feaad38f&lt;/sys_id&gt;&lt;sys_mod_count&gt;26&lt;/sys_mod_count&gt;&lt;sys_name&gt;Reportar Bugs&lt;/sys_name&gt;&lt;sys_package display_value="Mock SkillUp" source="x_1523172_skill_up"&gt;6938717783b712109566f7b6feaad3b9&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="Mock SkillUp"&gt;6938717783b712109566f7b6feaad3b9&lt;/sys_scope&gt;&lt;sys_update_name&gt;sp_instance_link_591cca27831422109566f7b6feaad38f&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2025-03-26 14:29:50&lt;/sys_updated_on&gt;&lt;title&gt;Reportar Bugs&lt;/title&gt;&lt;type&gt;sc_cat_item&lt;/type&gt;&lt;url/&gt;&lt;widget_parameters&gt;&lt;![CDATA[{
+	"link_template": {
+		"value": "",
+		"displayValue": "-- None --"
+	}
+}]]&gt;&lt;/widget_parameters&gt;&lt;/sp_instance_link&gt;&lt;sys_translated_text action="delete_multiple" query="documentkey=591cca27831422109566f7b6feaad38f"/&gt;&lt;/record_update&gt;</payload>
+        <payload_hash>1183611591</payload_hash>
+        <record_name>Reportar Bugs</record_name>
+        <reverted_from/>
+        <source>a538717783b712109566f7b6feaad3be</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-03-26 14:29:50</sys_created_on>
+        <sys_id>561fb341832422109566f7b6feaad3cd</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>195d2dc09200000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-03-26 14:29:50</sys_updated_on>
+        <type>Instance with Link</type>
+        <update_guid>1e1fb3415c2422109db9ea0432319bcc</update_guid>
+        <update_guid_history>1e1fb3415c2422109db9ea0432319bcc:1183611591,c21fb3416424221039cef7f93f2298b8:-1830920203,651fb3412c2422100b7684db0bf5378f:1183611591,ad1fb341e9242210a27bb3b63df3877f:-1830920203,111fb3417a242210401a7b885cfe5c63:1183611591,991fb341ef242210bf75b904becffd58:-1830920203,c26c7b4df4e022107d17a8f23128005f:1183611591,026c7b4d08e02210e0250391813a0758:-1920530117,ec6c3b4d14e02210f8799ccb12262330:1183611591,646c3b4dfde02210397543e593215a20:-1920530117,ea5cf74ddce02210b9d5731b08c5e97b:1183611591,ea5cf74df2e02210c92ca06f5b356073:-1920530117,4e5cf74d1ae02210e2fc9619c9eb0d48:1183611591,4e5cbf0db0e02210f537693d373bafed:-1920530117,695c734de8e022106ae0e1d95833a85a:940814268,ae911eeb5214221045a067fd066f015c:-1920530117,aa819eeba51422102792774ab3732b56:-512230973,7660da6bc51422105ae12af0de7cedc0:921391938,0d60da6b951422107cf29d0ec12489a6:1871972233,a3df0a6b601422103d63c4c9649e4618:-1994545958,b4df866b5b142210d4d4f871ed5ab899:115815576,453ec6e749142210648d40e940792155:-1994545958,e42ec2a75c142210be3534b99ce7bad2:-1728271836,e0bd4a6777142210cdc187e8ee1e9c2c:206794977,db4d826716142210adbe9ced9187b0c5:169481120,5cec026776142210396c80026c5c990d:1597276856,591cca272114221035ba2a78c0798291:-106941348</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="Reportar Bugs">6f1f3341832422109566f7b6feaad301</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-03-26 14:29:55</sys_created_on>
+        <sys_db_object display_value="" name="sp_instance_link">sp_instance_link</sys_db_object>
+        <sys_id>49728e9bd76d4335b6915c3324b3c709</sys_id>
+        <sys_metadata>591cca27831422109566f7b6feaad38f</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Reportar Bugs</sys_name>
+        <sys_package display_value="Mock SkillUp" source="x_1523172_skill_up">6938717783b712109566f7b6feaad3b9</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="Mock SkillUp">6938717783b712109566f7b6feaad3b9</sys_scope>
+        <sys_scope_delete display_value="">3a6d93cae10942c4892c498dcc264390</sys_scope_delete>
+        <sys_update_name>sp_instance_link_591cca27831422109566f7b6feaad38f</sys_update_name>
+        <sys_update_version display_value="sp_instance_link_591cca27831422109566f7b6feaad38f">561fb341832422109566f7b6feaad3cd</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-03-26 14:29:55</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

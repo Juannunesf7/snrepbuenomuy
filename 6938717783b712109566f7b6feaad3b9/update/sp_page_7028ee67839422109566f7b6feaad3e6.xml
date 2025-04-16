@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_page">
+    <sp_page action="INSERT_OR_UPDATE">
+        <category>custom</category>
+        <css>body {&#13;
+  background: #0A0F3D url('https://goedx.com.br/assets/bghero.e3c4b7b6.webp') no-repeat center center fixed !important;&#13;
+  background-size: cover !important;&#13;
+  position: relative;&#13;
+}&#13;
+&#13;
+/* Container principal da página de perfil */&#13;
+.profile-page {&#13;
+  font-family: Arial, sans-serif;&#13;
+  max-width: 800px;&#13;
+  margin: 0 auto;&#13;
+  padding: 20px;&#13;
+  background-color: #4A4A4A;&#13;
+  border-radius: 8px;&#13;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);&#13;
+}&#13;
+&#13;
+/* Título da página */&#13;
+.profile-page h1 {&#13;
+  color: #000000;&#13;
+  font-size: 28px;&#13;
+  margin-bottom: 20px;&#13;
+  text-align: center;&#13;
+}&#13;
+&#13;
+/* Seções do perfil */&#13;
+.profile-section {&#13;
+  margin-bottom: 20px;&#13;
+  padding: 15px;&#13;
+  background-color: #4A4A4A;&#13;
+  border-radius: 6px;&#13;
+  border: 1px solid #ddd;&#13;
+}&#13;
+&#13;
+/* Títulos das seções */&#13;
+.profile-section h2 {&#13;
+  color: #000000;&#13;
+  font-size: 22px;&#13;
+  margin-bottom: 10px;&#13;
+}&#13;
+&#13;
+/* Lista de habilidades */&#13;
+.skills-list {&#13;
+  list-style-type: none;&#13;
+  padding: 0;&#13;
+}&#13;
+&#13;
+.skills-list li {&#13;
+  padding: 8px;&#13;
+  margin-bottom: 8px;&#13;
+  background-color: #f1f1f1;&#13;
+  border-radius: 4px;&#13;
+  display: flex;&#13;
+  justify-content: space-between;&#13;
+  align-items: center;&#13;
+}&#13;
+&#13;
+/* Nome da habilidade */&#13;
+.skill-name {&#13;
+  font-weight: bold;&#13;
+  color: #333;&#13;
+}&#13;
+&#13;
+/* Nível da habilidade */&#13;
+.skill-level {&#13;
+  color: #666;&#13;
+  font-style: italic;&#13;
+}&#13;
+&#13;
+/* Mensagem de "Nenhuma habilidade cadastrada" */&#13;
+.no-skills-message {&#13;
+  color: #888;&#13;
+  font-style: italic;&#13;
+  text-align: center;&#13;
+}&#13;
+&#13;
+/* Botões (se houver) */&#13;
+.profile-button {&#13;
+  display: inline-block;&#13;
+  padding: 10px 20px;&#13;
+  background-color: #0077cc;&#13;
+  color: #fff;&#13;
+  border: none;&#13;
+  border-radius: 4px;&#13;
+  cursor: pointer;&#13;
+  text-align: center;&#13;
+  font-size: 16px;&#13;
+}&#13;
+&#13;
+.profile-button:hover {&#13;
+  background-color: #005fa3;&#13;
+}&#13;
+/* Background do body */&#13;
+&#13;
+/* Garantir que os widgets fiquem acima */&#13;
+.container-fluid,&#13;
+.page-header,&#13;
+.widget {&#13;
+  position: relative;&#13;
+  z-index: 2;&#13;
+}&#13;
+&#13;
+/* Tornar widgets transparentes */&#13;
+.widget {&#13;
+  background-color: rgba(255, 255, 255, 1) !important;&#13;
+  border-radius: 10px;&#13;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);&#13;
+}&#13;
+&#13;
+/* Remover fundos sólidos de painéis e cards */&#13;
+.panel,&#13;
+.card {&#13;
+  border: none !important;&#13;
+}&#13;
+&#13;
+.panel-body,&#13;
+.card-body {&#13;
+  background-color: transparent !important;&#13;
+}</css>
+        <draft>false</draft>
+        <dynamic_title_structure/>
+        <human_readable_url_structure/>
+        <id>edx_perfil</id>
+        <internal>false</internal>
+        <omit_watcher>false</omit_watcher>
+        <public>true</public>
+        <roles/>
+        <seo_script/>
+        <short_description/>
+        <sys_class_name>sp_page</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-03-21 16:19:37</sys_created_on>
+        <sys_id>7028ee67839422109566f7b6feaad3e6</sys_id>
+        <sys_mod_count>22</sys_mod_count>
+        <sys_name>edx_perfil</sys_name>
+        <sys_package display_value="Mock SkillUp" source="x_1523172_skill_up">6938717783b712109566f7b6feaad3b9</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Mock SkillUp">6938717783b712109566f7b6feaad3b9</sys_scope>
+        <sys_update_name>sp_page_7028ee67839422109566f7b6feaad3e6</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-03-28 17:15:21</sys_updated_on>
+        <title>Perfil</title>
+        <use_seo_script>false</use_seo_script>
+    </sp_page>
+    <sys_translated_text action="delete_multiple" query="documentkey=7028ee67839422109566f7b6feaad3e6"/>
+</record_update>

@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_instance_link">
+    <sp_instance_link action="DELETE">
+        <active>true</active>
+        <class_name/>
+        <color>default</color>
+        <css>h2 {&#13;
+    background: linear-gradient(&#13;
+        to bottom,&#13;
+        #ffffff, /* Laranja vibrante na parte superior */&#13;
+        #ffffff  /* Branco na parte inferior */&#13;
+    );&#13;
+      -webkit-background-clip: text; /* Recorta o gradiente no formato do texto */&#13;
+      background-clip: text;&#13;
+      color: transparent; /* Torna o texto transparente para revelar o gradiente */&#13;
+ &#13;
+}&#13;
+ &#13;
+.text-default{&#13;
+    background: linear-gradient(&#13;
+        to bottom,&#13;
+        #003366, &#13;
+        #6699CC&#13;
+    );&#13;
+      -webkit-background-clip: text; /* Recorta o gradiente no formato do texto */&#13;
+      background-clip: text;&#13;
+      color: transparent; /* Torna o texto transparente para revelar o gradiente */&#13;
+ &#13;
+}</css>
+        <glyph>book</glyph>
+        <id/>
+        <kb_article/>
+        <kb_category display_value="Primeiros Passos">3d2bce3583e022109566f7b6feaad304</kb_category>
+        <kb_topic/>
+        <order>1</order>
+        <roles/>
+        <sc_cat_item/>
+        <sc_category/>
+        <short_description/>
+        <size>md</size>
+        <sp_column display_value="3">7c02867983a022109566f7b6feaad3d4</sp_column>
+        <sp_page display_value="copy_kb_cat">ca8aaeb9836422109566f7b6feaad389</sp_page>
+        <sp_widget display_value="Icon Link">3caa67afcb13020000f8d856634c9c2e</sp_widget>
+        <sys_class_name>sp_instance_link</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-03-28 14:13:00</sys_created_on>
+        <sys_id>876e063983e022109566f7b6feaad3a3</sys_id>
+        <sys_mod_count>22</sys_mod_count>
+        <sys_name>Knowledge Base: Primeiros Passos</sys_name>
+        <sys_package display_value="Mock SkillUp" source="x_1523172_skill_up">6938717783b712109566f7b6feaad3b9</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Mock SkillUp">6938717783b712109566f7b6feaad3b9</sys_scope>
+        <sys_update_name>sp_instance_link_876e063983e022109566f7b6feaad3a3</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-03-31 16:13:55</sys_updated_on>
+        <title>Knowledge Base: Primeiros Passos</title>
+        <type>kb_category</type>
+        <url/>
+        <widget_parameters><![CDATA[{
+	"link_template": {
+		"value": "Top Icon",
+		"displayValue": "Top Icon"
+	}
+}]]></widget_parameters>
+    </sp_instance_link>
+    <sys_translated_text action="DELETE" query="documentkey=876e063983e022109566f7b6feaad3a3"/>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Mock SkillUp">6938717783b712109566f7b6feaad3b9</application>
+        <file_path/>
+        <instance_id>7ee1e82afb5f1e945704f3585eefdcfd</instance_id>
+        <instance_name>dev293201</instance_name>
+        <name>sp_instance_link_876e063983e022109566f7b6feaad3a3</name>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update table="sp_instance_link"&gt;&lt;sp_instance_link action="INSERT_OR_UPDATE"&gt;&lt;active&gt;true&lt;/active&gt;&lt;class_name/&gt;&lt;color&gt;default&lt;/color&gt;&lt;css&gt;h2 {&amp;#13;
+    background: linear-gradient(&amp;#13;
+        to bottom,&amp;#13;
+        #ffffff, /* Laranja vibrante na parte superior */&amp;#13;
+        #ffffff  /* Branco na parte inferior */&amp;#13;
+    );&amp;#13;
+      -webkit-background-clip: text; /* Recorta o gradiente no formato do texto */&amp;#13;
+      background-clip: text;&amp;#13;
+      color: transparent; /* Torna o texto transparente para revelar o gradiente */&amp;#13;
+ &amp;#13;
+}&amp;#13;
+ &amp;#13;
+.text-default{&amp;#13;
+    background: linear-gradient(&amp;#13;
+        to bottom,&amp;#13;
+        #003366, &amp;#13;
+        #6699CC&amp;#13;
+    );&amp;#13;
+      -webkit-background-clip: text; /* Recorta o gradiente no formato do texto */&amp;#13;
+      background-clip: text;&amp;#13;
+      color: transparent; /* Torna o texto transparente para revelar o gradiente */&amp;#13;
+ &amp;#13;
+}&lt;/css&gt;&lt;glyph&gt;book&lt;/glyph&gt;&lt;id/&gt;&lt;kb_article/&gt;&lt;kb_category display_value="Primeiros Passos"&gt;3d2bce3583e022109566f7b6feaad304&lt;/kb_category&gt;&lt;kb_topic/&gt;&lt;order&gt;1&lt;/order&gt;&lt;roles/&gt;&lt;sc_cat_item/&gt;&lt;sc_category/&gt;&lt;short_description/&gt;&lt;size&gt;md&lt;/size&gt;&lt;sp_column display_value="3"&gt;7c02867983a022109566f7b6feaad3d4&lt;/sp_column&gt;&lt;sp_page display_value="copy_kb_cat"&gt;ca8aaeb9836422109566f7b6feaad389&lt;/sp_page&gt;&lt;sp_widget display_value="Icon Link"&gt;3caa67afcb13020000f8d856634c9c2e&lt;/sp_widget&gt;&lt;sys_class_name&gt;sp_instance_link&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2025-03-28 14:13:00&lt;/sys_created_on&gt;&lt;sys_id&gt;876e063983e022109566f7b6feaad3a3&lt;/sys_id&gt;&lt;sys_mod_count&gt;22&lt;/sys_mod_count&gt;&lt;sys_name&gt;Knowledge Base: Primeiros Passos&lt;/sys_name&gt;&lt;sys_package display_value="Mock SkillUp" source="x_1523172_skill_up"&gt;6938717783b712109566f7b6feaad3b9&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="Mock SkillUp"&gt;6938717783b712109566f7b6feaad3b9&lt;/sys_scope&gt;&lt;sys_update_name&gt;sp_instance_link_876e063983e022109566f7b6feaad3a3&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2025-03-31 16:13:55&lt;/sys_updated_on&gt;&lt;title&gt;Knowledge Base: Primeiros Passos&lt;/title&gt;&lt;type&gt;kb_category&lt;/type&gt;&lt;url/&gt;&lt;widget_parameters&gt;&lt;![CDATA[{
+	"link_template": {
+		"value": "Top Icon",
+		"displayValue": "Top Icon"
+	}
+}]]&gt;&lt;/widget_parameters&gt;&lt;/sp_instance_link&gt;&lt;sys_translated_text action="delete_multiple" query="documentkey=876e063983e022109566f7b6feaad3a3"/&gt;&lt;/record_update&gt;</payload>
+        <payload_hash>-1821865691</payload_hash>
+        <record_name>Knowledge Base: Primeiros Passos</record_name>
+        <reverted_from/>
+        <source>a538717783b712109566f7b6feaad3be</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-03-31 16:13:55</sys_created_on>
+        <sys_id>efd6427e836422109566f7b6feaad34e</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>195ecfb20380000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-03-31 16:13:55</sys_updated_on>
+        <type>Instance with Link</type>
+        <update_guid>a7d6427ebe642210bcd178c09859cb4e</update_guid>
+        <update_guid_history>a7d6427ebe642210bcd178c09859cb4e:-1821865691,90e609fe55202210e46728b71f634dd6:1409043238,9bd609fe05202210ca0f441d6da9b469:-1929283589,3dc645fe6620221036cfd84a86b56138:-907487212,c8b6097e492022106aa59fa28f19a739:-1798843315,8fa58d7e56202210f6d2f49c552f7a56:942394327,e755097e07202210a278d30f3859b19a:-626634633,09da62f993642210ad63377d8d386c59:2097212185,82c392312c24221084e0246cd9796c33:784195594,c30392fd49e022102256386169ff85d7:-1025003876,bdd2dabdb7e02210fd55c805387b1409:-1679920573,91b29abdcbe02210c330ec8b40226fed:-901161227,9652d2bda2e02210a1ea387300aa36fc:-1679920573,b85252bdade0221005d9003029950cb6:-2058110746,494212bd5ae02210ba3a7e42558d709b:226816327,3c325e7d57e022106efbdd1c02156280:-1071884580,28221a7dbce02210358c856b607ce779:1026246132,7ec1d6f9bbe02210c1e47dd2f5a8db70:-500376656,2ca1923db9e02210e8c3665cb03830c0:230941344,551116b920e02210fcd69fece9850c8d:-773616452,9cde0e797ae0221055e2b798089ec537:-638858992,3ebe067906e02210ca820ff660fb7fe7:-179819930,436e063927e022100145ace4df965ca5:-955341742</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="Knowledge Base: Primeiros Passos">84e68e3e836422109566f7b6feaad39c</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-03-31 16:13:58</sys_created_on>
+        <sys_db_object display_value="" name="sp_instance_link">sp_instance_link</sys_db_object>
+        <sys_id>a2be8dbb6f01498a83fe8754b1d82889</sys_id>
+        <sys_metadata>876e063983e022109566f7b6feaad3a3</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Knowledge Base: Primeiros Passos</sys_name>
+        <sys_package display_value="Mock SkillUp" source="x_1523172_skill_up">6938717783b712109566f7b6feaad3b9</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="Mock SkillUp">6938717783b712109566f7b6feaad3b9</sys_scope>
+        <sys_scope_delete display_value="">3a6d93cae10942c4892c498dcc264390</sys_scope_delete>
+        <sys_update_name>sp_instance_link_876e063983e022109566f7b6feaad3a3</sys_update_name>
+        <sys_update_version display_value="sp_instance_link_876e063983e022109566f7b6feaad3a3">efd6427e836422109566f7b6feaad34e</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-03-31 16:13:58</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

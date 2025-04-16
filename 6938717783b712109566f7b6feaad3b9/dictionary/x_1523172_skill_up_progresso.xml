@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element db_object_id="d9be42fb83f712109566f7b6feaad3a3" label="Progresso" max_length="40" name="x_1523172_skill_up_progresso" type="collection">
+        <element choice="1" label="Status" mandatory="true" max_length="40" name="status" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="Concluido" sequence="1" value="3"/>
+                <element inactive_on_update="false" label="Aberto" sequence="0" value="1"/>
+                <element inactive_on_update="false" label="Em Andamento" sequence="2" value="2"/>
+            </choice>
+        </element>
+        <element attributes="encode_utf8=false" display="true" label="Cursos" mandatory="true" max_length="32" name="x_1523172_skill_up_cursos" reference="x_1523172_skill_up_cursos" type="reference"/>
+        <element attributes="encode_utf8=false" label="Equipes" mandatory="true" max_length="32" name="x_1523172_skill_up_equipe" reference="x_1523172_skill_up_equipe" type="reference"/>
+        <index name="index">
+            <element name="x_1523172_skill_up_cursos"/>
+        </index>
+        <index name="index2">
+            <element name="x_1523172_skill_up_equipe"/>
+        </index>
+    </element>
+</database>

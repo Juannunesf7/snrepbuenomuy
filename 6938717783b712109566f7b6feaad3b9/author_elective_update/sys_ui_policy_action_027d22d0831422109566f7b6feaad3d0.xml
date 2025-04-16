@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ui_policy_action">
+    <sys_ui_policy_action action="DELETE">
+        <cleared>false</cleared>
+        <disabled>true</disabled>
+        <field>data_inicio</field>
+        <field_message/>
+        <field_message_type>none</field_message_type>
+        <mandatory>ignore</mandatory>
+        <sys_class_name>sys_ui_policy_action</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-03-11 14:22:12</sys_created_on>
+        <sys_id>027d22d0831422109566f7b6feaad3d0</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>data_inicio</sys_name>
+        <sys_package display_value="Mock SkillUp" source="x_1523172_skill_up">6938717783b712109566f7b6feaad3b9</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Mock SkillUp">6938717783b712109566f7b6feaad3b9</sys_scope>
+        <sys_update_name>sys_ui_policy_action_027d22d0831422109566f7b6feaad3d0</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-03-11 14:22:12</sys_updated_on>
+        <table>x_1523172_skill_up_tarefas</table>
+        <ui_policy display_value="Campo Read Only para estagiario">15fbe250831422109566f7b6feaad34b</ui_policy>
+        <value/>
+        <value_action>ignore</value_action>
+        <visible>ignore</visible>
+    </sys_ui_policy_action>
+    <sys_translated_text action="DELETE" query="documentkey=027d22d0831422109566f7b6feaad3d0"/>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Mock SkillUp">6938717783b712109566f7b6feaad3b9</application>
+        <file_path/>
+        <instance_id>7ee1e82afb5f1e945704f3585eefdcfd</instance_id>
+        <instance_name>dev293201</instance_name>
+        <name>sys_ui_policy_action_027d22d0831422109566f7b6feaad3d0</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ui_policy_action"><sys_ui_policy_action action="INSERT_OR_UPDATE"><cleared>false</cleared><disabled>true</disabled><field>data_inicio</field><field_message/><field_message_type>none</field_message_type><mandatory>ignore</mandatory><sys_class_name>sys_ui_policy_action</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2025-03-11 14:22:12</sys_created_on><sys_id>027d22d0831422109566f7b6feaad3d0</sys_id><sys_mod_count>0</sys_mod_count><sys_name>data_inicio</sys_name><sys_package display_value="Mock SkillUp" source="x_1523172_skill_up">6938717783b712109566f7b6feaad3b9</sys_package><sys_policy/><sys_scope display_value="Mock SkillUp">6938717783b712109566f7b6feaad3b9</sys_scope><sys_update_name>sys_ui_policy_action_027d22d0831422109566f7b6feaad3d0</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2025-03-11 14:22:12</sys_updated_on><table>x_1523172_skill_up_tarefas</table><ui_policy display_value="Campo Read Only para estagiario">15fbe250831422109566f7b6feaad34b</ui_policy><value/><value_action>ignore</value_action><visible>ignore</visible></sys_ui_policy_action><sys_translated_text action="delete_multiple" query="documentkey=027d22d0831422109566f7b6feaad3d0"/></record_update>]]></payload>
+        <payload_hash>1033436592</payload_hash>
+        <record_name>data_inicio</record_name>
+        <reverted_from/>
+        <source>a538717783b712109566f7b6feaad3be</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-03-11 14:22:12</sys_created_on>
+        <sys_id>cc8d62d0831422109566f7b6feaad3ab</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>1958595a8410000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-03-11 14:22:12</sys_updated_on>
+        <type>UI Policy Action</type>
+        <update_guid>c08d62d066142210c5eec781ccd9ebab</update_guid>
+        <update_guid_history>c08d62d066142210c5eec781ccd9ebab:1033436592</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-03-11 14:27:52</sys_created_on>
+        <sys_db_object display_value="" name="sys_ui_policy_action">sys_ui_policy_action</sys_db_object>
+        <sys_id>1c9929f3717e4d8083330bd78f291000</sys_id>
+        <sys_metadata>027d22d0831422109566f7b6feaad3d0</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>data_inicio</sys_name>
+        <sys_package display_value="Mock SkillUp" source="x_1523172_skill_up">6938717783b712109566f7b6feaad3b9</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="Mock SkillUp">6938717783b712109566f7b6feaad3b9</sys_scope>
+        <sys_scope_delete display_value="">3a6d93cae10942c4892c498dcc264390</sys_scope_delete>
+        <sys_update_name>sys_ui_policy_action_027d22d0831422109566f7b6feaad3d0</sys_update_name>
+        <sys_update_version display_value="sys_ui_policy_action_027d22d0831422109566f7b6feaad3d0">cc8d62d0831422109566f7b6feaad3ab</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-03-11 14:27:52</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

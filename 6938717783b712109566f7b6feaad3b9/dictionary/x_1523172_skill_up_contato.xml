@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element db_object_id="92fa463f83f712109566f7b6feaad3ab" extends="sys_user" label="Contato" max_length="40" name="x_1523172_skill_up_contato" type="collection">
+        <element attributes="edge_encryption_enabled=true" label="Nome" mandatory="true" max_length="40" name="nome" type="string"/>
+        <element label="Company(C)" mandatory="true" max_length="32" name="company_c" reference="sys_user" reference_qual="company=22cddd7883c462109566f7b6feaad3ce^EQ" reference_qual_condition="company=22cddd7883c462109566f7b6feaad3ce^EQ" type="reference"/>
+        <index name="index">
+            <element name="company_c"/>
+        </index>
+    </element>
+</database>

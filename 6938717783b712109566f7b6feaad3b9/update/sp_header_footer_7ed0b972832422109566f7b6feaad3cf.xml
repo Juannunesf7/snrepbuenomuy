@@ -1,0 +1,607 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_header_footer">
+    <sp_header_footer action="INSERT_OR_UPDATE">
+        <category>custom</category>
+        <client_script><![CDATA[function clientController ($rootScope, $scope, snRecordWatcher, spUtil, $location, $uibModal, cabrillo, $timeout, $window, i18n) {
+    // Inicialização das variáveis
+    $scope.logoText = i18n.format(i18n.getMessage('Go to {0} Homepage'), $scope.portal.title);
+
+    // Função para collapse do menu
+    $scope.collapse = function () {
+        $rootScope.$emit('sp-navbar-collapse');
+    };
+
+    // Configuração do avatar do usuário
+    $scope.avatarProfile = {
+        userID: $scope.user.sys_id,
+        name: $scope.user.name,
+        initials: $window.NOW.user_initials
+    };
+
+    if ($window.NOW.user_avatar) {
+        $scope.avatarProfile.userImage = $window.NOW.user_avatar;
+    }
+
+    // Verifica se o dispositivo é nativo (mobile/tablet)
+    if (cabrillo.isNative()) {
+        if ($window.innerWidth < 767) {
+            $scope.isViewNative = true;
+        } else {
+            $scope.isViewNativeTablet = true;
+        }
+    }
+
+    // Função para abrir chat ao vivo
+    $scope.openPopUp = function () {
+        var url = "$chat_support.do?queueID=" + $scope.data.connect_support_queue_id;
+        var popup = window.open(url, "popup", "width=900, height=600");
+    };
+
+    // Função para abrir modal de login
+    $scope.openLogin = function () {
+        $scope.modalInstance = $uibModal.open({
+            templateUrl: 'modalLogin',
+            scope: $scope
+        });
+
+        var pageRoot = angular.element('.sp-page-root');
+        $scope.modalInstance.rendered.then(function () {
+            var $uibModalStack = $injector.get('$uibModalStack');
+            var modalObj = $uibModalStack.getTop();
+            var modal = modalObj.value.modalDomEl;
+
+            modal.attr('aria-label', modal.find('.panel-title').html());
+            modal.attr('aria-modal', 'true');
+            pageRoot.attr('aria-hidden', 'true');
+        });
+
+        $scope.modalInstance.closed.then(function () {
+            pageRoot.attr('aria-hidden', 'false');
+        });
+    };
+
+    // Verifica o tamanho da tela para exibir avatar
+    var mdScreenSize = isMDScreenSize();
+    $scope.showSMAvatar = isMDScreenSize();
+    $scope.showAvatar = !isMDScreenSize();
+
+    // Verifica configuração do chat de agente
+    $scope.isAgentChatConfigured = g_has_agent_chat_config;
+
+    // Evento de redimensionamento da janela
+    angular.element($window).on('resize', function () {
+        if (mdScreenSize !== isMDScreenSize() && (!$scope.showSMAvatar || !$scope.showAvatar)) {
+            $scope.showSMAvatar = true;
+            $scope.showAvatar = true;
+        }
+    });
+
+    // Função para verificar o tamanho da tela
+    function isMDScreenSize() {
+        return $window.matchMedia('(max-width: 992px)').matches;
+    }
+
+    // Oculta o ícone Sparkle se necessário
+    $scope.hideSparkle = $scope.hideSparkle || !$scope.data.showSparkle || ($window.innerWidth <= 992);
+
+    // Evento para atualizar o avatar do usuário
+    $rootScope.$on('sp.avatar_changed', function (evt, obj) {
+        $scope.userID = "";
+        $scope.newAvatarId = obj.newAvatarId;
+        $timeout(function () {
+            $scope.userID = $scope.user.sys_id;
+            $("#profile-dropdown .sub-avatar").css("background-image", 'url("' + $scope.newAvatarId + '.iix?t=small")');
+        });
+    });
+
+    // Verifica se a página atual é a homepage
+    $scope.isHomepage = function () {
+        if (!$scope.page.id) {
+            return true;
+        }
+
+        if ($scope.page.id == $scope.portal.homepage_dv) {
+            return true;
+        }
+
+        return false;
+    };
+}]]></client_script>
+        <controller_as>c</controller_as>
+        <css>/* Reset padrão */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Container principal do cabeçalho */
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: url('https://goedx.com.br/assets/bgform.ce401cbf.jpg') no-repeat center center;
+  background-size: cover;
+  color: white;
+  position: relative;
+  padding: 15px 25px;
+  z-index: 1;
+}
+
+/* Camada semi-transparente */
+.header-container::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+}
+
+/* Conteúdo do header acima da camada */
+.header-container &gt; * {
+  position: relative;
+  z-index: 2;
+}
+
+/* Divisor abaixo do cabeçalho */
+.header-container::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #11266D;
+  z-index: 1;
+}
+
+/* Logo */
+.logo-container {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  height: auto;
+  width: 120px; /* Largura aumentada para maior comprimento */
+}
+
+/* Menu de Navegação */
+.nav-menu-container {
+  display: flex;
+  align-items: center;
+}
+
+.nav-menu {
+  list-style: none;
+  display: flex;
+  gap: 15px;
+  position: relative;
+}
+
+.nav-menu li {
+  display: flex;
+  align-items: center;
+  position: static;
+}
+
+.nav-menu li a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.nav-menu li a:hover {
+  color: #ddd;
+}
+
+/* Ícone de Perfil */
+.navbar-avatar {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.avatar-small-medium {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: 2px solid #11266D;
+}
+
+/* Dropdown corrigido para ServiceNow */
+.dropdown {
+  position: relative;
+  z-index: 1000;
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  left: auto;
+  min-width: 160px;
+  max-width: 300px;
+  max-height: 60vh;
+  overflow-y: auto;
+  padding: 0.5rem 0;
+  margin: 0.125rem 0 0;
+  font-size: 1.3rem;
+  color: #212529 !important;
+  text-align: left;
+  list-style: none;
+  background-color: #fff !important;
+  background-clip: padding-box;
+  border: 1px solid rgba(0,0,0,.15);
+  border-radius: 0.25rem;
+  box-shadow: 0 0.5rem 1rem rgba(0,0,0,.175);
+  z-index: 1000;
+}
+
+.dropdown-item, 
+.dropdown-menu li a {
+  display: block;
+  width: 100%;
+  padding: 0.5rem 1.5rem;
+  clear: both;
+  font-weight: 400;
+  color: #212529 !important;
+  text-align: inherit;
+  white-space: nowrap;
+  background-color: transparent;
+  border: 0;
+  text-decoration: none;
+  opacity: 1 !important;
+}
+
+.dropdown-item:hover, 
+.dropdown-item:focus,
+.dropdown-menu li a:hover,
+.dropdown-menu li a:focus {
+  color: #16181b !important;
+  text-decoration: none;
+  background-color: #6d8aff !important;
+}
+
+/* Estilo da barra de scroll */
+.dropdown-menu::-webkit-scrollbar {
+  width: 8px;
+}
+
+.dropdown-menu::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+.dropdown-menu::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 4px;
+}
+
+.dropdown-menu::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+/* Versão Mobile */
+@media (max-width: 991.98px) {
+  .dropdown-menu {
+    position: static;
+    float: none;
+    width: 100%;
+    max-width: 100%;
+    border: 1px solid #ddd;
+    box-shadow: none;
+    max-height: 40vh;
+  }
+  
+  .dropdown-item, 
+  .dropdown-menu li a {
+    padding: 0.75rem 1.5rem;
+  }
+}
+
+/* Estilos Adicionais */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* Correção específica para ServiceNow */
+#sp-navbar .dropdown-menu,
+#sp-navbar .dropdown-menu * {
+  color: #212529 !important;
+  background-color: white !important;
+  opacity: 1 !important;
+}
+
+.sn-avatar-wrapper {
+  opacity: 1 !important;
+}
+</css>
+        <data_table>sp_instance</data_table>
+        <demo_data/>
+        <description/>
+        <docs/>
+        <field_list/>
+        <has_preview>true</has_preview>
+        <id/>
+        <internal>false</internal>
+        <link><![CDATA[function minhaFuncao(scope, element) {
+    var prevFocusIndex = -1; // Usado para rastrear o foco anterior no menu dropdown.
+    var KEY = {
+        TAB: 9,
+        ENTER: 13,
+        ESC: 27,
+        SPACE_BAR: 32,
+        LEFT: 37,
+        UP: 38,
+        RIGHT: 39,
+        DOWN: 40
+    };
+
+    function isMDScreenSize() {
+        return window.matchMedia('(max-width: 992px)').matches;
+    }
+
+    var navbarContainer = $('#sp-nav-bar');
+    navbarContainer.on('shown.bs.collapse', function () {
+        $('a:visible', navbarContainer).first().focus();
+    });
+
+    $(document).keyup(function (event) {
+        var mdScreenSize = isMDScreenSize();
+
+        if (event.which === KEY.TAB || event.which === KEY.LEFT || event.which === KEY.RIGHT) {
+            // Fecha os dropdowns quando fora de um dropdown e não em tamanho mobile.
+            if (!mdScreenSize && $(event.target).parents(".dropdown-menu").length === 0) {
+                $(".dropdown.open", $(element)).removeClass("open");
+                $("[data-toggle='dropdown']", $(element)).attr("aria-expanded", "false");
+                prevFocusIndex = -1;
+            }
+        } else if (event.which === KEY.UP || event.which === KEY.DOWN) {
+            let parentDropdown = $(event.target).parents('.dropdown-menu'); // Escopo local.
+
+            // Ignora dropdowns customizados (como carrinho ou lista de desejos).
+            if (parentDropdown.hasClass('custom-drop-down')) return;
+
+            if (parentDropdown.length) {
+                let menuListItems = parentDropdown.find('li a, li button'); // Renomeada para evitar conflito.
+                if (!menuListItems.length) return;
+
+                let currentItemIndex = menuListItems.index(menuListItems.filter(':focus')); // Renomeada para evitar conflito.
+                if (currentItemIndex === -1) return;
+
+                if (prevFocusIndex === currentItemIndex) {
+                    if (currentItemIndex === 0) {
+                        currentItemIndex = menuListItems.length - 1;
+                    } else if (currentItemIndex === menuListItems.length - 1) {
+                        currentItemIndex = 0;
+                    }
+                    menuListItems[currentItemIndex].focus();
+                } else if (event.which === KEY.UP && currentItemIndex === 0 && prevFocusIndex === -1) {
+                    // Lida com dropdown recém-aberto ao pressionar seta para cima.
+                    currentItemIndex = menuListItems.length - 1;
+                    menuListItems[currentItemIndex].focus();
+                }
+                prevFocusIndex = currentItemIndex;
+            } else {
+                // Foca o primeiro/último item do menu ao pressionar setas para cima/baixo.
+                if ($(event.target).is('[data-toggle="dropdown"]')) {
+                    let parentDropdownMenu = $(event.target).parent().find('.dropdown-menu'); // Escopo local.
+
+                    // Ignora dropdowns customizados (como carrinho ou lista de desejos).
+                    if (parentDropdownMenu.hasClass('custom-drop-down')) return;
+
+                    let menuListItems = parentDropdownMenu.find('li a, li button'); // Renomeada para evitar conflito.
+                    if (!menuListItems.length) return;
+
+                    let currentItemIndex = -1;
+                    if (event.which === KEY.DOWN) {
+                        currentItemIndex = 0; // Primeiro item ao pressionar seta para baixo.
+                    } else if (event.which === KEY.UP) {
+                        currentItemIndex = menuListItems.length > 0 ? menuListItems.length - 1 : 0; // Último item ao pressionar seta para cima.
+                    }
+
+                    menuListItems[currentItemIndex].focus();
+                    prevFocusIndex = currentItemIndex;
+                }
+            }
+        }
+
+        // Fecha o menu ao pressionar ESC e redefine o índice.
+        if (event.which === KEY.ESC) {
+            prevFocusIndex = -1;
+            if (mdScreenSize && $('.navbar-right').attr("aria-expanded")) {
+                closeMobileMenu();
+
+                if ($(event.target).parents(".navbar-right").length > 0) {
+                    $('.navbar-toggle').focus();
+                }
+            }
+        }
+
+        // Ao pressionar ENTER ou ESPAÇO, foca o primeiro item do submenu.
+        if (event.which === KEY.ENTER || event.which === KEY.SPACE_BAR) {
+            $(event.target).parent(".dropdown.open").find("ul.dropdown-menu li:first-child a").focus();
+        }
+    });
+
+    $(element).on('click.nav', '.navbar-collapse.in', function (e) {
+        let target = $(e.target); // Escopo local.
+
+        if (target.is('a')) {
+            if (target.hasClass('sp-menu-has-items')) {
+                return; // O item do menu tem um submenu, então apenas alterna-o.
+            }
+
+            // Fecha o menu mobile ao clicar em um link.
+            $(this).removeClass('in').addClass('collapse');
+            return;
+        }
+
+        if (target.parent().hasClass("toggle-dropdown")) {
+            // Fecha o menu mobile se o pai tiver a classe toggle-dropdown.
+            $(this).removeClass('in').addClass('collapse');
+            return;
+        }
+
+        // Se o alvo nem o pai forem links, não faz nada.
+        if (!target.parent().is('a')) {
+            return;
+        }
+
+        // Fecha o menu mobile se o alvo for parte de um submenu.
+        if (target.parents("ul.dropdown-menu").length > 0) {
+            $(this).removeClass('in').addClass('collapse');
+        }
+    });
+
+    // Fecha o menu mobile ao clicar fora dele.
+    $(document).on('click', function (e) {
+        let target = $(e.target); // Escopo local.
+        if (target.parents('.navbar-right').length === 0) {
+            closeMobileMenu();
+        }
+    });
+
+    // Fecha o menu mobile quando o foco sai do menu.
+    $('.navbar-right').on('keydown', 'a', function (event) {
+        if (
+            ($(this).is($('.navbar-right a').last()) && event.which === KEY.TAB && !event.shiftKey) ||
+            ($(this).is($('.navbar-right a').first()) && event.which === KEY.TAB && event.shiftKey)
+        ) {
+            closeMobileMenu();
+            setTimeout(function () {
+                window.scrollBy(0, -200);
+            }, 0);
+        }
+    });
+
+    function closeMobileMenu() {
+        $('.navbar-right').collapse('hide');
+    }
+}]]></link>
+        <name>MSU Cliente - Header Customizado</name>
+        <option_schema/>
+        <public>true</public>
+        <roles/>
+        <script><![CDATA[// Define o ID da fila de suporte que será vinculada pelo link de chat ao vivo no cabeçalho
+data.connect_support_queue_id = $sp.getValue('sp_chat_queue');
+data.login_page = $sp.getValue('login_page');
+data.profileBtnMsg = gs.getMessage("User options");
+data.toggleMsg = gs.getMessage("Toggle navigation");
+
+// Configuração do menu
+var menu = $sp.getValue("sp_rectangle_menu");
+data.menu = $sp.getWidgetFromInstance(menu);
+
+// Seletor de idioma
+var gr = new GlideRecord('sys_plugins');
+gr.addQuery('id', 'com.glide.i18n');
+gr.addQuery('active', true);
+gr.query();
+if (gr.next()) {
+    data.langSelector = $sp.getWidget('sp-lang-selector');
+} else {
+    data.langSelector = "";
+}
+
+// Processa os itens do menu (com verificações de segurança)
+if (data.menu && data.menu.data && data.menu.data.menu && data.menu.data.menu.items) {
+    data.menu.data.replace = true;
+    // Oculta o login se o menu já tiver um link para a página de login
+    data.hasLogin = false;
+    data.hasMenuItems = data.menu.data.menu.items.length > 0;
+    for (var i in data.menu.data.menu.items) {
+        var item = data.menu.data.menu.items[i];
+        if (item.type == 'page' && item.sp_page == data.login_page)
+            data.hasLogin = true;
+    }
+} else {
+    // Inicializa valores padrão se o menu não estiver definido
+    data.hasLogin = false;
+    data.hasMenuItems = false;
+}
+
+// Widget de login
+data.loginWidget = $sp.getWidgetFromInstance('login-modal');
+
+// Ícone Sparkle (Now Assist)
+data.showSparkle = !gs.isMobile() && $sp.isNowAssistEnabled();
+if (data.showSparkle)
+    data.sparkle = $sp.getWidget('now_assist_sparkle_icon');]]></script>
+        <servicenow>false</servicenow>
+        <static>false</static>
+        <sys_class_name>sp_header_footer</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-03-31 14:37:45</sys_created_on>
+        <sys_id>7ed0b972832422109566f7b6feaad3cf</sys_id>
+        <sys_mod_count>4</sys_mod_count>
+        <sys_name>MSU Cliente - Header Customizado</sys_name>
+        <sys_package display_value="Mock SkillUp" source="x_1523172_skill_up">6938717783b712109566f7b6feaad3b9</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Mock SkillUp">6938717783b712109566f7b6feaad3b9</sys_scope>
+        <sys_update_name>sp_header_footer_7ed0b972832422109566f7b6feaad3cf</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-04-10 12:50:32</sys_updated_on>
+        <template><![CDATA[
+ <div class="header-container">
+  <!-- Logo -->
+  <div class="logo-container">
+    <a href="msu">
+      <img src="{{::portal.logo}}" alt="{{::portal.title}}" class="logo" />
+    </a>
+  </div>
+  
+      
+      <!-- chat, avatar, and logout -->
+      <li ng-if="::(data.connect_support_queue_id && !isAgentChatConfigured)">
+        <a href ng-click="openPopUp()" role="button">${Live Chat}</a>
+      </li>
+      <!-- Versão Desktop: Apenas o avatar -->
+      <li ng-if="showAvatar" class="hidden-xs hidden-sm dropdown">
+        <a href class="toggle-dropdown" data-toggle="dropdown" aria-expanded="false" aria-label="{{::data.profileBtnMsg}}" id="profile-dropdown" role="button" aria-haspopup="true">
+          <span class="navbar-avatar" aria-hidden="true">
+            <sn-avatar class="avatar-small-medium" primary="avatarProfile" />
+          </span>
+        </a>
+        <ul class="dropdown-menu" aria-label="{{::data.profileBtnMsg}}">
+          <li>
+            <a tabindex="-1" ng-href="?id=edx_perfil&sys_id={{::user.sys_id}}">${Profile}</a>
+          </li>
+          <li ng-if="::!(isViewNative || isViewNativeTablet)">
+            <a tabindex="-1" href="{{::portal.logoutUrl}}">${Logout}</a>
+          </li>
+        </ul>
+      </li>
+      <!-- Versão Mobile: Apenas o avatar -->
+      <li ng-if="showSMAvatar" class="visible-xs-block visible-sm-block">
+        <a ng-href="?id=perfil_usuario&sys_id={{::user.sys_id}}" ng-click="collapse()">
+          <span class="navbar-avatar">
+            <sn-avatar class="avatar-small-medium" primary="avatarProfile" />
+          </span>
+        </a>
+      </li>
+      <li ng-if="::!(isViewNative || isViewNativeTablet)" class="visible-xs-block visible-sm-block">
+        <a ng-href="{{::portal.logoutUrl}}" ng-click="collapse()">${Logout}</a>
+      </li>
+    </ul>
+  </div>
+</div>
+]]></template>
+    </sp_header_footer>
+    <sys_es_latest_script action="INSERT_OR_UPDATE">
+        <id>7ed0b972832422109566f7b6feaad3cf</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-03-31 14:39:02</sys_created_on>
+        <sys_id>6d2135b2832422109566f7b6feaad392</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-03-31 14:39:02</sys_updated_on>
+        <table>sp_header_footer</table>
+        <use_es_latest>true</use_es_latest>
+    </sys_es_latest_script>
+</record_update>

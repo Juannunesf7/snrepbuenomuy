@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sysauto_script">
+    <sysauto_script action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <business_calendar/>
+        <condition/>
+        <conditional>false</conditional>
+        <entered_time>1970-01-01 00:00:00</entered_time>
+        <max_drift/>
+        <name>Atualizar Managers Com Base Na Data de Admissão</name>
+        <offset/>
+        <offset_type>0</offset_type>
+        <run_as display_value="System Administrator">6816f79cc0a8016401c5a33be04be441</run_as>
+        <run_as_tz/>
+        <run_dayofmonth>1</run_dayofmonth>
+        <run_dayofweek>1</run_dayofweek>
+        <run_period/>
+        <run_start>2025-02-28 09:48:59</run_start>
+        <run_time>1970-01-01 08:00:00</run_time>
+        <run_type>daily</run_type>
+        <script><![CDATA[(function executeScheduleJob() {
+    gs.info('Iniciando atualização de managers para estagiários...');
+
+    var grEstagiarios = new GlideRecord('x_1523172_skill_up_equipe');
+    grEstagiarios.addQuery('cargo', 'estagiario');
+    grEstagiarios.query();
+
+    while (grEstagiarios.next()) {
+        var tresMeses = new GlideDateTime();
+        tresMeses.addMonthsUTC(-3);
+
+        var precisaGestor = new GlideDateTime(grEstagiarios.data_admissao).onOrBefore(tresMeses);
+
+        // verifica se precisa trocar o manager
+        if (!gs.nil(grEstagiarios.manager)) {
+            var grManagerAtual = new GlideRecord('x_1523172_skill_up_equipe');
+            if (grManagerAtual.get(grEstagiarios.manager)) {
+
+                if (precisaGestor && grManagerAtual.cargo == 'gestor') {
+                    gs.info('Estagiário já possui um gestor adequado: ' + grEstagiarios.manager);
+                    continue;
+                }
+                if (precisaGestor && grManagerAtual.cargo == 'monitor') {
+                    gs.info('Estagiário precisa trocar de monitor para gestor: ' + grEstagiarios.sys_id);
+                } else {
+                    gs.info('Estagiário ainda dentro dos 3 meses com monitor correto: ' + grEstagiarios.manager);
+                    continue;
+                }
+            }
+        }
+        var cargoManager = precisaGestor ? 'gestor' : 'monitor';
+
+        var grManager = new GlideRecord('x_1523172_skill_up_equipe');
+        grManager.addQuery('cargo', cargoManager);
+        grManager.addQuery('active', true);
+        grManager.addQuery('department', grEstagiarios.department);
+        grManager.query();
+
+        var validManagers = [];
+
+        while (grManager.next()) {
+            var estagiariosCount = new GlideAggregate('x_1523172_skill_up_equipe');
+            estagiariosCount.addQuery('manager', grManager.sys_id);
+            estagiariosCount.addAggregate('COUNT');
+            estagiariosCount.query();
+
+            if (estagiariosCount.next() && estagiariosCount.getAggregate('COUNT') < 15) {
+                validManagers.push(grManager.sys_id.toString());
+            }
+        }
+        if (validManagers.length > 0) {
+            var randomIndex = Math.floor(Math.random() * validManagers.length);
+            grEstagiarios.manager = validManagers[randomIndex];
+            grEstagiarios.update();
+            gs.info('Manager atualizado para o estagiário: ' + grEstagiarios.sys_id);
+        } else {
+            gs.warn('Nenhum manager disponível para estagiário: ' + grEstagiarios.sys_id);
+        }
+    }
+
+    gs.info('Processo de atualização de managers finalizado.');
+})();]]></script>
+        <sys_class_name>sysauto_script</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-02-28 10:04:26</sys_created_on>
+        <sys_id>3e75c9b8834462109566f7b6feaad362</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Atualizar Managers Com Base Na Data de Admissão</sys_name>
+        <sys_package display_value="Mock SkillUp" source="x_1523172_skill_up">6938717783b712109566f7b6feaad3b9</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Mock SkillUp">6938717783b712109566f7b6feaad3b9</sys_scope>
+        <sys_update_name>sysauto_script_3e75c9b8834462109566f7b6feaad362</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-02-28 10:04:26</sys_updated_on>
+        <time_zone/>
+        <upgrade_safe>false</upgrade_safe>
+    </sysauto_script>
+    <sys_es_latest_script action="INSERT_OR_UPDATE">
+        <id>3e75c9b8834462109566f7b6feaad362</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-02-28 10:04:25</sys_created_on>
+        <sys_id>bc0905b8834462109566f7b6feaad395</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-02-28 10:04:25</sys_updated_on>
+        <table>sysauto_script</table>
+        <use_es_latest>true</use_es_latest>
+    </sys_es_latest_script>
+</record_update>

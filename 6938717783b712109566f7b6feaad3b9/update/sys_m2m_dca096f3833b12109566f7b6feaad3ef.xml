@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_m2m">
+    <sys_m2m action="INSERT_OR_UPDATE">
+        <from_table>x_1523172_skill_up_equipe</from_table>
+        <m2m_from_field>x_1523172_skill_up_equipe</m2m_from_field>
+        <m2m_from_label>Skills</m2m_from_label>
+        <m2m_table>x_1523172_skill_up_possui_skill</m2m_table>
+        <m2m_to_field>x_1523172_skill_up_skill</m2m_to_field>
+        <m2m_to_label>Equipes</m2m_to_label>
+        <sys_class_name>sys_m2m</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-02-25 12:45:20</sys_created_on>
+        <sys_id>dca096f3833b12109566f7b6feaad3ef</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>x_1523172_skill_up_possui_skill</sys_name>
+        <sys_package display_value="Mock SkillUp" source="x_1523172_skill_up">6938717783b712109566f7b6feaad3b9</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Mock SkillUp">6938717783b712109566f7b6feaad3b9</sys_scope>
+        <sys_update_name>sys_m2m_dca096f3833b12109566f7b6feaad3ef</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-02-25 12:45:20</sys_updated_on>
+        <to_table>x_1523172_skill_up_skill</to_table>
+    </sys_m2m>
+</record_update>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element db_object_id="055d353f83b712109566f7b6feaad3e8" label="Certificados" max_length="40" name="x_1523172_skill_up_certificados" type="collection">
+        <element attributes="edge_encryption_enabled=true" label="Data de Emissão" mandatory="true" max_length="40" name="data_emissao" type="glide_date"/>
+        <element label="Quantidade de Horas" mandatory="true" max_length="40" name="quantidade_hora" type="glide_duration"/>
+        <element attributes="encode_utf8=false" display="true" label="Curso" mandatory="true" max_length="32" name="curso" reference="x_1523172_skill_up_cursos" type="reference"/>
+        <element attributes="edge_encryption_enabled=true" label="Anexo" mandatory="true" max_length="40" name="anexo" type="file_attachment"/>
+        <element label="Colaborador" mandatory="true" max_length="32" name="staff" reference="x_1523172_skill_up_equipe" type="reference"/>
+        <index name="index">
+            <element name="curso"/>
+        </index>
+        <index name="index2">
+            <element name="staff"/>
+        </index>
+    </element>
+</database>

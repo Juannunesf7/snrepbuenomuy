@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_hub_action_type_definition">
+    <sys_hub_action_type_definition action="DELETE">
+        <access>public</access>
+        <acls/>
+        <action_status/>
+        <action_template/>
+        <active>true</active>
+        <annotation/>
+        <attributes>{labelCacheCleanUpExecuted=true}</attributes>
+        <authored_on_release_version>26000</authored_on_release_version>
+        <callable_by_client_api>false</callable_by_client_api>
+        <category/>
+        <compiler_build/>
+        <copied_from/>
+        <copied_from_name/>
+        <description/>
+        <flow_priority/>
+        <ih_action>false</ih_action>
+        <internal_name>enviar_solicitao_para_ambiente_produtivo</internal_name>
+        <label_cache/>
+        <latest_snapshot/>
+        <master_snapshot/>
+        <master_snapshot_digest/>
+        <name>Enviar Solicitação para Ambiente Produtivo</name>
+        <natlang/>
+        <outputs/>
+        <pre_compiled>false</pre_compiled>
+        <state>draft</state>
+        <sys_class_name>sys_hub_action_type_definition</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-03-20 12:35:26</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>7b5be4d3839022109566f7b6feaad325</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Enviar Solicitação para Ambiente Produtivo</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Mock SkillUp" source="x_1523172_skill_up">6938717783b712109566f7b6feaad3b9</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Mock SkillUp">6938717783b712109566f7b6feaad3b9</sys_scope>
+        <sys_update_name>sys_hub_action_type_definition_7b5be4d3839022109566f7b6feaad325</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-03-20 12:35:26</sys_updated_on>
+        <system_level>false</system_level>
+        <type/>
+    </sys_hub_action_type_definition>
+    <sys_translated_text action="DELETE" query="documentkey=7b5be4d3839022109566f7b6feaad325"/>
+    <sys_variable_value action="DELETE" query="document_key=7b5be4d3839022109566f7b6feaad325"/>
+    <sys_hub_step_instance action="DELETE" query="action=7b5be4d3839022109566f7b6feaad325"/>
+    <sys_hub_action_input action="DELETE" query="model=7b5be4d3839022109566f7b6feaad325"/>
+    <sys_hub_action_output action="DELETE" query="model=7b5be4d3839022109566f7b6feaad325"/>
+    <sys_hub_pill_compound action="DELETE" query="attached_to=7b5be4d3839022109566f7b6feaad325"/>
+    <sys_hub_action_status_metadata action="DELETE" query="action_type_id=7b5be4d3839022109566f7b6feaad325"/>
+    <sys_documentation action="DELETE" query="name=var__m_sys_hub_action_input_7b5be4d3839022109566f7b6feaad325"/>
+    <sys_choice action="DELETE" query="name=var__m_sys_hub_action_input_7b5be4d3839022109566f7b6feaad325"/>
+    <sys_documentation action="DELETE" query="name=var__m_sys_hub_action_output_7b5be4d3839022109566f7b6feaad325"/>
+    <sys_choice action="DELETE" query="name=var__m_sys_hub_action_output_7b5be4d3839022109566f7b6feaad325"/>
+    <sys_hub_action_plan action="DELETE" query="action_id=7b5be4d3839022109566f7b6feaad325"/>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Mock SkillUp">6938717783b712109566f7b6feaad3b9</application>
+        <file_path/>
+        <instance_id>7ee1e82afb5f1e945704f3585eefdcfd</instance_id>
+        <instance_name>dev293201</instance_name>
+        <name>sys_hub_action_type_definition_7b5be4d3839022109566f7b6feaad325</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_hub_action_type_definition"><sys_hub_action_type_definition action="INSERT_OR_UPDATE"><access>public</access><acls/><action_status/><action_template/><active>true</active><annotation/><attributes>{labelCacheCleanUpExecuted=true}</attributes><authored_on_release_version>26000</authored_on_release_version><callable_by_client_api>false</callable_by_client_api><category/><compiler_build/><copied_from/><copied_from_name/><description/><flow_priority/><ih_action>false</ih_action><internal_name>enviar_solicitao_para_ambiente_produtivo</internal_name><label_cache/><latest_snapshot/><master_snapshot/><master_snapshot_digest/><name>Enviar Solicitação para Ambiente Produtivo</name><natlang/><outputs/><pre_compiled>false</pre_compiled><state>draft</state><sys_class_name>sys_hub_action_type_definition</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2025-03-20 12:35:26</sys_created_on><sys_domain>global</sys_domain><sys_domain_path>/</sys_domain_path><sys_id>7b5be4d3839022109566f7b6feaad325</sys_id><sys_mod_count>0</sys_mod_count><sys_name>Enviar Solicitação para Ambiente Produtivo</sys_name><sys_overrides/><sys_package display_value="Mock SkillUp" source="x_1523172_skill_up">6938717783b712109566f7b6feaad3b9</sys_package><sys_policy/><sys_scope display_value="Mock SkillUp">6938717783b712109566f7b6feaad3b9</sys_scope><sys_update_name>sys_hub_action_type_definition_7b5be4d3839022109566f7b6feaad325</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2025-03-20 12:35:26</sys_updated_on><system_level>false</system_level><type/></sys_hub_action_type_definition><sys_translated_text action="delete_multiple" query="documentkey=7b5be4d3839022109566f7b6feaad325"/><sys_variable_value action="delete_multiple" query="document_key=7b5be4d3839022109566f7b6feaad325"/><sys_hub_step_instance action="delete_multiple" query="action=7b5be4d3839022109566f7b6feaad325"/><sys_hub_action_input action="delete_multiple" query="model=7b5be4d3839022109566f7b6feaad325"/><sys_hub_action_output action="delete_multiple" query="model=7b5be4d3839022109566f7b6feaad325"/><sys_hub_pill_compound action="delete_multiple" query="attached_to=7b5be4d3839022109566f7b6feaad325"/><sys_hub_action_status_metadata action="delete_multiple" query="action_type_id=7b5be4d3839022109566f7b6feaad325"/><sys_documentation action="delete_multiple" query="name=var__m_sys_hub_action_input_7b5be4d3839022109566f7b6feaad325"/><sys_choice action="delete_multiple" query="name=var__m_sys_hub_action_input_7b5be4d3839022109566f7b6feaad325"/><sys_documentation action="delete_multiple" query="name=var__m_sys_hub_action_output_7b5be4d3839022109566f7b6feaad325"/><sys_choice action="delete_multiple" query="name=var__m_sys_hub_action_output_7b5be4d3839022109566f7b6feaad325"/><sys_hub_action_plan action="delete_multiple" query="action_id=7b5be4d3839022109566f7b6feaad325"/></record_update>]]></payload>
+        <payload_hash>-1234228484</payload_hash>
+        <record_name>Enviar Solicitação para Ambiente Produtivo</record_name>
+        <reverted_from/>
+        <source>a538717783b712109566f7b6feaad3be</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-03-20 12:35:26</sys_created_on>
+        <sys_id>c86be4d3839022109566f7b6feaad32a</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>195b38d250f0000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-03-20 12:35:26</sys_updated_on>
+        <type>Action Type</type>
+        <update_guid>8c6be4d39f902210b881a5668ffb1729</update_guid>
+        <update_guid_history>8c6be4d39f902210b881a5668ffb1729:-1234228484</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-04-03 16:43:56</sys_created_on>
+        <sys_db_object display_value="" name="sys_hub_action_type_definition">sys_hub_action_type_definition</sys_db_object>
+        <sys_id>016ff771ed9a407f8007de17dbf37aa9</sys_id>
+        <sys_metadata>7b5be4d3839022109566f7b6feaad325</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Enviar Solicitação para Ambiente Produtivo</sys_name>
+        <sys_package display_value="Mock SkillUp" source="x_1523172_skill_up">6938717783b712109566f7b6feaad3b9</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="Mock SkillUp">6938717783b712109566f7b6feaad3b9</sys_scope>
+        <sys_scope_delete display_value="">3a6d93cae10942c4892c498dcc264390</sys_scope_delete>
+        <sys_update_name>sys_hub_action_type_definition_7b5be4d3839022109566f7b6feaad325</sys_update_name>
+        <sys_update_version display_value="sys_hub_action_type_definition_7b5be4d3839022109566f7b6feaad325">c86be4d3839022109566f7b6feaad32a</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-04-03 16:43:56</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

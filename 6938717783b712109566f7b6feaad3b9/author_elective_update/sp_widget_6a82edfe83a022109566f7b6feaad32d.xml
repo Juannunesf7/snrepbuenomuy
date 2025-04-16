@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_widget">
+    <sp_widget action="DELETE">
+        <category>custom</category>
+        <client_script><![CDATA[function recprodCard($scope, spUtil) {
+  // Define o título e descrição do card
+  $scope.c.data.title = "Knowledge Base";
+  $scope.c.data.description = "Seu guia para introdução à plataforma.";
+
+  // Função para redirecionar ao Record Producer
+  $scope.c.redirectToRecordProducer = function() {
+    window.location.href = "?id=kb_category&kb_category=3d2bce3583e022109566f7b6feaad304";
+  };
+}]]></client_script>
+        <controller_as>c</controller_as>
+        <css>.card-widget {
+  background-color: transparent; /* Fundo escuro para contraste */
+  border: 1px solid #444;
+  border-radius: 8px;
+  padding: 20px;
+  text-align: center;
+  cursor: pointer;
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease;
+  color: white; /* Texto branco */
+  max-width: 200px; /* Tamanho reduzido para um card */
+  margin: 0 auto; /* Centraliza */
+}
+
+.card-widget:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  background-color: #0A0F3D; /* Cor mais clara no hover */
+}
+
+/* Estilo para o ícone (ajuste o tamanho conforme necessário) */
+.card-widget img {
+  width: 48px; /* Reduz o ícone para um tamanho adequado */
+  height: 48px;
+  margin-bottom: 12px;
+}
+
+/* Estilo para o texto "Report Bug" */
+.card-widget h3 {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 600;
+  color: white; /* Garante texto branco */
+}</css>
+        <data_table>sp_instance</data_table>
+        <demo_data/>
+        <description/>
+        <docs/>
+        <field_list/>
+        <has_preview>false</has_preview>
+        <id>widget_card_kb</id>
+        <internal>false</internal>
+        <link><![CDATA[function link(scope, element, attrs, controller) {  }]]></link>
+        <name>Widget Card KB</name>
+        <option_schema/>
+        <public>true</public>
+        <roles/>
+        <script><![CDATA[(function() {  /* populate the 'data' object */  /* e.g., data.table = $sp.getValue('table'); */})();]]></script>
+        <servicenow>false</servicenow>
+        <sys_class_name>sp_widget</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-03-31 13:35:12</sys_created_on>
+        <sys_id>6a82edfe83a022109566f7b6feaad32d</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name>Widget Card KB</sys_name>
+        <sys_package display_value="Mock SkillUp" source="x_1523172_skill_up">6938717783b712109566f7b6feaad3b9</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Mock SkillUp">6938717783b712109566f7b6feaad3b9</sys_scope>
+        <sys_update_name>sp_widget_6a82edfe83a022109566f7b6feaad32d</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-03-31 14:47:35</sys_updated_on>
+        <template><![CDATA[<div class="card-widget" ng-click="c.redirectToRecordProducer()">
+  <img src="x_1523172_skill_up.knowledgebase.png" alt="Knowledge Base"/>
+  <h3>{{c.data.title}}</h3>
+  <p>{{c.data.description}}</p>
+</div>]]></template>
+    </sp_widget>
+    <sys_es_latest_script action="DELETE">
+        <id>6a82edfe83a022109566f7b6feaad32d</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-03-31 14:25:56</sys_created_on>
+        <sys_id>e12ee1be83e022109566f7b6feaad34a</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-03-31 14:25:56</sys_updated_on>
+        <table>sp_widget</table>
+        <use_es_latest>true</use_es_latest>
+    </sys_es_latest_script>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Mock SkillUp">6938717783b712109566f7b6feaad3b9</application>
+        <file_path/>
+        <instance_id>7ee1e82afb5f1e945704f3585eefdcfd</instance_id>
+        <instance_name>dev293201</instance_name>
+        <name>sp_widget_6a82edfe83a022109566f7b6feaad32d</name>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update table="sp_widget"&gt;&lt;sp_widget action="INSERT_OR_UPDATE"&gt;&lt;category&gt;custom&lt;/category&gt;&lt;client_script&gt;&lt;![CDATA[function recprodCard($scope, spUtil) {
+  // Define o título e descrição do card
+  $scope.c.data.title = "Knowledge Base";
+  $scope.c.data.description = "Seu guia para introdução à plataforma.";
+
+  // Função para redirecionar ao Record Producer
+  $scope.c.redirectToRecordProducer = function() {
+    window.location.href = "?id=kb_category&amp;kb_category=3d2bce3583e022109566f7b6feaad304";
+  };
+}]]&gt;&lt;/client_script&gt;&lt;controller_as&gt;c&lt;/controller_as&gt;&lt;css&gt;.card-widget {
+  background-color: transparent; /* Fundo escuro para contraste */
+  border: 1px solid #444;
+  border-radius: 8px;
+  padding: 20px;
+  text-align: center;
+  cursor: pointer;
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease;
+  color: white; /* Texto branco */
+  max-width: 200px; /* Tamanho reduzido para um card */
+  margin: 0 auto; /* Centraliza */
+}
+
+.card-widget:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  background-color: #0A0F3D; /* Cor mais clara no hover */
+}
+
+/* Estilo para o ícone (ajuste o tamanho conforme necessário) */
+.card-widget img {
+  width: 48px; /* Reduz o ícone para um tamanho adequado */
+  height: 48px;
+  margin-bottom: 12px;
+}
+
+/* Estilo para o texto "Report Bug" */
+.card-widget h3 {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 600;
+  color: white; /* Garante texto branco */
+}&lt;/css&gt;&lt;data_table&gt;sp_instance&lt;/data_table&gt;&lt;demo_data/&gt;&lt;description/&gt;&lt;docs/&gt;&lt;field_list/&gt;&lt;has_preview&gt;false&lt;/has_preview&gt;&lt;id&gt;widget_card_kb&lt;/id&gt;&lt;internal&gt;false&lt;/internal&gt;&lt;link&gt;&lt;![CDATA[function link(scope, element, attrs, controller) {  }]]&gt;&lt;/link&gt;&lt;name&gt;Widget Card KB&lt;/name&gt;&lt;option_schema/&gt;&lt;public&gt;true&lt;/public&gt;&lt;roles/&gt;&lt;script&gt;&lt;![CDATA[(function() {  /* populate the 'data' object */  /* e.g., data.table = $sp.getValue('table'); */})();]]&gt;&lt;/script&gt;&lt;servicenow&gt;false&lt;/servicenow&gt;&lt;sys_class_name&gt;sp_widget&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2025-03-31 13:35:12&lt;/sys_created_on&gt;&lt;sys_id&gt;6a82edfe83a022109566f7b6feaad32d&lt;/sys_id&gt;&lt;sys_mod_count&gt;2&lt;/sys_mod_count&gt;&lt;sys_name&gt;Widget Card KB&lt;/sys_name&gt;&lt;sys_package display_value="Mock SkillUp" source="x_1523172_skill_up"&gt;6938717783b712109566f7b6feaad3b9&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="Mock SkillUp"&gt;6938717783b712109566f7b6feaad3b9&lt;/sys_scope&gt;&lt;sys_update_name&gt;sp_widget_6a82edfe83a022109566f7b6feaad32d&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2025-03-31 14:47:35&lt;/sys_updated_on&gt;&lt;template&gt;&lt;![CDATA[&lt;div class="card-widget" ng-click="c.redirectToRecordProducer()"&gt;
+  &lt;img src="x_1523172_skill_up.knowledgebase.png" alt="Knowledge Base"/&gt;
+  &lt;h3&gt;{{c.data.title}}&lt;/h3&gt;
+  &lt;p&gt;{{c.data.description}}&lt;/p&gt;
+&lt;/div&gt;]]&gt;&lt;/template&gt;&lt;/sp_widget&gt;&lt;sys_es_latest_script action="INSERT_OR_UPDATE"&gt;&lt;id&gt;6a82edfe83a022109566f7b6feaad32d&lt;/id&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2025-03-31 14:25:56&lt;/sys_created_on&gt;&lt;sys_id&gt;e12ee1be83e022109566f7b6feaad34a&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2025-03-31 14:25:56&lt;/sys_updated_on&gt;&lt;table&gt;sp_widget&lt;/table&gt;&lt;use_es_latest&gt;true&lt;/use_es_latest&gt;&lt;/sys_es_latest_script&gt;&lt;/record_update&gt;</payload>
+        <payload_hash>284234683</payload_hash>
+        <record_name>Widget Card KB</record_name>
+        <reverted_from/>
+        <source>a538717783b712109566f7b6feaad3be</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-03-31 14:47:35</sys_created_on>
+        <sys_id>3613b176832422109566f7b6feaad393</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>195ecac15de0000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-03-31 14:47:35</sys_updated_on>
+        <type>Widget</type>
+        <update_guid>fa13b17615242210e68d00ef3cb15b92</update_guid>
+        <update_guid_history>fa13b17615242210e68d00ef3cb15b92:284234683,3c9ee9fe09e02210354af1732e8b913c:-1846978555,2682edfe68a0221079365df47880cb2f:-1720422810</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="Widget Card KB">4f5c50f3832022109566f7b6feaad3b8</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-04-03 11:02:30</sys_created_on>
+        <sys_db_object display_value="" name="sp_widget">sp_widget</sys_db_object>
+        <sys_id>2a62739b072c4b8d8bfd1303497c0061</sys_id>
+        <sys_metadata>6a82edfe83a022109566f7b6feaad32d</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Widget Card KB</sys_name>
+        <sys_package display_value="Mock SkillUp" source="x_1523172_skill_up">6938717783b712109566f7b6feaad3b9</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="Mock SkillUp">6938717783b712109566f7b6feaad3b9</sys_scope>
+        <sys_scope_delete display_value="">3a6d93cae10942c4892c498dcc264390</sys_scope_delete>
+        <sys_update_name>sp_widget_6a82edfe83a022109566f7b6feaad32d</sys_update_name>
+        <sys_update_version display_value="sp_widget_6a82edfe83a022109566f7b6feaad32d">3613b176832422109566f7b6feaad393</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-04-03 11:02:30</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

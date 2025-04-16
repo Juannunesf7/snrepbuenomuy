@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_rest_message_fn">
+    <sys_rest_message_fn action="INSERT_OR_UPDATE">
+        <authentication_type>basic</authentication_type>
+        <basic_auth_password/>
+        <basic_auth_profile display_value="Cursos">4f0e1af3837b12109566f7b6feaad3f2</basic_auth_profile>
+        <basic_auth_user/>
+        <content/>
+        <function_name>GET Cursos</function_name>
+        <http_method>get</http_method>
+        <lock>false</lock>
+        <oauth2_profile/>
+        <protocol_name/>
+        <qualified_name>Importar Cursos [ GET Cursos ]</qualified_name>
+        <rest_endpoint>https://dev224983.service-now.com/api/now/table/x_1632557_skillup_courses?sysparm_fields=template%2Ctreinamento%2Cduracao%2Cordem</rest_endpoint>
+        <rest_message display_value="Importar Cursos">91bd12f3837b12109566f7b6feaad3d2</rest_message>
+        <sys_class_name>sys_rest_message_fn</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-02-25 13:41:14</sys_created_on>
+        <sys_id>9fdd16f3837b12109566f7b6feaad3aa</sys_id>
+        <sys_mod_count>7</sys_mod_count>
+        <sys_name>GET Cursos</sys_name>
+        <sys_package display_value="Mock SkillUp" source="x_1523172_skill_up">6938717783b712109566f7b6feaad3b9</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Mock SkillUp">6938717783b712109566f7b6feaad3b9</sys_scope>
+        <sys_update_name>sys_rest_message_fn_9fdd16f3837b12109566f7b6feaad3aa</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-02-26 14:01:15</sys_updated_on>
+        <use_basic_auth>false</use_basic_auth>
+        <use_mid_server/>
+        <use_mutual_auth>false</use_mutual_auth>
+    </sys_rest_message_fn>
+</record_update>

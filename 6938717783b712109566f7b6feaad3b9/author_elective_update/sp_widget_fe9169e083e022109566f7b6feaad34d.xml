@@ -1,0 +1,751 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_widget">
+    <sp_widget action="DELETE">
+        <category>custom</category>
+        <client_script><![CDATA[function minhasSkills($scope, $http) {
+  const c = this;
+  
+  // Estado inicial controlado
+  c.data = {
+    skills: [],
+    loading: true,
+    error: null,
+    userInfo: {
+      id: g_user.userID,
+      name: g_user.userName
+    }
+  };
+
+  // Inicialização
+  loadUserSkills();
+
+  // ------ CORE FUNCTIONS ------ //
+
+  function loadUserSkills() {
+    fetchUserSkills()
+      .then(processSkills)
+      .catch(handleError)
+      .finally(finalizeLoading);
+  }
+
+  // ------ DATA FLOW ------ //
+
+  function fetchUserSkills() {
+    return $http.get('/api/now/table/x_1523172_skill_up_possui_skill', {
+      params: {
+        sysparm_query: `user=${c.data.userInfo.id}^active=true`,
+        sysparm_fields: 'sys_id,x_1523172_skill_up_skill,nivel,active',
+        sysparm_limit: 100,
+        sysparm_display_value: true
+      }
+    }).then(handleApiResponse);
+  }
+
+  function processSkills(possuiSkills) {
+    if (!possuiSkills?.length) {
+      logInfo('Nenhuma skill encontrada para o usuário');
+      return;
+    }
+    
+    return fetchSkillsDetails(possuiSkills)
+      .then(skillsDetails => combineData(possuiSkills, skillsDetails));
+  }
+
+  function fetchSkillsDetails(possuiSkills) {
+    const skillIds = possuiSkills
+      .filter(item => item.active === 'true')
+      .map(item => item.x_1523172_skill_up_skill.value);
+    
+    if (!skillIds.length) return Promise.resolve([]);
+
+    return $http.get('/api/now/table/x_1523172_skill_up_skill', {
+      params: {
+        sysparm_query: `sys_idIN${skillIds.join(',')}^active=true`,
+        sysparm_fields: 'sys_id,skill,description,technical,active',
+        sysparm_limit: 100,
+        sysparm_display_value: true
+      }
+    }).then(handleApiResponse);
+  }
+
+  // ------ DATA TRANSFORMATION ------ //
+
+  function combineData(possuiSkills, skillsDetails) {
+    return possuiSkills
+      .filter(item => item.active === 'true')
+      .map(item => ({
+        id: item.sys_id,
+        skillId: item.x_1523172_skill_up_skill.value,
+        name: getSkillDetail(item.x_1523172_skill_up_skill.value, skillsDetails)?.skill || 'Não especificado',
+        description: getSkillDetail(item.x_1523172_skill_up_skill.value, skillsDetails)?.description || '',
+        level: item.nivel || 0,
+        technical: getSkillDetail(item.x_1523172_skill_up_skill.value, skillsDetails)?.technical === 'true',
+        active: item.active === 'true'
+      }));
+  }
+
+  // ------ UTILITIES ------ //
+
+  function handleApiResponse(response) {
+    if (!response?.data?.result) {
+      throw new Error('Resposta da API inválida');
+    }
+    return response.data.result;
+  }
+
+  function getSkillDetail(skillId, details) {
+    return details?.find(skill => skill.sys_id === skillId && skill.active === 'true');
+  }
+
+  // ------ ERROR HANDLING ------ //
+
+  function handleError(error) {
+    const errorDetails = {
+      widget: 'minhasSkills',
+      user: c.data.userInfo,
+      error: {
+        message: error?.message,
+        status: error?.status,
+        api: error?.config?.url,
+        timestamp: new Date().toISOString()
+      }
+    };
+
+    // Log hierárquico no ServiceNow
+    if (error?.status >= 500) {
+      logError('Server Error', errorDetails);
+    } else {
+      logWarning('Application Error', errorDetails);
+    }
+
+    // User-friendly feedback
+    c.data.error = {
+      message: 'Ocorreu um erro ao carregar suas habilidades',
+      action: 'Por favor tente novamente mais tarde',
+      referenceId: `ERR-${Date.now()}`
+    };
+  }
+
+  function finalizeLoading() {
+    c.data.loading = false;
+    $scope.$applyAsync();
+  }
+
+  // ------ LOGGING SYSTEM ------ //
+
+  function logError(message, data) {
+    if (typeof gs !== 'undefined') {
+      gs.error(`[${message}] ${JSON.stringify(data)}`, 'minhasSkills Widget');
+    }
+    logToServer('error', message, data);
+  }
+
+  function logWarning(message, data) {
+    if (typeof gs !== 'undefined') {
+      gs.warn(`[${message}] ${JSON.stringify(data)}`, 'minhasSkills Widget');
+    }
+    logToServer('warn', message, data);
+  }
+
+  function logInfo(message) {
+    if (typeof gs !== 'undefined') {
+      gs.info(`[INFO] ${message}`, 'minhasSkills Widget');
+    }
+    logToServer('info', message);
+  }
+
+  function logToServer(level, message, data = {}) {
+    // Implementação para enviar logs a um endpoint REST se necessário
+    // (opcional para ambientes enterprise)
+  }
+}]]></client_script>
+        <controller_as>c</controller_as>
+        <css>/* Reset básico */&#13;
+* {&#13;
+  margin: 0;&#13;
+  padding: 0;&#13;
+  box-sizing: border-box;&#13;
+}&#13;
+&#13;
+/* Estilo do widget principal */&#13;
+.skills-widget {&#13;
+  background-color: #ffffff;&#13;
+  border: 1px solid #e0e0e0;&#13;
+  border-radius: 8px;&#13;
+  padding: 20px;&#13;
+  max-width: 600px;&#13;
+  margin: 20px auto;&#13;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);&#13;
+  font-family: Arial, sans-serif;&#13;
+}&#13;
+&#13;
+.skills-widget h3 {&#13;
+  font-size: 20px;&#13;
+  color: #333;&#13;
+  margin-bottom: 15px;&#13;
+  text-align: center;&#13;
+}&#13;
+&#13;
+/* Lista de skills */&#13;
+.skills-list {&#13;
+  display: flex;&#13;
+  flex-direction: column;&#13;
+  gap: 15px;&#13;
+}&#13;
+&#13;
+.skill-item {&#13;
+  background-color: #f9f9f9;&#13;
+  border: 1px solid #ddd;&#13;
+  border-radius: 6px;&#13;
+  padding: 15px;&#13;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;&#13;
+}&#13;
+&#13;
+.skill-item:hover {&#13;
+  transform: translateY(-2px);&#13;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);&#13;
+}&#13;
+&#13;
+.skill-header {&#13;
+  display: flex;&#13;
+  justify-content: space-between;&#13;
+  align-items: center;&#13;
+  margin-bottom: 10px;&#13;
+}&#13;
+&#13;
+.skill-header strong {&#13;
+  font-size: 16px;&#13;
+  color: #333;&#13;
+}&#13;
+&#13;
+.skill-level {&#13;
+  font-size: 14px;&#13;
+  color: #555;&#13;
+  background-color: #f0f0f0;&#13;
+  padding: 4px 8px;&#13;
+  border-radius: 4px;&#13;
+}&#13;
+&#13;
+.skill-description {&#13;
+  font-size: 14px;&#13;
+  color: #666;&#13;
+  margin-bottom: 10px;&#13;
+}&#13;
+&#13;
+.skill-tags {&#13;
+  display: flex;&#13;
+  gap: 8px;&#13;
+}&#13;
+&#13;
+.tag {&#13;
+  font-size: 12px;&#13;
+  padding: 4px 8px;&#13;
+  border-radius: 4px;&#13;
+  color: #fff;&#13;
+}&#13;
+&#13;
+.tag.technical {&#13;
+  background-color: #007bff;&#13;
+}&#13;
+&#13;
+.no-skills {&#13;
+  text-align: center;&#13;
+  font-size: 16px;&#13;
+  color: #888;&#13;
+  padding: 20px;&#13;
+  border: 1px dashed #ddd;&#13;
+  border-radius: 6px;&#13;
+}&#13;
+&#13;
+/* Loader */&#13;
+.loader {&#13;
+  text-align: center;&#13;
+  margin-top: 50px;&#13;
+}&#13;
+&#13;
+.spinner {&#13;
+  border: 4px solid #f3f3f3;&#13;
+  border-top: 4px solid #007bff;&#13;
+  border-radius: 50%;&#13;
+  width: 40px;&#13;
+  height: 40px;&#13;
+  animation: spin 1s linear infinite;&#13;
+  margin: 0 auto 15px;&#13;
+}&#13;
+&#13;
+@keyframes spin {&#13;
+  0% {&#13;
+    transform: rotate(0deg);&#13;
+  }&#13;
+  100% {&#13;
+    transform: rotate(360deg);&#13;
+  }&#13;
+}&#13;
+&#13;
+.loader p {&#13;
+  font-size: 14px;&#13;
+  color: #555;&#13;
+}&#13;
+&#13;
+/* Estado de erro */&#13;
+.error-state {&#13;
+  text-align: center;&#13;
+  margin-top: 50px;&#13;
+  color: #d9534f;&#13;
+  font-size: 16px;&#13;
+}&#13;
+&#13;
+.error-state h4 {&#13;
+  font-size: 18px;&#13;
+  margin-bottom: 10px;&#13;
+}&#13;
+&#13;
+.error-state p {&#13;
+  font-size: 14px;&#13;
+  color: #666;&#13;
+}</css>
+        <data_table>sp_instance</data_table>
+        <demo_data/>
+        <description/>
+        <docs/>
+        <field_list/>
+        <has_preview>false</has_preview>
+        <id/>
+        <internal>false</internal>
+        <link><![CDATA[function link(scope, element, attrs, controller) {
+  
+}]]></link>
+        <name>Copy of Minhas Skills</name>
+        <option_schema/>
+        <public>true</public>
+        <roles/>
+        <script><![CDATA[(function() {
+  /* populate the 'data' object */
+  /* e.g., data.table = $sp.getValue('table'); */
+
+})();]]></script>
+        <servicenow>false</servicenow>
+        <sys_class_name>sp_widget</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-03-24 13:44:47</sys_created_on>
+        <sys_id>fe9169e083e022109566f7b6feaad34d</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Copy of Minhas Skills</sys_name>
+        <sys_package display_value="Mock SkillUp" source="x_1523172_skill_up">6938717783b712109566f7b6feaad3b9</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Mock SkillUp">6938717783b712109566f7b6feaad3b9</sys_scope>
+        <sys_update_name>sp_widget_fe9169e083e022109566f7b6feaad34d</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-03-24 13:44:47</sys_updated_on>
+        <template><![CDATA[<div class="skills-widget" ng-if="!data.loading && !data.error">
+  <h3>Minhas Skills</h3>
+  <div class="skills-list">
+    <div class="skill-item" ng-repeat="skill in data.skills" ng-if="skill.active">
+      <div class="skill-header">
+        <strong>{{skill.name}}</strong>
+        <span class="skill-level">Nível: {{skill.level}}</span>
+      </div>
+      <p class="skill-description">{{skill.description || 'Sem descrição disponível'}}</p>
+      <div class="skill-tags">
+        <span class="tag technical" ng-if="skill.technical">Técnica</span>
+      </div>
+    </div>
+    <div class="no-skills" ng-if="!data.skills.length">
+      <p>Você ainda não possui habilidades cadastradas.</p>
+    </div>
+  </div>
+</div>
+
+<!-- Loader -->
+<div class="loader" ng-if="data.loading">
+  <div class="spinner"></div>
+  <p>Carregando suas habilidades...</p>
+</div>
+
+<!-- Error State -->
+<div class="error-state" ng-if="data.error">
+  <h4>{{data.error.message}}</h4>
+  <p>{{data.error.action}}</p>
+  <p><strong>Referência:</strong> {{data.error.referenceId}}</p>
+</div>]]></template>
+    </sp_widget>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Mock SkillUp">6938717783b712109566f7b6feaad3b9</application>
+        <file_path/>
+        <instance_id>7ee1e82afb5f1e945704f3585eefdcfd</instance_id>
+        <instance_name>dev293201</instance_name>
+        <name>sp_widget_fe9169e083e022109566f7b6feaad34d</name>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update table="sp_widget"&gt;&lt;sp_widget action="INSERT_OR_UPDATE"&gt;&lt;category&gt;custom&lt;/category&gt;&lt;client_script&gt;&lt;![CDATA[function minhasSkills($scope, $http) {
+  const c = this;
+  
+  // Estado inicial controlado
+  c.data = {
+    skills: [],
+    loading: true,
+    error: null,
+    userInfo: {
+      id: g_user.userID,
+      name: g_user.userName
+    }
+  };
+
+  // Inicialização
+  loadUserSkills();
+
+  // ------ CORE FUNCTIONS ------ //
+
+  function loadUserSkills() {
+    fetchUserSkills()
+      .then(processSkills)
+      .catch(handleError)
+      .finally(finalizeLoading);
+  }
+
+  // ------ DATA FLOW ------ //
+
+  function fetchUserSkills() {
+    return $http.get('/api/now/table/x_1523172_skill_up_possui_skill', {
+      params: {
+        sysparm_query: `user=${c.data.userInfo.id}^active=true`,
+        sysparm_fields: 'sys_id,x_1523172_skill_up_skill,nivel,active',
+        sysparm_limit: 100,
+        sysparm_display_value: true
+      }
+    }).then(handleApiResponse);
+  }
+
+  function processSkills(possuiSkills) {
+    if (!possuiSkills?.length) {
+      logInfo('Nenhuma skill encontrada para o usuário');
+      return;
+    }
+    
+    return fetchSkillsDetails(possuiSkills)
+      .then(skillsDetails =&gt; combineData(possuiSkills, skillsDetails));
+  }
+
+  function fetchSkillsDetails(possuiSkills) {
+    const skillIds = possuiSkills
+      .filter(item =&gt; item.active === 'true')
+      .map(item =&gt; item.x_1523172_skill_up_skill.value);
+    
+    if (!skillIds.length) return Promise.resolve([]);
+
+    return $http.get('/api/now/table/x_1523172_skill_up_skill', {
+      params: {
+        sysparm_query: `sys_idIN${skillIds.join(',')}^active=true`,
+        sysparm_fields: 'sys_id,skill,description,technical,active',
+        sysparm_limit: 100,
+        sysparm_display_value: true
+      }
+    }).then(handleApiResponse);
+  }
+
+  // ------ DATA TRANSFORMATION ------ //
+
+  function combineData(possuiSkills, skillsDetails) {
+    return possuiSkills
+      .filter(item =&gt; item.active === 'true')
+      .map(item =&gt; ({
+        id: item.sys_id,
+        skillId: item.x_1523172_skill_up_skill.value,
+        name: getSkillDetail(item.x_1523172_skill_up_skill.value, skillsDetails)?.skill || 'Não especificado',
+        description: getSkillDetail(item.x_1523172_skill_up_skill.value, skillsDetails)?.description || '',
+        level: item.nivel || 0,
+        technical: getSkillDetail(item.x_1523172_skill_up_skill.value, skillsDetails)?.technical === 'true',
+        active: item.active === 'true'
+      }));
+  }
+
+  // ------ UTILITIES ------ //
+
+  function handleApiResponse(response) {
+    if (!response?.data?.result) {
+      throw new Error('Resposta da API inválida');
+    }
+    return response.data.result;
+  }
+
+  function getSkillDetail(skillId, details) {
+    return details?.find(skill =&gt; skill.sys_id === skillId &amp;&amp; skill.active === 'true');
+  }
+
+  // ------ ERROR HANDLING ------ //
+
+  function handleError(error) {
+    const errorDetails = {
+      widget: 'minhasSkills',
+      user: c.data.userInfo,
+      error: {
+        message: error?.message,
+        status: error?.status,
+        api: error?.config?.url,
+        timestamp: new Date().toISOString()
+      }
+    };
+
+    // Log hierárquico no ServiceNow
+    if (error?.status &gt;= 500) {
+      logError('Server Error', errorDetails);
+    } else {
+      logWarning('Application Error', errorDetails);
+    }
+
+    // User-friendly feedback
+    c.data.error = {
+      message: 'Ocorreu um erro ao carregar suas habilidades',
+      action: 'Por favor tente novamente mais tarde',
+      referenceId: `ERR-${Date.now()}`
+    };
+  }
+
+  function finalizeLoading() {
+    c.data.loading = false;
+    $scope.$applyAsync();
+  }
+
+  // ------ LOGGING SYSTEM ------ //
+
+  function logError(message, data) {
+    if (typeof gs !== 'undefined') {
+      gs.error(`[${message}] ${JSON.stringify(data)}`, 'minhasSkills Widget');
+    }
+    logToServer('error', message, data);
+  }
+
+  function logWarning(message, data) {
+    if (typeof gs !== 'undefined') {
+      gs.warn(`[${message}] ${JSON.stringify(data)}`, 'minhasSkills Widget');
+    }
+    logToServer('warn', message, data);
+  }
+
+  function logInfo(message) {
+    if (typeof gs !== 'undefined') {
+      gs.info(`[INFO] ${message}`, 'minhasSkills Widget');
+    }
+    logToServer('info', message);
+  }
+
+  function logToServer(level, message, data = {}) {
+    // Implementação para enviar logs a um endpoint REST se necessário
+    // (opcional para ambientes enterprise)
+  }
+}]]&gt;&lt;/client_script&gt;&lt;controller_as&gt;c&lt;/controller_as&gt;&lt;css&gt;/* Reset básico */&amp;#13;
+* {&amp;#13;
+  margin: 0;&amp;#13;
+  padding: 0;&amp;#13;
+  box-sizing: border-box;&amp;#13;
+}&amp;#13;
+&amp;#13;
+/* Estilo do widget principal */&amp;#13;
+.skills-widget {&amp;#13;
+  background-color: #ffffff;&amp;#13;
+  border: 1px solid #e0e0e0;&amp;#13;
+  border-radius: 8px;&amp;#13;
+  padding: 20px;&amp;#13;
+  max-width: 600px;&amp;#13;
+  margin: 20px auto;&amp;#13;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);&amp;#13;
+  font-family: Arial, sans-serif;&amp;#13;
+}&amp;#13;
+&amp;#13;
+.skills-widget h3 {&amp;#13;
+  font-size: 20px;&amp;#13;
+  color: #333;&amp;#13;
+  margin-bottom: 15px;&amp;#13;
+  text-align: center;&amp;#13;
+}&amp;#13;
+&amp;#13;
+/* Lista de skills */&amp;#13;
+.skills-list {&amp;#13;
+  display: flex;&amp;#13;
+  flex-direction: column;&amp;#13;
+  gap: 15px;&amp;#13;
+}&amp;#13;
+&amp;#13;
+.skill-item {&amp;#13;
+  background-color: #f9f9f9;&amp;#13;
+  border: 1px solid #ddd;&amp;#13;
+  border-radius: 6px;&amp;#13;
+  padding: 15px;&amp;#13;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;&amp;#13;
+}&amp;#13;
+&amp;#13;
+.skill-item:hover {&amp;#13;
+  transform: translateY(-2px);&amp;#13;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);&amp;#13;
+}&amp;#13;
+&amp;#13;
+.skill-header {&amp;#13;
+  display: flex;&amp;#13;
+  justify-content: space-between;&amp;#13;
+  align-items: center;&amp;#13;
+  margin-bottom: 10px;&amp;#13;
+}&amp;#13;
+&amp;#13;
+.skill-header strong {&amp;#13;
+  font-size: 16px;&amp;#13;
+  color: #333;&amp;#13;
+}&amp;#13;
+&amp;#13;
+.skill-level {&amp;#13;
+  font-size: 14px;&amp;#13;
+  color: #555;&amp;#13;
+  background-color: #f0f0f0;&amp;#13;
+  padding: 4px 8px;&amp;#13;
+  border-radius: 4px;&amp;#13;
+}&amp;#13;
+&amp;#13;
+.skill-description {&amp;#13;
+  font-size: 14px;&amp;#13;
+  color: #666;&amp;#13;
+  margin-bottom: 10px;&amp;#13;
+}&amp;#13;
+&amp;#13;
+.skill-tags {&amp;#13;
+  display: flex;&amp;#13;
+  gap: 8px;&amp;#13;
+}&amp;#13;
+&amp;#13;
+.tag {&amp;#13;
+  font-size: 12px;&amp;#13;
+  padding: 4px 8px;&amp;#13;
+  border-radius: 4px;&amp;#13;
+  color: #fff;&amp;#13;
+}&amp;#13;
+&amp;#13;
+.tag.technical {&amp;#13;
+  background-color: #007bff;&amp;#13;
+}&amp;#13;
+&amp;#13;
+.no-skills {&amp;#13;
+  text-align: center;&amp;#13;
+  font-size: 16px;&amp;#13;
+  color: #888;&amp;#13;
+  padding: 20px;&amp;#13;
+  border: 1px dashed #ddd;&amp;#13;
+  border-radius: 6px;&amp;#13;
+}&amp;#13;
+&amp;#13;
+/* Loader */&amp;#13;
+.loader {&amp;#13;
+  text-align: center;&amp;#13;
+  margin-top: 50px;&amp;#13;
+}&amp;#13;
+&amp;#13;
+.spinner {&amp;#13;
+  border: 4px solid #f3f3f3;&amp;#13;
+  border-top: 4px solid #007bff;&amp;#13;
+  border-radius: 50%;&amp;#13;
+  width: 40px;&amp;#13;
+  height: 40px;&amp;#13;
+  animation: spin 1s linear infinite;&amp;#13;
+  margin: 0 auto 15px;&amp;#13;
+}&amp;#13;
+&amp;#13;
+@keyframes spin {&amp;#13;
+  0% {&amp;#13;
+    transform: rotate(0deg);&amp;#13;
+  }&amp;#13;
+  100% {&amp;#13;
+    transform: rotate(360deg);&amp;#13;
+  }&amp;#13;
+}&amp;#13;
+&amp;#13;
+.loader p {&amp;#13;
+  font-size: 14px;&amp;#13;
+  color: #555;&amp;#13;
+}&amp;#13;
+&amp;#13;
+/* Estado de erro */&amp;#13;
+.error-state {&amp;#13;
+  text-align: center;&amp;#13;
+  margin-top: 50px;&amp;#13;
+  color: #d9534f;&amp;#13;
+  font-size: 16px;&amp;#13;
+}&amp;#13;
+&amp;#13;
+.error-state h4 {&amp;#13;
+  font-size: 18px;&amp;#13;
+  margin-bottom: 10px;&amp;#13;
+}&amp;#13;
+&amp;#13;
+.error-state p {&amp;#13;
+  font-size: 14px;&amp;#13;
+  color: #666;&amp;#13;
+}&lt;/css&gt;&lt;data_table&gt;sp_instance&lt;/data_table&gt;&lt;demo_data/&gt;&lt;description/&gt;&lt;docs/&gt;&lt;field_list/&gt;&lt;has_preview&gt;false&lt;/has_preview&gt;&lt;id/&gt;&lt;internal&gt;false&lt;/internal&gt;&lt;link&gt;&lt;![CDATA[function link(scope, element, attrs, controller) {
+  
+}]]&gt;&lt;/link&gt;&lt;name&gt;Copy of Minhas Skills&lt;/name&gt;&lt;option_schema/&gt;&lt;public&gt;true&lt;/public&gt;&lt;roles/&gt;&lt;script&gt;&lt;![CDATA[(function() {
+  /* populate the 'data' object */
+  /* e.g., data.table = $sp.getValue('table'); */
+
+})();]]&gt;&lt;/script&gt;&lt;servicenow&gt;false&lt;/servicenow&gt;&lt;sys_class_name&gt;sp_widget&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2025-03-24 13:44:47&lt;/sys_created_on&gt;&lt;sys_id&gt;fe9169e083e022109566f7b6feaad34d&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_name&gt;Copy of Minhas Skills&lt;/sys_name&gt;&lt;sys_package display_value="Mock SkillUp" source="x_1523172_skill_up"&gt;6938717783b712109566f7b6feaad3b9&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="Mock SkillUp"&gt;6938717783b712109566f7b6feaad3b9&lt;/sys_scope&gt;&lt;sys_update_name&gt;sp_widget_fe9169e083e022109566f7b6feaad34d&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2025-03-24 13:44:47&lt;/sys_updated_on&gt;&lt;template&gt;&lt;![CDATA[&lt;div class="skills-widget" ng-if="!data.loading &amp;&amp; !data.error"&gt;
+  &lt;h3&gt;Minhas Skills&lt;/h3&gt;
+  &lt;div class="skills-list"&gt;
+    &lt;div class="skill-item" ng-repeat="skill in data.skills" ng-if="skill.active"&gt;
+      &lt;div class="skill-header"&gt;
+        &lt;strong&gt;{{skill.name}}&lt;/strong&gt;
+        &lt;span class="skill-level"&gt;Nível: {{skill.level}}&lt;/span&gt;
+      &lt;/div&gt;
+      &lt;p class="skill-description"&gt;{{skill.description || 'Sem descrição disponível'}}&lt;/p&gt;
+      &lt;div class="skill-tags"&gt;
+        &lt;span class="tag technical" ng-if="skill.technical"&gt;Técnica&lt;/span&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class="no-skills" ng-if="!data.skills.length"&gt;
+      &lt;p&gt;Você ainda não possui habilidades cadastradas.&lt;/p&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;!-- Loader --&gt;
+&lt;div class="loader" ng-if="data.loading"&gt;
+  &lt;div class="spinner"&gt;&lt;/div&gt;
+  &lt;p&gt;Carregando suas habilidades...&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;!-- Error State --&gt;
+&lt;div class="error-state" ng-if="data.error"&gt;
+  &lt;h4&gt;{{data.error.message}}&lt;/h4&gt;
+  &lt;p&gt;{{data.error.action}}&lt;/p&gt;
+  &lt;p&gt;&lt;strong&gt;Referência:&lt;/strong&gt; {{data.error.referenceId}}&lt;/p&gt;
+&lt;/div&gt;]]&gt;&lt;/template&gt;&lt;/sp_widget&gt;&lt;/record_update&gt;</payload>
+        <payload_hash>-97101667</payload_hash>
+        <record_name>Copy of Minhas Skills</record_name>
+        <reverted_from/>
+        <source>a538717783b712109566f7b6feaad3be</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-03-24 13:44:47</sys_created_on>
+        <sys_id>ba9169e083e022109566f7b6feaad350</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>195c866125c0000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-03-24 13:44:47</sys_updated_on>
+        <type>Widget</type>
+        <update_guid>be9169e0f3e0221043321bd3f5f1554f</update_guid>
+        <update_guid_history>be9169e0f3e0221043321bd3f5f1554f:-97101667</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="Copy of Minhas Skills">4da129e083e022109566f7b6feaad3df</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-03-24 13:44:57</sys_created_on>
+        <sys_db_object display_value="" name="sp_widget">sp_widget</sys_db_object>
+        <sys_id>00b4aed9e3b94ed281514bbdf4c0f464</sys_id>
+        <sys_metadata>fe9169e083e022109566f7b6feaad34d</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Copy of Minhas Skills</sys_name>
+        <sys_package display_value="Mock SkillUp" source="x_1523172_skill_up">6938717783b712109566f7b6feaad3b9</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="Mock SkillUp">6938717783b712109566f7b6feaad3b9</sys_scope>
+        <sys_scope_delete display_value="">3a6d93cae10942c4892c498dcc264390</sys_scope_delete>
+        <sys_update_name>sp_widget_fe9169e083e022109566f7b6feaad34d</sys_update_name>
+        <sys_update_version display_value="sp_widget_fe9169e083e022109566f7b6feaad34d">ba9169e083e022109566f7b6feaad350</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-03-24 13:44:57</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

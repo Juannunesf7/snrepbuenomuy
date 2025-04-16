@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element db_object_id="79af31ff83b712109566f7b6feaad360" extends="task" label="Projeto" max_length="40" name="x_1523172_skill_up_projeto" type="collection">
+        <element attributes="edge_encryption_enabled=true" choice="1" label="Status" mandatory="true" max_length="40" name="status" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="Aberto" sequence="0" value="1"/>
+                <element inactive_on_update="false" label="Concluido" sequence="2" value="3"/>
+                <element inactive_on_update="false" label="Em Andamento" sequence="3" value="2"/>
+                <element inactive_on_update="false" label="Cancelado" sequence="1" value="4"/>
+            </choice>
+        </element>
+        <element attributes="edge_encryption_enabled=true" label="Motivo do Cancelamento" max_length="40" name="motivo_cancelamento" type="string"/>
+        <element attributes="omit_sys_original=true" label="Orçamento Real" mandatory="true" max_length="20" name="orcam_real" type="currency"/>
+        <element attributes="edge_encryption_enabled=true" label="Data de Início" mandatory="true" max_length="40" name="data_inicio" type="glide_date"/>
+        <element attributes="omit_sys_original=true" label="Orçamento Estimado" mandatory="true" max_length="20" name="orcam_estimado" type="currency"/>
+        <element attributes="omit_sys_original=true" label="Diferença de Orçamento" max_length="20" name="orcam_dif" read_only="true" type="currency"/>
+        <element attributes="edge_encryption_enabled=true" label="Data de finalização" max_length="40" name="data_fim" type="glide_date"/>
+        <element attributes="edge_encryption_enabled=true" label="Nome do Projeto" mandatory="true" max_length="40" name="nome_projeto" type="string"/>
+        <element attributes="encode_utf8=false" label="Gerente" mandatory="true" max_length="32" name="gerente" reference="x_1523172_skill_up_equipe" reference_qual="cargo=gestor^EQ" reference_qual_condition="cargo=gestor^EQ" type="reference"/>
+    </element>
+</database>
